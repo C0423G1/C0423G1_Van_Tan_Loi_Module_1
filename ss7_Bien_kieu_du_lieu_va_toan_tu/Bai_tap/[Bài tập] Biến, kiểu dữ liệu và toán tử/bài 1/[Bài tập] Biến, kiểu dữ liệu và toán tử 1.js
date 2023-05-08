@@ -1,0 +1,5 @@
+let a =  promp('nhập điểm môn vật lý ')
+let b =  promp('nhập điểm môn Hoá học  ')
+let c =  promp('nhập điểm môn Sinh Học')
+let d = (( a+ b +c)/3)
+alert(" Điểm trung bình của ba môn là =" + d)

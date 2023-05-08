@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<h2> Caculator</h2>
+<table>
+    <tr>
+        <input type="text" name="number" id="number0">
+        <input type="text" name="number1" id="number1">
+    </tr>
+    <tr>
+        <th>
+            <button type="button" onclick="c()">Addition(+)</button>
+        </th>
+        <th>
+            <button type="button" onclick="d">Subtraction(-)</button>
+        </th>
+        <th>
+            <button type="button"  onclick="e">Multiplication(X)</button>
+        </th>
+        <th>
+            <button type="button"  onclick="f">Divion(/)</button>
+        </th>
+    </tr>
+    <p id="ketqua"></p>
+</table>
+<script>
+    <function c(){
+        let a = document.getElementById('Number0').value ;
+        let b = document.getElementById('number1').value;
+        phepcong = (a+b);
+        document.getElementById("ketqua").innerHTML="Result Addition" + phepcong ;}
+</script>
+
+</body>
+</html>

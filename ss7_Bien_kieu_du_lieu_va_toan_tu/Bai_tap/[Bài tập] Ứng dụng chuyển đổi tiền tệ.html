@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        h2{
+            text-align: center;
+        }
+    </style>
+    <title>Title</title>
+</head>
+<body>
+<h2> CHUYỂN ĐỔI TIỀN TỆ  </h2>
+<table>
+    <tr>
+        <th>
+            <p>Amount</p>
+        </th>
+        <th>
+            <p>From Currency</p>
+        </th>
+        <th>
+            <p>To Currency</p>
+        </th>
+    </tr>
+    <tr>
+        <th>
+            <form>
+                <input type="text" name="" id="number" >
+            </form>
+        <td>
+            <form>
+                <select id="tiente" >
+                    <option value="VND">VND</option>
+                    <option value="USD">USD </option>
+                </select>
+            </form>
+        </td>
+        <td>
+            <form>
+                <select id="tientecandoi">
+                    <option value="USD"> USD</option>
+                    <option value="VND">VND</option>
+                </select>
+            </form>
+        </td>
+        <td> <button type="button" onclick="changeMoney()">Convert</button></td>
+    </tr>
+</table>
+<p id="result"> Result: </p>
+<script>
+    function changeMoney(){
+        let inputAmount = document.getElementById("number").value;
+        let from=document.getElementById("tiente").value;
+        let to=document.getElementById("tientecandoi").value;
+        if (from==to)
+        {document.getElementById("result").innerHTML="Result: " + inputAmount};
+        if (from=="VND" && to=="USD")
+        {document.getElementById("result").innerText="Result:" + inputAmount/23000};
+        if (from=="USD" && to=="VND")
+        {document.getElementById("result").innerText="Result: " + inputAmount*23000};
+    }
+</script>
+
+
+</body>
+</html>
