@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th><input type="text" id="number1"></th>
+        <th><input type="text" id="number2"></th>
+        <th><input type="text" id="result"></th>
+    </tr>
+    <tr>
+        <th><button onclick="cong()">Addition(+)</button></th>
+        <th><button onclick="tru()">Subtraction(-)</button></th>
+        <th><button onclick="nhan()">Multiplication(X)</button></th>
+        <th><button onclick="chia()">Divison(/)</button></th>
+    </tr>
+
+</table>
+<script>
+    function cong() {
+        var a = document.getElementById('number1').value;
+        var b = document.getElementById('number2').value;
+        var s = 0;
+        s = parseFloat(a) + parseFloat(b);
+        document.getElementById('result').value = s;
+    }
+    function tru() {
+        var a = document.getElementById('number1').value;
+        var b = document.getElementById('number2').value;
+        var s = 0;
+        s = parseFloat(a) - parseFloat(b);
+        document.getElementById('result').value = s;
+    }
+    function nhan() {
+        var a = document.getElementById('number1').value;
+        var b = document.getElementById('number2').value;
+        var s = 0;
+        s = parseFloat(a) * parseFloat(b);
+        document.getElementById('result').value = s;
+    }
+    function chia() {
+        var a = document.getElementById('number1').value;
+        var b = document.getElementById('number2').value;
+        var s = 0;
+        s = parseFloat(a) / parseFloat(b);
+        document.getElementById('result').value = s;
+    }
+</script>
+
+</body>
+</html>
