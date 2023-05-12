@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // tam giác thứ nhất
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; i >= j; j++) {
+            document.write('*');
+        }
+        document.write('<br>')
+    }
+    document.write('<br>');
+    // tam giác thứ hai
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            if (i + j <= 4) {
+                document.write('*');
+            } else {
+                document.write('&nbsp&nbsp');
+            }
+
+        }
+        document.write('<br>')
+    }
+    // tam giác thứ ba
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            if (i + j >= 4) {
+                document.write('*');
+            } else {
+                document.write('&nbsp&nbsp');
+            }
+
+        }
+        document.write('<br>');
+    }
+    document.write('<br>')
+    //tam giác thứ tư
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            if (i <= j) {
+                document.write('*');
+            } else {
+                document.write('&nbsp&nbsp');
+            }
+
+        }
+        document.write('<br>');
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1, tong;
+    for (let i = 0; ; i++) {
+        tong = a + b
+        a = b;
+        b = tong;
+        if (tong % 5 === 0) {
+
+            document.write(' số chia hết cho 5 là ' + tong);
+            break;
+        }
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = +prompt('nhập số thứ nhất');
+    let b = +prompt('nhập số thứ hai ');
+    let c = +prompt('nhập số thứ ba');
+    let s = (Math.pow(b, 2) - (4 * a * c));
+    let d = (-(b / (2 * a)));
+    let e = ((-b + Math.sqrt(s)) / (2 * a));
+    let i = ((-b - Math.sqrt(s)) / (2 * a));
+    if (a === 0) {
+        alert('nhập lại a ');
+    } else {
+        if (s === 0) {
+            alert('phương trình có nghiệm là x1 = x2 =' + d);
+        } else if (s > 0) {
+            alert('phương trình có nghiệm phân biệt là : x1 = ' + s + ' ; x2 = ' + i);
+        } else {
+            alert('phương trình vô nghiệm');
+        }
+    }
+</script>

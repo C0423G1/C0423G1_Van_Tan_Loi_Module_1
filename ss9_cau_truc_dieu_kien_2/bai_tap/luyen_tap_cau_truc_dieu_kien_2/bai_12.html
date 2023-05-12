@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+</body>
+</html>
+<script>
+    let a = +prompt('số tiền cần vay là :');
+    let d = +prompt('số tháng vay')
+    let b = (a * 0.1)
+    let c = ((b + a) / d)
+    let e = (a * 0.2)
+    let f = ((e + a) / d)
+    switch (d) {
+        case 1 :
+        case 2 :
+        case 3 :
+        case 4 :
+        case 5 :
+        case 6 :
+            alert('số tiền cần trả từng tháng là : ' + c + ' VND');
+            break;
+        case 7 :
+        case 8 :
+        case 9 :
+        case 10:
+        case 11:
+        case 12:
+            alert('số tiền cần trả từng tháng là :' + f + ' VND');
+            break;
+
+    }
+</script>
+a + b
