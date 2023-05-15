@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt('Nhập số vào đây ');
+    let b = a.toString();
+    let c = [];
+    for (let i = 0; i < b.length; i++) {
+        if ((b[i + 1] % 2 === 0) && (b[i] % 2 === 0)) {
+            c.push(b[i],"-");
+        } else {
+            c.push(b[i]);
+        }
+    }
+    document.write(c.join(""));
+</script>
+</body>
+</html>

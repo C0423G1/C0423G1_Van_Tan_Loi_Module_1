@@ -10,16 +10,14 @@
 </body>
 </html>
 <script>
-    let a = +prompt('Nhập số a :')
-    let b = +prompt('nhập số b :')
-    s = ((-b) / a)
+    let a = +prompt('Nhập số a :');
+    let b = +prompt('nhập số b :');
+    s = ((-b) / a);
     if (a === 0 && b === 0) {
         alert('phương trình vô số nghiệm');
-    } else if (a === 0 && b !== 0)
-    {
+    } else if (a === 0 && b !== 0) {
         alert('Phương trình vô nghiệm');
-    }
-    else if (a !== 0) {
+    } else if (a !== 0) {
         alert('Phương trình có một nghiệm duy nhất x = ' + s);
     }
 </script>

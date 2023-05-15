@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        input{
+        input {
             width: 50px;
-            height:50px;
+            height: 50px;
         }
-        table{
+
+        table {
             border: 1px solid black;
         }
     </style>
@@ -16,42 +17,44 @@
 </head>
 <body>
 <input type="text" id="window" style="width: 210px;height: 50px ; color: blue;font-size: 20px; text-align: right">
-<table >
+<table>
     <tr>
-        <td> <input type="button" onclick="nhap(this.value)" value="1"> </td>
-        <td> <input type="button" onclick="nhap(this.value)" value="2"> </td>
-        <td> <input type="button" onclick="nhap(this.value)" value="3"> </td>
-        <td> <input type="button" onclick="nhap(this.value)" value="+"> </td>
+        <td><input type="button" onclick="nhap(this.value)" value="1"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="2"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="3"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="+"></td>
     </tr>
     <tr>
-        <td> <input type="button" onclick="nhap(this.value)" value="4"> </td>
-        <td> <input type="button" onclick="nhap(this.value)" value="5"> </td>
-        <td> <input type="button" onclick="nhap(this.value)" value="6"> </td>
-        <td> <input class="dau" type="button" onclick="nhap(this.value)" value="-"> </td>
+        <td><input type="button" onclick="nhap(this.value)" value="4"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="5"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="6"></td>
+        <td><input class="dau" type="button" onclick="nhap(this.value)" value="-"></td>
     </tr>
     <tr>
-        <td> <input type="button" onclick="nhap(this.value)" value="7"> </td>
-        <td> <input type="button" onclick="nhap(this.value)" value="8"> </td>
-        <td> <input type="button" onclick="nhap(this.value)" value="9"> </td>
-        <td> <input class="dau" type="button" onclick="nhap(this.value)" value="-" > </td>
+        <td><input type="button" onclick="nhap(this.value)" value="7"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="8"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="9"></td>
+        <td><input class="dau" type="button" onclick="nhap(this.value)" value="-"></td>
     </tr>
     <tr>
-        <td> <input type="button" onclick="xoa()" value="C" > </td>
-        <td> <input type="button" onclick="nhap(this.value)" value="0"> </td>
-        <td> <input type="button" onclick="bang()" value="="> </td>
-        <td> <input class="dau" type="button" onclick="nhap(this.value)" value="/" > </td>
+        <td><input type="button" onclick="xoa()" value="C"></td>
+        <td><input type="button" onclick="nhap(this.value)" value="0"></td>
+        <td><input type="button" onclick="bang()" value="="></td>
+        <td><input class="dau" type="button" onclick="nhap(this.value)" value="/"></td>
     </tr>
 </table>
 <script>
     function nhap(number) {
         document.getElementById('window').value += number;
     }
+
     function bang() {
         let chuoi = document.getElementById('window').value;
         document.getElementById('window').value = eval(chuoi);
     }
+
     function xoa() {
-        document.getElementById('window').value= " ";
+        document.getElementById('window').value = " ";
 
     }
 

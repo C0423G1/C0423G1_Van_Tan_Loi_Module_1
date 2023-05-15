@@ -9,24 +9,19 @@
     let canVay = +prompt('số tiền cần vay là :');
     let thangVay = +prompt('số tháng vay là ');
     let laiSuat = 0;
-    let tong = 0
-    let tungThang = 0
+    let tong = 0;
+    let tungThang = canVay / thangVay
     for (let i = 1; i <= thangVay; i++) {
-        tungThang = canVay / thangVay
         if (thangVay <= 3) {
-            laiSuat = canVay * 0.1
-            tong = laiSuat + tungThang
-            document.write('<br>' + ' số tiền cần trả tháng ' + i + ' cần trả là :' + tong);
+            laiSuat = canVay * 0.1;
         } else if (thangVay <= 6) {
-            laiSuat = canVay * 0.2
-            tong = laiSuat + tungThang
-            document.write('<br>' + 'số tiền cần trả tháng' + i + ' cần trả là :' +  tong);
+            laiSuat = canVay * 0.2;
         } else {
-            laiSuat = (canVay * 0.3)
-            tong = laiSuat + tungThang
-            document.write('<br>' + 'số tiền cần trả tháng ' + i + ' cần trả là :' +  tong);
+            laiSuat = canVay * 0.3;
         }
+        tong = laiSuat + tungThang
     }
+    document.write('<br>' + 'số tiền cần trả mỗi  tháng  là :' + tong);
 
 </script>
 
