@@ -5,8 +5,33 @@
     <title>Title</title>
 </head>
 <body>
+<button onclick="game()" id="choiLai">Chơi</button>
 <script>
+    function game() {
+        alert(' Chào mừng bạn đã đến với trò chơi đoán số');
+        let min = +prompt('Nhập trong khoảng bạn muốn chơi\n + Từ :');
+        let max = +prompt(' Đến : ');
+        alert(' Bạn sẽ đoán trong khoảng từ ' + min + ' đến ' + max);
+        let doan = Math.round(Math.random() * (max - min) + min);
+        for (let i = 1; i <= 5; i++) {
+            let number = +prompt('Mời bạn đoán lần thứ ' + i);
+            if (number === doan) {
+                alert('Bạn đã đoán đúng ');
+                break;
 
+            } else if (number < doan) {
+                alert('số bạn đoán bé hơn ');
+            } else if (number > doan) {
+                alert('số bạn đoán lớn hơn');
+            }
+            if (i === 5) {
+                alert('Bạn đoán sai rồi . Kết quả đúng là :' + doan)
+                document.getElementById("choiLai").innerText = 'Chơi Lại';
+            }
+
+        }
+
+    }
 
 
 </script>
