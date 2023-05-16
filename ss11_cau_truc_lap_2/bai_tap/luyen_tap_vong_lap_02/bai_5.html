@@ -8,8 +8,8 @@
 <script>
     let canVay = +prompt('số tiền cần vay là :');
     let thangVay = +prompt('số tháng vay là ');
-    let laiSuat = 0;
-    let tong = 0;
+    let laiSuat = 0 ;
+    let tong = 0 ;
     let tungThang = canVay / thangVay
     for (let i = 1; i <= thangVay; i++) {
         if (thangVay <= 3) {
@@ -19,9 +19,10 @@
         } else {
             laiSuat = canVay * 0.3;
         }
-        tong = laiSuat + tungThang
+        tong = (laiSuat/thangVay) + tungThang ;
     }
-    document.write('<br>' + 'số tiền cần trả mỗi  tháng  là :' + tong);
+   document.write('số tiền cần trả mỗi tháng là ' + tong );
+
 
 </script>
 

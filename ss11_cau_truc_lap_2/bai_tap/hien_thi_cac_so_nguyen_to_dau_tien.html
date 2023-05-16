@@ -6,34 +6,24 @@
 </head>
 <body>
 <script>
-
-    var number = +prompt("Nhập n giá trị ban đầu vào :");
-
-    var N = 2;
-
-    var count = 0;
-
-    for (var i = 0; i < 100; i++) {
-
-        if (count < number) {
-
-            for (var j = 0; j <= i; j++) {
-                if (i % j === 0) {
-                    N = N + 1;
-                }
+    let a = +prompt('Nhập số lượng số nguyên tố ');
+    let b = 0;
+    let c = 2;
+    let d = 0;
+    while (a > b) {
+        let d = 0
+        for (let i = 0; i < c; i++) {
+            if (c % i === 0) {
+                d++;
             }
-
-        else
-            if (N === 2) {
-                document.write(i + " ");
-                count = count + 1;
-            }
-            N = 0;
-
-        } else
+        }
+        if (d === 1) {
+            document.write(c + '<br/>');
+            b++
+        }
+        c++;
     }
-    document.write(text);
-    x.length();
+
 </script>
 </body>
 </html>

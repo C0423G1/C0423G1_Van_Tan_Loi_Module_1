@@ -6,12 +6,22 @@
 </head>
 <body>
 <script>
-    let a = ['QWERTYUIOPASDFGHJKLZXCVBNM'];
-    let b = ['qwertyuiopasdfghjklzxcvbnm'];
+    let s = prompt('nhập chữ vào đây');
+    let a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let b = 'abcdefghijklmnopqrstuvwxyz';
     let c = [];
-    for (let i = 0; i < c.length ; i++) {
-        if ()
+    let d = s.split('');
+
+    for (let x = 0; x < d.length; x++) {
+        if (a.includes(d[x])) {
+        c.push(d[x].toLowerCase());
+        } else if (b.includes(d[x])) {
+            c.push(d[x].toUpperCase());
+        } else {
+            c.push(d[x]);
+        }
     }
+    document.write(c.join(''));
 </script>
 
 </body>
