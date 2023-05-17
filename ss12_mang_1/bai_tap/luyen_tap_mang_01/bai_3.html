@@ -9,16 +9,16 @@
     let a=[5,6,10,34,12,3,7,15,18];
     let max=a[0];
     let b =0 ;
+    let c = a.length
     for (let i = 1; i <= a.length - 1; i++) {
-
+        b = b + a[i]
         if( max>a[i]){
             max;
         }else {
             max=a[i];
-            b=i;
         }
-
     }
+    document.write(' số lớn nhất trong phần tử là ' + max + ' trung bình của phần tử là ' + b/c);
 </script>
 
 </body>

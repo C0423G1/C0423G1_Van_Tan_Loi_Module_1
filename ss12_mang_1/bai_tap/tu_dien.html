@@ -6,19 +6,25 @@
 </head>
 <body>
 <p>Dịch từ : </p>
-<input type="text" id="dien">
-<button onclick="a()">Dịch</button>
-<p id="hien"></p>
+    <input type="text" id="dien">
+    <button onclick="a()">Dịch</button>
+    <p id="hien"></p>
+
+
 <script>
     function a() {
         let tiengAnh = ["book", "aplle", "car", "math"];
-        let tiengViet = ["sách", "táo", "xe", "Toán"];
+        let tiengViet = ["sách", "táo", "ô tô", "Toán"];
         let nhap = document.getElementById("dien").value;
         for (let i = 0; i < tiengViet.length; i++) {
-            if (nhap === tiengAnh[i])
-                document.getElementById("hien").innerText= tiengViet[i]
-        }
+            if (nhap === tiengAnh[i]) {
+                document.getElementById("hien").innerHTML = tiengViet[i];
+                break;
+            } else {
+                document.getElementById("hien").innerHTML = 'Không tìm thấy';
 
+            }
+        }
     }
 
 </script>
