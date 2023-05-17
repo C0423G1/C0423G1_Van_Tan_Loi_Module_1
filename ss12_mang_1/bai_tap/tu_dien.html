@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DỊCH TIẾNG ANH </title>
+</head>
+<body>
+<p>Dịch từ : </p>
+<input type="text" id="dien">
+<button onclick="a()">Dịch</button>
+<p id="hien"></p>
+<script>
+    function a() {
+        let tiengAnh = ["book", "aplle", "car", "math"];
+        let tiengViet = ["sách", "táo", "xe", "Toán"];
+        let nhap = document.getElementById("dien").value;
+        for (let i = 0; i < tiengViet.length; i++) {
+            if (nhap === tiengAnh[i])
+                document.getElementById("hien").innerText= tiengViet[i]
+        }
+
+    }
+
+</script>
+
+</body>
+</html>
