@@ -8,18 +8,18 @@
 <script>
     let a = prompt('Nhập chuỗi đầu tiên ');
     let b = prompt('Nhập chuỗi thứ hai ');
-    let c=a.split('');
-    let d=b.split('');
+    let c = a.split('');
+    let d = b.split('');
     let f = 0;
-    for (let i = 0; i < c.length ; i++) {
-            if(c[i]=== d[i]){
-                f++;
-            }
+    for (let i = 0; i < c.length; i++) {
+        if (c[i] === d[i]) {
+            f++;
+        }
 
     }
-    if(c.length===f){
+    if (c.length === f) {
         document.write('2 chuỗi giống nhau ');
-    }else{
+    } else {
         document.write('2 chuỗi khách nhau');
     }
 
