@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findStars(string) {
+        let constellation = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        let star = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let flag = false;
+        for (let i = 0; i < star.length; i++) {
+            if (string === star[i]) {
+                flag = true;
+                document.write('chòm sao bạn muốn tìm của ngôi sao ' + star[i] + ' là : ' + constellation[i]);
+                break;
+            } else if (string === constellation[i]) {
+                document.write('Bạn nhập sai rồi bạn đang nhập là chòm sao ạ mời bạn nhập lại ngôi sao');
+              return;
+            }
+        }
+        if (flag === false) {
+            document.write('Không tìm thấy chòm sao mời bạn nhập lại');
+        }
+    }
+
+    let string = prompt('Nhập ngôi sao bạn muốn tìm vào đây');
+    findStars(string);
+</script>
+
+</body>
+</html>

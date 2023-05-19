@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function numberIsland(number) {
+        let a = number.split(' ');
+        let b = 0 ;
+        let c = a.length -1
+        while (b < c){
+            let d = a[b];
+            a[b] = a[c];
+            a[c] = d;
+            b++;
+            c--;
+        }
+        return a
+    }
+    let a = prompt('Nhập số nguyên vào đây');
+    let b = numberIsland(a);
+    document.write(b.join(' '))
+</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function factorialCalculation(number) {
+        let volume = 1;
+        for (let i = 1; i < number; i++) {
+            volume *= number;
+        }
+        return volume;
+    }
+    let a = prompt('Nhập số bạn cần muốn giai thừa vào đây');
+    let b = factorialCalculation(a);
+    alert('số giai thừa của ' + a +  ' là : ' + b);
+
+</script>
+
+</body>
+</html>

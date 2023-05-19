@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function array(string,string1) {
+        let a = string.split('');
+        let b = string1.split('');
+        let c = '';
+        for (let i = 0; i < b.length ; i++) {
+            if(a[0]===b[i]){
+                c++;
+            }
+        }
+        return c;
+    }
+    let a = prompt('Nhập dãy vào đây ')
+    let b = prompt('Nhập kí tự cần muốn kiểm tra')
+    let d = array(b,a);
+    document.write('ký tự ('+ b + ') xuất hiện '+ d + ' trong dãy bạn nhập ');
+
+</script>
+
+</body>
+</html>

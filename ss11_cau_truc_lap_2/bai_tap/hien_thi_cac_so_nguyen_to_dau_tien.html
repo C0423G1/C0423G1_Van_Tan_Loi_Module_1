@@ -7,23 +7,30 @@
 <body>
 <script>
     // Cách 1
-    // let a = +prompt('Nhập số lượng số nguyên tố ');
-    // let b = 0;
-    // let c = 2;
-    // let d = 0;
-    // while (a > b) {
-    //     let d = 0
-    //     for (let i = 0; i < c; i++) {
-    //         if (c % i === 0) {
-    //             d++;
+    let a = +prompt('Nhập số lượng số nguyên tố ');
+    let b = 0;
+    let c = 2;
+    while (a > b) {
+        let d = 0;
+        for (let i = 0; i < c; i++) {
+            if (c % i === 0) {
+                d++;
+            }
+        }
+        if (d === 1) {
+            document.write(c + '<br/>');
+            b++
+        }
+        c++;
+    }
+    // let a = +prompt('Nhập số vào đây ')
+    // let b = 2
+    // let flag = true ;
+    // for (let i = 2; i <a ; i++) {
+    //     if()
+    //
+    //
     //         }
-    //     }
-    //     if (d === 1) {
-    //         document.write(c + '<br/>');
-    //         b++
-    //     }
-    //     c++;
-    // }
     //cách 2
 
     // let a = 0;// số đếm số vòng lặp
@@ -42,12 +49,7 @@
     //     b++;
     // } while (a < 20);
     // cách 3
-    let a = 0
-    let b = 2
-    for (let i = 2; i <a ; i++) {
 
-
-    }
 
 </script>
 </body>

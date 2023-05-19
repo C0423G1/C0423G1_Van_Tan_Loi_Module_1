@@ -6,8 +6,20 @@
 </head>
 <body>
 <script>
-let a = prompt('chứa các số nguyên ');
-    let b = prompt('chứa các số nguyên')
+    let a = prompt('các số nguyên ');
+    let b = prompt('các số nguyên ');
+    let c = a.split(',');
+    let d = b.split(',');
+    for (let i = 0; i < c.length; i++) {
+        for (let j = 0; j < d.length; j++) {
+            if (c[i] === d[j]) {
+                d.splice(j,1);
+            }
+        }
+    }
+    document.write(d.join(','))
+
+
 </script>
 
 </body>
