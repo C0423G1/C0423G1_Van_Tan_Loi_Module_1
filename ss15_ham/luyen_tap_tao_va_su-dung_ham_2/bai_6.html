@@ -7,16 +7,17 @@
 <body>
 <script>
     function findingNumber(number) {
-        if(a%1!==0){
+        if (a % 1 !== 0) {
             document.write('Bạn nhập không phải là số nguyên vui lòng nhập lại ');
-        }else if(a>0){
+        } else if (a > 0) {
             document.write('số bạn nhập là số nguyên dương');
-        }else if(a<0){
+        } else if (a < 0) {
             document.write('số bạn nhập là số nguyên âm')
-        }else {
+        } else {
             document.write('số bạn nhập là số đặc biệt số này không phải là số nguyên âm và nguyên dương ')
         }
     }
+
     let a = prompt('Nhập giá trị cần kiểm tra vào đây :')
     findingNumber(a);
 </script>
