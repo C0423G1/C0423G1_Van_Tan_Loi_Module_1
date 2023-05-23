@@ -19,7 +19,8 @@
             return this.d + 273.15;
         }
     }
-let c = +prompt('Nhập độ C vào đây')
+
+    let c = +prompt('Nhập độ C vào đây')
     let temperature = new Temperature(c);
     document.write("Nhiệt độ K: " + temperature.kelvins() + "<br>"
         + "Nhiệt độ F: " + temperature.fahrenheit())
