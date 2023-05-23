@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    thoai()
+
+    function thoai() {
+        let a = "";
+        a += `
+        <table style="background-color: darkgrey;width: 200px; border-radius: 5px;">
+    <tr id="1">
+        <td style="width: 190px"></td>
+        <td><small>100%</small></td>
+    </tr>
+    <tr id="2">
+        <td colspan="2" align="center"><h3>NOKIA</h3></td>
+    </tr>
+    <tr style="height: 30px" id="3"></tr>
+    <tr id="4">
+        <td></td>
+        <td><button style="background-color: gray" onclick="nguon()">Bật Nguồn</button></td>
+    </tr>
+    <tr id="5"></tr>
+     <tr id="7"></tr>
+      <tr id="8"></tr>
+       <tr id="9"></tr>
+        <tr id="10"></tr>
+
+    <tr style="height: 100px"></tr>
+    <tr id="a1"></tr>
+
+</table>`
+        document.write(a)
+    }
+
+    function nguon() {
+        document.getElementById("4").innerHTML = `
+        <td><button style="background-color: gray;height:37.2px;width:54.48px" onclick="mess()">Tin Nhắn</button></td>
+        <td><button style="background-color: gray" onclick="tatnguon()">Tắt Nguồn</button></td>
+    `
+    }
+
+    function tatnguon() {
+        document.getElementById("4").innerHTML = `<td></td>
+        <td><button style="background-color: gray" onclick="nguon()">Bật Nguồn</button></td>`
+    }
+
+    function mess() {
+        document.getElementById("4").innerHTML = `
+<tr>Soạn Tin Nhắn</tr>
+<tr>
+<td><input type="text"></td>
+<td><button>Gửi</button></td>
+</tr>
+<tr> Tin Nhắn Gửi Đến</tr>
+<tr><select style="width: 100px">
+     <option> 1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+ </select></tr><br>
+<tr>Tin Nhắn Gửi Đi</tr><br>
+<tr><select style="width: 100px">
+     <option> 1</option>
+     <option>2</option>
+     <option>3</option>
+     <option>4</option>
+ </select></tr><br>
+<tr><button onclick="nguon()">Trở về</button></tr>
+`
+    }
+
+</script>
+
+</body>
+</html>

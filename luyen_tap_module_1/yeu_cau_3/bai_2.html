@@ -13,11 +13,13 @@
     for (let i = 0; i < c.length; i++) {
         for (let j = 0; j < d.length; j++) {
             if (c[i] === d[j]) {
-                d.splice(j,1);
+                d.splice(j,1,);
+                c.splice(i,1,);
             }
         }
     }
-    document.write(d.join(','))
+    let f = c.concat(d)
+    document.write(f.join(','))
 
 
 </script>

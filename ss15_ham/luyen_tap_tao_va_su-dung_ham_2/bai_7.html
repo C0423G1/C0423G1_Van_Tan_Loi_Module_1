@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    function numberIsland(number) {
+    function reverseNumber(number) {
         let a = number.split(' ');
         let b = a[0];
         a[0] = a[1];
@@ -15,7 +15,7 @@
     }
 
     let a = prompt('Nhập 2 số nguyên vào đây');
-    let b = numberIsland(a);
+    let b = reverseNumber(a);
     document.write(b.join(' '))
 
 </script>

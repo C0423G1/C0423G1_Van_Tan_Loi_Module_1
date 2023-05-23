@@ -6,7 +6,7 @@
 </head>
 <body>
 <script>
-    function findingNumber(number) {
+    function numberMin(number) {
         let a = number.split(' ');
         let min = a[0];
         for (let i = 1; i <= a.length - 1; i++) {
@@ -20,7 +20,7 @@
     }
 
     let a = prompt('Nhập 3 số muốn so sánh vào đây');
-    let b = findingNumber(a);
+    let b = numberMin(a);
     document.write('số nhỏ nhất trong ' + a + ' là ' + b)
 </script>
 

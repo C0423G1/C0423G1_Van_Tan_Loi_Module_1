@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<script>
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+        perimeter() {
+            return (this.length + this.width) * 2;
+        }
+
+        acreage() {
+            return this.width * this.width;
+        }
+    }
+
+    let a = +prompt('Nhập chiều dài hình chữ nhật')
+    let b = +prompt('Nhập chiều rộng hình chữ nhât')
+    let rectangle = new Rectangle(a, b);
+    document.write('chu vi hình chữ nhật là :' + rectangle.perimeter() + '<br>' + 'diện tích hình chữ nhật là :' + rectangle.acreage());
+</script>
+
+</body>
+</html>
