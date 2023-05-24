@@ -7,29 +7,15 @@
 <body>
 <script>
 
-    let array = [];
-    let arraylength = +prompt("nhập độ dài mảng");
+    module.exports = {
+        sum_even_numbers
+    };
 
-    while (isNaN(arraylength)) {
-        arraylength = +prompt("vui lòng nhập dữ liệu dạng số");
+    function sum_even_numbers(){
+        var sum = 0;
+        //your code here
+        return sum;
     }
-    alert("mảng của bạn vừa khởi tạo có độ dài là: " + arraylength);
-
-    for (let i = 0; i < arraylength; i++) {
-        let count = i + 1;
-        array[i] = prompt("nhấp phần tử thứ " + count + " :");
-    }
-    alert("mảng bạn vừa khởi tạo là: " + array);
-
-    let count = 0;
-
-    for (let i = 0; i < array.length; i++) {
-        if (!isNaN(array[i])) {
-            count++
-        }
-    }
-
-    alert("ký tự số có trong mảng " + array + " là: " + count);
 </script>
 
 </body>
