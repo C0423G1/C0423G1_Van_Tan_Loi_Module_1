@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+
+    class ElectricLamp {
+        constructor(status) {
+            this.status = status;
+        }
+
+        getStatus() {
+            return this.status;
+        }
+    }
+
+    class SwitchButton {
+        constructor(lamp, status) {
+            this.status = status;
+            this.lamp = lamp;
+        }
+
+        connectToLamp(lamp) {
+            return this.lamp = lamp;
+        }
+
+        switchOff() {
+            this.lamp.status = 'tắt';
+            return this.status = 'tắt';
+        }
+
+        switchOn() {
+            this.lamp.status = 'bật';
+            return this.status = 'bật';
+        }
+    }
+
+
+    let electricLamp_1 = new ElectricLamp(false);
+    let switchButton_1 = new SwitchButton(electricLamp_1, false);
+
+    alert(switchButton_1.switchOn());
+    alert(electricLamp_1.getStatus());
+    alert(switchButton_1.switchOff());
+    alert(electricLamp_1.getStatus());
+
+</script>
+</body>
+</html>
