@@ -4,182 +4,253 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    td, table, tr {
+        border: 1px solid;
+    }
+
+</style>
 <body>
+<table>
+    <tr>
+        <td>Samsung</td>
+        <td>Iphone</td>
+    </tr>
+    <td><textarea id="123"></textarea></td>
+    <td><textarea id="500"></textarea></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="iphoneOne.soanTinNhan()"> Soạn tin nhắn</button>
+        </td>
+        <td>
+            <button onclick="iphoneTwo.soanTinNhan()"> Soạn tin nhắn</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="iphoneOne.messageSent()">Xem tin nhắn</button>
+        </td>
+        <td>
+            <button onclick="iphoneTwo.messageSent()">Xem tin nhắn</button>
+        </td>
+    </tr>
+
+</table>
 
 <script>
-    thoai()
-
-    function thoai() {
-        let a = "";
-        a += `
-        <table style="background-color: darkgrey;width: 200px; border-radius: 5px;">
-    <tr id="1">
-        <td style="width: 190px"></td>
-        <td><small>100%</small></td>
-    </tr>
-    <tr id="2">
-        <td colspan="2" align="center"><h3>NOKIA</h3></td>
-    </tr>
-    <tr style="height: 30px" id="3"></tr>
-    <tr id="4">
-        <td></td>
-        <td><button style="background-color: gray" onclick="nguon()">Bật Nguồn</button></td>
-    </tr>
-    <tr id="5"></tr>
-     <tr id="6"></tr>
-      <tr id="7"></tr>
-       <tr id="8"></tr>
-        <tr id="9"></tr>
-    <tr style="height: 100px" id="10"></tr>
-    <tr id="11"></tr>
-
-</table>`
-        document.write(a)
-    }
-
-    function nguon() {
-        document.getElementById("4").innerHTML = `
-        <td><button style="background-color: gray;height:37.2px;width:54.48px" onclick="mess()">Tin Nhắn</button></td>
-        <td><button style="background-color: gray" onclick="tatnguon()">Tắt Nguồn</button></td>
-    `
-        document.getElementById("5").innerHTML = ``
-        document.getElementById("6").innerHTML = ``
-        document.getElementById("7").innerHTML = ``
-        document.getElementById("8").innerHTML = ``
-        document.getElementById("9").innerHTML = ``
-        document.getElementById("11").innerHTML = ``
-    }
-
-    function tatnguon() {
-        document.getElementById("4").innerHTML = `<td></td>
-        <td><button style="background-color: gray" onclick="nguon()">Bật Nguồn</button></td>`
-        document.getElementById("5").innerHTML = ``
-        document.getElementById("6").innerHTML = ``
-        document.getElementById("7").innerHTML = ``
-        document.getElementById("8").innerHTML = ``
-        document.getElementById("9").innerHTML = ``
-        document.getElementById("11").innerHTML = ``
-    }
-
-    function mess() {
-        document.getElementById("4").innerHTML = `
-Soạn Tin Nhắn`
-        document.getElementById("5").innerHTML = `<td><input type="text" id="a3"></td>
-<td><button onclick="gui()">Gửi</button></td>`
-        document.getElementById("6").innerHTML = `Tin Nhắn Gửi Đến`
-        document.getElementById("7").innerHTML = `<select style="width: 200px" id="a1">
-
-</select>`
-        document.getElementById("8").innerHTML = `Tin Nhắn Gửi Đi`
-        document.getElementById("9").innerHTML = `<select style="width: 200px" id="a2">
-
- </select>`
-        document.getElementById("11").innerHTML = `<button onclick="nguon()">Trở về</button>`
-    }
-
-    let v = [];
-
-    function them() {
-        let a = "";
-        for (let i = 0; i < v.length; i++) {
-            a += ` <option>${v[i]}</option>`
+    class Mobile {
+        constructor(numberPhone) {
+            this.soan;
+            this.den = [];
+            this.gui = [];
+            this.numberPhone = numberPhone;
         }
-        document.getElementById("a2").innerHTML = a;
-        document.getElementById("aa1").innerHTML = a;
 
-    }
-
-    function gui() {
-        v.push(document.getElementById("a3").value)
-        them()
-    }
-
-    thoaiOne()
-
-    function thoaiOne() {
-        let a = "";
-        a += `
-        <table style="background-color: darkgrey;width: 200px; border-radius: 5px;">
-    <tr id="a1">
-        <td style="width: 190px"></td>
-        <td><small>100%</small></td>
-    </tr>
-    <tr id="a2">
-        <td colspan="2" align="center"><h3>IPHONE</h3></td>
-    </tr>
-    <tr style="height: 30px" id="a3"></tr>
-    <tr id="a4">
-        <td></td>
-        <td><button style="background-color: gray" onclick="nguonOne()">Bật Nguồn</button></td>
-    </tr>
-    <tr id="a5"></tr>
-     <tr id="a6"></tr>
-      <tr id="a7"></tr>
-       <tr id="a8"></tr>
-        <tr id="a9"></tr>
-    <tr style="height: 100px" id="a10"></tr>
-    <tr id="a11"></tr>
-
-</table>`
-        document.write(a)
-    }
-
-    function nguonOne() {
-        document.getElementById("a4").innerHTML = `
-        <td><button style="background-color: gray;height:37.2px;width:54.48px" onclick="messOne()">Tin Nhắn</button></td>
-        <td><button style="background-color: gray" onclick="tatnguonOne()">Tắt Nguồn</button></td>
-    `
-        document.getElementById("a5").innerHTML = ``
-        document.getElementById("a6").innerHTML = ``
-        document.getElementById("a7").innerHTML = ``
-        document.getElementById("a8").innerHTML = ``
-        document.getElementById("a9").innerHTML = ``
-        document.getElementById("a11").innerHTML = ``
-    }
-
-    function tatnguonOne() {
-        document.getElementById("a4").innerHTML = `<td></td>
-        <td><button style="background-color: gray" onclick="nguonOne()">Bật Nguồn</button></td>`
-        document.getElementById("a5").innerHTML = ``
-        document.getElementById("a6").innerHTML = ``
-        document.getElementById("a7").innerHTML = ``
-        document.getElementById("a8").innerHTML = ``
-        document.getElementById("a9").innerHTML = ``
-        document.getElementById("a11").innerHTML = ``
-    }
-
-    function messOne() {
-        document.getElementById("a4").innerHTML = `
-Soạn Tin Nhắn`
-        document.getElementById("a5").innerHTML = `<td><input type="text" id="aa3"></td>
-<td><button onclick="guiOne()">Gửi</button></td>`
-        document.getElementById("a6").innerHTML = `Tin Nhắn Gửi Đến`
-        document.getElementById("a7").innerHTML = `<select style="width: 200px" id="aa1">
-
-</select>`
-        document.getElementById("a8").innerHTML = `Tin Nhắn Gửi Đi`
-        document.getElementById("a9").innerHTML = `<select style="width: 200px" id="aa2">
-
- </select>`
-        document.getElementById("a11").innerHTML = `<button onclick="nguonOne()">Trở về</button>`
-    }
-
-    let l = [];
-
-    function themOne() {
-        let a = "";
-        for (let i = 0; i < l.length; i++) {
-            a += ` <option>${l[i]}</option>`
+        soanTinNhan() {
+            this.soan = prompt("Soạn tin nhắn ");
+            let soDienThoai = +prompt("Nhập số điện thoại")
+            this.mess(this.soan, soDienThoai);
         }
-        document.getElementById("aa2").innerHTML = a;
-        document.getElementById("a1").innerHTML = a;
+        mess(tinNhan,soDienThoai){
+            let location = tongDaiSoDienThoai.indexOf(soDienThoai);
+                alert("Sẽ gửi cho số " + soDienThoai);
+                let phoneGui = tongDaiDienThoai[location];
+                phoneGui.nhanMess(tinNhan + " của số" + this.numberPhone);
 
+        }
+        nhanMess(tinNhan){
+            this.den.push(tinNhan);
+        }
+            messageSent(){
+            let tinNhan = "";
+            for (let i = 0; i < this.den.length ; i++) {
+                tinNhan += this.den[i] + '<br>';
+            }
+            let idScreen = "" + this.numberPhone;
+            document.getElementById(idScreen).value = tinNhan;
+        }
     }
+    let tongDaiDienThoai =[];
+    let tongDaiSoDienThoai = [];
+    let iphoneOne = new Mobile(222);
+    let iphoneTwo = new Mobile(111);
+    tongDaiDienThoai.push(iphoneOne,iphoneTwo);
+    tongDaiSoDienThoai.push(iphoneOne.numberPhone,iphoneTwo.numberPhone);
 
-    function guiOne() {
-        l.push(document.getElementById("aa3").value)
-        themOne()
-    }
+    //     thoai()
+    //
+    //     function thoai() {
+    //         let a = "";
+    //         a += `
+    //         <table style="background-color: darkgrey;width: 200px; border-radius: 5px;">
+    //     <tr id="1">
+    //         <td style="width: 190px"></td>
+    //         <td><small>100%</small></td>
+    //     </tr>
+    //     <tr id="2">
+    //         <td colspan="2" align="center"><h3>NOKIA</h3></td>
+    //     </tr>
+    //     <tr style="height: 30px" id="3"></tr>
+    //     <tr id="4">
+    //         <td></td>
+    //         <td><button style="background-color: gray" onclick="nguon()">Bật Nguồn</button></td>
+    //     </tr>
+    //     <tr id="5"></tr>
+    //      <tr id="6"></tr>
+    //       <tr id="7"></tr>
+    //        <tr id="8"></tr>
+    //         <tr id="9"></tr>
+    //     <tr style="height: 100px" id="10"></tr>
+    //     <tr id="11"></tr>
+    //
+    // </table>`
+    //         document.write(a)
+    //     }
+    //
+    //     function nguon() {
+    //         document.getElementById("4").innerHTML = `
+    //         <td><button style="background-color: gray;height:37.2px;width:54.48px" onclick="mess()">Tin Nhắn</button></td>
+    //         <td><button style="background-color: gray" onclick="tatnguon()">Tắt Nguồn</button></td>
+    //     `
+    //         document.getElementById("5").innerHTML = ``
+    //         document.getElementById("6").innerHTML = ``
+    //         document.getElementById("7").innerHTML = ``
+    //         document.getElementById("8").innerHTML = ``
+    //         document.getElementById("9").innerHTML = ``
+    //         document.getElementById("11").innerHTML = ``
+    //     }
+    //
+    //     function tatnguon() {
+    //         document.getElementById("4").innerHTML = `<td></td>
+    //         <td><button style="background-color: gray" onclick="nguon()">Bật Nguồn</button></td>`
+    //         document.getElementById("5").innerHTML = ``
+    //         document.getElementById("6").innerHTML = ``
+    //         document.getElementById("7").innerHTML = ``
+    //         document.getElementById("8").innerHTML = ``
+    //         document.getElementById("9").innerHTML = ``
+    //         document.getElementById("11").innerHTML = ``
+    //     }
+    //
+    //     function mess() {
+    //         document.getElementById("4").innerHTML = `
+    // Soạn Tin Nhắn`
+    //         document.getElementById("5").innerHTML = `<td><input type="text" id="a3"></td>
+    // <td><button onclick="gui()">Gửi</button></td>`
+    //         document.getElementById("6").innerHTML = `Tin Nhắn Gửi Đến`
+    //         document.getElementById("7").innerHTML = `<select style="width: 200px" id="a1">
+    //
+    // </select>`
+    //         document.getElementById("8").innerHTML = `Tin Nhắn Gửi Đi`
+    //         document.getElementById("9").innerHTML = `<select style="width: 200px" id="a2">
+    //
+    //  </select>`
+    //         document.getElementById("11").innerHTML = `<button onclick="nguon()">Trở về</button>`
+    //     }
+    //
+    //     let v = [];
+    //
+    //     function them() {
+    //         let a = "";
+    //         for (let i = 0; i < v.length; i++) {
+    //             a += ` <option>${v[i]}</option>`
+    //         }
+    //         document.getElementById("a2").innerHTML = a;
+    //         document.getElementById("aa1").innerHTML = a;
+    //
+    //     }
+    //
+    //     function gui() {
+    //         v.push(document.getElementById("a3").value)
+    //         them()
+    //     }
+    //
+    //     thoaiOne()
+    //
+    //     function thoaiOne() {
+    //         let a = "";
+    //         a += `
+    //         <table style="background-color: darkgrey;width: 200px; border-radius: 5px;">
+    //     <tr id="a1">
+    //         <td style="width: 190px"></td>
+    //         <td><small>100%</small></td>
+    //     </tr>
+    //     <tr id="a2">
+    //         <td colspan="2" align="center"><h3>IPHONE</h3></td>
+    //     </tr>
+    //     <tr style="height: 30px" id="a3"></tr>
+    //     <tr id="a4">
+    //         <td></td>
+    //         <td><button style="background-color: gray" onclick="nguonOne()">Bật Nguồn</button></td>
+    //     </tr>
+    //     <tr id="a5"></tr>
+    //      <tr id="a6"></tr>
+    //       <tr id="a7"></tr>
+    //        <tr id="a8"></tr>
+    //         <tr id="a9"></tr>
+    //     <tr style="height: 100px" id="a10"></tr>
+    //     <tr id="a11"></tr>
+    //
+    // </table>`
+    //         document.write(a)
+    //     }
+    //
+    //     function nguonOne() {
+    //         document.getElementById("a4").innerHTML = `
+    //         <td><button style="background-color: gray;height:37.2px;width:54.48px" onclick="messOne()">Tin Nhắn</button></td>
+    //         <td><button style="background-color: gray" onclick="tatnguonOne()">Tắt Nguồn</button></td>
+    //     `
+    //         document.getElementById("a5").innerHTML = ``
+    //         document.getElementById("a6").innerHTML = ``
+    //         document.getElementById("a7").innerHTML = ``
+    //         document.getElementById("a8").innerHTML = ``
+    //         document.getElementById("a9").innerHTML = ``
+    //         document.getElementById("a11").innerHTML = ``
+    //     }
+    //
+    //     function tatnguonOne() {
+    //         document.getElementById("a4").innerHTML = `<td></td>
+    //         <td><button style="background-color: gray" onclick="nguonOne()">Bật Nguồn</button></td>`
+    //         document.getElementById("a5").innerHTML = ``
+    //         document.getElementById("a6").innerHTML = ``
+    //         document.getElementById("a7").innerHTML = ``
+    //         document.getElementById("a8").innerHTML = ``
+    //         document.getElementById("a9").innerHTML = ``
+    //         document.getElementById("a11").innerHTML = ``
+    //     }
+    //
+    //     function messOne() {
+    //         document.getElementById("a4").innerHTML = `
+    // Soạn Tin Nhắn`
+    //         document.getElementById("a5").innerHTML = `<td><input type="text" id="aa3"></td>
+    // <td><button onclick="guiOne()">Gửi</button></td>`
+    //         document.getElementById("a6").innerHTML = `Tin Nhắn Gửi Đến`
+    //         document.getElementById("a7").innerHTML = `<select style="width: 200px" id="aa1">
+    //
+    // </select>`
+    //         document.getElementById("a8").innerHTML = `Tin Nhắn Gửi Đi`
+    //         document.getElementById("a9").innerHTML = `<select style="width: 200px" id="aa2">
+    //
+    //  </select>`
+    //         document.getElementById("a11").innerHTML = `<button onclick="nguonOne()">Trở về</button>`
+    //     }
+    //
+    //     let l = [];
+    //
+    //     function themOne() {
+    //         let a = "";
+    //         for (let i = 0; i < l.length; i++) {
+    //             a += ` <option>${l[i]}</option>`
+    //         }
+    //         document.getElementById("aa2").innerHTML = a;
+    //         document.getElementById("a1").innerHTML = a;
+    //
+    //     }
+    //
+    //     function guiOne() {
+    //         l.push(document.getElementById("aa3").value)
+    //         themOne()
+    //     }
 
 </script>
 

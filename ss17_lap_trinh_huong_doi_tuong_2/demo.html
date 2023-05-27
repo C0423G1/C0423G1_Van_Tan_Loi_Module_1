@@ -1,51 +1,89 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title></title>
 </head>
 <body>
-<p id="result"></p>
+<table border="1">
+    <tr>
+        <th>Khôi</th>
+        <th>Hạnh</th>
+    </tr>
+    <tr>
+        <td><textarea id="123"></textarea></td>
+        <td><textarea id="500"></textarea></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="samsungCuaKhoi.soanTinNhan()"> Soạn tin nhắn</button>
+        </td>
+        <td>
+            <button onclick="iphoneCuaHanh.soanTinNhan()"> Soạn tin nhắn</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="samsungCuaKhoi.xemTinNhan()">Xem tin nhắn</button>
+        </td>
+        <td>
+            <button onclick="iphoneCuaHanh.xemTinNhan()">Xem tin nhắn</button>
+        </td>
+    </tr>
+</table>
 <script>
-
-    class ElectricLamp{
-        constructor(status) {
-            this.status = status;
+    class Mobile {
+        constructor(soDienThoai) {
+            this.pin = 100;
+            this.tinNhanDangSoan;
+            this.hopThuDen = [];
+            this.hopThuDaGui = [];
+            this.trangThai = true;
+            this.soDienThoai = soDienThoai;
         }
-        getStatus(){
-            return this.status;
+
+        soanTinNhan() {
+            this.tinNhanDangSoan = prompt("Mời bạn nhập tin nhắn: ");
+            let xacNhanGui = confirm("Bạn có muốn gửi cho ai không?");
+            if (xacNhanGui) {
+                let soDienThoaiNguoiNhan = +prompt("hãy nhập số điện thoại người nhận");
+                this.guiTinNhan(this.tinNhanDangSoan, soDienThoaiNguoiNhan);
+            }
+        }
+
+        guiTinNhan(tinNhan, soDienThoaiNguoiNhan) {
+            let viTriCuaSDT = khoLuuSoDienThoai.indexOf(soDienThoaiNguoiNhan);
+            if (viTriCuaSDT !== -1) {
+                alert("Sẽ gửi cho số " + soDienThoaiNguoiNhan);
+                let dienThoaiCanNhan = khoLuuDienThoai[viTriCuaSDT];
+                dienThoaiCanNhan.nhanTinNhan(tinNhan + " từ số " + this.soDienThoai);
+            } else {
+                alert("Không tìm thấy số điện thoại này.");
+            }
+        }
+
+        nhanTinNhan(tinNhan) {
+            this.hopThuDen.push(tinNhan);
+        }
+
+        xemTinNhan() {
+            let tatCaTinNhan = "";
+            for (let i = 0; i < this.hopThuDen.length; i++) {
+                tatCaTinNhan += this.hopThuDen[i] + "\n";
+            }
+            let idScreen = "" + this.soDienThoai;
+            document.getElementById(idScreen).value = tatCaTinNhan;
         }
     }
 
-    class SwitchButton{
-        constructor(lamp, status) {
-            this.status = status;
-            this.lamp = lamp;
-        }
-        connectToLamp(Electriclamp){
-            return this.lamp = Electriclamp;
-        }
+    let khoLuuSoDienThoai = [];
+    let khoLuuDienThoai = [];
 
-        switchOff(){
-            this.lamp.status = 'tắt';
-            return this.status = 'tắt';
-        }
-
-        switchOn(){
-            this.lamp.status = 'bật';
-            return this.status = 'bật';
-        }
-    }
-
-
-    let electricLamp_1 = new ElectricLamp(false);
-    let switchButton_1 = new SwitchButton(electricLamp_1,false);
-
-    alert(switchButton_1.switchOn());
-    alert(electricLamp_1.getStatus());
-    alert(switchButton_1.switchOff());
-    alert(electricLamp_1.getStatus());
-
+    let samsungCuaKhoi = new Mobile(123);
+    let iphoneCuaHanh = new Mobile(500);
+    khoLuuDienThoai.push(samsungCuaKhoi, iphoneCuaHanh);
+    khoLuuSoDienThoai.push(samsungCuaKhoi.soDienThoai, iphoneCuaHanh.soDienThoai);
 </script>
 </body>
 </html>

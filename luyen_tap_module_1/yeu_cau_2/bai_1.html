@@ -7,16 +7,15 @@
 <body>
 <script>
     let tienLuong = +prompt('Tiền lương nhân viên :');
-    let tienThue ;
-    if(tienLuong<7000000){
-        tienThue=tienLuong*0.05;
+    let tienThue;
+    if (tienLuong < 7000000) {
+        tienThue = tienLuong * 0.05;
+    } else if (tienLuong < 15000000) {
+        tienThue = tienLuong * 0.1;
+    } else {
+        tienThue = tienLuong * 0.2;
     }
-    else if(tienLuong<15000000){
-        tienThue=tienLuong*0.1;
-    }else{
-        tienThue=tienLuong*0.2;
-    }
-    alert('Số tiền bạn nhận được sau khi thu thuế là :' +(tienLuong-tienThue)+ ' VND')
+    alert('Số tiền bạn nhận được sau khi thu thuế là :' + (tienLuong - tienThue) + ' VND')
 </script>
 
 </body>

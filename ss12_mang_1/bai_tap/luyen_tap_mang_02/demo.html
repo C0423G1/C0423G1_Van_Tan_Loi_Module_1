@@ -6,16 +6,32 @@
 </head>
 <body>
 <script>
+    function diagonalDifference(arr) {
+        // Write your code here
+        let sumOne = 0;
+        let sumTwo = 0;
+        for(let i = 0 ; i<arr.length;i++){
+            for(let j = 0;j<arr[i].length;j++){
+                if(i===j){
+                    sumOne = sumOne + arr[i][j];
 
-    module.exports = {
-        sum_even_numbers
-    };
-
-    function sum_even_numbers(){
-        var sum = 0;
-        //your code here
-        return sum;
+                }else if (i + j === arr.length-1){
+                    sumTwo = sumTwo + arr[i][j];
+                }
+            }
+        }
+        console.log(sumOne);
+        console.log(sumTwo);
+      console.log(Math.abs(sumTwo - sumOne));
     }
+
+    let arr = [
+        [11,2,4],
+        [4,5,6],
+        [10,8,-12]
+    ]
+    diagonalDifference(arr);
+
 </script>
 
 </body>

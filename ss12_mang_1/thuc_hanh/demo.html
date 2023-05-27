@@ -4,11 +4,49 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<style>
+    table,td,tr{
+        border: 2px solid;
+    }
+</style>
 <body>
+<table>
+    <tr>
+        <th>Iphone</th>
+        <th>Samsung</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="000"><button onclick="guiTinNhan()">Gửi</button></td>
+        <td><input type="text" id="111"><button>Gửi</button></td>
+    </tr>
+    <tr>
+        <td><textarea style="width: 150px"></textarea></td>
+        <td><textarea style="width: 150px"></textarea></td>
+    </tr>
+</table>
 <script>
-
-
-
+    function plusMinus(arr) {
+        // Write your code here
+        let coutPositive = 0;
+        let coutNegative = 0;
+        let coutZeros = 0;
+        for(let i= 0 ; i < arr.length ; i++){
+            if(arr[i]>0){
+                coutPositive++;
+            }else if(arr[i]<0){
+                coutNegative++;
+            }else if(arr[i]==0){
+                coutZeros++;
+            }
+        }
+        let a = coutPositive/arr.length;
+        let b = coutNegative/arr.length;
+        let c = coutZeros/arr.length;
+        let d = document.write(a,b,c);
+        return d
+    }
+    let arr = [1,2,3,0,-1,-3,-4]
+    document.write(plusMinus(arr))
 </script>
 
 
