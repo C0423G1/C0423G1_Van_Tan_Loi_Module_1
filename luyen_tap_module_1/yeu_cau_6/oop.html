@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    th, td, tr, table {
+        border: 1px solid;
+    }
+</style>
+<body>
+<button onclick="them()">Thêm mới học viên</button>
+<button>Sửa thông tin học viên</button>
+<button onclick="xoa()">Xoá thông tin học viên</button>
+<div id="one"></div>
+<script>
+    class Study {
+        constructor(id, name, lop, email, day) {
+            this.id = id;
+            this.name = name;
+            this.lop = lop;
+            this.email = email;
+            this.day = day;
+        }
+    }
+
+    let arr = []
+    let one = new Study(1, 'Nguyễn Văn A', 'C0122G1', 'nguyenvana@gmail.com', '01/01/2022');
+    let two = new Study(2, 'Nguyễn Văn A', 'C0122G1', 'nguyenvana@gmail.com', '01/01/2022');
+    arr.push(one, two);
+    tao()
+    debugger
+
+    function tao() {
+        let tableOne = `
+<table >
+    <tr>
+        <th>Mã học viên</th>
+        <th>Tên</th>
+        <th>Lớp</th>
+        <th>Email</th>
+        <th>Ngày sinh</th>
+    </tr>
+`
+        for (let i = 0; i < arr.length; i++) {
+            tableOne += `
+        <tr>
+        <td>${arr[i].id}</td>
+        <td>${arr[i].name}</td>
+        <td>${arr[i].lop}</td>
+        <td>${arr[i].email}</td>
+        <td>${arr[i].day}</td>
+    </tr>
+        `;
+        }
+        tableOne += `</table>`;
+        document.getElementById("one").innerHTML = tableOne;
+    }
+
+    function them() {
+        let a = prompt("Nhập id ");
+        let b = prompt("Nhập tên ");
+        let c = prompt("Nhập lớp vào đây");
+        let d = prompt("Nhập email vào đây");
+        let f = prompt("Nhập ngày sinh vào đây");
+        let three = new Study(a, b, c, d, f);
+        arr.push(three);
+        tao()
+    }
+
+    function xoa() {
+        let o = +prompt('xoá học viên có id là :')
+        arr.splice((o - 1), 1);
+        tao();
+    }
+
+    function sua() {
+        let a  = prompt(" Nhập id vào đây");
+
+    }
+
+</script>
+</body>
+</html>

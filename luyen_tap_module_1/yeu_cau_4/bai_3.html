@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập chuỗi vào đây');
+    let strOne = prompt('Nhập chuỗi thứ hai vào đây')
+    let arr = str.split("");
+    let arrOne = strOne.split("")
+    let text = [];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arrOne.length; j++) {
+            if (arr[i] === arrOne[j]) {
+                text.push(arr[i]);
+                arrOne.splice(j, 1);
+            }
+        }
+
+    }
+    alert(`2 chuỗi có số ký tự chung là ${text.length}\n - ${text}`);
+</script>
+
+</body>
+</html>

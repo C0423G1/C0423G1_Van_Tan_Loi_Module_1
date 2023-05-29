@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập độ dài cạnh vào đây");
+    let b = +prompt("Nhập chiều rộng vào đây");
+
+    function sum(a, b) {
+        let arr = [];
+        let sum = 0;
+        debugger
+        for (let i = 0; i < a; i++) {
+            let subArr = []
+            for (let j = 0; j < b; j++) {
+                subArr[j] = Math.floor(Math.random() * 1000);
+            }
+            arr[i] = subArr
+        }
+        for (let i = 0; i < a; i++) {
+            for (let j = 0; j < b; j++) {
+                if (arr[i][j] % 2 === 0) {
+                    sum = sum + arr[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+
+    alert(sum(a, b));
+</script>
+
+</body>
+</html>

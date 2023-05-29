@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập độ dài cạnh vào đây");
+    let b = +prompt("Nhập chiều rộng vào đây");
+
+    function volume(a, b) {
+        let flag = true;
+        let arr = [];
+        let text = [];
+        for (let i = 0; i < a; i++) {
+            let subArr = [];
+            for (let j = 0; j < b; j++) {
+                subArr[j] = Math.floor(Math.random() * 10);
+            }
+            arr[i] = subArr;
+        }
+        alert(arr);
+        for (let i = 0; i < a; i++) {
+            for (let j = 0; j < b; j++) {
+                flag = true;
+                for (let k = 2; k < arr[i][j]; k++) {
+                    if (arr[i][j] % k === 0) {
+                        flag = false;
+                    }
+                }
+                if (flag === true) {
+                    text.push(arr[i][j]);
+                }
+            }
+        }
+        for (let i = 0; i < text.length; i++) {
+            if (text[i] === 0 || text[i] === 1) {
+                text.splice(i, 1)
+            }
+        }
+        return text;
+    }
+
+    alert(volume(a, b));
+</script>
+
+</body>
+</html>

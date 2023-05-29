@@ -6,7 +6,24 @@
 </head>
 <body>
 <script>
-
+    let arr = prompt('nhập chuỗi');
+    let max = 0;
+    let a = "";
+    arr = arr.toLowerCase();
+    let arrNew = arr.split(" ");
+    debugger
+    for (let i = 0; i < arrNew.length; i++) {
+        if (arrNew[i] === "") {
+            arrNew.splice(i, 1);
+        }
+        arrNew[i] = arrNew[i][0].toUpperCase() + arrNew[i].substr(1);
+        if (max < arrNew[i].length) {
+            max = arrNew[i].length;
+            a = arrNew[i];
+        }
+    }
+    alert(arrNew.join(" "));
+    alert('Chữ có độ dài nhất là ' + a);
 </script>
 
 </body>

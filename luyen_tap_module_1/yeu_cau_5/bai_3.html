@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập độ dài cạnh vào đây");
+    let b = +prompt("Nhập chiều rộng vào đây");
+
+    function sum(a, b) {
+        let arr = [];
+        let max = 0;
+        let min = 0;
+        for (let i = 0; i < a; i++) {
+            let subArr = [];
+            for (let j = 0; j < b; j++) {
+                subArr[j] = Math.floor(Math.random() * 10);
+            }
+            arr[i] = subArr;
+        }
+        for (let i = 0; i < a; i++) {
+            for (let j = 0; j < b; j++) {
+                if (max < arr[i][j]) {
+                    max = arr[i][j];
+                }
+                if (min > arr[i][j]) {
+                    min = arr[i][j];
+                }
+            }
+        }
+        alert('Số lớn nhất của mảng là : ' + max);
+        alert('Số lớn nhỏ của mảng là : ' + min)
+    }
+
+    sum(a, b);
+</script>
+
+</body>
+</html>
