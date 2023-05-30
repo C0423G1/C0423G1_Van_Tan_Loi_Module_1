@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<script>
-
+function taskOneOne() {
     let tienLuong = +prompt('Tiền lương nhân viên :');
     let tienThue;
     if (tienLuong < 7000000) {
@@ -16,9 +8,6 @@
     } else {
         tienThue = tienLuong * 0.2;
     }
-    alert('Số tiền bạn nhận được sau khi thu thuế là :' + (tienLuong - tienThue) + ' VND')
+    document.getElementById("one").innerHTML= 'Số tiền bạn nhận được sau khi thu thuế là :' + (tienLuong - tienThue) + ' VND'
 
-</script>
-
-</body>
-</html>
+}

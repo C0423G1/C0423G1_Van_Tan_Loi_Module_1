@@ -4,16 +4,26 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <style>
     th, td, tr, table {
         border: 1px solid;
     }
+
+    th {
+        text-align: center;
+    }
 </style>
 <body>
+<div id="one"></div>
+<div id="xoa"></div>
+<br>
 <button onclick="add()">Thêm mới học viên</button>
 <button onclick="update()">Sửa thông tin học viên</button>
 <button onclick="deleteOne()">Xoá thông tin học viên</button>
-<div id="one"></div>
+
+
 <script>
     class Study {
         constructor(id, name, lop, email, day, module) {
@@ -28,17 +38,20 @@
 
     let arr = []
     let one = new Study('HV-0001', 'Nguyễn Văn A', 'C0122G1', 'nguyenvana@gmail.com', '01/01/2022', 6);
-    let two = new Study('HV-0002', 'Nguyễn Văn A', 'C0122G1', 'nguyenvana@gmail.com', '01/01/2022', 1);
-    arr.push(one, two);
+    let two = new Study('HV-0002', 'Nguyễn Văn A', 'C0122G1', 'nguyenvana@gmail.com', '01/01/2022', 5);
+    let three = new Study('HV-0003', 'Nguyễn Văn A', 'C0122G1', 'nguyenvana@gmail.com', '01/01/2022', 4);
+    let four = new Study('HV-0004', 'Nguyễn Văn A', 'C0122G1', 'nguyenvana@gmail.com', '01/01/2022', 3);
+    arr.push(one, two, three, four);
     tao()
     debugger
 
     function tao() {
         let tableOne = `
-<table >
+<table style="width: 1550px" class="table table-striped table-hover">
     <tr>
+        <td>Thứ tự</td>
         <th>Mã học viên</th>
-        <th>Tên</th>
+        <th >Tên</th>
         <th>Lớp</th>
         <th>Email</th>
         <th>Ngày sinh</th>
@@ -48,6 +61,7 @@
         for (let i = 0; i < arr.length; i++) {
             tableOne += `
         <tr id="${i - 1}">
+        <td id="${i}">${i + 1}</td>
         <td>${arr[i].id}</td>
         <td>${arr[i].name}</td>
         <td>${arr[i].lop}</td>
@@ -62,7 +76,7 @@
     }
 
     function add() {
-        let a = prompt("Nhập mã sinh viên")
+        const a = prompt("Nhập mã sinh viên")
         let b = checkName(prompt("Nhập tên "));
         let c = prompt("Nhập lớp vào đây");
         let d = prompt("Nhập email vào đây");
@@ -74,19 +88,36 @@
     }
 
     function deleteOne() {
-        let flag = false;
-        let a = prompt('mã sinh viên bạn muốn xoá là :');
+        //     let flag = false;
+        //     let a = prompt('mã sinh viên bạn muốn xoá là :');
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (a === arr[i].id) {
+        //             flag = true;
+        //             arr.splice(i, 1);
+        //         }
+        //     }
+        //     if (flag === false) {
+        //         alert("Không tìm thấy id sinh viên ");
+        //     }
+        //     tao();
+        // }
         for (let i = 0; i < arr.length; i++) {
-            if (a === arr[i].id) {
-                flag = true;
-                arr.splice(i, 1);
+            document.getElementById(`${i}`).innerHTML = `${i + 1}<input type="checkbox" name="sinhviencheckbox">`;
+        }
+        document.getElementById("xoa").innerHTML = `<button onclick="xoa()">Xoá những tick được chọn</button>`
+    }
+
+    function xoa() {
+        let newArr = document.getElementsByName("sinhviencheckbox");
+        for (let i = 0; i < arr.length; i++) {
+            if (newArr[i].checked === true) {
+                arr.splice(i, 1)
             }
         }
-        if (flag === false) {
-            alert("Không tìm thấy id sinh viên ");
-        }
-        tao();
+        document.getElementById("xoa").innerHTML = ``;
+        tao()
     }
+
 
     function update() {
         let flag = false;
@@ -137,7 +168,7 @@
     }
 
     function checkModule(a) {
-        if (1 <= a.length <= 50) {
+        if (1 <= a.length <= 6) {
             return a;
         } else {
             alert("Bạn bạn nhập lại module chỉ có thể từ 1 đến 6");
