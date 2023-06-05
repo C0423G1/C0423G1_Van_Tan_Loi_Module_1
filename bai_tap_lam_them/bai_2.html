@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chuỗi vào đây");
+    let arr = a.toUpperCase().split(" ");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === '') {
+            arr.splice(i, 1);
+        }
+    }
+    if (arr.length === 1) {
+        alert("chuỗi bạn nhập có 1 từ nên không cần viết tắt");
+    } else {
+        let arrNew = [];
+        for (let k = 0; k < arr.length; k++) {
+            for (let j = 0; j < arr[k].length; j++) {
+                arrNew.push(arr[k][0]);
+                break;
+            }
+        }
+        document.write(arrNew.join(""));
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let m = +prompt('Nhập m :');
+
+    let arr = [];
+    let sum = 0;
+
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        let n = +prompt('nhập n :');
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = +prompt(`nhập phần tử ${i},${j}`);
+            if (arr[i][j] % 2 === 0) {
+                sum += arr[i][j];
+            }
+        }
+    }
+    console.log(sum);
+
+</script>
+</body>
+</html>

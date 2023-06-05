@@ -20,10 +20,10 @@
 <div id="xoa"></div>
 <br>
 <button onclick="add()">Thêm mới học viên</button>
-<button onclick="update()">Sửa thông tin học viên</button>
+<button onclick="sua()">Sửa thông tin học viên</button>
 <button onclick="deleteOne()">Xoá thông tin học viên</button>
-
-
+<label for="hello">Hello</label>
+<input type="checkbox" id="hello">
 <script>
     class Study {
         constructor(id, name, lop, email, day, module) {
@@ -43,7 +43,6 @@
     let four = new Study('HV-0004', 'Nguyễn Văn A', 'C0122G1', 'nguyenvana@gmail.com', '01/01/2022', 3);
     arr.push(one, two, three, four);
     tao()
-    debugger
 
     function tao() {
         let tableOne = `
@@ -60,7 +59,7 @@
 `
         for (let i = 0; i < arr.length; i++) {
             tableOne += `
-        <tr id="${i - 1}">
+        <tr id="b${i}">
         <td id="${i}">${i + 1}</td>
         <td>${arr[i].id}</td>
         <td>${arr[i].name}</td>
@@ -76,93 +75,107 @@
     }
 
     function add() {
-        const a = prompt("Nhập mã sinh viên")
-        let b = checkName(prompt("Nhập tên "));
-        let c = prompt("Nhập lớp vào đây");
-        let d = prompt("Nhập email vào đây");
-        let f = prompt("Nhập ngày sinh vào đây");
-        let o = checkModule(prompt("Nhập Module"));
+        const a = `<input type="text" id="zx" >`
+        let b = `<input type="text" id="xc">`;
+        let c = `<input type="text" id="cv">`;
+        let d = `<input type="text" id="vb">`;
+        let f = `<input type="text" id="bn">`;
+        let o = `<input type="text" id="nm">`;
         let three = new Study(a, b, c, d, f, o);
         arr.push(three);
         tao()
+        document.getElementById("xoa").innerHTML = `<button onclick="them(` + (arr.length - 1) + `)">Xong</button>`
+    }
+
+    function them(i) {
+        arr[i].id = document.getElementById("zx").value;
+        arr[i].name = document.getElementById("xc").value;
+        arr[i].lop = document.getElementById("cv").value;
+        arr[i].email = document.getElementById("vb").value;
+        arr[i].day = document.getElementById("bn").value;
+        arr[i].module = document.getElementById("nm").value;
+        document.getElementById("xoa").innerHTML = ``;
+        tao();
+
+
     }
 
     function deleteOne() {
-        //     let flag = false;
-        //     let a = prompt('mã sinh viên bạn muốn xoá là :');
-        //     for (let i = 0; i < arr.length; i++) {
-        //         if (a === arr[i].id) {
-        //             flag = true;
-        //             arr.splice(i, 1);
-        //         }
-        //     }
-        //     if (flag === false) {
-        //         alert("Không tìm thấy id sinh viên ");
-        //     }
-        //     tao();
-        // }
         for (let i = 0; i < arr.length; i++) {
-            document.getElementById(`${i}`).innerHTML = `${i + 1}<input type="checkbox" name="sinhviencheckbox">`;
+            document.getElementById(`${i}`).innerHTML = `<label for="qq${i}">${i + 1}</label><input type="checkbox" name="student" id="qq${i}">`;
         }
         document.getElementById("xoa").innerHTML = `<button onclick="xoa()">Xoá những tick được chọn</button>`
     }
 
     function xoa() {
-        let newArr = document.getElementsByName("sinhviencheckbox");
-        for (let i = 0; i < arr.length; i++) {
-            if (newArr[i].checked === true) {
-                arr.splice(i, 1)
+        let a = confirm("Bạn có muốn xoá những id đã tick không");
+        if (a === true) {
+            let newArr = document.getElementsByName("student");
+            let arrayNode = [];
+            for (let i = 0; i < newArr.length; i++) {
+                arrayNode.push(newArr[i]);
             }
-        }
-        document.getElementById("xoa").innerHTML = ``;
-        tao()
-    }
-
-
-    function update() {
-        let flag = false;
-        let o = prompt('Nhập mã sinh viên bạn muốn sửa vào đây:');
-        let u = confirm("Bạn có chắc chắn muốn sửa mã sinh viên " + o + ' không')
-        if (u === true) {
-            for (let i = 0; i < arr.length; i++) {
-                if (o === arr[i].id) {
-                    flag = true;
-                    let a = confirm("Bạn có muốn sửa tên không");
-                    if (a === true) {
-                        arr[i].name = checkName(prompt("Nhập tên mới"));
-                    }
-                    let b = confirm("Bạn có muốn sửa lớp không");
-                    if (b === true) {
-                        arr[i].lop = prompt("Nhập lớp mới");
-                    }
-                    let c = confirm("Bạn có muốn sửa email không");
-                    if (c === true) {
-                        arr[i].email = prompt("Nhập địa chỉ email mới");
-                    }
-                    let d = confirm("Bạn có muốn sửa ngày tháng năm sinh không");
-                    if (d === true) {
-                        arr[i].day = prompt("Nhập ngày tháng năm sinh mới");
-                    }
-                    let p = confirm("Bạn có muốn module không");
-                    if (p === true) {
-                        arr[i].module = checkModule(prompt("Nhập module mới"));
-                    }
+            console.log(arrayNode)
+            let a = arr.length;
+            for (let i = 0; i < arrayNode.length; i++) {
+                if (arrayNode[i].checked === true) {
+                    arr.splice(i, 1);
+                    arrayNode.splice(i, 1);
+                    i--;
                 }
-
-
             }
-            if (flag === false) {
-                alert("Không tìm thấy id sinh viên ")
-            }
+            document.getElementById("xoa").innerHTML = ``;
         }
         tao();
+    }
+
+    function sua() {
+        let a = checkMaSinhVien(prompt("Nhập mã sinh viên bạn muốn đổi vào đây"));
+        for (let i = 0; i < arr.length; i++) {
+            if (a === arr[i].id) {
+                document.getElementById(`b${i}`).innerHTML = `
+        <td id="${i}">${i + 1}</td>
+        <td ><input type="text" value="${arr[i].id}" id="z${i}"></td>
+        <td><input type="text" id="x${i}" value="${arr[i].name}"></td>
+        <td><input type="text" id="c${i}" value="${arr[i].lop}"></td>
+        <td><input type="text" id="v${i}" value="${arr[i].email}"></td>
+        <td><input type="text" id="q${i}" value="${arr[i].day}"></td>
+        <td><input type="text" id="n${i}" value="${arr[i].module}"></td>`
+                document.getElementById("xoa").innerHTML = `<button onclick="chinhsua(` + i + `)">Xong</button>`
+            }
+        }
+
+    }
+
+    function chinhsua(i) {
+        arr[i].id = document.getElementById(`z${i}`).value;
+        arr[i].name = document.getElementById(`x${i}`).value;
+        arr[i].lop = document.getElementById(`c${i}`).value;
+        arr[i].email = document.getElementById(`v${i}`).value;
+        arr[i].day = document.getElementById(`q${i}`).value;
+        arr[i].module = document.getElementById(`n${i}`).value;
+        document.getElementById("xoa").innerHTML = ``;
+        tao();
+
+    }
+
+    function checkMaSinhVien(arr) {
+        let a = "";
+        arr = arr.toUpperCase();
+        let arrNew = arr.split(" ");
+        for (let i = 0; i < arrNew.length; i++) {
+            if (arrNew[i] === "") {
+                arrNew.splice(i, 1);
+            }
+        }
+        return arrNew.join("");
     }
 
     function checkName(a) {
         if (a.length <= 50) {
             return a;
         } else {
-            alert("Bạn bạn nhập lại không được quá 50 kí tự");
+            prompt('Mời bạn nhập lại , tên không được quá 50 ký tự');
         }
 
     }

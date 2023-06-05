@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let q = +prompt("bạn muốn nhập bao nhiêu phần tử vào đây ạ");
+    let arr = [];
+    let arrNew = [];
+    for (let i = 1; i <= q; i++) {
+        let c = +prompt("Mời bạn nhập số thứ" + i);
+        arr.push(c);
+    }
+    for (let i = 0; i < arr.length; i++) {
+        if (checkNumber(arr[i]) === true) {
+            arrNew.push(arr[i]);
+        }
+    }
+    document.write(Sapxep(arrNew));
+
+    function checkNumber(number) {
+        let count = 0;
+        for (let i = 1; i <= number; i++) {
+            if (number % i === 0) {
+                count++;
+            }
+        }
+        if (count === 2 && number !== 0 && number !== 1) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    function Sapxep(arr) {
+        let arrNew = [];
+        let a = arr.length;
+        for (let j = 0; j < a; j++) fd
+        let min = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (min > arr[i]) {
+                min = arr[i];
+            }
+        }
+        arr.splice(i, 1)
+        arrNew.push(min);
+    }
+
+    return arrNew;
+    }
+</script>
+
+</body>
+</html>

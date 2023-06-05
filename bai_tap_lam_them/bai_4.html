@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    th, td, table, tr {
+        border: 1px solid;
+    }
+</style>
+<body>
+<div id="one"></div>
+<button onclick="them()">thêm Máy tính mới</button>
+<script>
+    class Maytinh {
+        constructor(id, name, hang, gia) {
+            this.id = id;
+            this.name = name;
+            this.hang = hang;
+            this.gia = gia;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getHang() {
+            return this.hang;
+        }
+
+        setHang(hang) {
+            this.hang = hang;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        setGia(gia) {
+            this.gia = gia;
+        }
+    }
+
+    let a = new Maytinh("001", "Osi", "Van", 1000);
+    let b = new Maytinh("002", "Osi", "Van", 2000);
+    let arr = [a, b];
+    tao(arr);
+
+    function tao() {
+        let table = `<table>
+       <tr>
+    <th>Mã máy tính</th>
+        <th>Tên Máy</th>
+        <th>Tên Hãng </th>
+        <th>Giá Bán</th>
+    </tr>`
+        for (let i = 0; i < arr.length; i++) {
+            table += `<tr>
+<td>${arr[i].id}</td>
+<td>${arr[i].name}</td>
+<td>${arr[i].hang}</td>
+<td>${arr[i].gia}</td>
+</tr>`
+        }
+        table += `</table>`
+        document.getElementById("one").innerHTML = table;
+    }
+
+    function them() {
+        let a = prompt("Nhập mã máy vào đây");
+        let b = prompt("Nhập tên máy vào đây");
+        let c = prompt("Nhập hãng máy vào đây");
+        let d = prompt("Nhập giá máy vào đây");
+        let g = new Maytinh(a, b, c, d);
+        arr.push(g);
+        tao();
+    }
+
+</script>
+
+</body>
+</html>

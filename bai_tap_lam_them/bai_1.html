@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let q = +prompt("bạn muốn nhập bao nhiêu phần tử vào đây ạ");
+    if (q <= 50) {
+        let count = 0;
+        let sum = 0;
+        let arr = [];
+        for (let i = 1; i <= q; i++) {
+            let c = +prompt("Mời bạn nhập số thứ" + i);
+            arr.push(c);
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] % 5 === 0) {
+                    sum = sum + arr[i];
+                    count++;
+                }
+            }
+        }
+        if (count === 0) {
+            alert("không có kết quả")
+        } else {
+            document.write("kết quả sau khi thực hiện là " + (sum / count));
+        }
+
+    } else {
+        alert("Mời bạn nhập lại không được quá 50 số ");
+    }
+
+</script>
+
+</body>
+</html>
