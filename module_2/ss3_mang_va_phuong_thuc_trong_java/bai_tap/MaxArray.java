@@ -18,7 +18,7 @@ public class MaxArray {
             }
         }
         System.out.println(Arrays.deepToString(array));
-        int max = 0;
+        int max = array[0][0];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
                 if (array[i][j] > max) {
