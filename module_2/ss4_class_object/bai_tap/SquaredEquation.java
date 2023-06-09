@@ -1,7 +1,9 @@
 package ss4_class_object.bai_tap;
 
 public class SquaredEquation {
-    private double a, b, c;
+    private double a;
+    private double b;
+    private double c;
 
     public SquaredEquation(double a, double b, double c) {
         this.a = a;

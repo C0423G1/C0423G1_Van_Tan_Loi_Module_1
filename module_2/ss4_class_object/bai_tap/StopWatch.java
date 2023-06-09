@@ -1,7 +1,8 @@
 package ss4_class_object.bai_tap;
 
 public class StopWatch {
-    private long a, b;
+    private long a;
+    private long b;
 
     public StopWatch() {
     }
