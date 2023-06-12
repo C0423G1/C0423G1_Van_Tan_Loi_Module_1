@@ -53,17 +53,10 @@ public class Fan {
 
     public String toString() {
         if (this.on) {
-            return "Fan " +
-                    "\noff = fan is off" +
-                    "\n radius = " + radius +
-                    " color = '" + color;
+            return "Fan " + "\noff = fan is off" + "\n radius = " + radius + " color = '" + color;
 
         } else {
-            return "Fan" +
-                    "\non = fan is on" +
-                    "\n speed = " + speed +
-                    "\n radius = " + radius +
-                    "\n color = '" + color;
+            return "Fan" + "\non = fan is on" + "\n speed = " + speed + "\n radius = " + radius + "\n color = '" + color;
         }
     }
 }
