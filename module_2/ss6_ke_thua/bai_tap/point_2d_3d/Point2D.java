@@ -34,10 +34,9 @@ public class Point2D {
     }
 
     public float[] setXY() {
-        float[] xy = {x, y};
-        return xy;
+        return new float[]{x, y};
     }
-    
+
     public String toString() {
         return "Point2D{" + "x=" + x + ", y=" + y + '}';
     }

@@ -1,8 +1,8 @@
 package ss6_ke_thua.bai_tap.poin_va_moveablepoint;
 
 public class Point {
-    float x;
-    float y;
+    public float x;
+    public float y;
 
     public Point() {
     }

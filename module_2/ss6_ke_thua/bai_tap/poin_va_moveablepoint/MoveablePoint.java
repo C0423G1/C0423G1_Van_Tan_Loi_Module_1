@@ -30,8 +30,7 @@ public class MoveablePoint extends Point {
     }
 
     public float[] setSpeed(float x, float y, float xSpeed, float ySpeed) {
-        float[] speed = {super.x, super.y, xSpeed, ySpeed};
-        return speed;
+        return new float[]{super.x, super.y, xSpeed, ySpeed};
     }
 
     public MoveablePoint getSpeed() {
