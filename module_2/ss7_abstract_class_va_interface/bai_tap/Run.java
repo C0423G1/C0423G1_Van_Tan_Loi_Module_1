@@ -1,6 +1,7 @@
 package ss7_abstract_class_va_interface.bai_tap;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Run {
@@ -29,6 +30,8 @@ public class Run {
             }
         }
         System.out.println(Arrays.toString(shapes));
+
+
 
     }
 }
