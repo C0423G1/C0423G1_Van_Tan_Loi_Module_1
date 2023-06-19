@@ -1,5 +1,7 @@
 package ss10_dsa_danh_sach.mvc.service;
 
+import ss10_dsa_danh_sach.mvc.model.StudentModel;
+
 import java.util.Scanner;
 
 public class StudentService implements IStudentService {
@@ -18,6 +20,8 @@ public class StudentService implements IStudentService {
         String classStudent = scanner.nextLine();
         System.out.println("Nhập Điểm Số");
         int score = Integer.parseInt(scanner.nextLine());
+        StudentModel studentModel = new StudentModel(id,name,date,gender,classStudent,score);
+        studentModel.add(studentModel);
 
     }
 

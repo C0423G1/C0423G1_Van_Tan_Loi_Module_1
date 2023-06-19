@@ -79,4 +79,7 @@ public class StudentModel {
                 ", score=" + score +
                 '}';
     }
+
+    public void add(StudentModel studentModel) {
+    }
 }
