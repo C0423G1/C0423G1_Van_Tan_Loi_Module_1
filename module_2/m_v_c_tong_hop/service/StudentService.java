@@ -1,15 +1,15 @@
-package ss10_dsa_danh_sach.mvc.service;
+package m_v_c_tong_hop.service;
 
-import ss10_dsa_danh_sach.mvc.model.StudentModel;
-import ss10_dsa_danh_sach.mvc.repository.StudentRepository;
+
+import m_v_c_tong_hop.model.Student;
+import m_v_c_tong_hop.repository.StudentRepository;
 
 import java.util.List;
 import java.util.Scanner;
 
-public class StudentService implements IStudentService {
-    StudentRepository studentRepository = new StudentRepository();
+public class StudentService implements IHumanService {
+    public StudentRepository studentRepository = new StudentRepository();
 
-    @Override
     public void add() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Thêm id học viên");
@@ -24,30 +24,25 @@ public class StudentService implements IStudentService {
         String classStudent = scanner.nextLine();
         System.out.println("Nhập Điểm Số");
         int score = Integer.parseInt(scanner.nextLine());
-        StudentModel studentModel = new StudentModel(id, name, date, gender, classStudent, score);
-        studentRepository.add(studentModel);
+        Student student = new Student(id, name, date, gender, classStudent, score);
+        studentRepository.add(student);
     }
 
     @Override
     public void detele() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Mời bạn nhập id bạn muốn xoá");
-        int a = Integer.parseInt(scanner.nextLine());
-        System.out.println("Bạn có muốn xoá không" +
-                "\n1.Có" +
-                "\n2.Không");
-        int b = Integer.parseInt(scanner.nextLine());
-        if (b == 1) {
-            studentRepository.delete(a);
-        }
+        System.out.println("Mời Bạn Nhập ID bạn muốn xoá ");
+        int id = Integer.parseInt(scanner.nextLine());
+        studentRepository.detele(id);
 
     }
 
     @Override
     public void display() {
-        List<StudentModel> studentModelList = studentRepository.display();
-        for (StudentModel student : studentModelList) {
+        List<Student> students = studentRepository.getHumanList();
+        for (Student student : students) {
             System.out.println(student);
         }
+
     }
 }

@@ -1,23 +1,19 @@
-package ss10_dsa_danh_sach.mvc.model;
+package m_v_c_tong_hop.model;
 
-public class StudentModel {
+public class Humana {
     private int id;
     private String name;
     private String date;
     private String gender;
-    private String classStudent;
-    private int score;
 
-    public StudentModel() {
+    public Humana() {
     }
 
-    public StudentModel(int id, String name, String date, String gender, String classStudent, int score) {
+    public Humana(int id, String name, String date, String gender) {
         this.id = id;
         this.name = name;
         this.date = date;
         this.gender = gender;
-        this.classStudent = classStudent;
-        this.score = score;
     }
 
     public int getId() {
@@ -52,32 +48,13 @@ public class StudentModel {
         this.gender = gender;
     }
 
-    public String getClassStudent() {
-        return classStudent;
-    }
-
-    public void setClassStudent(String classStudent) {
-        this.classStudent = classStudent;
-    }
-
-    public int getScore() {
-        return score;
-    }
-
-    public void setScore(int score) {
-        this.score = score;
-    }
-
     @Override
     public String toString() {
-        return "StudentModel{" +
+        return "Humana{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", date='" + date + '\'' +
                 ", gender='" + gender + '\'' +
-                ", classStudent='" + classStudent + '\'' +
-                ", score=" + score +
                 '}';
     }
-
 }

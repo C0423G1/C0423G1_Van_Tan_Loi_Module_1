@@ -10,25 +10,27 @@ public class StudentRepository implements IStudentRepository {
 
     static {
         student.add(new StudentModel(1, "Nguyễn văn A", "16/06/2022", "Nam", "c04", 80));
-        student.add(new StudentModel(1, "Nguyễn văn B", "16/05/2022", "Nam", "c04", 80));
-        student.add(new StudentModel(1, "Nguyễn văn C", "16/03/2022", "Nam", "c04", 80));
+        student.add(new StudentModel(2, "Nguyễn văn B", "16/05/2022", "Nam", "c04", 80));
+        student.add(new StudentModel(3, "Nguyễn văn C", "16/03/2022", "Nam", "c04", 80));
 
     }
 
     @Override
-    public void add(StudentModel student) {
-        StudentModel StudentModel = new StudentModel();
-        student.add(StudentModel);
-
+    public void add(StudentModel student1) {
+        student.add(student1);
     }
 
     @Override
     public ArrayList<StudentModel> display() {
-        return null;
+        return student;
     }
 
     @Override
-    public void delete(StudentModel id) {
-
+    public void delete(int id) {
+        for (int i = 0; i < student.size(); i++) {
+            if (id == student.get(i).getId()) {
+                student.remove(i);
+            }
+        }
     }
 }

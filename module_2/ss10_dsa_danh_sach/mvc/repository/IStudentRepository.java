@@ -7,5 +7,5 @@ import java.util.ArrayList;
 public interface IStudentRepository {
     void add(StudentModel student);
     ArrayList<StudentModel> display();
-    void delete(StudentModel id);
+    void delete(int id);
 }
