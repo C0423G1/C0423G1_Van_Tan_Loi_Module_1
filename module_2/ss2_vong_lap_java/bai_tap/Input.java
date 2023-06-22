@@ -8,8 +8,8 @@ public class Input {
         do {
             Scanner sc = new Scanner(System.in);
             System.out.println("\n1.Print the rectangle" +
-                    "\n2.Print the square triangle " +
-                    "\n3.Print isosceles triangle" +
+                    "\n2.Print the square Triangle " +
+                    "\n3.Print isosceles Triangle" +
                     "\n4.Exit");
             int a = sc.nextInt();
             switch (a) {
