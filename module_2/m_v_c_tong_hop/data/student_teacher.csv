@@ -1,0 +1,6 @@
+Student{classStudent='C04', core=100id=1, name='Nguyễn Văn A, date='19/10/2020', gender='Nam'}
+Student{classStudent='C04', core=100id=2, name='Nguyễn Văn B, date='10/10/2020', gender='Nữ'}
+Student{classStudent='C04', core=100id=3, name='Nguyễn Văn B, date='19/11/2020', gender='Nam'}
+Teacher{specialize='Sinh Học'id=1, name='Nguyễn Văn F', date='11/01/2020', gender='Nữ'}
+Teacher{specialize='Hoá Học'id=2, name='Nguyễn Văn O', date='18/11/2020', gender='Nam'}
+Teacher{specialize='Toán Học'id=3, name='Nguyễn Văn Z', date='15/10/2020', gender='Nữ'}

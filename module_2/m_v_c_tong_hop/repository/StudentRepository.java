@@ -2,6 +2,7 @@ package m_v_c_tong_hop.repository;
 
 import m_v_c_tong_hop.model.Student;
 import m_v_c_tong_hop.model.Teacher;
+import m_v_c_tong_hop.util.ReadStudentTeacher;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -24,6 +25,7 @@ public class StudentRepository implements IHumanRepository<Student> {
 
     @Override
     public ArrayList<Student> getHumanList() {
+        ReadStudentTeacher.writeStudent(students, false);
         return students;
     }
 
