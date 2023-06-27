@@ -2,6 +2,7 @@ package ss17_io_binary_file_and_serialization.quan_li_san_pham.service;
 
 import ss17_io_binary_file_and_serialization.quan_li_san_pham.controller.MenuProduct;
 import ss17_io_binary_file_and_serialization.quan_li_san_pham.model.ProductManagement;
+import ss17_io_binary_file_and_serialization.quan_li_san_pham.repository.IProductRepository;
 import ss17_io_binary_file_and_serialization.quan_li_san_pham.repository.ProductRepository;
 
 import java.util.ArrayList;
@@ -9,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ProductService implements IProductService {
-    ProductRepository productRepository = new ProductRepository();
+    IProductRepository productRepository = new ProductRepository();
 
     @Override
     public void add() {

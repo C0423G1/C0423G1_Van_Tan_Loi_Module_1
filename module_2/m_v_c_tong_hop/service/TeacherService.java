@@ -4,11 +4,13 @@ import m_v_c_tong_hop.model.Student;
 import m_v_c_tong_hop.model.Teacher;
 import m_v_c_tong_hop.repository.IHumanRepository;
 import m_v_c_tong_hop.repository.TeacherRepository;
+import ss19_string_regex.validate_class.NameExample;
 
 import java.util.List;
 import java.util.Scanner;
 
 public class TeacherService implements IHumanService {
+    public static NameExample nameExample = new NameExample();
     public TeacherRepository teacherRepository = new TeacherRepository();
 
     public void add() {
@@ -17,6 +19,7 @@ public class TeacherService implements IHumanService {
         int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Thêm tên giáo viên");
         String name = scanner.nextLine();
+        nameExample.checkName(name);
         System.out.println("Thêm Ngày giáo viên");
         String date = scanner.nextLine();
         System.out.println("Nhập giới tính");
