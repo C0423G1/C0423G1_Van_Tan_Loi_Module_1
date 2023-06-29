@@ -19,7 +19,18 @@ public class TeacherService implements IHumanService {
         int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Thêm tên giáo viên");
         String name = scanner.nextLine();
-        nameExample.checkName(name);
+        boolean flag = true;
+        boolean check;
+        do {
+            check = nameExample.checkName(name);
+            flag = true;
+            if (check == false) {
+                flag = false;
+                System.out.println("Nhập lại");
+                String nameCheck = scanner.nextLine();
+                name = nameCheck;
+            }
+        } while (!flag);
         System.out.println("Thêm Ngày giáo viên");
         String date = scanner.nextLine();
         System.out.println("Nhập giới tính");

@@ -36,13 +36,6 @@ public class Student extends Humana {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "classStudent='" + classStudent + '\'' +
-                ", core=" + core +
-                "id=" + getId() +
-                ", name='" + getName() +
-                ", date='" + getDate() + '\'' +
-                ", gender='" + getGender() + '\'' +
-                '}';
+        return getId() + "," + getName() + "," + getDate() + "," + getGender() + "," + classStudent + "," + core;
     }
 }

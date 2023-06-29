@@ -20,6 +20,7 @@ public class TeacherRepository implements IHumanRepository<Teacher> {
 
     @Override
     public void add(Teacher teacher) {
+
         teachers.add(teacher);
     }
 

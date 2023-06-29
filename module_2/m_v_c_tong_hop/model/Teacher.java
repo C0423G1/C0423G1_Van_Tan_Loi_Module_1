@@ -22,12 +22,6 @@ public class Teacher extends Humana {
 
     @Override
     public String toString() {
-        return "Teacher{" +
-                "specialize='" + specialize + '\'' +
-                "id=" + getId() +
-                ", name='" + getName() + '\'' +
-                ", date='" + getDate() + '\'' +
-                ", gender='" + getGender() + '\'' +
-                '}';
+        return specialize + "," + getId() + "," + getName() + "," + getDate() + "," + getGender();
     }
 }

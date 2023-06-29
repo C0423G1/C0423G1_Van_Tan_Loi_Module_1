@@ -19,13 +19,15 @@ public class StudentRepository implements IHumanRepository<Student> {
 
     public void add(Student student) {
         students.add(student);
+        ReadStudentTeacher.writeStudent(students, true);
+        ReadStudentTeacher.write(students);
 
     }
 
 
     @Override
     public ArrayList<Student> getHumanList() {
-        ReadStudentTeacher.writeStudent(students, false);
+        ReadStudentTeacher.readBinary();
         return students;
     }
 

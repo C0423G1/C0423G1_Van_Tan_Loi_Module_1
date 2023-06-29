@@ -18,6 +18,23 @@ public class NameExample {
         return matcher.matches();
     }
 
+    public String checkNameTeacher(String name) {
+        Scanner scanner = new Scanner(System.in);
+        boolean flag = true;
+        boolean check;
+        do {
+            check = nameExample.checkName(name);
+            flag = true;
+            if (check == false) {
+                flag = false;
+                System.out.println("Nhập lại");
+                String nameCheck = scanner.nextLine();
+                name = nameCheck;
+            }
+        } while (!flag);
+        return name;
+    }
+
     public static NameExample nameExample = new NameExample();
 
     public static void main(String[] args) {

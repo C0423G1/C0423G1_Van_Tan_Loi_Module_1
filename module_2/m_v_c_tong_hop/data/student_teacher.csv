@@ -4,4 +4,8 @@ Student{classStudent='C04', core=100id=3, name='Nguyễn Văn B, date='19/11/202
 Teacher{specialize='Sinh Học'id=1, name='Nguyễn Văn F', date='11/01/2020', gender='Nữ'}
 Teacher{specialize='Hoá Học'id=2, name='Nguyễn Văn O', date='18/11/2020', gender='Nam'}
 Teacher{specialize='Toán Học'id=3, name='Nguyễn Văn Z', date='15/10/2020', gender='Nữ'}
-Teacher{specialize='ădawd'id=123, name='ưdergftyhuj', date='ádfad', gender='adawdwa'}
+Teacher{specialize='123123'id=123123, name='Nguyen Van A', date='12312', gender='123123'}
+1,Nguyễn Văn A,19/10/2020,Nam,C04,100
+2,Nguyễn Văn B,10/10/2020,Nữ,C04,100
+3,Nguyễn Văn B,19/11/2020,Nam,C04,100
+1,1,1,1,1,1
