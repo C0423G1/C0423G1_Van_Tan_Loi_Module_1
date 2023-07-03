@@ -1,6 +1,7 @@
 package tong_hop_cuoi_module_2.repository;
 
 import tong_hop_cuoi_module_2.model.Employee;
+import tong_hop_cuoi_module_2.model.Facility;
 
 import java.util.List;
 
@@ -11,5 +12,6 @@ public interface IEmployeeRepository {
     void fix(String id);
 
     List<Employee> display();
+
     boolean checkID(String id);
 }

@@ -7,10 +7,14 @@ public class Regex {
     private final static String CHECK_DATE = "^(\\d{2})\\-(\\d{2})\\-(\\d{4})$";
     private final static String CHECK_NUMBER_PHONE = "^0\\d{9}$";
     private final static String CHECK_EMAIL = "^[a-z]\\w{5,}@[a-z]{2,5}\\.[a-z]{2,5}$";
+    private final static String CHECK_ID_ONE = "^KH\\-[0-9]{4}$";
 
 
     public static boolean checkID(String id) {
         return id.matches(CHECK_ID);
+    }
+    public static boolean checkIDOne(String id) {
+        return id.matches(CHECK_ID_ONE);
     }
 
     public static boolean checkName(String name) {

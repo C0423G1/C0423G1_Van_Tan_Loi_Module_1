@@ -16,11 +16,12 @@ public class EmployeeService implements IEmployeeService {
 
 
     @Override
-    public void display() {
+    public List<Employee> display() {
         List<Employee> list = employeeRepository.display();
         for (Employee pr : list) {
             System.out.println(pr);
         }
+        return list;
     }
 
     @Override
@@ -30,7 +31,7 @@ public class EmployeeService implements IEmployeeService {
         boolean flagCheck = false;
         do {
             do {
-                System.out.println("Please Enter ID");
+                System.out.println("Nhập Mã Nhân Viên Mới (NV-XXXX ,X : số từ 0-9)");
                 id = scanner.nextLine();
             } while (!Regex.checkID(id));
             if (employeeRepository.checkID(id) == false) {
@@ -41,45 +42,45 @@ public class EmployeeService implements IEmployeeService {
         } while (flagCheck == false);
         String name;
         do {
-            System.out.println("Please Enter Name");
+            System.out.println("Nhập Tên Nhân Viên Mới( Chữ cái đầu của mỗi từ phải viết hoa)");
             name = scanner.nextLine();
         } while (!Regex.checkName(name));
         String date;
         do {
-            System.out.println("Please Enter Date");
+            System.out.println("Nhập Ngày Tháng Năm Sinh :Trên 18+ (XX-YY-MMMM , XX: Ngày , YY : Tháng , MMMM : Năm , )");
             date = scanner.nextLine();
         } while (!CheckYear.is18YearsOld(date));
-        System.out.println("Please Enter Gender");
+        System.out.println("Mời Nhập Giới Tính");
         String gender = scanner.nextLine();
         String numberName;
         do {
-            System.out.println("Please Enter NumberName");
+            System.out.println("Nhập Chính Minh Nhân Dân Mới(9 số - 12 số)");
             numberName = scanner.nextLine();
         } while (!Regex.checkNumberName(numberName));
         String numberPhone;
         do {
-            System.out.println("Please Enter NumberPhone");
+            System.out.println("Nhập Số Điện Thoại (Bắt đầu bằng 0, Đủ 10 số)");
             numberPhone = scanner.nextLine();
         } while (!Regex.checkNumberPhone(numberPhone));
         String email;
         do {
-            System.out.println("Please Enter Email");
+            System.out.println("Mời Nhập Địa Chỉ email");
             email = scanner.nextLine();
         } while (!Regex.checkEmail(email));
-        String level ;
+        String level;
         do {
-            System.out.println("Please Enter Level (Trung cấp, Cao đẳng, Đại học và Sau đại học )");
+            System.out.println("Mời Nhập Trình Độ Học Vấn");
             level = scanner.nextLine();
         } while (!CheckLevel.checkLevel(level));
-        String position ;
+        String position;
         do {
-            System.out.println("Please Enter Position( lễ tân, phục vụ, chuyên viên, giám sát, quản lý, giám đốc.) ");
+            System.out.println("Mời Nhập Vị trí ");
             position = scanner.nextLine();
         } while (!CheckPosition.checkPosition(position));
         long wage;
         boolean flag = true;
         do {
-            System.out.println("Please Enter Wage");
+            System.out.println("Mời Nhập Mức Lương");
             wage = Long.parseLong(scanner.nextLine());
             if (wage > 0) {
                 flag = false;

@@ -1,12 +1,17 @@
 package tong_hop_cuoi_module_2.controllers;
 
 
+import tong_hop_cuoi_module_2.model.Facility;
+import tong_hop_cuoi_module_2.service.CustomerService;
 import tong_hop_cuoi_module_2.service.EmployeeService;
+import tong_hop_cuoi_module_2.service.FacilityService;
 
 import java.util.Scanner;
 
 public class FuramaController {
     private static EmployeeService employeeService = new EmployeeService();
+    private static CustomerService customerService = new CustomerService();
+    private static FacilityService facilityService = new FacilityService();
 
     public void menu() {
         Scanner scanner = new Scanner(System.in);
@@ -14,7 +19,7 @@ public class FuramaController {
         boolean flag = true;
         AD:
         do {
-            System.out.println("1. Employee Management" + "\n2. Customer Management" + "\n3. Facility Management" + "\n4. Booking Management" + "\n5. Promotion Management" + "\n6. Exit");
+            System.out.println("1. Quản lý nhân viên" + "\n2. Quản lý khách hàng" + "\n3. Quản lý cơ sở" + "\n4. Quản lý đặt chỗ" + "\n5. Quản lý khuyến mãi" + "\n6. Thoát");
             boolean flagCheck = true;
             do {
                 flagCheck = true;
@@ -25,11 +30,11 @@ public class FuramaController {
                             do {
                                 flagCheck = true;
                                 try {
-                                    System.out.println("-----------------  Employee Management --------------- ");
+                                    System.out.println("-----------------   Quản lý nhân viên --------------- ");
                                     boolean flagEmployee = true;
                                     do {
                                         flagEmployee = true;
-                                        System.out.println("1 Display list employees" + "\n2 Add new employee" + "\n3 Edit employee" + "\n4 Return main menu");
+                                        System.out.println("1 Hiển thị danh sách nhân viên" + "\n2 Thêm nhân viên mới" + "\n3 Chỉnh sửa nhân viên" + "\n4 Quay lại menu chính");
                                         int menuOne = Integer.parseInt(scanner.nextLine());
                                         switch (menuOne) {
                                             case 1:
@@ -46,7 +51,7 @@ public class FuramaController {
                                                 continue AD;
                                             default:
                                                 flagEmployee = false;
-                                                System.out.println("Nhập Lại");
+                                                System.out.println("Nhập Lại Ngoài Phạm Vi Truy Cập");
                                                 break;
                                         }
                                     } while (!flagEmployee);
@@ -64,10 +69,33 @@ public class FuramaController {
                             do {
                                 flagCheck = true;
                                 try {
-                                    System.out.println("-----------------   Customer Management --------------- ");
-                                    System.out.println("1. Display list customers" + "\n2. Add new customer" + "\n3. Edit customer" + "\n4. Return main menu");
-                                    int menuTwo = Integer.parseInt(scanner.nextLine());
+                                    System.out.println("-----------------   Quản lý khách hàng --------------- ");
+                                    boolean flagCustomer = true;
+                                    do {
+                                        flagCustomer = true;
+                                        System.out.println("1. Hiển thị danh sách khách hàng" + "\n2. Thêm khách hàng mới" + "\n3. Chỉnh sửa khách hàng" + "\n4. Quay lại menu chính");
+                                        int menuTwo = Integer.parseInt(scanner.nextLine());
+                                        switch (menuTwo) {
+                                            case 1:
+                                                customerService.display();
+                                                break;
+                                            case 2:
+                                                customerService.add();
+                                                break;
+                                            case 3:
+                                                customerService.fix();
+                                                break;
+                                            case 4:
+                                                flagCustomer = false;
+                                                continue AD;
+                                            default:
+                                                flagCustomer = false;
+                                                System.out.println("Nhập Lại Ngoài Phạm Vi Truy Cập");
+                                                break;
+                                        }
+                                    } while (!flagCustomer);
                                 } catch (Exception e) {
+                                    e.printStackTrace();
                                     System.out.println("Error : Wrong Data Type 2");
                                     flagCheck = false;
                                 }
@@ -75,12 +103,59 @@ public class FuramaController {
                             break;
                         case 3:
                             do {
-                                System.out.println("-----------------   Facility Management --------------- ");
-                                System.out.println("1 Display list facility" + "\n2 Add new facility" + "\n3 Display list facility maintenance" + "\n4 Return main menu");
                                 flagCheck = true;
                                 try {
-                                    int menuThree = Integer.parseInt(scanner.nextLine());
+                                    System.out.println("-----------------   Facility Management --------------- ");
+                                    boolean flagFacility = true;
+                                    AC:
+                                    do {
+                                        flagFacility = true;
+                                        System.out.println("1 Cơ sở danh sách hiển thị" + "\n2 Thêm cơ sở mới" + "\n3 Hiển thị danh sách bảo trì cơ sở" + "\n4 Quay lại menu chính");
+                                        int menuThree = Integer.parseInt(scanner.nextLine());
+                                        switch (menuThree) {
+                                            case 1:
+                                                facilityService.display();
+                                                break;
+                                            case 2:
+                                                System.out.println("---------------Add New Facility-----------------");
+                                                boolean flagNewFacility = true;
+                                                do {
+                                                    flagNewFacility = true;
+                                                    System.out.println("1. Thêm biệt thự mới" + "\n2. Thêm nhà mới" + "\n3. Thêm phòng mới" + "\n4. Quay lại menu");
+                                                    int checkNewFacility = Integer.parseInt(scanner.nextLine());
+                                                    switch (checkNewFacility) {
+                                                        case 1:
+                                                            facilityService.add(checkNewFacility);
+                                                            break;
+                                                        case 2:
+                                                            facilityService.add(checkNewFacility);
+                                                            break;
+                                                        case 3:
+                                                            facilityService.add(checkNewFacility);
+                                                            break;
+                                                        case 4:
+                                                            flagNewFacility = false;
+                                                            continue AC;
+                                                        default:
+                                                            flagNewFacility = false;
+                                                            System.out.println("Nhập Lại Ngoài Phạm Vi Truy Cập");
+                                                            break;
+                                                    }
+                                                } while (flagNewFacility == false);
+                                                break;
+                                            case 3:
+                                                break;
+                                            case 4:
+                                                flagFacility = false;
+                                                continue AD;
+                                            default:
+                                                flagFacility = false;
+                                                System.out.println("Nhập Lại");
+                                                break;
+                                        }
+                                    } while (!flagFacility);
                                 } catch (Exception e) {
+                                    e.printStackTrace();
                                     System.out.println("Error : Wrong Data Type 3");
                                     flagCheck = false;
                                 }

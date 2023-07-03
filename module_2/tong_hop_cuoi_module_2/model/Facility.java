@@ -3,14 +3,14 @@ package tong_hop_cuoi_module_2.model;
 import tong_hop_cuoi_module_2.service.IFacilityService;
 
 public abstract class Facility {
-    private int id;
+    private String id;
     private String name;
     private double acreage;
     private double expense;
     private int quantity;
     private String date;
 
-    public Facility(int id, String name, double acreage, double expense, int quantity, String date) {
+    public Facility(String id, String name, double acreage, double expense, int quantity, String date) {
         this.id = id;
         this.name = name;
         this.acreage = acreage;
@@ -19,11 +19,14 @@ public abstract class Facility {
         this.date = date;
     }
 
-    public int getId() {
+    public Facility() {
+    }
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
