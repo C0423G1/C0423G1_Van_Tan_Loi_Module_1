@@ -39,8 +39,11 @@ public class Employee extends Person {
         this.wage = wage;
     }
 
-    @Override
-    public String toString() {
+
+    public String toStringFile() {
         return getId() + "," + getName() + "," + getDate() + "," + getGender() + "," + getNumberName() + "," + getNumberPhone() + "," + getEmail() + "," + getLevel() + "," + getPosition() + "," + getWage();
+    }
+    public String toString() {
+        return "Mã Nhân Viên : " + getId() + "," + "Tên Nhân Viên : " +  getName() + "," +"Ngày Tháng Năm Sinh Nhân Viên : " +  getDate() + "," +"Giới Tính Nhân Viên : " +  getGender() + "," + "CMND : : " + getNumberName() + "," +"Số Điện Thoai: " + getNumberPhone() + "," + "Email :  " +getEmail() + "," +"Trình Độ Học Vấn Nhân Viên : " + getLevel() + "," + "Chức Vụ Nhân Viên : " + getPosition() + "," +"Mức Lương : " + getWage();
     }
 }

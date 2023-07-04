@@ -18,6 +18,6 @@ public class Room extends Facility {
 
     @Override
     public String toString() {
-        return getId() + "," + getName() + "," + getAcreage() + "," + getExpense() + "," + getQuantity() + "," + getDate() + "," + getFreeService();
+        return  "ROOM : "+" Mã dịch vụ " +getId() + "," +" Tên dịch vụ " + getName() + "," +"Diện tích sử dụng " + getAcreage() + "," + "Chi phí thuế : " + getExpense() + "," + "Số Lượng người : " +  getQuantity() + "," +"Kiểu Thuê " +  getDate() + "," +"Dịch Vụ Miễn Phí " + getFreeService();
     }
 }

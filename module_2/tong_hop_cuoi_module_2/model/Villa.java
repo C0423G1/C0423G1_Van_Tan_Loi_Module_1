@@ -38,6 +38,6 @@ public class Villa extends Facility {
 
     @Override
     public String toString() {
-        return getId() + "," + getName() + "," + getAcreage() + "," + getExpense() + "," + getQuantity() + "," + getDate() + "," + getRoomStandard() + "," + getPoolArea() + "," + getFloors();
+        return "VILLA : " + " Mã dịch vụ " +getId() + "," +" Tên dịch vụ " + getName() + "," +"Diện tích sử dụng " + getAcreage() + "," + "Chi phí thuế : " + getExpense() + "," + "Số Lượng người : " +  getQuantity() + "," +"Kiểu Thuê " +  getDate() + "," +"Tiêu Chuẩn phòng " +  getRoomStandard() + "," + "Diện tích hồ bơi" +  getPoolArea() + "," +  "Số tầng " + getFloors();
     }
 }

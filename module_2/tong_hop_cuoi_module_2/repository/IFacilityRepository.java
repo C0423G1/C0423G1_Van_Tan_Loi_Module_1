@@ -6,6 +6,9 @@ import java.util.LinkedHashMap;
 
 public interface IFacilityRepository {
     LinkedHashMap<Facility, Integer> display();
+
     void add(Facility facility);
+
+    boolean isIdDuplicated(String id);
 
 }

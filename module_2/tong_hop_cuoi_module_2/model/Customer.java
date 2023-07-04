@@ -26,8 +26,12 @@ public class Customer extends Person {
         this.address = address;
     }
 
-    @Override
-    public String toString() {
+
+    public String toStringFile() {
         return getId() + "," + getName() + "," + getDate() + "," + getGender() + "," + getNumberName() + "," + getNumberPhone() + "," + getEmail() + "," + getTypeOfGuest() + "," + getAddress();
+    }
+
+    public String toString() {
+        return "Mã Khách Hàng : " + getId() + "," + "Tên Khách Hàng : " + getName() + "," + "Ngày Tháng Năm Sinh  : " + getDate() + "," + "Giới Tính : " + getGender() + "," + "CMND : : " + getNumberName() + "," + "Số Điện Thoai: " + getNumberPhone() + "," + "Email :  " + getEmail() + "," + "Hạng Khách Hàng :  " + getTypeOfGuest() + "," + "Địa Chỉ :  " + getAddress();
     }
 }

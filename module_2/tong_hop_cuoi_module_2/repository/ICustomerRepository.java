@@ -8,8 +8,7 @@ import java.util.List;
 public interface ICustomerRepository {
     void add(Customer customer);
 
-
-    void fix(String id);
+    void fix(String id,int a, String function);
 
     List<Customer> display();
     boolean checkID(String id);

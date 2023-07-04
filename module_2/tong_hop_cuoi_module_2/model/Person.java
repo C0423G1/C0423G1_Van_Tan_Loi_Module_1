@@ -75,8 +75,8 @@ public abstract class Person {
         this.email = email;
     }
 
-    @Override
-    public String toString() {
+
+    public String toStringFile() {
         return getId() + "," + getName() + "," + getDate() + "," + getGender() + "," + getNumberName() + "," + getNumberPhone() + "," + getEmail();
     }
 }

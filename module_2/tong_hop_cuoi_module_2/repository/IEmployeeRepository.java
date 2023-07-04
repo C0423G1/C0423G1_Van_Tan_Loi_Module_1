@@ -9,7 +9,7 @@ public interface IEmployeeRepository {
     void add(Employee employees);
 
 
-    void fix(String id);
+    void fix(String id, int number, String function);
 
     List<Employee> display();
 

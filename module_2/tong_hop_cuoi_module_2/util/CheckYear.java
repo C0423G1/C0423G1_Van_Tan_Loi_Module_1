@@ -6,12 +6,13 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CheckYear {
+
     public static boolean isLeapYear(int year) {
         return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
     }
 
     public static boolean is18YearsOld(String dateOfBirth) {
-        String regex = "^(\\d{2})\\-(\\d{2})\\-(\\d{4})$";
+        String regex = "^([0-2][0-9])-([0-1][0-9])-([1-2][0-9]{3})$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(dateOfBirth);
 
@@ -45,10 +46,8 @@ public class CheckYear {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String date;
-        do {
-            System.out.println("Nhập");
-            date = scanner.nextLine();
-        } while (!CheckYear.is18YearsOld(date));
+        System.out.println("Nhập ");
+        String a = scanner.nextLine();
+        System.out.println(CheckYear.is18YearsOld(a));
     }
 }

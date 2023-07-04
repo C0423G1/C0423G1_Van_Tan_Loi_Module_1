@@ -29,6 +29,6 @@ public class House extends Facility {
 
     @Override
     public String toString() {
-        return getId() + "," + getName() + "," + getAcreage() + "," + getExpense() + "," + getQuantity() + "," + getDate() + "," + getRoomStandard() + "," + getFloors();
+        return  "HOUSE : "+ "Mã dịch vụ " +getId() + "," +" Tên dịch vụ " + getName() + "," +"Diện tích sử dụng " + getAcreage() + "," + "Chi phí thuế : " + getExpense() + "," + "Số Lượng người : " +  getQuantity() + "," +"Kiểu Thuê " +  getDate() + "," +"Tiêu Chuẩn phòng " +  getRoomStandard() +  "," +  "Số tầng " + getFloors();
     }
 }

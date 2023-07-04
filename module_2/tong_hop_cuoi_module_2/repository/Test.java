@@ -4,13 +4,11 @@ import tong_hop_cuoi_module_2.model.Facility;
 import tong_hop_cuoi_module_2.model.House;
 import tong_hop_cuoi_module_2.model.Room;
 import tong_hop_cuoi_module_2.model.Villa;
-import tong_hop_cuoi_module_2.service.FacilityService;
-import tong_hop_cuoi_module_2.util.WriteAndRead;
 
 import java.util.LinkedHashMap;
-import java.util.List;
+import java.util.Map;
 
-public class FacilityRepository implements IFacilityRepository {
+public class Test {
     public static LinkedHashMap<Facility, Integer> linkedHashMap = new LinkedHashMap<>();
 
     static {
@@ -22,16 +20,7 @@ public class FacilityRepository implements IFacilityRepository {
         linkedHashMap.put(new Room("SVRO-0001", "Room 1", 50, 1, 2, "Ngày", "Đỗ Xe Miễn Phí"), 2);
     }
 
-    public LinkedHashMap<Facility, Integer> display() {
-        return linkedHashMap;
-    }
-
-    @Override
-    public void add(Facility facility) {
-        linkedHashMap.put(facility, 0);
-    }
-
-    public boolean isIdDuplicated(String id) {
+    public static boolean isIdDuplicated(String id) {
         for (Facility facility : linkedHashMap.keySet()) {
             if (facility.getId().equals(id)) {
                 return true;
@@ -41,5 +30,13 @@ public class FacilityRepository implements IFacilityRepository {
 
     }
 
+    public static void main(String[] args) {
+        String idToCheck = "SVHO-0001";
 
+        if (isIdDuplicated(idToCheck)) {
+            System.out.println("ID is duplicated.");
+        } else {
+            System.out.println("ID is not duplicated.");
+        }
+    }
 }

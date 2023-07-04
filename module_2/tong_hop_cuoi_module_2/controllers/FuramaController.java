@@ -17,20 +17,20 @@ public class FuramaController {
         Scanner scanner = new Scanner(System.in);
         System.out.println("----------------------------------------- Bắt Đầu Chương Trình ---------------------------------------");
         boolean flag = true;
-        AD:
         do {
             System.out.println("1. Quản lý nhân viên" + "\n2. Quản lý khách hàng" + "\n3. Quản lý cơ sở" + "\n4. Quản lý đặt chỗ" + "\n5. Quản lý khuyến mãi" + "\n6. Thoát");
             boolean flagCheck = true;
+            AD:
             do {
                 flagCheck = true;
                 try {
                     int menu = Integer.parseInt(scanner.nextLine());
                     switch (menu) {
                         case 1:
+                            System.out.println("-----------------   Quản lý nhân viên --------------- ");
                             do {
                                 flagCheck = true;
                                 try {
-                                    System.out.println("-----------------   Quản lý nhân viên --------------- ");
                                     boolean flagEmployee = true;
                                     do {
                                         flagEmployee = true;
@@ -39,15 +39,17 @@ public class FuramaController {
                                         switch (menuOne) {
                                             case 1:
                                                 employeeService.display();
+                                                flagEmployee = false;
                                                 break;
                                             case 2:
                                                 employeeService.add();
+                                                flagEmployee = false;
                                                 break;
                                             case 3:
                                                 employeeService.fix();
+                                                flagEmployee = false;
                                                 break;
                                             case 4:
-                                                flagEmployee = false;
                                                 continue AD;
                                             default:
                                                 flagEmployee = false;
@@ -78,15 +80,17 @@ public class FuramaController {
                                         switch (menuTwo) {
                                             case 1:
                                                 customerService.display();
+                                                flagCustomer = false;
                                                 break;
                                             case 2:
                                                 customerService.add();
+                                                flagCustomer = false;
                                                 break;
                                             case 3:
                                                 customerService.fix();
+                                                flagCustomer = false;
                                                 break;
                                             case 4:
-                                                flagCustomer = false;
                                                 continue AD;
                                             default:
                                                 flagCustomer = false;
@@ -105,61 +109,58 @@ public class FuramaController {
                             do {
                                 flagCheck = true;
                                 try {
-                                    System.out.println("-----------------   Facility Management --------------- ");
                                     boolean flagFacility = true;
-                                    AC:
                                     do {
+                                        System.out.println("-----------------   Facility Management --------------- ");
                                         flagFacility = true;
                                         System.out.println("1 Cơ sở danh sách hiển thị" + "\n2 Thêm cơ sở mới" + "\n3 Hiển thị danh sách bảo trì cơ sở" + "\n4 Quay lại menu chính");
                                         int menuThree = Integer.parseInt(scanner.nextLine());
                                         switch (menuThree) {
                                             case 1:
+                                                flagFacility = false;
                                                 facilityService.display();
                                                 break;
                                             case 2:
+                                                flagFacility = false;
                                                 System.out.println("---------------Add New Facility-----------------");
                                                 boolean flagNewFacility = true;
                                                 do {
-                                                    flagNewFacility = true;
-                                                    System.out.println("1. Thêm biệt thự mới" + "\n2. Thêm nhà mới" + "\n3. Thêm phòng mới" + "\n4. Quay lại menu");
-                                                    int checkNewFacility = Integer.parseInt(scanner.nextLine());
-                                                    switch (checkNewFacility) {
-                                                        case 1:
+                                                    try {
+                                                        flagNewFacility = true;
+                                                        System.out.println("1. Thêm biệt thự mới" + "\n2. Thêm nhà mới" + "\n3. Thêm phòng mới" + "\n4. Quay lại menu");
+                                                        int checkNewFacility = Integer.parseInt(scanner.nextLine());
+                                                        if (checkNewFacility == 1 || checkNewFacility == 2 || checkNewFacility == 3) {
                                                             facilityService.add(checkNewFacility);
-                                                            break;
-                                                        case 2:
-                                                            facilityService.add(checkNewFacility);
-                                                            break;
-                                                        case 3:
-                                                            facilityService.add(checkNewFacility);
-                                                            break;
-                                                        case 4:
                                                             flagNewFacility = false;
-                                                            continue AC;
-                                                        default:
+                                                        } else if (checkNewFacility == 4) {
+                                                            flagNewFacility = true;
+                                                        } else {
+                                                            System.out.println("Ngoài Phạm Vi TRuy Cập");
                                                             flagNewFacility = false;
-                                                            System.out.println("Nhập Lại Ngoài Phạm Vi Truy Cập");
-                                                            break;
+                                                        }
+                                                    } catch (Exception ex) {
+                                                        flagNewFacility = false;
+                                                        System.out.println("Sai Định Dạng Vui Lòng Nhập Lại");
                                                     }
-                                                } while (flagNewFacility == false);
+
+                                                } while (!flagNewFacility);
                                                 break;
                                             case 3:
+                                                flagFacility = false;
                                                 break;
                                             case 4:
-                                                flagFacility = false;
                                                 continue AD;
                                             default:
                                                 flagFacility = false;
-                                                System.out.println("Nhập Lại");
+                                                System.out.println("Ngoài Phạm Vi Truy Cập . Nhập Lại");
                                                 break;
                                         }
                                     } while (!flagFacility);
                                 } catch (Exception e) {
-                                    e.printStackTrace();
-                                    System.out.println("Error : Wrong Data Type 3");
+                                    System.out.println("Sai Định Dạng Vui lòng Nhập Lại");
                                     flagCheck = false;
                                 }
-                            } while (flagCheck == false);
+                            } while (!flagCheck);
                             break;
                         case 4:
                             do {
