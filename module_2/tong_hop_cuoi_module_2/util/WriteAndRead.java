@@ -67,7 +67,7 @@ public class WriteAndRead {
             FileWriter fw = new FileWriter(file, append);
             BufferedWriter bw = new BufferedWriter(fw);
             for (Customer e : customers) {
-                bw.write(e.toString());
+                bw.write(e.toStringFile());
                 bw.newLine();
             }
             bw.close();
@@ -112,124 +112,124 @@ public class WriteAndRead {
         return customers;
     }
 
-//    public static LinkedHashMap<Facility, Integer> readVilla(String file) {
-//        LinkedHashMap<Facility, Integer> linkedHashMap = new LinkedHashMap<>();
-//        try {
-//            FileReader fr = new FileReader(file);
-//            BufferedReader br = new BufferedReader(fr);
-//            String line = "";
-//            while (true) {
-//                line = br.readLine();
-//                if (line == null) {
-//                    break;
-//                } else {
-//                    String[] tests = line.split(",");
-//                    String id = tests[0];
-//                    String name = tests[1];
-//                    double acreage = Double.parseDouble(tests[2]);
-//                    double expense = Double.parseDouble(tests[3]);
-//                    int quantity = Integer.parseInt(tests[4]);
-//                    String date = tests[5];
-//                    String roomStandard = tests[6];
-//                    double poolArea = Double.parseDouble(tests[7]);
-//                    int floors = Integer.parseInt(tests[8]);
-//                    Integer value = Integer.parseInt(tests[9]);
-//                    linkedHashMap.put(new Villa(id, name, acreage, expense, quantity, date, roomStandard, poolArea, floors), value);
-//                }
-//            }
-//            br.close();
-//            fr.close();
-//
-//        } catch (FileNotFoundException ex) {
-//            throw new RuntimeException(ex);
-//        } catch (IOException ex) {
-//            throw new RuntimeException(ex);
-//        }
-//        return linkedHashMap;
-//    }
-//
-//    public static void writeVilla(LinkedHashMap<Facility, Integer> facilityIntegerLinkedHashMap, String file, boolean append) {
-//        try {
-//            FileWriter fw = new FileWriter(file, append);
-//            BufferedWriter bw = new BufferedWriter(fw);
-//            for (Map.Entry<Facility, Integer> e : facilityIntegerLinkedHashMap.entrySet()) {
-//                bw.write(e.getKey() + "," + e.getValue());
-//                bw.newLine();
-//            }
-//            bw.close();
-//            fw.close();
-//        } catch (IOException e) {
-//            throw new RuntimeException(e);
-//        }
-//    }
-//
-//    public static LinkedHashMap<Facility, Integer> readRoom(String file) {
-//        LinkedHashMap<Facility, Integer> linkedHashMap = new LinkedHashMap<>();
-//        try {
-//            FileReader fr = new FileReader(file);
-//            BufferedReader br = new BufferedReader(fr);
-//            String line = "";
-//            while (true) {
-//                line = br.readLine();
-//                if (line == null) {
-//                    break;
-//                } else {
-//                    String[] tests = line.split(",");
-//                    String id = tests[0];
-//                    String name = tests[1];
-//                    double acreage = Double.parseDouble(tests[2]);
-//                    double expense = Double.parseDouble(tests[3]);
-//                    int quantity = Integer.parseInt(tests[4]);
-//                    String date = tests[5];
-//                    String freeService = tests[6];
-//                    Integer value = Integer.parseInt(tests[7]);
-//                    linkedHashMap.put(new Room(id, name, acreage, expense, quantity, date, freeService), value);
-//                }
-//            }
-//            br.close();
-//            fr.close();
-//
-//        } catch (FileNotFoundException ex) {
-//            throw new RuntimeException(ex);
-//        } catch (IOException ex) {
-//            throw new RuntimeException(ex);
-//        }
-//        return linkedHashMap;
-//    }
-//
-//    public static LinkedHashMap<Facility, Integer> readHouse(String file) {
-//        LinkedHashMap<Facility, Integer> linkedHashMap = new LinkedHashMap<>();
-//        try {
-//            FileReader fr = new FileReader(file);
-//            BufferedReader br = new BufferedReader(fr);
-//            String line = "";
-//            while (true) {
-//                line = br.readLine();
-//                if (line == null) {
-//                    break;
-//                } else {
-//                    String[] tests = line.split(",");
-//                    String id = tests[0];
-//                    String name = tests[1];
-//                    double acreage = Double.parseDouble(tests[2]);
-//                    double expense = Double.parseDouble(tests[3]);
-//                    int quantity = Integer.parseInt(tests[4]);
-//                    String date = tests[5];
-//                    String roomStandard = tests[6];
-//                    int floors = Integer.parseInt(tests[7]);
-//                    Integer value = Integer.parseInt(tests[8]);
-//                    linkedHashMap.put(new House(id, name, acreage, expense, quantity, date, roomStandard, floors), value);
-//                }
-//            }
-//            br.close();
-//            fr.close();
-//
-//        } catch (FileNotFoundException ex) {
-//            throw new RuntimeException(ex);
-//        } catch (IOException ex) {
-//            throw new RuntimeException(ex);
-//        }
-//        return linkedHashMap;
-//    }
+    public static LinkedHashMap<Facility, Integer> readVilla(String file) {
+        LinkedHashMap<Facility, Integer> linkedHashMap = new LinkedHashMap<>();
+        try {
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String line = "";
+            while (true) {
+                line = br.readLine();
+                if (line == null) {
+                    break;
+                } else {
+                    String[] tests = line.split(",");
+                    String id = tests[0];
+                    String name = tests[1];
+                    double acreage = Double.parseDouble(tests[2]);
+                    double expense = Double.parseDouble(tests[3]);
+                    int quantity = Integer.parseInt(tests[4]);
+                    String date = tests[5];
+                    String roomStandard = tests[6];
+                    double poolArea = Double.parseDouble(tests[7]);
+                    int floors = Integer.parseInt(tests[8]);
+                    Integer value = Integer.parseInt(tests[9]);
+                    linkedHashMap.put(new Villa(id, name, acreage, expense, quantity, date, roomStandard, poolArea, floors), value);
+                }
+            }
+            br.close();
+            fr.close();
+
+        } catch (FileNotFoundException ex) {
+            throw new RuntimeException(ex);
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+        return linkedHashMap;
+    }
+
+    public static void writeFacility(LinkedHashMap<Facility, Integer> facilityIntegerLinkedHashMap, String file, boolean append) {
+        try {
+            FileWriter fw = new FileWriter(file, append);
+            BufferedWriter bw = new BufferedWriter(fw);
+            for (Map.Entry<Facility, Integer> e : facilityIntegerLinkedHashMap.entrySet()) {
+                bw.write(e.getKey().toStringFile() + "," + e.getValue());
+                bw.newLine();
+            }
+            bw.close();
+            fw.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static LinkedHashMap<Facility, Integer> readRoom(String file) {
+        LinkedHashMap<Facility, Integer> linkedHashMap = new LinkedHashMap<>();
+        try {
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String line = "";
+            while (true) {
+                line = br.readLine();
+                if (line == null) {
+                    break;
+                } else {
+                    String[] tests = line.split(",");
+                    String id = tests[0];
+                    String name = tests[1];
+                    double acreage = Double.parseDouble(tests[2]);
+                    double expense = Double.parseDouble(tests[3]);
+                    int quantity = Integer.parseInt(tests[4]);
+                    String date = tests[5];
+                    String freeService = tests[6];
+                    Integer value = Integer.parseInt(tests[7]);
+                    linkedHashMap.put(new Room(id, name, acreage, expense, quantity, date, freeService), value);
+                }
+            }
+            br.close();
+            fr.close();
+
+        } catch (FileNotFoundException ex) {
+            throw new RuntimeException(ex);
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+        return linkedHashMap;
+    }
+
+    public static LinkedHashMap<Facility, Integer> readHouse(String file) {
+        LinkedHashMap<Facility, Integer> linkedHashMap = new LinkedHashMap<>();
+        try {
+            FileReader fr = new FileReader(file);
+            BufferedReader br = new BufferedReader(fr);
+            String line = "";
+            while (true) {
+                line = br.readLine();
+                if (line == null) {
+                    break;
+                } else {
+                    String[] tests = line.split(",");
+                    String id = tests[0];
+                    String name = tests[1];
+                    double acreage = Double.parseDouble(tests[2]);
+                    double expense = Double.parseDouble(tests[3]);
+                    int quantity = Integer.parseInt(tests[4]);
+                    String date = tests[5];
+                    String roomStandard = tests[6];
+                    int floors = Integer.parseInt(tests[7]);
+                    Integer value = Integer.parseInt(tests[8]);
+                    linkedHashMap.put(new House(id, name, acreage, expense, quantity, date, roomStandard, floors), value);
+                }
+            }
+            br.close();
+            fr.close();
+
+        } catch (FileNotFoundException ex) {
+            throw new RuntimeException(ex);
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+        return linkedHashMap;
+    }
 
 }

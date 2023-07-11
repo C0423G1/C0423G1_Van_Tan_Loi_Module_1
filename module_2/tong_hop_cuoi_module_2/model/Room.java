@@ -16,8 +16,11 @@ public class Room extends Facility {
         this.freeService = freeService;
     }
 
-    @Override
+
     public String toString() {
-        return  "ROOM : "+" Mã dịch vụ " +getId() + "," +" Tên dịch vụ " + getName() + "," +"Diện tích sử dụng " + getAcreage() + "," + "Chi phí thuế : " + getExpense() + "," + "Số Lượng người : " +  getQuantity() + "," +"Kiểu Thuê " +  getDate() + "," +"Dịch Vụ Miễn Phí " + getFreeService();
+        return  "ROOM : "+" Mã dịch vụ " +getId() + "   |   " +" Tên dịch vụ " + getName() + "   |   " +"Diện tích sử dụng " + getAcreage() + "   |   " + "Chi phí thuê : " + getExpense() + "   |   " + "Số Lượng người : " +  getQuantity() + "   |   " +"Kiểu Thuê " +  getDate() + "   |   " +"Dịch Vụ Miễn Phí " + getFreeService();
+    }
+    public String toStringFile() {
+        return  getId() + "," + getName() + ","  + getAcreage() + "," + getExpense() + "," +  getQuantity() + "," + getDate() + "," + getFreeService();
     }
 }

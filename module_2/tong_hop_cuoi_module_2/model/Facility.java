@@ -70,8 +70,11 @@ public abstract class Facility {
         this.date = date;
     }
 
-    @Override
+
+    public String toStringFile() {
+        return  "Mã dịch vụ " +getId() + "   |   " +" Tên dịch vụ " + getName() + "   |   " +"Diện tích sử dụng " + getAcreage() + "   |   " + "Chi phí thuê : " + getExpense() + "   |   " + "Số Lượng người : " +  getQuantity() + "   |   " +"Kiểu Thuê " +  getDate() ;
+    }
     public String toString() {
-        return getId() + "," + getName() + "," + getAcreage() + "," + getExpense() + "," + getQuantity() + "," + getDate();
+        return  getId() + "," + getName() + ","  + getAcreage() + "," + getExpense() + "," +  getQuantity() + "," + getDate() ;
     }
 }

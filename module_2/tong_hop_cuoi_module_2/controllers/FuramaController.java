@@ -111,18 +111,46 @@ public class FuramaController {
                                 try {
                                     boolean flagFacility = true;
                                     do {
-                                        System.out.println("-----------------   Facility Management --------------- ");
+                                        System.out.println("-----------------   Quản lí cơ sở --------------- ");
                                         flagFacility = true;
                                         System.out.println("1 Cơ sở danh sách hiển thị" + "\n2 Thêm cơ sở mới" + "\n3 Hiển thị danh sách bảo trì cơ sở" + "\n4 Quay lại menu chính");
                                         int menuThree = Integer.parseInt(scanner.nextLine());
                                         switch (menuThree) {
                                             case 1:
                                                 flagFacility = false;
-                                                facilityService.display();
+                                                System.out.println("---------------Hiển Thị Danh Sách Cơ Sở -----------------");
+                                                boolean flagDisplayFacility = true;
+                                                do {
+                                                    try {
+                                                        flagDisplayFacility = true;
+                                                        System.out.println("1. Villa" + "\n2. House" + "\n3. Room" + "\n4. Quay lại menu");
+                                                        int checkNewFacility = Integer.parseInt(scanner.nextLine());
+                                                        if (checkNewFacility == 1) {
+                                                            facilityService.display(1);
+                                                            flagDisplayFacility = false;
+                                                        } else if (checkNewFacility == 2) {
+                                                            facilityService.display(2);
+                                                            flagDisplayFacility = false;
+                                                        } else if (checkNewFacility == 3) {
+                                                            facilityService.display(3);
+                                                            flagDisplayFacility = false;
+                                                        } else if (checkNewFacility == 4) {
+                                                            flagDisplayFacility = true;
+                                                        } else {
+                                                            System.out.println("Ngoài Phạm Vi TRuy Cập");
+                                                            flagDisplayFacility = false;
+                                                        }
+                                                    } catch (Exception ex) {
+                                                        ex.printStackTrace();
+                                                        flagDisplayFacility = false;
+                                                        System.out.println("Sai Định Dạng Vui Lòng Nhập Lại");
+                                                    }
+
+                                                } while (!flagDisplayFacility);
                                                 break;
                                             case 2:
                                                 flagFacility = false;
-                                                System.out.println("---------------Add New Facility-----------------");
+                                                System.out.println("---------------Thêm Mới Cơ Sở-----------------");
                                                 boolean flagNewFacility = true;
                                                 do {
                                                     try {

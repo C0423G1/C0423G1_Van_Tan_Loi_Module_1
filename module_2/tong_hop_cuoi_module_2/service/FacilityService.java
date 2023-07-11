@@ -15,11 +15,35 @@ import java.util.Scanner;
 public class FacilityService implements IFacilityService {
     IFacilityRepository facilityRepository = new FacilityRepository();
 
-    @Override
-    public void display() {
-        LinkedHashMap<Facility, Integer> integerLinkedHashMap = facilityRepository.display();
-        for (Map.Entry<Facility, Integer> f : integerLinkedHashMap.entrySet()) {
-            System.out.println(f.getKey() + "," + f.getValue());
+//    @Override
+//    public void display() {
+//        LinkedHashMap<Facility, Integer> integerLinkedHashMap = facilityRepository.display();
+//        for (Map.Entry<Facility, Integer> f : integerLinkedHashMap.entrySet()) {
+//            System.out.println(f.getKey() + "    |    Số lần booking : " + f.getValue());
+//        }
+//    }
+
+    public void display(int check) {
+        switch (check) {
+            case 1:
+                LinkedHashMap<Facility, Integer> integerLinkedHashMap = facilityRepository.display(1);
+                for (Map.Entry<Facility, Integer> f : integerLinkedHashMap.entrySet()) {
+                    System.out.println(f.getKey() + "    |    Số lần booking : " + f.getValue());
+                }
+                break;
+            case 2:
+                LinkedHashMap<Facility, Integer> integerLinkedHashMapp = facilityRepository.display(2);
+                for (Map.Entry<Facility, Integer> f : integerLinkedHashMapp.entrySet()) {
+                    System.out.println(f.getKey() + "    |    Số lần booking : " + f.getValue());
+                }
+                break;
+            case 3:
+                LinkedHashMap<Facility, Integer> integerLinkedHashMappp = facilityRepository.display(3);
+                for (Map.Entry<Facility, Integer> f : integerLinkedHashMappp.entrySet()) {
+                    System.out.println(f.getKey() + "    |    Số lần booking : " + f.getValue());
+                }
+                break;
+
         }
     }
 
@@ -39,7 +63,7 @@ public class FacilityService implements IFacilityService {
                             if (!Regex.checkVilla(id)) {
                                 System.out.println("Sai Định Dạng Vui Lòng Nhập Lại");
                             }
-                            if(!facilityRepository.isIdDuplicated(id)){
+                            if (!facilityRepository.isIdDuplicated(id,1)) {
                                 System.out.println("ID Trùng Vui lòng Nhập Lại");
                             }
                         } while (!Regex.checkVilla(id));
@@ -51,7 +75,7 @@ public class FacilityService implements IFacilityService {
                             if (!Regex.checkHouse(id)) {
                                 System.out.println("Sai Định Dạng Vui Lòng Nhập Lại");
                             }
-                            if(!facilityRepository.isIdDuplicated(id)){
+                            if (!facilityRepository.isIdDuplicated(id,2)) {
                                 System.out.println("ID Trùng Vui lòng Nhập Lại");
                             }
                         } while (!Regex.checkHouse(id));
@@ -63,7 +87,7 @@ public class FacilityService implements IFacilityService {
                             if (!Regex.checkRooom(id)) {
                                 System.out.println("Sai Định Dạng Vui Lòng Nhập Lại");
                             }
-                            if(!facilityRepository.isIdDuplicated(id)){
+                            if (!facilityRepository.isIdDuplicated(id,3)) {
                                 System.out.println("ID Trùng Vui lòng Nhập Lại");
                             }
                         } while (!Regex.checkRooom(id));
@@ -93,9 +117,9 @@ public class FacilityService implements IFacilityService {
                 double expense = 0;
                 while (true) {
                     try {
-                        System.out.println("Mời Nhập Chi Phí Thuế ( Từ 1 Đến 10)");
+                        System.out.println("Mời Nhập Chi Phí Thuê ");
                         expense = Double.parseDouble(scanner.nextLine());
-                        if (expense > 0 && expense <= 10) {
+                        if (expense > 0) {
                             break;
                         }
                     } catch (Exception e) {
@@ -143,7 +167,7 @@ public class FacilityService implements IFacilityService {
                         flagCheck = true;
                         System.out.println("Sai Định Dạng Vui Lòng Nhập Lại");
                     }
-                } while (!flagCheck);
+                } while (flagCheck);
                 int floors = 0;
                 String roomStandard = "";
                 if (check == 2 || check == 1) {
@@ -185,19 +209,19 @@ public class FacilityService implements IFacilityService {
                 }
                 switch (check) {
                     case 1:
-                        System.out.println("Thêm Thông Tin Villa Mới Thành Công");
+                        System.out.println("Thêm Thông Tin Villa.csv Mới Thành Công");
                         Villa villa = new Villa(id, name, acreage, expense, quantily, date, roomStandard, poolArea, floors);
-                        facilityRepository.add(villa);
+                        facilityRepository.add(villa,1);
                         break;
                     case 2:
                         System.out.println("Thêm Thông Tin House Mới Thành Công");
                         House house = new House(id, name, acreage, expense, quantily, date, roomStandard, floors);
-                        facilityRepository.add(house);
+                        facilityRepository.add(house,2);
                         break;
                     case 3:
                         System.out.println("Thêm Thông Tin Room Mới Thành Công");
                         Room room = new Room(id, name, acreage, expense, quantily, date, freeService);
-                        facilityRepository.add(room);
+                        facilityRepository.add(room,3);
                         break;
                 }
 

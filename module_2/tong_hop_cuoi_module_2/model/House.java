@@ -27,8 +27,11 @@ public class House extends Facility {
         this.floors = floors;
     }
 
-    @Override
     public String toString() {
-        return  "HOUSE : "+ "Mã dịch vụ " +getId() + "," +" Tên dịch vụ " + getName() + "," +"Diện tích sử dụng " + getAcreage() + "," + "Chi phí thuế : " + getExpense() + "," + "Số Lượng người : " +  getQuantity() + "," +"Kiểu Thuê " +  getDate() + "," +"Tiêu Chuẩn phòng " +  getRoomStandard() +  "," +  "Số tầng " + getFloors();
+        return "HOUSE : " + "Mã dịch vụ " + getId() + "   |   " + " Tên dịch vụ " + getName() + "   |   " + "Diện tích sử dụng " + getAcreage() + "   |   " + "Chi phí thuê : " + getExpense() + "   |   " + "Số Lượng người : " + getQuantity() + "   |   " + "Kiểu Thuê " + getDate() + "   |   " + "Tiêu Chuẩn phòng " + getRoomStandard() + "   |   " + "Số tầng " + getFloors();
+    }
+
+    public String toStringFile() {
+        return getId() + "," + getName() + "," + getAcreage() + "," + getExpense() + "," + getQuantity() + "," + getDate() + "," + getRoomStandard() + "," + getFloors();
     }
 }

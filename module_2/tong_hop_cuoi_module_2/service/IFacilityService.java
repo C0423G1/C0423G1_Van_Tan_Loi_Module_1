@@ -8,8 +8,7 @@ import java.util.List;
 
 public interface IFacilityService extends Service {
 
-    void display();
-
     void add(int check);
 
+    void display(int check);
 }
