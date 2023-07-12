@@ -176,4 +176,16 @@ join hop_dong on khach_hang.ma_khach_hang=hop_dong.ma_khach_hang
 join hop_dong_chi_tiet on hop_dong.ma_hop_dong=hop_dong_chi_tiet.ma_hop_dong
 join dich_vu_di_kem on dich_vu_di_kem.ma_dich_vu_di_kem=hop_dong_chi_tiet.ma_dich_vu_di_kem
 join dich_vu on hop_dong.ma_dich_vu=dich_vu.ma_dich_vu;
+select dich_vu.ma_dich_vu,
+dich_vu.ten_dich_vu,
+dich_vu.dien_tich_ho_boi,
+dich_vu.chi_phi_thue 
+from dich_vu
+join hop_dong on dich_vu.ma_dich_vu = hop_dong.ma_dich_vu
+where count(*) = 0
+and hop_dong.ma_dich_vu in(1,2,3,4,5,6)
+and year(hop_dong.ngay_lam_hop_dong)=2021
+and month(hop_dong.ngay_lam_hop_dong) in(1,2,3)
+group by hop_dong.ma_dich_vu;
+
 
