@@ -57,6 +57,12 @@ SELECT c.c_name AS customer_name
 FROM customer c
 LEFT JOIN orders o ON c.c_id = o.c_id
 WHERE o.o_id IS NULL;
+SELECT o.o_id AS order_id, o.o_date AS order_date,
+    SUM(od.od_qty * p.p_price) AS total_price
+FROM orders o
+JOIN orderdetail od ON o.o_id = od.o_id
+JOIN product p ON od.p_id = p.p_id
+GROUP BY o.o_id, o.o_date;
 
 
 

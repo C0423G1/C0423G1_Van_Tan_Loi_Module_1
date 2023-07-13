@@ -154,38 +154,146 @@ insert table_furama.hop_dong_chi_tiet(so_luong,ma_hop_dong,ma_dich_vu_di_kem) va
 1,1,3),(
 2,1,2),(
 2,12,2);
+-- task 2:
 select*from table_furama.nhan_vien where ho_ten like 'T%' or  ho_ten like 'H%' or  ho_ten like 'K%' and length(ho_ten)<=15 ; 
+-- task 3 : 
 select*from table_furama.nhan_vien where (year(curdate()))- (year(ngay_sinh))>=18 and (dia_chi like "%Đà Nẵng%" or dia_chi like "%Quảng Trị%") ;
-select khach_hang.ma_khach_hang, khach_hang.ho_ten,count(hop_dong.ma_khach_hang) as so_lan_dat_phong 
+-- task 4:
+select khach_hang.ma_khach_hang,
+ khach_hang.ho_ten,
+count(hop_dong.ma_khach_hang) as so_lan_dat_phong 
 from table_furama.khach_hang 
 join table_furama.hop_dong on khach_hang.ma_khach_hang = hop_dong.ma_khach_hang 
 where  khach_hang.ma_loai_khach = 1 
 group by hop_dong.ma_khach_hang 
 order by so_lan_dat_phong ;
+-- task 5:
 select khach_hang.ma_khach_hang,
 khach_hang.ho_ten,
 loai_khach.ten_loai_khach,
-hop_dong.ma_hop_dong,
-dich_vu.ten_dich_vu,
+ifnull(hop_dong.ma_hop_dong,"") as ma_hop_dong ,
+ifnull(dich_vu.ten_dich_vu,"") as ten_dich_vu,
+ifnull(hop_dong.ngay_lam_hop_dong,"") as ngay_lam_hop_dong,
+ifnull(hop_dong.ngay_ket_thuc,"") as ngay_ket_thuc,
+ifnull((dich_vu.chi_phi_thue + (dich_vu_di_kem.gia*hop_dong_chi_tiet.so_luong)),0) as tong_tien 
+from loai_khach
+left join khach_hang on loai_khach.ma_loai_khach=khach_hang.ma_loai_khach
+left join hop_dong on khach_hang.ma_khach_hang=hop_dong.ma_khach_hang
+left join hop_dong_chi_tiet on hop_dong.ma_hop_dong=hop_dong_chi_tiet.ma_hop_dong
+left join dich_vu_di_kem on dich_vu_di_kem.ma_dich_vu_di_kem=hop_dong_chi_tiet.ma_dich_vu_di_kem
+left join dich_vu on hop_dong.ma_dich_vu=dich_vu.ma_dich_vu
+order by khach_hang.ma_khach_hang;
+-- task 6 :
+SELECT d.ma_dich_vu, d.ten_dich_vu, d.dien_tich, d.chi_phi_thue, l.ten_loai_dich_vu
+FROM dich_vu d
+JOIN loai_dich_vu l ON d.ma_loai_dich_vu = l.ma_loai_dich_vu
+WHERE d.ma_dich_vu NOT IN (
+  SELECT DISTINCT ma_dich_vu
+  FROM hop_dong
+  WHERE YEAR(ngay_lam_hop_dong) = 2021 AND QUARTER(ngay_lam_hop_dong) = 1
+);     
+-- task 7 :
+     SELECT
+    dich_vu.ma_dich_vu,
+    dich_vu.ten_dich_vu,
+    dich_vu.dien_tich,
+    dich_vu.so_nguoi_toi_da,
+    dich_vu.chi_phi_thue,
+    loai_dich_vu.ten_loai_dich_vu
+FROM
+    dich_vu
+    JOIN loai_dich_vu ON dich_vu.ma_loai_dich_vu = loai_dich_vu.ma_loai_dich_vu
+    JOIN hop_dong ON dich_vu.ma_dich_vu = hop_dong.ma_dich_vu
+WHERE
+    YEAR(hop_dong.ngay_lam_hop_dong) = 2020
+    AND hop_dong.ma_khach_hang  NOT IN  (
+        SELECT ma_khach_hang
+        FROM hop_dong
+        WHERE YEAR(hop_dong.ngay_lam_hop_dong) = 2021
+    );
+--     task 8 :
+-- 1.
+select distinct(ho_ten) from khach_hang;
+-- 2.
+select ho_ten from khach_hang 
+group by ho_ten
+having count(*) =1 ;
+-- task 9 :
+select  month(hop_dong.ngay_lam_hop_dong) as thang,
+count( distinct  hop_dong.ma_khach_hang) as so_luong_khach_hang
+from hop_dong 
+where year(hop_dong.ngay_lam_hop_dong) = 2021 
+group by  month(hop_dong.ngay_lam_hop_dong);
+-- task 10 :
+select hop_dong.ma_hop_dong,
 hop_dong.ngay_lam_hop_dong,
 hop_dong.ngay_ket_thuc,
-(dich_vu.chi_phi_thue + (dich_vu_di_kem.gia*hop_dong_chi_tiet.so_luong)) as tong_tien 
-from loai_khach
-join khach_hang on loai_khach.ma_loai_khach=khach_hang.ma_loai_khach
-join hop_dong on khach_hang.ma_khach_hang=hop_dong.ma_khach_hang
+hop_dong.tien_dat_coc,
+sum(hop_dong_chi_tiet.so_luong) as so_luong_dich_vu_di_kem
+from hop_dong
 join hop_dong_chi_tiet on hop_dong.ma_hop_dong=hop_dong_chi_tiet.ma_hop_dong
-join dich_vu_di_kem on dich_vu_di_kem.ma_dich_vu_di_kem=hop_dong_chi_tiet.ma_dich_vu_di_kem
-join dich_vu on hop_dong.ma_dich_vu=dich_vu.ma_dich_vu;
-select dich_vu.ma_dich_vu,
-dich_vu.ten_dich_vu,
-dich_vu.dien_tich_ho_boi,
-dich_vu.chi_phi_thue 
-from dich_vu
-join hop_dong on dich_vu.ma_dich_vu = hop_dong.ma_dich_vu
-where count(*) = 0
-and hop_dong.ma_dich_vu in(1,2,3,4,5,6)
-and year(hop_dong.ngay_lam_hop_dong)=2021
-and month(hop_dong.ngay_lam_hop_dong) in(1,2,3)
-group by hop_dong.ma_dich_vu;
-
+group by hop_dong.ma_hop_dong,
+hop_dong.ngay_lam_hop_dong,
+hop_dong.ngay_ket_thuc,
+hop_dong.tien_dat_coc ;
+-- task 11 :
+select dich_vu_di_kem.ma_dich_vu_di_kem,
+dich_vu_di_kem.ten_dich_vu_di_kem
+from dich_vu_di_kem
+join hop_dong_chi_tiet on hop_dong_chi_tiet.ma_dich_vu_di_kem=dich_vu_di_kem.ma_dich_vu_di_kem
+join hop_dong on hop_dong.ma_hop_dong=hop_dong_chi_tiet.ma_hop_dong
+join khach_hang on khach_hang.ma_khach_hang=hop_dong.ma_khach_hang
+join loai_khach on loai_khach.ma_loai_khach=khach_hang.ma_loai_khach
+where khach_hang.ma_loai_khach =1
+and (khach_hang.dia_chi like '%Vinh%' or khach_hang.dia_chi like '%Quảng Ngãi%');
+-- task 12 
+SELECT hop_dong.ma_hop_dong,
+       nhan_vien.ho_ten AS ho_ten_nhan_vien,
+       khach_hang.ho_ten AS ho_ten_khach_hang,
+       khach_hang.so_dien_thoai,
+       dich_vu.ten_dich_vu,
+       IFNULL(SUM(hop_dong.tien_dat_coc),0)AS tien_dat_coc,
+       IFNULL(SUM(hop_dong_chi_tiet.so_luong),0) AS so_luong_dich_vu_di_kem
+FROM hop_dong
+left JOIN hop_dong_chi_tiet ON hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
+JOIN khach_hang ON hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
+JOIN nhan_vien ON hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien
+JOIN dich_vu ON dich_vu.ma_dich_vu = hop_dong.ma_dich_vu
+WHERE hop_dong.ma_dich_vu IN (
+        SELECT ma_dich_vu
+        FROM hop_dong
+        WHERE YEAR(hop_dong.ngay_lam_hop_dong) = 2020 AND
+        QUARTER(hop_dong.ngay_lam_hop_dong) = 4
+    )
+  AND hop_dong.ma_dich_vu NOT IN (
+        SELECT ma_dich_vu
+        FROM hop_dong
+        WHERE YEAR(hop_dong.ngay_lam_hop_dong) = 2021 AND
+        MONTH(hop_dong.ngay_lam_hop_dong) IN (1, 2, 3, 4, 5, 6)
+    )
+GROUP BY hop_dong.ma_hop_dong;
+-- task 13 : 
+SELECT dich_vu_di_kem.ma_dich_vu_di_kem, dich_vu_di_kem.ten_dich_vu_di_kem, sum(hop_dong_chi_tiet.so_luong) AS so_lan_su_dung
+FROM hop_dong_chi_tiet 
+JOIN dich_vu_di_kem  ON  hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
+GROUP BY dich_vu_di_kem.ma_dich_vu_di_kem, dich_vu_di_kem.ten_dich_vu_di_kem
+HAVING  sum(hop_dong_chi_tiet.so_luong) = (
+  SELECT MAX(so_lan_su_dung)
+  FROM (
+    SELECT sum(hop_dong_chi_tiet.so_luong)AS so_lan_su_dung
+    FROM hop_dong_chi_tiet
+    GROUP BY ma_dich_vu_di_kem
+  ) AS temp
+);
+-- task 14
+SELECT 
+hop_dong.ma_hop_dong,
+dich_vu_di_kem.ma_dich_vu_di_kem,
+dich_vu_di_kem.ten_dich_vu_di_kem,
+count(hop_dong_chi_tiet.ma_dich_vu_di_kem) AS so_lan_su_dung
+FROM hop_dong
+JOIN hop_dong_chi_tiet ON hop_dong.ma_hop_dong=hop_dong_chi_tiet.ma_hop_dong
+JOIN dich_vu_di_kem  ON  hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
+GROUP BY dich_vu_di_kem.ma_dich_vu_di_kem, dich_vu_di_kem.ten_dich_vu_di_kem,hop_dong.ma_hop_dong
+HAVING  count(hop_dong_chi_tiet.ma_dich_vu_di_kem) = 1;
 
