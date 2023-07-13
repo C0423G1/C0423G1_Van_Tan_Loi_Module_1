@@ -212,12 +212,16 @@ WHERE
         WHERE YEAR(hop_dong.ngay_lam_hop_dong) = 2021
     );
 --     task 8 :
--- 1.
-select distinct(ho_ten) from khach_hang;
--- 2.
-select ho_ten from khach_hang 
-group by ho_ten
-having count(*) =1 ;
+SELECT DISTINCT ho_ten
+FROM khach_hang;
+
+SELECT ho_ten
+FROM khach_hang
+GROUP BY ho_ten;
+
+SELECT DISTINCT kh.ho_ten
+FROM khach_hang kh
+INNER JOIN hop_dong hd ON kh.ma_khach_hang = hd.ma_khach_hang;
 -- task 9 :
 select  month(hop_dong.ngay_lam_hop_dong) as thang,
 count( distinct  hop_dong.ma_khach_hang) as so_luong_khach_hang
@@ -286,14 +290,24 @@ HAVING  sum(hop_dong_chi_tiet.so_luong) = (
   ) AS temp
 );
 -- task 14
-SELECT 
-hop_dong.ma_hop_dong,
-dich_vu_di_kem.ma_dich_vu_di_kem,
-dich_vu_di_kem.ten_dich_vu_di_kem,
-count(hop_dong_chi_tiet.ma_dich_vu_di_kem) AS so_lan_su_dung
-FROM hop_dong
-JOIN hop_dong_chi_tiet ON hop_dong.ma_hop_dong=hop_dong_chi_tiet.ma_hop_dong
-JOIN dich_vu_di_kem  ON  hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
-GROUP BY dich_vu_di_kem.ma_dich_vu_di_kem, dich_vu_di_kem.ten_dich_vu_di_kem,hop_dong.ma_hop_dong
-HAVING  count(hop_dong_chi_tiet.ma_dich_vu_di_kem) = 1;
-
+set sql_mode =0 ;
+SELECT
+    hd.ma_hop_dong,
+    dv.ten_dich_vu,
+    dvdk.ten_dich_vu_di_kem,
+    COUNT(hdct.ma_dich_vu_di_kem) AS so_lan_su_dung
+FROM
+    hop_dong hd
+    JOIN dich_vu dv ON hd.ma_dich_vu = dv.ma_dich_vu
+    JOIN hop_dong_chi_tiet hdct ON hd.ma_hop_dong = hdct.ma_hop_dong
+    JOIN dich_vu_di_kem dvdk ON hdct.ma_dich_vu_di_kem = dvdk.ma_dich_vu_di_kem
+GROUP BY
+    dvdk.ma_dich_vu_di_kem
+HAVING
+    so_lan_su_dung = 1;
+    set sql_mode =1;
+-- task 15 :
+select nhan_vien.ma_nhan_vien,nhan_vien.ho_ten,trinh_do.ten_trinh_do,bo_phan.ten_bo_phan,nhan_vien.so_dien_thoai,nhan_vien.dia_chi
+from nhan_vien
+join trinh_do on nhan_vien.ma_trinh_do=trinh_do.ma_trinh_do
+join bo_phan on nhan_vien.ma_bo_phan=bo_phan.ma_bo_phan

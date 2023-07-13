@@ -57,6 +57,16 @@ SELECT c.c_name AS customer_name
 FROM customer c
 LEFT JOIN orders o ON c.c_id = o.c_id
 WHERE o.o_id IS NULL;
+SELECT
+  o.o_id AS invoice_id,
+  o.o_date AS sale_date,
+  SUM(od.od_qty * p.p_price) AS total_price
+FROM
+  orders AS o
+  JOIN orderdetail AS od ON o.o_id = od.o_id
+  JOIN product AS p ON od.p_id = p.p_id
+GROUP BY
+  o.o_id, o.o_date;
 
 
 
