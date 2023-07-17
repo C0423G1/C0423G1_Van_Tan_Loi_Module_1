@@ -370,7 +370,10 @@ FROM nhan_vien
 UNION ALL
 SELECT ma_khach_hang AS id, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi
 FROM khach_hang;
-
+-- task 21 : 
+create view  v_nhan_vien as 
+select nhan_vien.ma_nhan_vien,nhan_vien.ho_ten,nhan_vien.ngay_sinh,nhan_vien.so_cmnd,nhan_vien.luong,nhan_vien.so_dien_thoai,nhan_vien.email,nhan_vien.dia_chi,vitri.ten_vi_tri,trinh_do.ten_trinh_do,bo_phan.ten_bo_phan
+from nhan_vien 
 
 
 
