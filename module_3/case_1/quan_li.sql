@@ -324,3 +324,57 @@ WHERE nhan_vien.ma_nhan_vien NOT IN (select * from
     LEFT JOIN hop_dong ON nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
     WHERE YEAR(hop_dong.ngay_lam_hop_dong) IN (2019,2020,2021)) as temp
 );
+-- task 17 :
+SET SQL_SAFE_UPDATES = 0;
+UPDATE khach_hang
+JOIN loai_khach ON khach_hang.ma_loai_khach = loai_khach.ma_loai_khach
+JOIN hop_dong ON khach_hang.ma_khach_hang = hop_dong.ma_khach_hang
+JOIN dich_vu ON hop_dong.ma_dich_vu = dich_vu.ma_dich_vu
+JOIN hop_dong_chi_tiet ON hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
+JOIN dich_vu_di_kem ON hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
+SET khach_hang.ma_loai_khach = 1
+WHERE khach_hang.ma_khach_hang IN ( select*from (
+    SELECT khach_hang.ma_khach_hang
+    FROM khach_hang
+    JOIN loai_khach ON khach_hang.ma_loai_khach = loai_khach.ma_loai_khach
+    JOIN hop_dong ON khach_hang.ma_khach_hang = hop_dong.ma_khach_hang
+    JOIN dich_vu ON hop_dong.ma_dich_vu = dich_vu.ma_dich_vu
+    JOIN hop_dong_chi_tiet ON hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
+    JOIN dich_vu_di_kem ON hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
+    WHERE YEAR(hop_dong.ngay_lam_hop_dong) = 2021
+    AND khach_hang.ma_loai_khach = 2 
+    AND (dich_vu_di_kem.gia * hop_dong_chi_tiet.so_luong + dich_vu.chi_phi_thue)  > 10000000) as temp
+);
+SET SQL_SAFE_UPDATES = 1;
+-- task 18 :
+alter table khach_hang 
+add count int ;
+update khach_hang
+left JOIN hop_dong ON khach_hang.ma_khach_hang = hop_dong.ma_khach_hang
+set count = 1 
+WHERE YEAR(hop_dong.ngay_lam_hop_dong) < 2021;
+-- task 19 : 
+UPDATE dich_vu_di_kem
+SET gia = gia * 2
+WHERE ma_dich_vu_di_kem IN (
+    SELECT ma_dich_vu_di_kem
+    FROM hop_dong_chi_tiet
+    JOIN hop_dong ON hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
+    WHERE YEAR(hop_dong.ngay_lam_hop_dong) = 2020
+    GROUP BY hop_dong_chi_tiet.ma_dich_vu_di_kem
+    HAVING sum(hop_dong_chi_tiet.so_luong) > 10
+);
+-- task 20 :
+SELECT ma_nhan_vien AS id, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi
+FROM nhan_vien
+UNION ALL
+SELECT ma_khach_hang AS id, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi
+FROM khach_hang;
+
+
+
+
+
+
+
+
