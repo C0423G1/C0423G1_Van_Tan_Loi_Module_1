@@ -336,11 +336,6 @@ SET khach_hang.ma_loai_khach = 1
 WHERE khach_hang.ma_khach_hang IN ( select*from (
     SELECT khach_hang.ma_khach_hang
     FROM khach_hang
-    JOIN loai_khach ON khach_hang.ma_loai_khach = loai_khach.ma_loai_khach
-    JOIN hop_dong ON khach_hang.ma_khach_hang = hop_dong.ma_khach_hang
-    JOIN dich_vu ON hop_dong.ma_dich_vu = dich_vu.ma_dich_vu
-    JOIN hop_dong_chi_tiet ON hop_dong.ma_hop_dong = hop_dong_chi_tiet.ma_hop_dong
-    JOIN dich_vu_di_kem ON hop_dong_chi_tiet.ma_dich_vu_di_kem = dich_vu_di_kem.ma_dich_vu_di_kem
     WHERE YEAR(hop_dong.ngay_lam_hop_dong) = 2021
     AND khach_hang.ma_loai_khach = 2 
     AND (dich_vu_di_kem.gia * hop_dong_chi_tiet.so_luong + dich_vu.chi_phi_thue)  > 10000000) as temp
@@ -371,9 +366,30 @@ UNION ALL
 SELECT ma_khach_hang AS id, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi
 FROM khach_hang;
 -- task 21 : 
-create view  v_nhan_vien as 
-select nhan_vien.ma_nhan_vien,nhan_vien.ho_ten,nhan_vien.ngay_sinh,nhan_vien.so_cmnd,nhan_vien.luong,nhan_vien.so_dien_thoai,nhan_vien.email,nhan_vien.dia_chi,vitri.ten_vi_tri,trinh_do.ten_trinh_do,bo_phan.ten_bo_phan
-from nhan_vien 
+CREATE VIEW v_nhan_vien AS
+SELECT nhan_vien.ma_nhan_vien, nhan_vien.ho_ten, nhan_vien.ngay_sinh, nhan_vien.so_cmnd, nhan_vien.luong, nhan_vien.so_dien_thoai, nhan_vien.email, nhan_vien.dia_chi, vi_tri.ten_vi_tri, trinh_do.ten_trinh_do, bo_phan.ten_bo_phan
+FROM nhan_vien
+JOIN vi_tri ON nhan_vien.ma_vi_tri = vi_tri.ma_vi_tri
+JOIN trinh_do ON trinh_do.ma_trinh_do = nhan_vien.ma_trinh_do
+JOIN bo_phan ON bo_phan.ma_bo_phan = nhan_vien.ma_bo_phan
+JOIN hop_dong ON nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
+WHERE nhan_vien.dia_chi like "%Huế%"
+AND DATE(hop_dong.ngay_lam_hop_dong) = 2021-07-14;
+-- task 22 :
+UPDATE nhan_vien
+SET dia_chi = 'Liên Chiểu'
+WHERE ma_nhan_vien IN (
+    SELECT nhan_vien.ma_nhan_vien
+    FROM nhan_vien
+    JOIN vi_tri ON nhan_vien.ma_vi_tri = vi_tri.ma_vi_tri
+    JOIN trinh_do ON trinh_do.ma_trinh_do = nhan_vien.ma_trinh_do
+    JOIN bo_phan ON bo_phan.ma_bo_phan = nhan_vien.ma_bo_phan
+    JOIN hop_dong ON nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
+    WHERE nhan_vien.dia_chi LIKE '%Hải Châu%'
+    AND DATE(hop_dong.ngay_lam_hop_dong) = '2019-12-12'
+);
+
+
 
 
 
