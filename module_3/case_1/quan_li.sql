@@ -338,7 +338,7 @@ WHERE khach_hang.ma_khach_hang IN ( select*from (
     FROM khach_hang
     WHERE YEAR(hop_dong.ngay_lam_hop_dong) = 2021
     AND khach_hang.ma_loai_khach = 2 
-    AND (dich_vu_di_kem.gia * hop_dong_chi_tiet.so_luong + dich_vu.chi_phi_thue)  > 10000000) as temp
+    AND (dich_vu_di_kem.gia * hop_dong_chi_tiet.so_luong + dich_vu.chi_phi_thue)  > 1000000) as temp
 );
 SET SQL_SAFE_UPDATES = 1;
 -- task 18 :
