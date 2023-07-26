@@ -1,4 +1,4 @@
-package com.example.productdiscountcalculator;
+package com.example.calculator;
 
 import java.io.*;
 import javax.servlet.http.*;

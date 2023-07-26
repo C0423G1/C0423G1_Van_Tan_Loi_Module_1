@@ -1,30 +1,27 @@
 package com.example.productdiscountcalculator;
 
+import javax.servlet.*;
+import javax.servlet.http.*;
+import javax.servlet.annotation.*;
 import java.io.IOException;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-@WebServlet("/display-discount")
+@WebServlet(name = "DiscountServlet ", value = "/DiscountServlet")
 public class DiscountServlet extends HttpServlet {
-    private static final long serialVersionUID = 1L;
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        String productDescription = request.getParameter("productDescription");
-        double listPrice = Double.parseDouble(request.getParameter("listPrice"));
-        double discountPercent = Double.parseDouble(request.getParameter("discountPercent"));
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String productDescription = request.getParameter("product");
+        double listPrice = Double.parseDouble(request.getParameter("price"));
+        double discountPercent = Double.parseDouble(request.getParameter("discount"));
         double discountAmount = listPrice * discountPercent * 0.01;
         double discountPrice = listPrice - discountAmount;
-        request.setAttribute("productDescription", productDescription);
-        request.setAttribute("listPrice", listPrice);
-        request.setAttribute("discountPercent", discountPercent);
-        request.setAttribute("discountAmount", discountAmount);
-        request.setAttribute("discountPrice", discountPrice);
-
-        request.getRequestDispatcher("display-discount.jsp").forward(request, response);
+        request.setAttribute("amount", discountAmount);
+        request.setAttribute("discountprice", discountPrice);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("display.jsp");
+        requestDispatcher.forward(request, response);
     }
 }

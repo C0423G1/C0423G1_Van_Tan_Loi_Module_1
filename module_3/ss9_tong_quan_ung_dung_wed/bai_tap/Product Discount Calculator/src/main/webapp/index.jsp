@@ -2,21 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Product Discount Calculator</title>
+  <title>JSP - Hello World</title>
 </head>
 <body>
-<h1>Product Discount Calculator</h1>
-<form action="/display-discount" method="post">
-  <label for="productDescription">Product Description:</label>
-  <input type="text" id="productDescription" name="productDescription" required><br>
-
-  <label for="listPrice">List Price:</label>
-  <input type="number" id="listPrice" name="listPrice" required><br>
-
-  <label for="discountPercent">Discount Percent:</label>
-  <input type="number" id="discountPercent" name="discountPercent" required><br>
-
-  <input type="submit" value="Calculate Discount">
+<form action="/DiscountServlet" method="post">
+<h5>Product Description : <input name="product"></h5>
+<h5>List Price :<input name="price"></h5>
+<h5>Discount Percent : <input name="discount"></h5>
+<input type="submit">Next</input>
 </form>
 </body>
-</html></html>
+</html>

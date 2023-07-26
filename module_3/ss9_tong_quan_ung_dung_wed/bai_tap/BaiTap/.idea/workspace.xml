@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e46f0993-6989-4df3-a5c0-9f3832bf0f03" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../case_2/shopping_cart/view/demo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_2/shopping_cart/view/css.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_2/shopping_cart/view/css.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/src/main/java/com/example/productdiscountcalculator/DiscountServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/src/main/java/com/example/productdiscountcalculator/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/src/main/webapp/display-discount.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Product Discount Calculator/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/src/main/java/com/example/productdiscountcalculator/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ProductDiscountCalculator/src/main/webapp/index.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2T5cD8VGo424lhsuUcu7J1uixm4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e46f0993-6989-4df3-a5c0-9f3832bf0f03" name="Changes" comment="" />
+      <created>1690336262047</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690336262047</updated>
+      <workItem from="1690336263036" duration="118000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
