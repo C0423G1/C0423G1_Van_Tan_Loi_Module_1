@@ -10,7 +10,7 @@
         }
 
         table, td, tr {
-            border: black;
+            border: black solid 1px;
         }
     </style>
 </head>

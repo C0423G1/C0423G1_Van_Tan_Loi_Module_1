@@ -5,43 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1eb456b-21ec-488e-a07d-794b973673a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../case_2/shopping_cart/view/demo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/customer/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/customer/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Customer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/src/main/webapp/display.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../case_2/shopping_cart/view/css.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_2/shopping_cart/view/css.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/src/main/java/com/example/productdiscountcalculator/DiscountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/src/main/java/com/example/productdiscountcalculator/DiscountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/src/main/java/com/example/productdiscountcalculator/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/src/main/webapp/display-discount.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/src/main/java/com/example/productdiscountcalculator/HelloServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/ProductDiscountCalculator/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Customer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +48,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/CodeGymC0423G1/codegym/module_1/module_3/ss10_ jsp_va_jstl/bai_tap/Calculator",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -195,6 +162,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690339912285</updated>
       <workItem from="1690339913275" duration="3825000" />
+      <workItem from="1690378437055" duration="942000" />
     </task>
     <servers />
   </component>

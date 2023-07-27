@@ -24,7 +24,7 @@ public class CalculateServlet extends HttpServlet {
                 result = String.valueOf(firstOperand / secondOperand);
             }
         } catch (NullPointerException e) {
-            result ="Không được chia cho 0";
+            result = "Không được chia cho 0";
         }catch (Exception e){
             result = "Lôĩ";
         }
