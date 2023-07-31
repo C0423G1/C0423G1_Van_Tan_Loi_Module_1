@@ -1,14 +1,15 @@
-package com.example.productmanagement.service;
+package com.example.demomvc.service;
 
-import com.example.productmanagement.model.Product;
+import com.example.demomvc.model.Product;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public interface IProductService {
 
     void add(Product product);
 
-    List<Product> display();
+    List<Product> display() throws SQLException;
 
     void delete(int index);
 

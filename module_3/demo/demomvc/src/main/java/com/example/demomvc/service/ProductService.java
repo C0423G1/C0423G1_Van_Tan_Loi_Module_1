@@ -1,9 +1,10 @@
-package com.example.productmanagement.service;
+package com.example.demomvc.service;
 
-import com.example.productmanagement.model.Product;
-import com.example.productmanagement.repository.IProductRepository;
-import com.example.productmanagement.repository.ProductRepository;
+import com.example.demomvc.model.Product;
+import com.example.demomvc.repository.IProductRepository;
+import com.example.demomvc.repository.ProductRepository;
 
+import java.sql.SQLException;
 import java.util.List;
 
 public class ProductService implements IProductService {
@@ -15,7 +16,7 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public List<Product> display() {
+    public List<Product> display() throws SQLException {
         return repository.display();
     }
 

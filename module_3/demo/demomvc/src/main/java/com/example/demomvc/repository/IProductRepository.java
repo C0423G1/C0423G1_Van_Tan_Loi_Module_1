@@ -1,7 +1,8 @@
-package com.example.productmanagement.repository;
+package com.example.demomvc.repository;
 
-import com.example.productmanagement.model.Product;
+import com.example.demomvc.model.Product;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 public interface IProductRepository {
     void add(Product product);
 
-    List<Product> display();
+    List<Product> display() throws SQLException;
 
     void delete(int index);
 

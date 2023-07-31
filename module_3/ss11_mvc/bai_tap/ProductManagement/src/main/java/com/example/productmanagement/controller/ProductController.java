@@ -1,18 +1,17 @@
 package com.example.productmanagement.controller;
 
 import com.example.productmanagement.model.Product;
-import com.example.productmanagement.repository.IProductRepository;
-import com.example.productmanagement.repository.ProductRepository;
-
+import com.example.productmanagement.service.IProductService;
+import com.example.productmanagement.service.ProductService;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
-@WebServlet(name = "ProductServlet", value = "/ProductServlet")
-public class ProductServlet extends HttpServlet {
-    IProductRepository repository = new ProductRepository();
+@WebServlet(name = "ProductController", value = "/ProductController")
+public class ProductController extends HttpServlet {
+    IProductService service = new ProductService();
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,13 +20,13 @@ public class ProductServlet extends HttpServlet {
             action = "";
         }
         switch (action) {
-            case "Thêm Mới":
+            case "Create":
                 showAdd(request, response);
                 break;
-            case "Xoá":
+            case "Delete":
                 showDelete(request, response);
                 break;
-            case "Sửa":
+            case "Edit":
                 showEdit(request, response);
                 break;
             default:
@@ -40,37 +39,50 @@ public class ProductServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         switch (action) {
-            case "Hoàn Thành Thêm Mới":
+            case "Create":
                 add(request, response);
-            case "Hoàn Thành Sửa":
+                break;
+            case "Edit":
                 edit(request, response);
+                break;
+            case "Delete":
+                delete(request, response);
+                break;
         }
     }
 
     private void showEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
-        Product product = repository.findById(id-1);
+        Product product = service.findById(id);
         request.setAttribute("editproduct", product);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/edit.jsp");
         requestDispatcher.forward(request, response);
     }
 
     private void showAdd(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = service.autoId()+1;
+        request.setAttribute("id",id);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/add.jsp");
         requestDispatcher.forward(request, response);
     }
 
     private void delete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/add.jsp");
+        int index = Integer.parseInt(request.getParameter("id"));
+        service.findById(index);
+        service.delete(index);
+        response.sendRedirect("/ProductController");
+    }
+
+    private void showDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("id"));
+        Product product = service.findById(id);
+        request.setAttribute("editproduct", product);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/delete.jsp");
         requestDispatcher.forward(request, response);
     }
 
-    private void showDelete(HttpServletRequest request, HttpServletResponse response) {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/delete.jsp");
-    }
-
     private void showList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ArrayList<Product> products = repository.display();
+        List<Product> products = service.display();
         request.setAttribute("products", products);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/display.jsp");
         dispatcher.forward(request, response);
@@ -82,20 +94,17 @@ public class ProductServlet extends HttpServlet {
         double gia = Double.parseDouble(request.getParameter("gia"));
         String moTa = request.getParameter("mota");
         String nhaSanXuat = request.getParameter("nhasanxuat");
-        repository.add(new Product(id, name, gia, moTa, nhaSanXuat));
-        response.sendRedirect("/ProductServlet");
+        service.add(new Product(id, name, gia, moTa, nhaSanXuat));
+        response.sendRedirect("/ProductController");
     }
 
     private void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = (Integer.parseInt(request.getParameter("id")))-1;
+        int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        repository.editName(id, name);
         double gia = Double.parseDouble(request.getParameter("gia"));
-        repository.editGia(id, gia);
         String moTa = request.getParameter("mota");
-        repository.editMoTa(id, moTa);
         String nhaSanXuat = request.getParameter("nhasanxuat");
-        repository.editNhaSanXuat(id, nhaSanXuat);
-        response.sendRedirect("/ProductServlet");
+        service.edit(new Product(id, name, gia, moTa, nhaSanXuat));
+        response.sendRedirect("/ProductController");
     }
 }
