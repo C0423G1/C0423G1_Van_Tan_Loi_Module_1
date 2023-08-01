@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1eb456b-21ec-488e-a07d-794b973673a2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Customer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Customer.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_tong_quan_ung_dung_wed/bai_tap/Product Discount Calculator/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_2/bookingTour/src/main/java/com/example/bookingtour/Model/Tours.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_2/bookingTour/src/main/java/com/example/bookingtour/Model/Tours.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../demo/demomvc/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../demo/demomvc/.idea/gradle.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +17,23 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Customer" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -48,7 +64,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/CodeGymC0423G1/codegym/module_1/module_3/ss10_ jsp_va_jstl/bai_tap/Calculator",
+    "last_opened_file_path": "C:/CodeGymC0423G1/codegym/module_1/module_3/ss12_jdbc&crud/User",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -163,6 +179,7 @@
       <updated>1690339912285</updated>
       <workItem from="1690339913275" duration="3825000" />
       <workItem from="1690378437055" duration="942000" />
+      <workItem from="1690811813047" duration="547000" />
     </task>
     <servers />
   </component>

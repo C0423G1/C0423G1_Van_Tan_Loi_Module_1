@@ -34,9 +34,9 @@
         <tr>
             <th scope="row">${sanPham.id}</th>
             <td>${sanPham.name}</td>
-            <td>${sanPham.gia}</td>
-            <td>${sanPham.moTa}</td>
-            <td>${sanPham.nhaSanXuat}</td>
+            <td>${sanPham.price}</td>
+            <td>${sanPham.describe}</td>
+            <td>${sanPham.producer}</td>
             <td>
                 <a href="ProductController?action=Edit&id=${sanPham.id}">
                     <button type="submit" class="btn btn-outline-secondary" >Edit</button>

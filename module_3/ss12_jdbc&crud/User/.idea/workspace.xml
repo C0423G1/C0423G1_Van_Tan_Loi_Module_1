@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f3e26c7d-f77d-440a-bbcf-755b5319aeeb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../case_2/User/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_2/User/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_2/User/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_2/User/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_2/User/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_2/User/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Users/src/main/java/com/example/users/Controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Users/src/main/java/com/example/users/Model/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Users/src/main/java/com/example/users/Repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Users/src/main/java/com/example/users/Repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Users/src/main/java/com/example/users/Repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Users/src/main/java/com/example/users/Service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Users/src/main/java/com/example/users/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Users/src/main/webapp/View/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Users/src/main/webapp/View/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Users/src/main/webapp/View/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Users/src/main/webapp/View/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Model/Tours.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Model/Tours.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo/demomvc/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/demomvc/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss10_ jsp_va_jstl/bai_tap/Customer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss10_ jsp_va_jstl/bai_tap/Customer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/display.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/edit.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="2TLAL3UAlipsPiMrAQWCGqRLlwZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/CodeGymC0423G1/codegym/module_1/module_3/ss12_jdbc&crud/User",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\CodeGymC0423G1\codegym\module_1\module_3\ss12_jdbc&amp;crud\User\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 8.5.912" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.912" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Gradle : com.example : User-1.0-SNAPSHOT.war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="793b6988-94b4-4971-ab41-20b3176aae70" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49702" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Gradle : com.example : User-1.0-SNAPSHOT.war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3e26c7d-f77d-440a-bbcf-755b5319aeeb" name="Changes" comment="" />
+      <created>1690811928212</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690811928212</updated>
+      <workItem from="1690811929213" duration="5814000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

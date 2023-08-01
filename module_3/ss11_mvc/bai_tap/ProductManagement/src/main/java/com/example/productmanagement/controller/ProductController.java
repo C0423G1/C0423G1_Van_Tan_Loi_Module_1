@@ -91,20 +91,20 @@ public class ProductController extends HttpServlet {
     private void add(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        double gia = Double.parseDouble(request.getParameter("gia"));
-        String moTa = request.getParameter("mota");
-        String nhaSanXuat = request.getParameter("nhasanxuat");
-        service.add(new Product(id, name, gia, moTa, nhaSanXuat));
+        double price = Double.parseDouble(request.getParameter("gia"));
+        String describe = request.getParameter("mota");
+        String producer = request.getParameter("nhasanxuat");
+        service.add(new Product(id, name, price, describe, producer));
         response.sendRedirect("/ProductController");
     }
 
     private void edit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
-        double gia = Double.parseDouble(request.getParameter("gia"));
-        String moTa = request.getParameter("mota");
-        String nhaSanXuat = request.getParameter("nhasanxuat");
-        service.edit(new Product(id, name, gia, moTa, nhaSanXuat));
+        double price = Double.parseDouble(request.getParameter("gia"));
+        String describe = request.getParameter("mota");
+        String producer = request.getParameter("nhasanxuat");
+        service.edit(new Product(id, name, price, describe, producer));
         response.sendRedirect("/ProductController");
     }
 }

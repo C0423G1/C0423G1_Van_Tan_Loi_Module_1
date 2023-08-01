@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2d0a1c74-e748-4a89-a189-03ff42f6a5e4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/User/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/User/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/User/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/User/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/User/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/User/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Model/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Repository/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Repository/IUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss12_jdbc&amp;crud/Users/src/main/webapp/View/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss12_jdbc&amp;crud/Users/src/main/webapp/View/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss12_jdbc&amp;crud/Users/src/main/webapp/View/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_3/ss12_jdbc&amp;crud/Users/src/main/webapp/View/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/java/com/example/bookingtour/Model/Tours.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/java/com/example/bookingtour/Model/Tours.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/demo/demomvc/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/demo/demomvc/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/ss10_ jsp_va_jstl/bai_tap/Customer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/ss10_ jsp_va_jstl/bai_tap/Customer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/display.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/edit.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2TN1EpP3JwlV7TLd6Y4H3bfBo2R" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/CodeGymC0423G1/codegym/module_1/module_2/m_v_c_tong_hop",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d0a1c74-e748-4a89-a189-03ff42f6a5e4" name="Changes" comment="" />
+      <created>1690868616257</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1690868616257</updated>
+      <workItem from="1690868617249" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,7 +1,5 @@
 package com.example.bookingtour.Model;
 
-import javax.servlet.http.HttpServletRequest;
-
 public class Tours {
     private int tourId;
     private String tourName;
@@ -33,8 +31,6 @@ public class Tours {
         this.tourName = tourName;
         this.tourPrice = tourPrice;
     }
-
-
 
     public int getTourId() {
         return tourId;

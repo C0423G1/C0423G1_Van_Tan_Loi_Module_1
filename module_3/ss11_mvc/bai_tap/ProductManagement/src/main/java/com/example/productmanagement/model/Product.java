@@ -3,19 +3,19 @@ package com.example.productmanagement.model;
 public class Product {
     private int id;
     private String name;
-    private double gia;
-    private String moTa;
-    private String nhaSanXuat;
+    private double price;
+    private String describe;
+    private String producer;
 
     public Product() {
     }
 
-    public Product(int id, String name, double gia, String moTa, String nhaSanXuat) {
+    public Product(int id, String name, double price, String describe, String producer) {
         this.id = id;
         this.name = name;
-        this.gia = gia;
-        this.moTa = moTa;
-        this.nhaSanXuat = nhaSanXuat;
+        this.price = price;
+        this.describe = describe;
+        this.producer = producer;
     }
 
     public int getId() {
@@ -34,27 +34,27 @@ public class Product {
         this.name = name;
     }
 
-    public double getGia() {
-        return gia;
+    public double getPrice() {
+        return price;
     }
 
-    public void setGia(double gia) {
-        this.gia = gia;
+    public void setPrice(double price) {
+        this.price = price;
     }
 
-    public String getMoTa() {
-        return moTa;
+    public String getDescribe() {
+        return describe;
     }
 
-    public void setMoTa(String moTa) {
-        this.moTa = moTa;
+    public void setDescribe(String describe) {
+        this.describe = describe;
     }
 
-    public String getNhaSanXuat() {
-        return nhaSanXuat;
+    public String getProducer() {
+        return producer;
     }
 
-    public void setNhaSanXuat(String nhaSanXuat) {
-        this.nhaSanXuat = nhaSanXuat;
+    public void setProducer(String producer) {
+        this.producer = producer;
     }
 }

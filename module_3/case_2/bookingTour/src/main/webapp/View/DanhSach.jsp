@@ -61,8 +61,8 @@
 <body>
 <header>
   <h1>Trang bán sản phẩm</h1>
+  <a href="/BookingServlet"><button>Giỏ Hàng</button></a>
 </header>
-
 <div class="product-container">
   <c:forEach var="SanPham" items="${tours}">
     <div class="product">
@@ -75,53 +75,6 @@
       </button>
     </div>
   </c:forEach>
-
-<%--  <div class="product">--%>
-<%--    <img src="https://haycafe.vn/wp-content/uploads/2022/03/anh-sach.jpg" alt="Sản phẩm 2">--%>
-<%--    <div class="product-name">Sản phẩm 2</div>--%>
-<%--    <div class="product-price">$30</div>--%>
-<%--    <button class="cart-button">--%>
-<%--      <span class="cart-icon">&#128722;</span> <!-- Unicode for shopping cart icon -->--%>
-<%--      Thêm vào giỏ hàng--%>
-<%--    </button>--%>
-<%--  </div>--%>
-<%--  <div class="product">--%>
-<%--    <img src="https://haycafe.vn/wp-content/uploads/2022/03/anh-sach.jpg" alt="Sản phẩm 3">--%>
-<%--    <div class="product-name">Sản phẩm 3</div>--%>
-<%--    <div class="product-price">$80</div>--%>
-<%--    <button class="cart-button">--%>
-<%--      <span class="cart-icon">&#128722;</span> <!-- Unicode for shopping cart icon -->--%>
-<%--      Thêm vào giỏ hàng--%>
-<%--    </button>--%>
-<%--  </div>--%>
-<%--  <div class="product">--%>
-<%--    <img src="https://haycafe.vn/wp-content/uploads/2022/03/anh-sach.jpg" alt="Sản phẩm 4">--%>
-<%--    <div class="product-name">Sản phẩm 4</div>--%>
-<%--    <div class="product-price">$10</div>--%>
-<%--    <button class="cart-button">--%>
-<%--      <span class="cart-icon">&#128722;</span> <!-- Unicode for shopping cart icon -->--%>
-<%--      Thêm vào giỏ hàng--%>
-<%--    </button>--%>
-<%--  </div>--%>
-<%--  <div class="product">--%>
-<%--    <img src="https://haycafe.vn/wp-content/uploads/2022/03/anh-sach.jpg" alt="Sản phẩm 5">--%>
-<%--    <div class="product-name">Sản phẩm 5</div>--%>
-<%--    <div class="product-price">$300</div>--%>
-<%--    <button class="cart-button">--%>
-<%--      <span class="cart-icon">&#128722;</span> <!-- Unicode for shopping cart icon -->--%>
-<%--      Thêm vào giỏ hàng--%>
-<%--    </button>--%>
-<%--  </div>--%>
-<%--  <div class="product">--%>
-<%--    <img src="https://haycafe.vn/wp-content/uploads/2022/03/anh-sach.jpg" alt="Sản phẩm 6">--%>
-<%--    <div class="product-name">Sản phẩm 6</div>--%>
-<%--    <div class="product-price">$550</div>--%>
-<%--    <button class="cart-button">--%>
-<%--      <span class="cart-icon">&#128722;</span> <!-- Unicode for shopping cart icon -->--%>
-<%--      Thêm vào giỏ hàng--%>
-<%--    </button>--%>
-<%--  </div>--%>
-
 </div>
 </body>
 </html>
