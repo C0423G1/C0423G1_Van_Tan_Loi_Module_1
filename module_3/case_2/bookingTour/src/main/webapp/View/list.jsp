@@ -64,15 +64,15 @@
   <a href="/BookingServlet"><button>Giỏ Hàng</button></a>
 </header>
 <div class="product-container">
-  <c:forEach var="SanPham" items="${tours}">
+  <c:forEach var="tours" items="${tours}">
     <div class="product">
       <img src="https://haycafe.vn/wp-content/uploads/2022/03/anh-sach.jpg" alt="Sản phẩm 1">
-      <div class="product-name">${SanPham.tourName}</div>
-      <div class="product-price">${SanPham.tourPrice}</div>
-      <button class="cart-button">
+      <div class="product-name">${tours.tourName}</div>
+      <div class="product-price">${tours.tourPrice}</div>
+      <a href="/BookingServlet?action=addquantitylist&id=${tours.tourId}"><button class="cart-button">
         <span class="cart-icon">&#128722;</span> <!-- Unicode for shopping cart icon -->
         Thêm vào giỏ hàng
-      </button>
+      </button></a>
     </div>
   </c:forEach>
 </div>

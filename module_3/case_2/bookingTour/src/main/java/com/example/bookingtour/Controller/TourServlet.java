@@ -16,7 +16,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "TourService", value = "/TourService")
+@WebServlet(name = "TourService", value = "/tourServlet")
 public class TourServlet extends HttpServlet {
     ITourService service =new TourService();
 
@@ -38,7 +38,7 @@ public class TourServlet extends HttpServlet {
     private void showList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
         List<Tours> tours = service.display();
         request.setAttribute("tours", tours);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("View/DanhSach.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("View/list.jsp");
         dispatcher.forward(request, response);
     }
 }

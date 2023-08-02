@@ -1,19 +1,24 @@
 package com.example.bookingtour.Model;
 
 public class Bookings {
-
     private int bookingId;
-    private int customerId;
     private String bookingDate;
-    private int tourId;
     private int quantity;
+    private double price;
+    private String customerId;
+    private int tourId;
+    private int idDelete;
+    private int status ;
 
-    public Bookings(int bookingId, int customerId, String bookingDate, int tourId, int quantity) {
+    public Bookings(int bookingId, String bookingDate, int quantity, double price, String customerId, int tourId, int idDelete, int status) {
         this.bookingId = bookingId;
-        this.customerId = customerId;
         this.bookingDate = bookingDate;
-        this.tourId = tourId;
         this.quantity = quantity;
+        this.price = price;
+        this.customerId = customerId;
+        this.tourId = tourId;
+        this.idDelete = idDelete;
+        this.status = status;
     }
 
     public int getBookingId() {
@@ -24,20 +29,36 @@ public class Bookings {
         this.bookingId = bookingId;
     }
 
-    public int getCustomerId() {
-        return customerId;
-    }
-
-    public void setCustomerId(int customerId) {
-        this.customerId = customerId;
-    }
-
     public String getBookingDate() {
         return bookingDate;
     }
 
     public void setBookingDate(String bookingDate) {
         this.bookingDate = bookingDate;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
 
     public int getTourId() {
@@ -48,11 +69,19 @@ public class Bookings {
         this.tourId = tourId;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getIdDelete() {
+        return idDelete;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setIdDelete(int idDelete) {
+        this.idDelete = idDelete;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 }

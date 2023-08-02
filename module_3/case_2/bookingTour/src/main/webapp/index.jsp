@@ -98,7 +98,7 @@
     <input type="text" placeholder=" Search..." style="border-radius: 35px;width: 200px;background-color: #f5f5f5">
     <ul class="nav nav-pills">
       <li class="nav-item"><a href="#" class="nav-link" style="color: #222222">Trang Chủ</a></li>
-      <li class="nav-item"><a href="/TourService" class="nav-link" style="color: #222222">Tour</a></li>
+      <li class="nav-item"><a href="/tourServlet" class="nav-link" style="color: #222222">Tour</a></li>
       <li class="nav-item"><a href="#" class="nav-link" style="color: #222222">Liên Hệ</a></li>
       <li class="nav-item"><a href="#" class="nav-link" style="color: #222222">Đăng kí</a></li>
       <li class="nav-item"><a href="#" class="nav-link" style="margin-top: -15px">
