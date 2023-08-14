@@ -2,9 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Biểu đồ doanh thu và số lượng bị bỏng hàng trong ngày</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-$END$
+<div style="width: 500px; display: inline-block;">
+    <canvas id="dailySalesPieChart" width="500" height="300"></canvas>
+</div>
+<div style="display: inline-block; vertical-align: top; margin-left: 20px;">
+    <h2>Dữ liệu doanh thu và số lượng bị bỏng hàng</h2>
+    <table id="salesDataTable" border="1">
+        <tr>
+            <th>Loại</th>
+            <th>Giá trị</th>
+        </tr>
+        <tr>
+            <td>Doanh thu bán được</td>
+            <td id="revenueData"></td>
+        </tr>
+        <tr>
+            <td>Số lượng bị bỏng hàng</td>
+            <td id="burnedProductsData"></td>
+        </tr>
+    </table>
+</div>
+
+<script>
+    function fetchDailySalesData() {
+        const selectedDate = document.getElementById('selectDate').value;
+        fetch(`/getDailySalesData?date=${selectedDate}`)
+            .then(response => response.json())
+            .then(salesData => {
+                renderPieChart(salesData);
+                renderSalesData(salesData);
+            })
+            .catch(error => console.error('Lỗi khi lấy dữ liệu doanh thu và số lượng bị bỏng hàng:', error));
+    }
+
+    function renderPieChart(salesData) {
+        const labels = ['Doanh thu bán được', 'Số lượng bị bỏng hàng'];
+        const data = [salesData.revenue, salesData.productsBurned];
+
+        const chartData = {
+            labels: labels,
+            datasets: [{
+                data: data,
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.2)', // Màu cho doanh thu bán được
+                    'rgba(255, 99, 132, 0.2)', // Màu cho số lượng bị bỏng hàng
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(255, 99, 132, 1)',
+                ],
+                borderWidth: 1
+            }]
+        };
+
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false
+        };
+
+        const ctx = document.getElementById('dailySalesPieChart').getContext('2d');
+        const dailySalesPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: chartData,
+            options: chartOptions
+        });
+    }
+
+    function renderSalesData(salesData) {
+        document.getElementById('revenueData').innerText = salesData.revenue;
+        document.getElementById('burnedProductsData').innerText = salesData.productsBurned;
+    }
+
+    // Lấy dữ liệu cho ngày mặc định (ngày hiện tại)
+    fetchDailySalesData();
+</script>
 </body>
 </html>

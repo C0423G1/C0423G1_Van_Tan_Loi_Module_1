@@ -248,7 +248,7 @@ join hop_dong_chi_tiet on hop_dong_chi_tiet.ma_dich_vu_di_kem=dich_vu_di_kem.ma_
 join hop_dong on hop_dong.ma_hop_dong=hop_dong_chi_tiet.ma_hop_dong
 join khach_hang on khach_hang.ma_khach_hang=hop_dong.ma_khach_hang
 join loai_khach on loai_khach.ma_loai_khach=khach_hang.ma_loai_khach
-where khach_hang.ma_loai_khach =1
+where khach_hang.ma_loai_khach = 1
 and (khach_hang.dia_chi like '%Vinh%' or khach_hang.dia_chi like '%Quảng Ngãi%');
 -- task 12 
 SELECT hop_dong.ma_hop_dong,
@@ -267,7 +267,7 @@ WHERE hop_dong.ma_dich_vu IN (
         SELECT ma_dich_vu
         FROM hop_dong
         WHERE YEAR(hop_dong.ngay_lam_hop_dong) = 2020 AND
-        QUARTER(hop_dong.ngay_lam_hop_dong) = 4
+        month(hop_dong.ngay_lam_hop_dong) in (10,11,12)
     )
   AND hop_dong.ma_dich_vu NOT IN (
         SELECT ma_dich_vu
@@ -313,7 +313,7 @@ JOIN trinh_do ON nhan_vien.ma_trinh_do = trinh_do.ma_trinh_do
 JOIN bo_phan ON nhan_vien.ma_bo_phan = bo_phan.ma_bo_phan
 JOIN hop_dong ON nhan_vien.ma_nhan_vien = hop_dong.ma_nhan_vien
 WHERE YEAR(hop_dong.ngay_lam_hop_dong) IN (2021, 2020)
-GROUP BY nhan_vien.ma_nhan_vien, nhan_vien.ho_ten, trinh_do.ten_trinh_do, bo_phan.ten_bo_phan, nhan_vien.so_dien_thoai, nhan_vien.dia_chi
+group by hop_dong.ma_nhan_vien
 HAVING COUNT(hop_dong.ma_nhan_vien) < 4;
 -- task 16
 SET SQL_SAFE_UPDATES = 0;
@@ -345,10 +345,14 @@ SET SQL_SAFE_UPDATES = 1;
 alter table khach_hang 
 add count int ;
 update khach_hang
-left JOIN hop_dong ON khach_hang.ma_khach_hang = hop_dong.ma_khach_hang
+left join hop_dong on khach_hang.ma_khach_hang = hop_dong.ma_khach_hang
 set count = 1 
-WHERE YEAR(hop_dong.ngay_lam_hop_dong) < 2021;
+where year(hop_dong.ngay_lam_hop_dong) < 2021;
+select*
+from khach_hang
+where count=1;
 -- task 19 : 
+set sql_safe_updates = 1;
 UPDATE dich_vu_di_kem
 SET gia = gia * 2
 WHERE ma_dich_vu_di_kem IN (
@@ -362,7 +366,7 @@ WHERE ma_dich_vu_di_kem IN (
 -- task 20 :
 SELECT ma_nhan_vien AS id, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi
 FROM nhan_vien
-UNION ALL
+UNION 
 SELECT ma_khach_hang AS id, ho_ten, email, so_dien_thoai, ngay_sinh, dia_chi
 FROM khach_hang;
 -- task 21 : 

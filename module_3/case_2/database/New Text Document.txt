@@ -1,0 +1,6 @@
+ document.addEventListener('DOMContentLoaded', function() {
+        const deleteButtons = document.querySelectorAll('.deleteButton');
+
+        deleteButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const id = this.closest('tr').querySelector('[data-id]').getAttribute('data-id');

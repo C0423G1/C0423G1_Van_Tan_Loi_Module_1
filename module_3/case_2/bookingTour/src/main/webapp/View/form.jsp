@@ -28,7 +28,7 @@
             <table>
                 <tr>
                     <td><img style="width: 88px;height: 88px;border-radius: 10px;margin: 20px"
-                             src="https://ik.imagekit.io/tvlk/blog/2022/12/cau-vang-da-nang-3.jpg"></td>
+                             src="${image[0]}"></td>
                     <td>
                         <h5>${tourname} </h5>
                         <p>Tour ghép </p>
@@ -66,11 +66,11 @@
         <div style="width: 300px;height: 370px;background-color: white;border-radius: 20px;margin: 30px">
             <div style="padding: 15px">
                 <h5 style="color: #ff5b00">Tóm tắt chuyến đi</h5>
-                <div style="width: 270px;height: 70px;border-radius: 10px;border: #e3dddd solid 1px;margin-top: 10px;margin-bottom: 10px">
+                <div style="width: 270px;height: 90px;margin-top: 10px;margin-bottom: 10px">
                     <table>
                         <tr>
-                            <td><img style="width: 60px;height: 55px;border-radius: 10px;margin: 5px"
-                                     src="https://ik.imagekit.io/tvlk/blog/2022/12/cau-vang-da-nang-3.jpg"></td>
+                            <td><img style="width: 65px;height: 62px;border-radius: 10px;margin: 5px"
+                                     src="${image[0]}"></td>
                             <td>
                                 <h5>${tourname}</h5>
                                 <p>Tour ghép </p>
@@ -85,7 +85,7 @@
                 <p style="display: inline-block;padding-right: 20%">Hành Khách</p>
                 <h6 style="display: inline-block;color: #ff5b00">${quantity} x ${price}</h6>
                 <h4 style="display: inline-block;padding-right: 10%">Tổng Cộng</h4>
-                <h5 style="display: inline-block;color: #ff5b00">${sumprice}</h5>
+                <h5 style="display: inline-block;color: #ff5b00">${sum}</h5>
                 <a href="/PaymentServlet?amount=${sum}&customerid=2">
                     <button type="submit"
                             style="background-color: #ff5b00;color: white;text-align: center;

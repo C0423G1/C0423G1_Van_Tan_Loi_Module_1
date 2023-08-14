@@ -5,25 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2bf1dbc-aca7-4493-8b5b-288cd6694304" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Model/Users.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Repository/IUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Service/IUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss12_jdbc&amp;crud/Users/src/main/java/com/example/users/Service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss12_jdbc&amp;crud/Users/src/main/webapp/View/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss12_jdbc&amp;crud/Users/src/main/webapp/View/delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss12_jdbc&amp;crud/Users/src/main/webapp/View/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../ss12_jdbc&amp;crud/Users/src/main/webapp/View/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Model/Tours.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Model/Tours.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../demo/demomvc/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/demomvc/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss10_ jsp_va_jstl/bai_tap/Customer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss10_ jsp_va_jstl/bai_tap/Customer/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/java/com/example/productmanagement/model/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/delete.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/display.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/display.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss11_mvc/bai_tap/ProductManagement/src/main/webapp/view/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../module_2/tong_hop_cuoi_module_2/tong_hop_cuoi_module_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case2/demoOne/src/main/java/com/example/demoone/RandomNumberServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Controller/PaymentServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Controller/RoleServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Controller/SendEmailServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Model/FromDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Model/PaymentDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Model/RoleDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Model/TourEmailDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Repository/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/form.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/information.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/View/role.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/gson-2.3.1.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/java/common/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/java/common/vnpayQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/java/common/vnpayRefund.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/META-INF/context.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/assets/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/assets/jquery-1.11.3.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/assets/jumbotron-narrow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/vnpay_ipn.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/vnpay_pay.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/vnpay_querydr.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/vnpay_refund.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/vnpay_return.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/bieudo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/bieudohinhtron.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/bảng role.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/doanhthu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/gia.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/giaodien.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../demo/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Controller/BookingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Controller/BookingServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Controller/PayServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/java/common/ajaxServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Model/BookingDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Model/BookingDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Model/VnpayPayment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Repository/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Repository/BookingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Repository/IBookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Repository/IBookingRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Service/BookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Service/IBookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/bookingtour/Service/IBookingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/View/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/View/cart.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/View/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/View/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo/demo2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/demo2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../demo/sau đăng nhập.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/sau đăng nhập.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss7_bien_kieu_du_lieu_va_toan_tu/thuc_hanh/su_dung_toan_tu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_bien_kieu_du_lieu_va_toan_tu/thuc_hanh/su_dung_toan_tu.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +69,30 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="bookingTour" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
+        <option value="Interface" />
         <option value="Servlet" />
         <option value="Class" />
-        <option value="Interface" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -64,17 +115,23 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/CodeGymC0423G1/codegym/module_1/module_3/ss11_mvc/bai_tap/ProductManagement",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/CodeGymC0423G1/codegym/module_1/module_3/case2_demo_demo/test213/tour",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.912" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.912" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="hot-swap-classes" />
       <deployment>
         <artifact name="Gradle : com.example : bookingTour-1.0-SNAPSHOT.war">
@@ -171,10 +228,41 @@
       <option name="presentableId" value="Default" />
       <updated>1690798044009</updated>
       <workItem from="1690798045010" duration="8449000" />
+      <workItem from="1690877686598" duration="110436000" />
+      <workItem from="1691390822053" duration="40487000" />
+      <workItem from="1691480544345" duration="23543000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/bookingtour/Repository/BookingRepository.java</url>
+          <line>64</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

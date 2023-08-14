@@ -1,5 +1,7 @@
 package com.example.bookingtour.Model;
 
+import java.util.List;
+
 public class BookingDto {
     private int customerId;
     private String tourName;
@@ -8,8 +10,9 @@ public class BookingDto {
     private double tourSumPrice;
     private int status ;
     private int tourId;
+    private String[] img ;
 
-    public BookingDto(int customerId, String tourName, double tourPrice, int quantity, double tourSumPrice, int status, int tourId) {
+    public BookingDto(int customerId, String tourName, double tourPrice, int quantity, double tourSumPrice, int status, int tourId, String[] img) {
         this.customerId = customerId;
         this.tourName = tourName;
         this.tourPrice = tourPrice;
@@ -17,6 +20,10 @@ public class BookingDto {
         this.tourSumPrice = tourSumPrice;
         this.status = status;
         this.tourId = tourId;
+        this.img = img;
+    }
+
+    public BookingDto() {
     }
 
     public int getCustomerId() {
@@ -73,5 +80,13 @@ public class BookingDto {
 
     public void setTourId(int tourId) {
         this.tourId = tourId;
+    }
+
+    public String[] getImg() {
+        return img;
+    }
+
+    public void setImg(String[] img) {
+        this.img = img;
     }
 }
