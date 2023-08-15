@@ -21,11 +21,15 @@ public class ConfigurationController {
     }
 
     @PostMapping("/config/post")
-    public String saveConfig(@RequestParam String language, @RequestParam int pagesize, @RequestParam String spamsfilter, @RequestParam String signature) {
+    public String saveConfig(@RequestParam String language, @RequestParam int pagesize, @RequestParam(defaultValue = "",required = false) String spamsfilter, @RequestParam String signature) {
         emailConfiguration.setLanguage(language);
         emailConfiguration.setPageSize(pagesize);
         emailConfiguration.setSignature(signature);
-        emailConfiguration.setSpamsfilter(spamsfilter);
+        if (spamsfilter.equals("Enable spams filter")) {
+            emailConfiguration.setSpamsfilter(spamsfilter);
+        } else  {
+            emailConfiguration.setSpamsfilter("Không");
+        }
         return "redirect:/config";
     }
 }

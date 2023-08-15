@@ -49,6 +49,8 @@
 </form>
 <h2>Language : ${config.language}</h2>
 <h2> Page Size : ${config.pageSize} </h2>
+<h2>Spams filter : ${config.spamsfilter}</h2>
+<h2>Signature : ${config.signature}</h2>
 </body>
 </html>
 
