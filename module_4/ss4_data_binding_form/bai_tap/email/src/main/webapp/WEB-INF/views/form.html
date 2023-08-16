@@ -1,24 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ACER
-  Date: 8/14/2023
-  Time: 3:21 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Email Configuration</title>
 </head>
 <body>
 <h1>Email Configuration</h1>
-<form action="/config/post" method="post">
+<form th:action="@{/config/post}" th:object="${config}" method="post">
     <div>
         <h3>Language:</h3>
-        <select name="language">
+        <select th:field="*{language}">
             <option value="English">English</option>
             <option value="Vietnamese">Vietnamese</option>
             <option value="Japanese">Japanese</option>
@@ -27,7 +18,7 @@
     </div>
     <div>
         <h3>Page Size:</h3>
-        <select name="pagesize">
+        <select th:field="*{pageSize}">
             <option value="5">5</option>
             <option value="10">10</option>
             <option value="15">15</option>
@@ -37,20 +28,23 @@
         </select>
         <p>emails per page</p>
     </div>
+    <!--  <div>-->
+    <!--    <h3>Spams filter:</h3>-->
+    <!--&lt;!&ndash;    <input type="checkbox" th:field="*{spamsFilter}"/>Enable spams filter<br/>&ndash;&gt;-->
+    <!--  </div>-->
     <div>
-        <h3> Spams filter :</h3>
-        <input name="spamsfilter" type="checkbox" value="Enable spams filter">Enable spams filter</br>
+        <h3>Spam filter:</h3>
+        <input type="checkbox" name="spamsFilter" id="spamsFilter" checked>Enable spam filter
     </div>
     <div>
-        <h3>Signature :</h3>
-        <textarea name="signature"></textarea>
+        <h3>Signature:</h3>
+        <textarea th:field="*{signature}"></textarea>
     </div>
     <button type="submit">Save Configuration</button>
 </form>
-<h2>Language : ${config.language}</h2>
-<h2> Page Size : ${config.pageSize} </h2>
-<h2>Spams filter : ${config.spamsfilter}</h2>
-<h2>Signature : ${config.signature}</h2>
+<h2>Language: <span th:text="${config.language}"></span></h2>
+<h2>Page Size: <span th:text="${config.pageSize}"></span></h2>
+<h2>Spams filter: <span th:text="${config.spamsFilter}"></span></h2>
+<h2>Signature: <span th:text="${config.signature}"></span></h2>
 </body>
 </html>
-

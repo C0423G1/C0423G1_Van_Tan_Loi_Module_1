@@ -19,5 +19,11 @@ public class ProductService implements IProductService {
     public void create(Product product) {
         repository.create(product);
     }
+    public void delete(int id){
+        repository.delete(id);
+    }
+    public Product findById(int id) {
+        return repository.findById(id);
+    }
 
 }

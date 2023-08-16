@@ -3,13 +3,14 @@ package com.example.homthu.model;
 public class EmailConfiguration {
     private String language;
     private int pageSize;
-    private String spamsfilter;
+    private String spamsFilter;
     private String signature;
 
-    public EmailConfiguration(String language, int pageSize, String spamsfilter, String signature) {
+
+    public EmailConfiguration(String language, int pageSize, String spamsFilter, String signature) {
         this.language = language;
         this.pageSize = pageSize;
-        this.spamsfilter = spamsfilter;
+        this.spamsFilter = spamsFilter;
         this.signature = signature;
     }
 
@@ -32,12 +33,12 @@ public class EmailConfiguration {
         this.pageSize = pageSize;
     }
 
-    public String getSpamsfilter() {
-        return spamsfilter;
+    public String getSpamsFilter() {
+        return spamsFilter;
     }
 
-    public void setSpamsfilter(String spamsfilter) {
-        this.spamsfilter = spamsfilter;
+    public void setSpamsFilter(String spamsFilter) {
+        this.spamsFilter = spamsFilter;
     }
 
     public String getSignature() {
