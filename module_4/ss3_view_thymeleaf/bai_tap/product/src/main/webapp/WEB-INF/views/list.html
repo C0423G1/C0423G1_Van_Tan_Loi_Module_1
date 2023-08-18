@@ -11,6 +11,10 @@
 <a th:href="@{/products/create}">
     <button type="button" class="btn btn-outline-primary">Create</button>
 </a>
+<form action="/search" method="get">
+    <input type="text" name="name" placeholder="Tên sản phẩm" />
+    <button type="submit">Search</button>
+</form>
 <table class="table">
     <thead>
     <tr>

@@ -5,6 +5,7 @@ import com.example.product.repository.IProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -24,6 +25,11 @@ public class ProductService implements IProductService {
     }
     public Product findById(int id) {
         return repository.findById(id);
+    }
+
+    @Override
+    public ArrayList<Product> findByName(String name) {
+        return repository.findByName(name);
     }
 
 }

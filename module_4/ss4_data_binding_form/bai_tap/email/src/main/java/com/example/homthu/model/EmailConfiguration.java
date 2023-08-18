@@ -1,6 +1,5 @@
 package com.example.homthu.model;
-
-public class EmailConfiguration {
+public class  EmailConfiguration {
     private String language;
     private int pageSize;
     private String spamsFilter;
