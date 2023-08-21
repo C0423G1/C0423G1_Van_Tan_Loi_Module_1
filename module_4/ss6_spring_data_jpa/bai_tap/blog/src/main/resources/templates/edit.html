@@ -10,7 +10,7 @@
     </style>
 </head>
 <body>
-<form th:action="@{/products/edit}" th:object="${products}"
+<form th:action="@{/blog/edit}" th:object="${blogs}"
       method="POST" >
     <div style="width: 50%;margin-left: 25%;margin-right: 25%;margin-top:7%;border: grey solid 1px;border-radius: 20px">
         <h3 style=" font-family: 'Montagu Slab', serif;text-align: center;font-size: 40px;margin-top: 3%">Sửa thông tin </h3>
@@ -23,22 +23,17 @@
             </div>
         </div>
         <div class="form-outline mb-4">
-            <input th:field="*{name}" style="width: 90%;margin-left: 5%;margin-right: 5%" placeholder="Name" id="form6Example4"
+            <input th:field="*{title}" style="width: 90%;margin-left: 5%;margin-right: 5%" placeholder="Name" id="form6Example4"
                    class="form-control" readonly/>
         </div>
         <div class="form-outline mb-4">
-            <input th:field="*{price}" style="width: 90%;margin-left: 5%;margin-right: 5%" placeholder="Price"
+            <input th:field="*{describe}" style="width: 90%;margin-left: 5%;margin-right: 5%" placeholder="Price"
                    id="form6Example5" class="form-control"/>
         </div>
-        <div class="form-outline mb-4">
-            <input th:field="*{description}" style="width: 90%;margin-left: 5%;margin-right: 5%" placeholder="Description"
-                   id="form6Example6" class="form-control"/>
-        </div>
-        <div class="form-outline mb-4">
-            <input th:field="*{manufacturer}" style="width: 90%;margin-left: 5%;margin-right: 5%" placeholder="Manufacturer"
-                   id="form6Example7" class="form-control"/>
-        </div>
-        <a th:href="@{/products}">
+        <select th:field="*{category}" style="width: 90%;margin-left: 5%;margin-right: 5%">
+            <option th:each="category : ${category}" th:value="${category.id}" th:text="${category.name}"></option>
+        </select>
+        <a th:href="@{/blog}">
             <button style="margin-bottom: 2%;margin-right: 60%;margin-left: 7%;width: 100px" type="button"
                     class="btn btn-outline-secondary">Back
             </button>
