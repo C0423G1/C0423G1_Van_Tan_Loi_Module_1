@@ -11,4 +11,5 @@ import java.util.List;
 public interface IBlogRepository extends JpaRepository<Blog,Integer> {
     @Query(value = "SELECT * FROM blog b INNER JOIN category c ON b.category_id = c.id WHERE c.id = :categoryId", nativeQuery = true)
     List<Blog> findCategory(@Param("categoryId") int categoryId);
+
 }
