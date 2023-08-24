@@ -20,7 +20,6 @@
     <input type="text" name="word" id="word" required>
     <input type="submit" value="Nhập">
 </form>
-
 <c:if test="${found}">
     <p>${meaning}</p>
 </c:if>

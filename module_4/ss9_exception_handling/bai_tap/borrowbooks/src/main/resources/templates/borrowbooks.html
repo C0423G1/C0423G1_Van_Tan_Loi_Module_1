@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+<h1 style="text-align: center">User List</h1>
+<form th:action="@{/borrowbooks/delete(id=${id})}" method="post">
+    <div class="form-group">
+        <input type="number" class="form-control" name="bookId" id="form6Example5" placeholder="Số Lượng Sách" style="width: 90%; margin-left: 5%; margin-right: 5%" />
+    </div>
+    <button type="submit" class="btn btn-outline-primary">Trả Sách</button>
+</form>
+
+
+<div th:if="${mess}">
+    <div class="alert alert-success">
+        <p th:text="${mess}"></p>
+    </div>
+</div>
+<table class="table">
+    <thead>
+    <tr>
+        <th>ID Mượn Sách</th>
+        <th>Tên Sách</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="borrowbooks : ${borrowbooks}">
+        <td th:text="${borrowbooks.idBorrowBooks}"></td>
+        <td th:text="${borrowbooks.book.getNameBook()}"></td>
+    </tr>
+    </tbody>
+</table>
+<!--<div align="center">-->
+<!--    <a th:if="${book.hasPrevious()}" th:href="@{/book/id(page=${book.number-1}),id=${id}}">Trước</a>-->
+<!--    <span th:text="${book.number+1}"></span>/<span th:text="${book.totalPages}"></span>-->
+<!--    <a th:if="${book.hasNext()}" th:href="@{/book/id(page=${book.number+1},id=${id})}">Sau</a>-->
+<!--</div>-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+</html>
