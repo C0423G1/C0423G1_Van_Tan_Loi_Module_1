@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e6e23b5f-c0d6-49a1-8db3-540d48a7eead" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/test213/tour/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case2/Case-study-team2" beforeDir="false" afterPath="$PROJECT_DIR$/../case2/Case-study-team2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213" beforeDir="false" afterPath="$PROJECT_DIR$/test213" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/common/EncodingFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/controller/account/AccountServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/controller/booking/BookingServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/controller/booking/PaymentServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/controller/booking/RoleServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/controller/booking/SendEmailServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/controller/customer/CustomerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/controller/employee/EmployeeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/controller/tour/TourServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/account/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/account/Email.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/account/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/booking/BookingDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/booking/Bookings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/booking/FromDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/booking/PaymentDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/booking/RoleDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/booking/TourEmailDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/booking/Tours.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/customer/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/employee/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/employee/EmployeeType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/employee/dto/EmployeeListDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/tour/ENameCate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/tour/Tour.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/tour/TourPlace.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/model/tour/dto/TourListDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/account/AccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/account/Base.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/account/IAccountRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/account/IRoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/account/RoleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/booking/BaseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/booking/BookingRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/booking/Config.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/booking/IBookingRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/booking/ITourRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/booking/TourRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/customer/ICustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/customer/impl/BaseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/customer/impl/CustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/employee/IEmployeeRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/employee/IEmployeeTypeRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/employee/impl/BaseRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/employee/impl/EmployeeRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/employee/impl/EmployeeTypeRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/tour/ENameCateRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/tour/IENameCateRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/tour/ITourPlaceRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/tour/ITourRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/tour/TourPlaceRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/tour/TourRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/repository/tour/database/Base.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/account/AccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/account/IAccountService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/account/IRoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/account/RoleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/booking/BookingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/booking/IBookingService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/booking/ITourService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/booking/TourService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/customer/ICustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/customer/impl/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/employee/IEmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/employee/IEmployeeTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/employee/impl/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/employee/impl/EmployeeTypeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/tour/ENameCateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/tour/IENameCateService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/tour/ITourPlaceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/tour/ITourService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/tour/TourPlaceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/java/com/example/service/tour/TourService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/dl1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/dl2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/dl3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/dn1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/dn2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/dn3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/h1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/h2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/h3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/hl1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/hl2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/hl3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/nb1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/nb2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/nb3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/pq1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/pq2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/pq3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/qb1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/qb2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/qb3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/qn1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/qn2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/qn3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/sp1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/sp2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/anh/sp3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/bootstrap-5.2.3-dist/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/Montserrat-Italic-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/Montserrat-VariableFont_wght.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/OFL.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-ExtraBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-ExtraBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-ExtraLight.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-ExtraLightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-SemiBold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-SemiBoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/font/static/Montserrat-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/home/footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/home/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/images/carosel/dalat.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/images/carosel/danang.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/images/carosel/halong.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/images/carosel/hue.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/images/carosel/ninhbinh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/images/carosel/phuquoc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/images/carosel/quanhbinh.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/images/carosel/quynhon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/images/carosel/sapa.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/images/simple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/js/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/statistical.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/account/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/account/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/account/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/account/listAccount.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/account/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/account/manage.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/account/reset.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/account/sign_up.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/booking/cart.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/booking/form.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/booking/information.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/booking/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/booking/role.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/customer/add.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/customer/detail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/customer/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/customer/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/employee/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/employee/delete.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/employee/detail.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/employee/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/employee/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/employee/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/tour/2.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/tour/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/tour/create1.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/tour/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/tour/edit1.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/tour/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/tour/list.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/tour/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/tour/list1.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_booking_tour/src/main/webapp/views/tour/view.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test213/case_study_travel_booking.sql" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2UYyMvLF4LH2cRCSY18z9RmetNg" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/CodeGymC0423G1/codegym/module_1/module_3/case2_demo_demo",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e6e23b5f-c0d6-49a1-8db3-540d48a7eead" name="Changes" comment="" />
+      <created>1693130763818</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1693130763818</updated>
+      <workItem from="1693130764876" duration="15000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

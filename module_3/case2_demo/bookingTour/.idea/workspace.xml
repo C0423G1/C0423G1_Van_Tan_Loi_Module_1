@@ -5,74 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2bf1dbc-aca7-4493-8b5b-288cd6694304" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../module_2/tong_hop_cuoi_module_2/tong_hop_cuoi_module_2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case2/demoOne/src/main/java/com/example/demoone/RandomNumberServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Controller/PaymentServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Controller/RoleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Controller/SendEmailServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Model/FromDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Model/PaymentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Model/RoleDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Model/TourEmailDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Repository/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/webapp/View/form.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/webapp/View/information.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/webapp/View/role.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/gson-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/java/common/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/java/common/vnpayQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/java/common/vnpayRefund.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/META-INF/context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/assets/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/assets/jquery-1.11.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/assets/jumbotron-narrow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/vnpay_ipn.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/vnpay_pay.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/vnpay_querydr.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/vnpay_refund.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/webapp/vnpay_return.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/bieudo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/bieudohinhtron.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/bảng role.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/doanhthu.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/giaodien.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/thi/hiển thị danh sách.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/thi/sửa thông tin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../demo/thi/thêm thông tin.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lam_thu/demo/src/main/java/com/example/demo/controller/BookServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lam_thu/demo/src/main/java/com/example/demo/model/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lam_thu/demo/src/main/java/com/example/demo/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lam_thu/demo/src/main/java/com/example/demo/repository/BaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lam_thu/demo/src/main/java/com/example/demo/repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lam_thu/demo/src/main/java/com/example/demo/repository/IBookingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lam_thu/demo/src/main/java/com/example/demo/service/BookingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lam_thu/demo/src/main/java/com/example/demo/service/IBookingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lam_thu/demo/src/main/webapp/view/add.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lam_thu/demo/src/main/webapp/view/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../lam_thu/demo/src/main/webapp/view/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_1/quan_li.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_1/quan_li.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Controller/BookingServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Controller/BookingServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Controller/PayServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/VNPAY/src/main/java/common/ajaxServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Model/BookingDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Model/BookingDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Model/VnpayPayment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Repository/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Repository/BookingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Repository/IBookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Repository/IBookingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Service/BookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Service/BookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Service/IBookingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/java/com/example/bookingtour/Service/IBookingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/webapp/View/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/webapp/View/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/webapp/View/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/webapp/View/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_2/bookingTour/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../demo/demo2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/demo2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../demo/hiển thị danh sách.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../demo/sau đăng nhập.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../demo/sau đăng nhập.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../ss7_bien_kieu_du_lieu_va_toan_tu/thuc_hanh/su_dung_toan_tu.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss7_bien_kieu_du_lieu_va_toan_tu/thuc_hanh/su_dung_toan_tu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case2/Case-study-team2" beforeDir="false" afterPath="$PROJECT_DIR$/../../case2/Case-study-team2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case2_demo_demo/test213" beforeDir="false" afterPath="$PROJECT_DIR$/../../case2_demo_demo/test213" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +67,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/CodeGymC0423G1/codegym/module_1/module_3/case2_demo/bookingTour",
+    "last_opened_file_path": "C:/CodeGymC0423G1/codegym/module_1/module_3/case2_demo/case_study_booking_tour",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -252,6 +186,7 @@
       <workItem from="1691390822053" duration="40487000" />
       <workItem from="1691504953988" duration="2781000" />
       <workItem from="1691562664578" duration="3135000" />
+      <workItem from="1693130800224" duration="34000" />
     </task>
     <servers />
   </component>
