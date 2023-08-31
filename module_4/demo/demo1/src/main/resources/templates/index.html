@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Images</title>
+    <style>
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        #image-preview-container {
+            display: flex;
+            flex-wrap: wrap; /* Cho phép các ảnh tự xuống dòng nếu không đủ không gian */
+        }
+
+        .preview-image {
+            max-width: 200px;
+            max-height: 200px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body class="bg-blue-500">
+<div class="flex h-screen h-full w-full items justify-center">
+<!--    <form action="/vehicle/upload" method="POST" enctype="multipart/form-data">-->
+        <input type="file" id="upload-file" multiple accept=".jpg, .jpeg, .png" onchange="limitFiles(this, 4)">
+        <div id="image-preview-container"></div>
+        <button id="myButton">Nhấp vào tôi</button>
+<!--    </form>-->
+</div>
+<script>
+    function limitFiles(input, maxFiles) {
+        if (input.files.length > maxFiles) {
+            alert(`Chỉ được chọn đúng ${maxFiles} tệp.`);
+            input.value = ""; // Xóa tệp đã chọn nếu vượt quá giới hạn
+        }
+    }
+    document.getElementById("upload-file").addEventListener("change", function(e) {
+        const container = document.getElementById("image-preview-container");
+        container.innerHTML = "";
+
+        const maxFiles = 4;
+        const files = e.target.files;
+
+        if (files.length !== maxFiles) {
+            alert(`Bạn phải chọn đúng ${maxFiles} tệp.`);
+            e.target.value = "";
+            return;
+        }
+
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            const img = document.createElement("img");
+            img.src = URL.createObjectURL(file);
+            img.classList.add("preview-image");
+            container.appendChild(img);
+        }
+    });
+</script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+<script type="module" src="configuration-firebase.js"></script>
+<script type="module" src="upload-file.js"></script>
+<script>
+
+</script>
+</body>
+</html>
