@@ -24,13 +24,7 @@ function handleUpload(e) {
             .catch(console.error);
     });
 }
-function handleClick() {
     document.getElementById("upload-file").addEventListener("change", function (e) {
-        handleUpload(e)
-    });
-}
-const button = document.getElementById('myButton');
-button.addEventListener('click', ()=>{
-    handleClick()
-});
+        handleUpload(e)});
+
 
