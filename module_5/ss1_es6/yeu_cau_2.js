@@ -25,8 +25,8 @@ let courses = [
         rating: 3.5,
     },
 ];
-let a = courses.filter(a => a.rating <4)
-a.forEach(a =>{
+let a = courses.filter(a => a.rating < 4)
+a.forEach(a => {
     console.log(`${a.id} - ${a.title} - ${a.rating}`)
     console.log("-----------------------------------")
 })
