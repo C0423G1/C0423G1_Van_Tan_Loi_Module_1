@@ -14,12 +14,13 @@ const person = {
         university: "Harvard University"
     }
 };
+const { firstName, gender, education: { degree }, languages: [english] } = person;
 
 const student = {
-    firstName: person.firstName,
-    gender: person.gender,
-    degree: person.education.degree,
-    english: person.languages[0],
+    firstName,
+    gender,
+    degree,
+    english
 };
 
 console.log(student)

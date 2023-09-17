@@ -1,8 +1,6 @@
-const check = (obj) => {
-    const firstName = obj.firstName !== undefined ? obj.firstName : "Quân"
-    const degree = obj.degree !== undefined ? obj.degree : "NA"
+const check = ({firstName="Quân",degree= 'NA'}) => {
     console.log("firstName : " + firstName );
-    console.log("degree    : " + degree);
+    console.log("degree     : " + degree);
     console.log("--------------------------");
 }
 
