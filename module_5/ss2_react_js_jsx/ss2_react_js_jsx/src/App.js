@@ -1,25 +1,63 @@
 import logo from './logo.svg';
 import './App.css';
-
+import React from "react";
+const students = [
+    {
+        company: 'Alfreds Futterkiste',
+        contact: 'Maria Anders',
+        country: 'Germany'
+    },
+    {
+        company: 'Centro comercial Moctezuma',
+        contact: 'Francisco Chang',
+        country: 'Mexico'
+    },
+    {
+        company: 'Ernst Handel',
+        contact: 'Roland Mendel',
+        country: 'Austria'
+    },
+    {
+        company: 'Island Trading',
+        contact: 'Helen Bennett',
+        country: 'UK'
+    },
+    {
+        company: 'Laughing Bacchus Winecellars',
+        contact: 'Yoshi Tannamuri',
+        country: 'Canada'
+    },
+    {
+        company: 'Magazzini Alimentari Riuniti',
+        contact: 'Giovanni Rovelli',
+        country: 'Italy'
+    }
+]
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <table>
+                <caption>Students</caption>
+                <thead>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+                </thead>
+                <tbody>
+                {students.map((student, index) => (
+                    <tr key={index}>
+                        <td>{student.company}</td>
+                        <td>{student.contact}</td>
+                        <td>{student.country}</td>
+                    </tr>
+                ))}
+                </tbody>
+            </table>
+        </>
+    )
+        ;
 }
 
 export default App;
