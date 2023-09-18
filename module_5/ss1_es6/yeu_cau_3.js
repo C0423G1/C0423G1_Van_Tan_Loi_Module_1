@@ -15,7 +15,7 @@ let addedCourses = [
         rating: 3.8,
     }
 ];
-let courses = [
+let course = [
     {
         id: 1,
         title: "ReactJS Tutorial",
@@ -42,7 +42,7 @@ let courses = [
         rating: 3.5,
     },
 ];
-let a = [...courses, ...addedCourses];
+let courses = [...course, ...addedCourses];
 
-console.log(a);
+console.log(courses);
 

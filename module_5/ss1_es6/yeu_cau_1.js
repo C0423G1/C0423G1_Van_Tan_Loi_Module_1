@@ -25,10 +25,10 @@ let courses = [
         rating: 3.5,
     },
 ];
-let a = courses.filter(courses => courses.rating >= 4);
-a.forEach(a => {
-    console.log("ID :" + a.id);
-    console.log("title :" + a.title);
-    console.log("rating :" + a.rating);
+let course = courses.filter(courses => courses.rating >= 4);
+course.forEach(course => {
+    console.log("ID :" + course.id);
+    console.log("title :" + course.title);
+    console.log("rating :" + course.rating);
     console.log("---------------------")
 })
