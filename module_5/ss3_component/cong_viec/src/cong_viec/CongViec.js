@@ -1,17 +1,24 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 function CongViec() {
     const [list, setList] = useState([]);
     const [item, setItem] = useState("");
+
     const handleChange = (event) => {
         setItem(event.target.value);
     }
+
+    useEffect(() => {
+        document.title = `Todo List (${list.length})`;
+    }, [list]);
+
     const handAddItem = () => {
         if (item !== "") {
             setList(prevList => [...prevList, item]);
             setItem("");
         }
     }
+
     return (
         <>
             <h1>Todo List</h1>
