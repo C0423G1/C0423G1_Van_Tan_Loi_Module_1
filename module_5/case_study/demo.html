@@ -2,24 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<div id="multiplicationTable"></div>
-<script>
-    let table = '<table>';
-    for (let i = 1; i <= 9; i++) {
-        table += '<tr>';
-        for (let j = 1; j <= 9; j++) {
-            let multiplication = i * j;
-            table += `<td>${i} x ${j} = ${multiplication}</td>`;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furama Hotel</title>
+    <!-- Sử dụng Bootstrap 5.2.3 và CSS tùy chỉnh -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f0f8ff;
         }
 
-        table += '</tr>';
-    }
-    table += '</table>';
-    document.getElementById('multiplicationTable').innerHTML = table;
+        .navbar {
+            background-color: #87CEEB;
+        }
 
-</script>
+        .navbar-light .navbar-nav .nav-link {
+            color: #333; /* Màu đen cho các liên kết trong navbar */
+        }
+
+        .container {
+            background-color: #fff; /* Màu trắng cho nền nội dung */
+            padding: 20px;
+            border-radius: 10px; /* Bo góc nền nội dung */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho nền nội dung */
+        }
+
+        footer {
+            background-color: #87CEEB; /* Màu xanh nhạt cho footer */
+            color: #87CEEB; /* Màu trắng cho văn bản trong footer */
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Tùy chỉnh kiểu chữ cho tiêu đề */
+        .navbar-brand {
+            font-family: 'Pacifico', cursive; /* Sử dụng font lộng lẫy 'Pacifico' */
+            font-size: 36px; /* Kích thước chữ 36px */
+            font-weight: bold; /* Đậm */
+            color: #333; /* Màu đen cho tiêu đề */
+        }
+
+        /* Tùy chỉnh kiểu chữ cho nội dung */
+        h1 {
+            font-family: 'Arial', sans-serif; /* Sử dụng font 'Arial' cho văn bản */
+            font-size: 24px; /* Kích thước chữ 24px */
+            color: #333; /* Màu đen cho tiêu đề */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Furama Hotel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Customers</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<!-- Content -->
+<div class="container mt-5">
+    <h1>Welcome to Furama Hotel</h1>
+    <p>This is a sample content section. You can replace it with your actual content.</p>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Furama Hotel. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap 5.2.3 JS (popper.js and bootstrap.js are required) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

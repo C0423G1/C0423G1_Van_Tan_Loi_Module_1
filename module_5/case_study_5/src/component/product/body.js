@@ -1,7 +1,4 @@
 import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
-import Header from "../../header/header";
-import Footer from "../../footer/footer";
 
 const Body = () => {
     const customStyle = {
@@ -27,6 +24,25 @@ const Body = () => {
             roomSize: '40m',
             imageSrc: 'https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg',
         },
+        {
+            id: 1,
+            title: 'Card title 1',
+            roomSize: '40m',
+            imageSrc: 'https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg',
+        },
+        {
+            id: 1,
+            title: 'Card title 1',
+            roomSize: '40m',
+            imageSrc: 'https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg',
+        },
+        {
+            id: 1,
+            title: 'Card title 1',
+            roomSize: '40m',
+            imageSrc: 'https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg',
+        },
+
         {
             id: 1,
             title: 'Card title 1',

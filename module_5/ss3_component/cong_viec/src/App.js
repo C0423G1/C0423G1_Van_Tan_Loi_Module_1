@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import CongViec from "./cong_viec/CongViec";
+import CongViec from "./todo/CongViec";
 
 class App extends Component {
   constructor(props) {

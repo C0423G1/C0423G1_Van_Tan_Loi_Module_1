@@ -1,6 +1,15 @@
 import React from "react";
+import {Link} from "react-router-dom";
 
 function BodyCustomer() {
+    const buttonStyle = {
+        width: '50px',
+        height: '50px',
+        fontSize: '24px',
+        cursor: 'pointer',
+        marginRight: "20px"
+    };
+
     const customers = [
         {
             id: 1,
@@ -148,6 +157,9 @@ function BodyCustomer() {
                 ))}
                 </tbody>
             </table>
+            <button style={buttonStyle} type="button" className="btn btn-outline-info float-end" >
+                <Link to="/createCustomer">+</Link>
+            </button>
         </div>
     );
 }
