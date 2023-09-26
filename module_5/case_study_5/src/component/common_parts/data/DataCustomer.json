@@ -1,0 +1,180 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "fullName": "Mark Otto",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "123456789",
+      "email": "mark@example.com",
+      "dateOfBirth": "1990-01-15T00:00:00.000Z",
+      "gender": "Male",
+      "customerType": "Diamond",
+      "address": "123 Main Street, City"
+    },
+    {
+      "id": 2,
+      "fullName": "Van Tannn",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "12313123123",
+      "email": "vaaaaaaa@gmail.com",
+      "dateOfBirth": "2023-09-25T00:00:00.000Z",
+      "gender": "male",
+      "customerType": "Platinium",
+      "address": "Liên Chiểu"
+    },
+    {
+      "id": 4,
+      "fullName": "Van Tan",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "12313123123",
+      "email": "vaaaaaaa@gmail.com",
+      "dateOfBirth": "2023-09-25T00:00:00.000Z",
+      "gender": "male",
+      "customerType": "Gold",
+      "address": "Liên Chiểu"
+    },
+    {
+      "id": 5,
+      "fullName": "Van Tan",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "12313123123",
+      "email": "vaaaaaaa@gmail.com",
+      "dateOfBirth": "2023-09-25T00:00:00.000Z",
+      "gender": "male",
+      "customerType": "Gold",
+      "address": "Liên Chiểu"
+    },
+    {
+      "id": 6,
+      "fullName": "Van Tan",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "12313123123",
+      "email": "vaaaaaaa@gmail.com",
+      "dateOfBirth": "2023-09-25T00:00:00.000Z",
+      "gender": "male",
+      "customerType": "Gold",
+      "address": "Liên Chiểu"
+    },
+    {
+      "id": 7,
+      "fullName": "Van Tan",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "12313123123",
+      "email": "vaaaaaaa@gmail.com",
+      "dateOfBirth": "2023-09-25T00:00:00.000Z",
+      "gender": "male",
+      "customerType": "Gold",
+      "address": "Liên Chiểu"
+    },
+    {
+      "id": 8,
+      "fullName": "Van Tan",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "12313123123",
+      "email": "vaaaaaaa@gmail.com",
+      "dateOfBirth": "2023-09-25T00:00:00.000Z",
+      "gender": "male",
+      "customerType": "Gold",
+      "address": "Liên Chiểu"
+    },
+    {
+      "id": 9,
+      "fullName": "Van Tan",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "12313123123",
+      "email": "vaaaaaaa@gmail.com",
+      "dateOfBirth": "2023-09-25T00:00:00.000Z",
+      "gender": "male",
+      "customerType": "Gold",
+      "address": "Liên Chiểu"
+    },
+    {
+      "id": 10,
+      "fullName": "Van Tan",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "12313123123",
+      "email": "vaaaaaaa@gmail.com",
+      "dateOfBirth": "2023-09-25T00:00:00.000Z",
+      "gender": "male",
+      "customerType": "Gold",
+      "address": "Liên Chiểu"
+    },
+    {
+      "id": 11,
+      "fullName": "Van Tan",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "12313123123",
+      "email": "vaaaaaaa@gmail.com",
+      "dateOfBirth": "2023-09-25T00:00:00.000Z",
+      "gender": "male",
+      "customerType": "Gold",
+      "address": "Liên Chiểu"
+    },
+    {
+      "id": 12,
+      "fullName": "Van Tan",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "12313123123",
+      "email": "vaaaaaaa@gmail.com",
+      "dateOfBirth": "2023-09-25T00:00:00.000Z",
+      "gender": "male",
+      "customerType": "Gold",
+      "address": "Liên Chiểu"
+    },
+    {
+      "id": 13,
+      "fullName": "Van Tan",
+      "phoneNumber": "0900000000",
+      "idCardNumber": "12313123123",
+      "email": "vaaaaaaa@gmail.com",
+      "dateOfBirth": "2023-09-25T00:00:00.000Z",
+      "gender": "male",
+      "customerType": "Gold",
+      "address": "Liên Chiểu"
+    }
+  ],
+  "product": [
+    {
+      "id": 5,
+      "title": "Card title eeee",
+      "roomSize": 400,
+      "imageSrc": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg",
+      "floor": 2,
+      "areaOfPool": 1233
+    }
+  ],
+  "contract": [
+    {
+      "id": 1,
+      "contractNumber": "HD001",
+      "startDate": "2023-09-01",
+      "endDate": "2023-09-30",
+      "advanceDeposit": 1000,
+      "totalPayment": 3000
+    },
+    {
+      "id": 2,
+      "contractNumber": "HD0022",
+      "startDate": "2023-10-01T00:00:00.000Z",
+      "endDate": "2023-10-31T00:00:00.000Z",
+      "advanceDeposit": 1200,
+      "totalPayment": 3500
+    },
+    {
+      "contractNumber": "ádadas",
+      "startDate": "2023-09-27T17:00:00.000Z",
+      "endDate": "2023-09-28T17:00:00.000Z",
+      "advanceDeposit": 0,
+      "totalPayment": 0,
+      "id": 3
+    },
+    {
+      "contractNumber": "ấdasd",
+      "startDate": "2023-09-29T17:00:00.000Z",
+      "endDate": "2023-09-29T17:00:00.000Z",
+      "advanceDeposit": 0,
+      "totalPayment": 0,
+      "id": 4
+    }
+  ]
+}

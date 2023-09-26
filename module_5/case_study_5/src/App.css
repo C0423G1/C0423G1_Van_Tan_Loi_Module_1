@@ -9,7 +9,9 @@
 .card:hover {
   transform: scale(1.02);
 }
-
+.error{
+  color: red;
+}
 .card-img-top {
   height: 212px;
   width: 100%;
@@ -75,19 +77,58 @@ footer {
 /* Tùy chỉnh kiểu chữ cho tiêu đề */
 .navbar-brand {
   font-family: 'Pacifico', cursive; /* Sử dụng font lộng lẫy 'Pacifico' */
-  font-size: 36px; /* Kích thước chữ 36px */
-  font-weight: bold; /* Đậm */
-  color: #333; /* Màu đen cho tiêu đề */
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
 }
 
-/* Tùy chỉnh kiểu chữ cho nội dung */
+
 h1 {
-  font-family: 'Arial', sans-serif; /* Sử dụng font 'Arial' cho văn bản */
-  font-size: 24px; /* Kích thước chữ 24px */
-  color: #333; /* Màu đen cho tiêu đề */
+  font-family: 'Arial', sans-serif;
+  font-size: 24px;
+  color: #333;
 }
 @media (max-width: 768px) {
   .card {
     width: 100%;
   }
+}
+.create-product{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+}
+.edit-product{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+}
+.body{
+  margin-top: 2%;
+  width: 80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  min-height: 400px;
+}
+
+.pagination-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pagination-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }

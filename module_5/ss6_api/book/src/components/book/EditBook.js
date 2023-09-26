@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {useNavigate, useParams} from "react-router";
 import {Field, Form, Formik} from "formik";
 import * as BookService from "../service/BookService";
-import {getById} from "../service/BookService";
+import {getById, getByName} from "../service/BookService";
 
 function EditBook() {
     const param = useParams();
@@ -11,11 +11,11 @@ function EditBook() {
 
     const editBook = async (data) => {
         const res = await BookService.edit(data);
-        if (res.status === 200) {
+        if (res.status === 201) {
             navigate("/");
-            alert("Sửa thành công");
+            alert("Thêm mới thành công");
         } else {
-            alert("Sửa thất bại");
+            alert("Thêm mới thất bại");
         }
     }
 
@@ -29,11 +29,8 @@ function EditBook() {
         const book = await getById(param.id);
         setBook(book);
     }
-    console.log(book);
-    if (!book) {
-        return null
-    }
     return (
+        book &&
         <>
             <Formik initialValues={{
                 id: book?.id,
