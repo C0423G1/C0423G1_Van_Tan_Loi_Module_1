@@ -2,145 +2,230 @@
   "customer": [
     {
       "id": 1,
-      "fullName": "Mark Otto",
-      "phoneNumber": "0900000000",
-      "idCardNumber": "123456789",
-      "email": "mark@example.com",
-      "dateOfBirth": "1990-01-15T00:00:00.000Z",
+      "fullName": "John Doe",
+      "phoneNumber": "0901234567",
+      "idCardNumber": "1234567890",
+      "email": "john@example.com",
+      "dateOfBirth": "1995-05-15T00:00:00.000Z",
       "gender": "Male",
-      "customerType": "Diamond",
+      "customerType": "Gold",
       "address": "123 Main Street, City"
     },
     {
       "id": 2,
-      "fullName": "Van Tannn",
-      "phoneNumber": "0900000000",
-      "idCardNumber": "12313123123",
-      "email": "vaaaaaaa@gmail.com",
-      "dateOfBirth": "2023-09-25T00:00:00.000Z",
-      "gender": "male",
-      "customerType": "Platinium",
-      "address": "Liên Chiểu"
+      "fullName": "Jane Smith",
+      "phoneNumber": "0909876543",
+      "idCardNumber": "0987654321",
+      "email": "jane@example.com",
+      "dateOfBirth": "1990-08-20T00:00:00.000Z",
+      "gender": "Female",
+      "customerType": "Diamond",
+      "address": "456 Elm Street, Town"
+    },
+    {
+      "id": 3,
+      "fullName": "Michael Johnson",
+      "phoneNumber": "0905678901",
+      "idCardNumber": "5678901234",
+      "email": "michael@example.com",
+      "dateOfBirth": "1988-03-10T00:00:00.000Z",
+      "gender": "Male",
+      "customerType": "Platinum",
+      "address": "789 Oak Avenue, Village"
     },
     {
       "id": 4,
-      "fullName": "Van Tan",
-      "phoneNumber": "0900000000",
-      "idCardNumber": "12313123123",
-      "email": "vaaaaaaa@gmail.com",
-      "dateOfBirth": "2023-09-25T00:00:00.000Z",
-      "gender": "male",
+      "fullName": "Emily Davis",
+      "phoneNumber": "0903456789",
+      "idCardNumber": "3456789012",
+      "email": "emily@example.com",
+      "dateOfBirth": "1992-11-25T00:00:00.000Z",
+      "gender": "Female",
       "customerType": "Gold",
-      "address": "Liên Chiểu"
+      "address": "101 Pine Road, Suburb"
     },
     {
       "id": 5,
-      "fullName": "Van Tan",
-      "phoneNumber": "0900000000",
-      "idCardNumber": "12313123123",
-      "email": "vaaaaaaa@gmail.com",
-      "dateOfBirth": "2023-09-25T00:00:00.000Z",
-      "gender": "male",
-      "customerType": "Gold",
-      "address": "Liên Chiểu"
+      "fullName": "William Wilson",
+      "phoneNumber": "0906789012",
+      "idCardNumber": "6789012345",
+      "email": "william@example.com",
+      "dateOfBirth": "1997-07-05T00:00:00.000Z",
+      "gender": "Male",
+      "customerType": "Platinum",
+      "address": "202 Maple Lane, Hamlet"
     },
     {
       "id": 6,
-      "fullName": "Van Tan",
-      "phoneNumber": "0900000000",
-      "idCardNumber": "12313123123",
-      "email": "vaaaaaaa@gmail.com",
-      "dateOfBirth": "2023-09-25T00:00:00.000Z",
-      "gender": "male",
-      "customerType": "Gold",
-      "address": "Liên Chiểu"
+      "fullName": "Olivia Anderson",
+      "phoneNumber": "0902345678",
+      "idCardNumber": "2345678901",
+      "email": "olivia@example.com",
+      "dateOfBirth": "1985-12-30T00:00:00.000Z",
+      "gender": "Female",
+      "customerType": "Diamond",
+      "address": "303 Cedar Street, County"
     },
     {
       "id": 7,
-      "fullName": "Van Tan",
-      "phoneNumber": "0900000000",
-      "idCardNumber": "12313123123",
-      "email": "vaaaaaaa@gmail.com",
-      "dateOfBirth": "2023-09-25T00:00:00.000Z",
-      "gender": "male",
+      "fullName": "James Brown",
+      "phoneNumber": "0908901234",
+      "idCardNumber": "8901234567",
+      "email": "james@example.com",
+      "dateOfBirth": "1993-09-17T00:00:00.000Z",
+      "gender": "Male",
       "customerType": "Gold",
-      "address": "Liên Chiểu"
+      "address": "404 Birch Road, Province"
     },
     {
       "id": 8,
-      "fullName": "Van Tan",
-      "phoneNumber": "0900000000",
-      "idCardNumber": "12313123123",
-      "email": "vaaaaaaa@gmail.com",
-      "dateOfBirth": "2023-09-25T00:00:00.000Z",
-      "gender": "male",
-      "customerType": "Gold",
-      "address": "Liên Chiểu"
+      "fullName": "Sophia Miller",
+      "phoneNumber": "0904567890",
+      "idCardNumber": "4567890123",
+      "email": "sophia@example.com",
+      "dateOfBirth": "1989-06-08T00:00:00.000Z",
+      "gender": "Female",
+      "customerType": "Platinum",
+      "address": "505 Redwood Drive, State"
     },
     {
       "id": 9,
-      "fullName": "Van Tan",
-      "phoneNumber": "0900000000",
-      "idCardNumber": "12313123123",
-      "email": "vaaaaaaa@gmail.com",
-      "dateOfBirth": "2023-09-25T00:00:00.000Z",
-      "gender": "male",
-      "customerType": "Gold",
-      "address": "Liên Chiểu"
+      "fullName": "Liam Jones",
+      "phoneNumber": "0906789012",
+      "idCardNumber": "6789012345",
+      "email": "liam@example.com",
+      "dateOfBirth": "1996-04-22T00:00:00.000Z",
+      "gender": "Male",
+      "customerType": "Diamond",
+      "address": "606 Willow Street, Territory"
     },
     {
-      "id": 10,
-      "fullName": "Van Tan",
+      "fullName": "Van",
       "phoneNumber": "0900000000",
       "idCardNumber": "12313123123",
       "email": "vaaaaaaa@gmail.com",
-      "dateOfBirth": "2023-09-25T00:00:00.000Z",
-      "gender": "male",
+      "dateOfBirth": "2023-09-27T08:09:28.327Z",
+      "gender": "female",
       "customerType": "Gold",
-      "address": "Liên Chiểu"
-    },
-    {
-      "id": 11,
-      "fullName": "Van Tan",
-      "phoneNumber": "0900000000",
-      "idCardNumber": "12313123123",
-      "email": "vaaaaaaa@gmail.com",
-      "dateOfBirth": "2023-09-25T00:00:00.000Z",
-      "gender": "male",
-      "customerType": "Gold",
-      "address": "Liên Chiểu"
-    },
-    {
-      "id": 12,
-      "fullName": "Van Tan",
-      "phoneNumber": "0900000000",
-      "idCardNumber": "12313123123",
-      "email": "vaaaaaaa@gmail.com",
-      "dateOfBirth": "2023-09-25T00:00:00.000Z",
-      "gender": "male",
-      "customerType": "Gold",
-      "address": "Liên Chiểu"
-    },
-    {
-      "id": 13,
-      "fullName": "Van Tan",
-      "phoneNumber": "0900000000",
-      "idCardNumber": "12313123123",
-      "email": "vaaaaaaa@gmail.com",
-      "dateOfBirth": "2023-09-25T00:00:00.000Z",
-      "gender": "male",
-      "customerType": "Gold",
-      "address": "Liên Chiểu"
+      "address": "Liên Chiểu",
+      "id": 10
     }
   ],
-  "product": [
+  "villa": [
     {
-      "id": 5,
-      "title": "Card title eeee",
-      "roomSize": 400,
-      "imageSrc": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Suite-Feature-370x239.jpg",
-      "floor": 2,
-      "areaOfPool": 1233
+      "id": 1,
+      "serviceType": "Villa",
+      "serviceName": "Luxury Villa",
+      "area": 350,
+      "rentalCost": 7000,
+      "maximumOccupancy": 12,
+      "rentalType": "Yearly",
+      "imageSrc": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Pool_Villas-F-370x239.jpg",
+      "roomStandard": "Deluxe",
+      "otherAmenitiesDescription": "Private garden, Jacuzzi, Swimming pool",
+      "numberOfFloors": 3,
+      "poolArea": 150
+    },
+    {
+      "id": 2,
+      "serviceType": "Villa",
+      "serviceName": "Beachfront Villa",
+      "area": 400,
+      "rentalCost": 8000,
+      "maximumOccupancy": 10,
+      "rentalType": "Yearly",
+      "imageSrc": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Beach_Pool_Villas-_Exterior-1-F-370x239.jpg",
+      "roomStandard": "Superior",
+      "otherAmenitiesDescription": "Private beach access, Infinity pool",
+      "numberOfFloors": 2,
+      "poolArea": 200
+    },
+    {
+      "id": 3,
+      "serviceType": "Villa",
+      "serviceName": "Beachfront Villa",
+      "area": 400,
+      "rentalCost": 8000,
+      "maximumOccupancy": 10,
+      "rentalType": "Yearly",
+      "imageSrc": "https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Pool_Villas-F-370x239.jpg",
+      "roomStandard": "Superior",
+      "otherAmenitiesDescription": "Private beach access, Infinity pool",
+      "numberOfFloors": 2,
+      "poolArea": 200
+    }
+  ],
+  "house": [
+    {
+      "id": 1,
+      "serviceName": "Cozy House",
+      "area": 150,
+      "rentalCost": 2500,
+      "maximumOccupancy": 6,
+      "rentalType": "Monthly",
+      "imageSrc": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Lagoon-Superior-twin-bed-F-370x239.jpg",
+      "roomStandard": "Standard",
+      "otherAmenitiesDescription": "Backyard, Parking space",
+      "numberOfFloors": 1
+    },
+    {
+      "id": 2,
+      "serviceName": "Modern House",
+      "area": 200,
+      "rentalCost": 3500,
+      "maximumOccupancy": 8,
+      "rentalType": "Monthly",
+      "imageSrc": "https://furamavietnam.com/wp-content/uploads/2018/03/Furama_Garden-Deluxe-5-450x291.jpg",
+      "roomStandard": "Deluxe",
+      "otherAmenitiesDescription": "Swimming pool, Garage",
+      "numberOfFloors": 2
+    },
+    {
+      "id": 3,
+      "serviceName": "Modern House",
+      "area": 200,
+      "rentalCost": 3500,
+      "maximumOccupancy": 8,
+      "rentalType": "Monthly",
+      "imageSrc": "https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Studio-Suite-F-370x239.jpg",
+      "roomStandard": "Deluxe",
+      "otherAmenitiesDescription": "Swimming pool, Garage",
+      "numberOfFloors": 2
+    }
+  ],
+  "room": [
+    {
+      "id": 1,
+      "serviceType": "Room",
+      "serviceName": "Single Room",
+      "area": 25,
+      "rentalCost": 500,
+      "imageSrc": "https://furamavietnam.com/wp-content/uploads/2018/03/Presidential-Suite-F-370x239.jpg",
+      "maximumOccupancy": 1,
+      "rentalType": "Daily",
+      "freeAmenities": "Wi-Fi, Breakfast"
+    },
+    {
+      "id": 2,
+      "serviceType": "Room",
+      "serviceName": "Double Room",
+      "area": 35,
+      "rentalCost": 800,
+      "imageSrc": "https://furamavietnam.com/wp-content/uploads/2018/03/Presidential-Suite-F-370x239.jpg",
+      "maximumOccupancy": 2,
+      "rentalType": "Daily",
+      "freeAmenities": "Wi-Fi, Breakfast, TV"
+    },
+    {
+      "id": 3,
+      "serviceType": "Room",
+      "serviceName": "Three Room",
+      "area": 35,
+      "rentalCost": 800,
+      "imageSrc": "https://furamavietnam.com/wp-content/uploads/2018/03/Presidential-Suite-F-370x239.jpg",
+      "maximumOccupancy": 2,
+      "rentalType": "Daily",
+      "freeAmenities": "Wi-Fi, Breakfast, TV"
     }
   ],
   "contract": [
@@ -154,27 +239,19 @@
     },
     {
       "id": 2,
-      "contractNumber": "HD0022",
-      "startDate": "2023-10-01T00:00:00.000Z",
-      "endDate": "2023-10-31T00:00:00.000Z",
+      "contractNumber": "HD002",
+      "startDate": "2023-10-01",
+      "endDate": "2023-10-31",
       "advanceDeposit": 1200,
       "totalPayment": 3500
     },
     {
-      "contractNumber": "ádadas",
-      "startDate": "2023-09-27T17:00:00.000Z",
-      "endDate": "2023-09-28T17:00:00.000Z",
-      "advanceDeposit": 0,
-      "totalPayment": 0,
-      "id": 3
-    },
-    {
-      "contractNumber": "ấdasd",
-      "startDate": "2023-09-29T17:00:00.000Z",
-      "endDate": "2023-09-29T17:00:00.000Z",
-      "advanceDeposit": 0,
-      "totalPayment": 0,
-      "id": 4
+      "id": 3,
+      "contractNumber": "HD002",
+      "startDate": "2023-10-01",
+      "endDate": "2023-10-31",
+      "advanceDeposit": 1200,
+      "totalPayment": 3500
     }
   ]
 }

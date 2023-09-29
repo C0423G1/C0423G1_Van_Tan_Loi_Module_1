@@ -15,6 +15,16 @@ import DeleteCustomer from "./component/customer/DeleteCustomer";
 import CreateContract from "./component/contract/CreateContract";
 import DeleteContract from "./component/contract/DeleteContract";
 import EditContract from "./component/contract/EditContract";
+import CreateService from "./component/product/demo/CreateDemo";
+import HouseList from "./component/product/demo/house/HouseList";
+import VillaList from "./component/product/demo/villa/VillaList";
+import RoomList from "./component/product/demo/room/RoomList";
+import DeleteHouse from "./component/product/demo/house/DeleteHouse";
+import DeleteVilla from "./component/product/demo/villa/DeleteVilla";
+import DeleteRoom from "./component/product/demo/room/DeleteRoom";
+import EditHouse from "./component/product/demo/house/EditHouse";
+import EditRoom from "./component/product/demo/room/EditRoom";
+import EditVilla from "./component/product/demo/villa/EditVilla";
 
 function App() {
     return (
@@ -34,6 +44,17 @@ function App() {
                     <Route path="createContract" element={<CreateContract/>}/>
                     <Route path="deleteContract/:id" element={<DeleteContract/>}/>
                     <Route path="editContract/:id" element={<EditContract/>}/>
+                    <Route path="createDemo" element={<CreateService/>}/>
+                    <Route path="house" element={<HouseList/>}/>
+                    <Route path="villa" element={<VillaList/>}/>
+                    <Route path="house" element={<HouseList/>}/>
+                    <Route path="room" element={<RoomList/>}/>
+                    <Route path="deleteHouse/:id" element={<DeleteHouse/>}/>
+                    <Route path="deleteVilla/:id" element={<DeleteVilla/>}/>
+                    <Route path="deleteRoom/:id" element={<DeleteRoom/>}/>
+                    <Route path="editHouse/:id" element={<EditHouse/>}/>
+                    <Route path="editRoom/:id" element={<EditRoom/>}/>
+                    <Route path="editVilla/:id" element={<EditVilla/>}/>
                 </Route>
             </Routes>
             <Footer/>

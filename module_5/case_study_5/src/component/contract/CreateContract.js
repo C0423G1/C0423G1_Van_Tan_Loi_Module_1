@@ -12,22 +12,21 @@ function CreateContract() {
     const navigate = useNavigate();
 
     const validationSchema = Yup.object().shape({
-        contractNumber: Yup.string().required('Contract Number is required'),
-        startDate: Yup.date().required('Start Date is required'),
+        contractNumber: Yup.string().required('Số hợp đồng là bắt buộc'),
+        startDate: Yup.date().required('Ngày bắt đầu là bắt buộc'),
         endDate: Yup.date()
-            .required('End Date is required')
-            .min(Yup.ref('startDate'), 'End Date must be later than Start Date'),
+            .required('Ngày kết thúc là bắt buộc')
+            .min(Yup.ref('startDate'), 'Ngày kết thúc phải sau ngày bắt đầu'),
         advanceDeposit: Yup.number()
-            .typeError('Advance Deposit must be a positive integer')
-            .required('Advance Deposit is required')
-            .integer('Advance Deposit must be an integer')
-            .min(1, 'Advance Deposit must be a positive integer'),
+            .typeError('Tiền đặt cọc phải là số nguyên dương')
+            .required('Tiền đặt cọc là bắt buộc')
+            .integer('Tiền đặt cọc phải là số nguyên')
+            .min(1, 'Tiền đặt cọc phải là số nguyên dương'),
         totalPayment: Yup.number()
-            .typeError('Total Payment must be a positive integer')
-            .required('Total Payment is required')
-            .integer('Total Payment must be an integer')
-            .min(1, 'Total Payment must be a positive integer'),
-
+            .typeError('Tổng thanh toán phải là số nguyên dương')
+            .required('Tổng thanh toán là bắt buộc')
+            .integer('Tổng thanh toán phải là số nguyên')
+            .min(1, 'Tổng thanh toán phải là số nguyên dương'),
     });
 
     const initialValues = {
@@ -38,33 +37,33 @@ function CreateContract() {
         totalPayment: 0,
     };
 
-    const createCustomer = async (values) => {
+    const createContract = async (values) => {
         try {
             const res = await ContractService.create(values);
             if (res.status === 201) {
-                await Swal.fire('Created!', 'Your customer has been created successfully.', 'success');
+                await Swal.fire('Tạo thành công!', 'Hợp đồng đã được tạo thành công.', 'success');
                 navigate('/contract');
             } else {
-                await Swal.fire('Error!', 'An error occurred while creating the customer.', 'error');
+                await Swal.fire('Lỗi!', 'Đã xảy ra lỗi khi tạo hợp đồng.', 'error');
             }
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Lỗi:', error);
         }
     };
 
     return (
         <div className="create-product">
-            <h1>Create Contract</h1>
-            <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={createCustomer}>
+            <h1>Tạo hợp đồng</h1>
+            <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={createContract}>
                 {({ values, setFieldValue }) => (
-                    <Form>
+                    <Form className="form-create">
                         <div>
-                            <label>Contract Number:</label>
+                            <label>Số hợp đồng:</label>
                             <Field type="text" name="contractNumber" className="form-control" />
                             <ErrorMessage name="contractNumber" component="div" className="error" />
                         </div>
                         <div className="mb-3 mt-3">
-                            <label>Start Date:</label>
+                            <label>Ngày bắt đầu:</label>
                             <DatePicker
                                 className="form-control"
                                 name="startDate"
@@ -77,7 +76,7 @@ function CreateContract() {
                         </div>
 
                         <div className="mb-3">
-                            <label>End Date:</label>
+                            <label>Ngày kết thúc:</label>
                             <DatePicker
                                 className="form-control"
                                 name="endDate"
@@ -89,13 +88,13 @@ function CreateContract() {
                             <ErrorMessage name="endDate" component="div" className="error" />
                         </div>
                         <div>
-                            <label>Advance Deposit:</label>
+                            <label>Tiền đặt cọc:</label>
                             <Field type="number" name="advanceDeposit" className="form-control" />
                             <ErrorMessage name="advanceDeposit" component="div" className="error" />
                         </div>
 
                         <div>
-                            <label>Total Payment:</label>
+                            <label>Tổng thanh toán:</label>
                             <Field type="number" name="totalPayment" className="form-control" />
                             <ErrorMessage name="totalPayment" component="div" className="error" />
                         </div>
@@ -106,7 +105,7 @@ function CreateContract() {
                             variant="primary"
                             type="submit"
                         >
-                            Save
+                            Lưu
                         </button>
                     </Form>
                 )}

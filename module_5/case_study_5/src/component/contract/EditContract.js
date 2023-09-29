@@ -15,7 +15,7 @@ function EditContract() {
     const [contracts, setContracts] = useState(null);
     const [dateStart, setDateStart] = useState(new Date());
     const [dateEnd, setDateEnd] = useState(new Date());
-    console.log(contracts)
+
     useEffect(() => {
         if (param.id) {
             getContractById();
@@ -31,64 +31,64 @@ function EditContract() {
                 setDateEnd(new Date(contract.endDate));
             }
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Lỗi:', error);
         }
     };
 
     const validationSchema = Yup.object().shape({
-        contractNumber: Yup.string().required('Contract Number is required'),
-        startDate: Yup.date().required('Start Date is required'),
+        contractNumber: Yup.string().required('Số hợp đồng là bắt buộc'),
+        startDate: Yup.date().required('Ngày bắt đầu là bắt buộc'),
         endDate: Yup.date()
-            .required('End Date is required')
-            .min(Yup.ref('startDate'), 'End Date must be later than Start Date'),
+            .required('Ngày kết thúc là bắt buộc')
+            .min(Yup.ref('startDate'), 'Ngày kết thúc phải sau ngày bắt đầu'),
         advanceDeposit: Yup.number()
-            .typeError('Advance Deposit must be a positive integer')
-            .required('Advance Deposit is required')
-            .integer('Advance Deposit must be an integer')
-            .min(1, 'Advance Deposit must be a positive integer'),
+            .typeError('Tiền đặt cọc phải là số nguyên dương')
+            .required('Tiền đặt cọc là bắt buộc')
+            .integer('Tiền đặt cọc phải là số nguyên')
+            .min(1, 'Tiền đặt cọc phải là số nguyên dương'),
         totalPayment: Yup.number()
-            .typeError('Total Payment must be a positive integer')
-            .required('Total Payment is required')
-            .integer('Total Payment must be an integer')
-            .min(1, 'Total Payment must be a positive integer'),
+            .typeError('Tổng số tiền phải là số nguyên dương')
+            .required('Tổng số tiền là bắt buộc')
+            .integer('Tổng số tiền phải là số nguyên')
+            .min(1, 'Tổng số tiền phải là số nguyên dương'),
     });
 
     const initialValues = {
-        id:contracts?.id,
+        id: contracts?.id,
         contractNumber: contracts?.contractNumber,
         startDate: dateStart,
         endDate: dateEnd,
-        advanceDeposit: contracts?.advanceDeposit ,
-        totalPayment: contracts?.totalPayment ,
+        advanceDeposit: contracts?.advanceDeposit,
+        totalPayment: contracts?.totalPayment,
     };
 
     const editCustomer = async (values) => {
         try {
             const res = await ContractService.edit(values);
             if (res.status === 200) {
-                await Swal.fire('Edited!', 'Your contract has been edited successfully.', 'success');
+                await Swal.fire('Chỉnh sửa thành công!', 'Hợp đồng của bạn đã được chỉnh sửa thành công.', 'success');
                 navigate('/contract');
             } else {
-                await Swal.fire('Error!', 'An error occurred while editing the contract.', 'error');
+                await Swal.fire('Lỗi!', 'Đã xảy ra lỗi trong quá trình chỉnh sửa hợp đồng.', 'error');
             }
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Lỗi:', error);
         }
     };
 
     return (
-        contracts &&
-        <div className="edit-contract">
-            <h1>Edit Contract</h1>
-            <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={editCustomer}>
-                    <Form>
+        contracts && (
+            <div className="create-product">
+                <h1>Chỉnh sửa hợp đồng</h1>
+                <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={editCustomer}>
+                    <Form className="form-create">
                         <div>
-                            <label>Contract Number:</label>
+                            <label>Số hợp đồng:</label>
                             <Field type="text" name="contractNumber" className="form-control" />
                             <ErrorMessage name="contractNumber" component="div" className="error" />
                         </div>
                         <div className="mb-3 mt-3">
-                            <label>Start Date:</label>
+                            <label>Ngày bắt đầu:</label>
                             <DatePicker
                                 className="form-control"
                                 name="startDate"
@@ -100,7 +100,7 @@ function EditContract() {
                         </div>
 
                         <div className="mb-3">
-                            <label>End Date:</label>
+                            <label>Ngày kết thúc:</label>
                             <DatePicker
                                 className="form-control"
                                 name="endDate"
@@ -111,13 +111,13 @@ function EditContract() {
                             <ErrorMessage name="endDate" component="div" className="error" />
                         </div>
                         <div>
-                            <label>Advance Deposit:</label>
+                            <label>Tiền đặt cọc:</label>
                             <Field type="number" name="advanceDeposit" className="form-control" />
                             <ErrorMessage name="advanceDeposit" component="div" className="error" />
                         </div>
 
                         <div>
-                            <label>Total Payment:</label>
+                            <label>Tổng số tiền:</label>
                             <Field type="number" name="totalPayment" className="form-control" />
                             <ErrorMessage name="totalPayment" component="div" className="error" />
                         </div>
@@ -126,11 +126,14 @@ function EditContract() {
                             className="btn btn-outline-primary"
                             style={{ marginTop: '10px' }}
                             variant="primary"
-                            type="submit">Save
+                            type="submit"
+                        >
+                            Lưu
                         </button>
                     </Form>
-            </Formik>
-        </div>
+                </Formik>
+            </div>
+        )
     );
 }
 

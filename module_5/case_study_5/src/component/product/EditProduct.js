@@ -80,8 +80,7 @@ function EditProduct() {
                     validationSchema={validationSchema}
                     onSubmit={(values) => {
                         editRoom(values);
-                    }}
-                >
+                    }}>
                     {({handleSubmit}) => (
                         <Form onSubmit={handleSubmit}>
                             <div className="mb-3">

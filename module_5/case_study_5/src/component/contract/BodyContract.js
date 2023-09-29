@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
-import * as ContractService from "../Service/ContractService";
-import {Link} from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import * as ContractService from '../Service/ContractService';
+import { Link } from 'react-router-dom';
 
 function formatDate(dateString) {
-    const options = {year: "numeric", month: "2-digit", day: "2-digit"};
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     return new Date(dateString).toLocaleDateString(undefined, options);
 }
 
@@ -24,16 +24,16 @@ function BodyContract() {
     return (
         <>
             <div className="body">
-                <h2>Contract List</h2>
+                <h2>Danh sách hợp đồng</h2>
                 <table className="table table-striped">
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Contract Number</th>
-                        <th>Start Date</th>
-                        <th>End Date</th>
-                        <th>Advance Deposit</th>
-                        <th>Total Payment</th>
+                        <th>Số hợp đồng</th>
+                        <th>Ngày bắt đầu</th>
+                        <th>Ngày kết thúc</th>
+                        <th>Tiền đặt cọc</th>
+                        <th>Tổng thanh toán</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -71,7 +71,7 @@ function BodyContract() {
                     </button>
                     <button
                         onClick={() => setCurrentPage(currentPage + 1)}
-                        disabled={contracts.length < pageSize}
+                        disabled={contracts.length <= pageSize}
                         className="pagination-button"
                     >
                         Trang Tiếp Theo
@@ -80,7 +80,7 @@ function BodyContract() {
                 <Link to="/createContract">
                     <button
                         type="button"
-                        className="btn btn-outline-info float-end"
+                        className="btn btn-outline-primary float-end"
                     >
                         +
                     </button>

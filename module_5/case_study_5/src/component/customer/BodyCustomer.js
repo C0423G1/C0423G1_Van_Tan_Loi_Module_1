@@ -1,42 +1,64 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 import * as CustomerService from "../Service/CustomerService";
 
 function formatDate(dateString) {
-    const options = { year: "numeric", month: "2-digit", day: "2-digit" };
+    const options = {year: "numeric", month: "2-digit", day: "2-digit"};
     return new Date(dateString).toLocaleDateString(undefined, options);
 }
 
 function BodyCustomer() {
-    const [customers, setCustomer] = useState([]);
+    const [customers, setCustomers] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [pageSize, setPageSize] = useState(10);
-
-    const getProduct = async () => {
-        setCustomer(await CustomerService.getAll(currentPage, pageSize));
+    const [pageSize, setPageSize] = useState(5);
+    const [search, setSearch] = useState("");
+    const styleSearch = {
+        width: "252px",
+        marginLeft: "76%"
+    }
+    const getCustomers = async () => {
+        setCustomers(await CustomerService.getAll(currentPage, pageSize, search));
     };
 
+
     useEffect(() => {
-        console.log(`currentPage: ${currentPage}, pageSize: ${pageSize}`);
-        getProduct();
+        getCustomers();
     }, [currentPage, pageSize]);
 
     return (
         <>
             <div className="body">
-                <h2>Customer List</h2>
+                <h2>Danh sách Khách hàng</h2>
+                <div style={styleSearch} className="input-group mb-3">
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Tìm kiếm..."
+                        aria-label="Tìm kiếm..."
+                        aria-describedby="search-button"
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                    />
+                    <button
+                        onClick={() => setCurrentPage(1)}
+                        className="btn btn-outline-search"
+                        type="button"
+                        id="search-button">Tìm
+                    </button>
+                </div>
+
                 <table className="table table-striped">
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>Full Name</th>
-                        <th>Date of Birth</th>
-                        <th>Gender</th>
-                        <th>ID Card Number</th>
-                        <th>Phone Number</th>
+                        <th>Họ và Tên</th>
+                        <th>Ngày sinh</th>
+                        <th>Giới tính</th>
+                        <th>Số CMND</th>
+                        <th>Số điện thoại</th>
                         <th>Email</th>
-                        <th>Customer Type</th>
-                        <th>Address</th>
+                        <th>Loại khách hàng</th>
+                        <th>Địa chỉ</th>
                         <th></th>
                         <th></th>
                     </tr>
@@ -86,9 +108,8 @@ function BodyCustomer() {
 
                 <Link to="/createCustomer">
                     <button
-                        // style={buttonStyle}
                         type="button"
-                        className="btn btn-outline-info float-end"
+                        className="btn btn-outline-primary float-end"
                     >
                         +
                     </button>

@@ -1,34 +1,33 @@
-import React, {useEffect, useState} from 'react';
-import {ErrorMessage, Field, Formik, Form} from 'formik';
+import React, { useEffect } from 'react';
+import { ErrorMessage, Field, Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import * as CustomerService from '../Service/CustomerService';
 import Swal from 'sweetalert2';
-import {useNavigate} from 'react-router';
-
+import { useNavigate } from 'react-router';
 
 function CreateCustomer() {
     const navigate = useNavigate();
 
     const validationSchema = Yup.object().shape({
         fullName: Yup.string()
-            .matches(/^[A-Z][a-z]*( [A-Z][a-z]*)*$/, 'Invalid name')
-            .required('Name is required'),
+            .matches(/^[A-Za-z\s]*$/, 'Tên không hợp lệ')
+            .required('Tên không được để trống'),
         phoneNumber: Yup.string()
-            .matches(/^(0[9][0-9]{8}|\(84\)\+0[9][0-9]{8})$/, 'Invalid phone number')
-            .required('Phone number is required'),
+            .matches(/^(0[0-9]{9}|\(84\)\+0[0-9]{9})$/, 'Số điện thoại không hợp lệ')
+            .required('Số điện thoại không được để trống'),
         idCardNumber: Yup.string()
-            .matches(/^[0-9]{9,12}$/, 'Invalid ID card number')
-            .required('ID card number is required'),
+            .matches(/^[0-9]{9,12}$/, 'Số CMND không hợp lệ')
+            .required('Số CMND không được để trống'),
         email: Yup.string()
-            .matches(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/, 'Invalid email')
-            .required('Email is required'),
-        dateOfBirth: Yup.string().required('Birth date is required'),
-        gender: Yup.string().required('Gender is required'),
-        customerType: Yup.string().required('Customer Type is required'),
-        address: Yup.string().required('Address is required'),
+            .matches(/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/, 'Email không hợp lệ')
+            .required('Email không được để trống'),
+        dateOfBirth: Yup.string().required('Ngày sinh không được để trống'),
+        gender: Yup.string().required('Giới tính không được để trống'),
+        customerType: Yup.string().required('Loại khách hàng không được để trống'),
+        address: Yup.string().required('Địa chỉ không được để trống'),
     });
 
     const initialValues = {
@@ -36,7 +35,7 @@ function CreateCustomer() {
         phoneNumber: '',
         idCardNumber: '',
         email: '',
-        dateOfBirth:new Date(),
+        dateOfBirth: new Date(),
         gender: "",
         customerType: "",
         address: ""
@@ -45,35 +44,35 @@ function CreateCustomer() {
     const createCustomer = async (values) => {
         try {
             const res = await CustomerService.create(values);
-            if (res.status === 201) {
-                await Swal.fire('Created!', 'Your customer has been created successfully.', 'success');
+            if (res.status === 200) {
+                await Swal.fire('Đã tạo!', 'Khách hàng của bạn đã được tạo thành công.', 'success');
                 navigate('/customer');
             } else {
-                await Swal.fire('Error!', 'An error occurred while creating the customer.', 'error');
+                await Swal.fire('Lỗi!', 'Đã xảy ra lỗi trong quá trình tạo khách hàng.', 'error');
             }
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Lỗi:', error);
         }
     };
 
     return (
         <div className="create-product">
-            <h1>Create Customer</h1>
+            <h1>Tạo Khách hàng</h1>
             <Formik initialValues={initialValues} validationSchema={validationSchema}
                     onSubmit={(values) => createCustomer(values)}>
-                <Form>
+                <Form className="form-create">
                     <div>
-                        <label>Name:</label>
+                        <label>Tên:</label>
                         <Field type="text" name="fullName" className="form-control"/>
                         <ErrorMessage name="fullName" component="div" className="error"/>
                     </div>
                     <div>
-                        <label>Phone Number:</label>
+                        <label>Số điện thoại:</label>
                         <Field type="text" name="phoneNumber" className="form-control"/>
                         <ErrorMessage name="phoneNumber" component="div" className="error"/>
                     </div>
                     <div>
-                        <label>ID Card Number:</label>
+                        <label>Số CMND:</label>
                         <Field type="text" name="idCardNumber" className="form-control"/>
                         <ErrorMessage name="idCardNumber" component="div" className="error"/>
                     </div>
@@ -83,7 +82,7 @@ function CreateCustomer() {
                         <ErrorMessage name="email" component="div" className="error"/>
                     </div>
                     <div className="mb-3">
-                        <label>Birth Date:</label>
+                        <label>Ngày sinh:</label>
                         <div className="input-group">
                             <DatePicker
                                 className="form-control"
@@ -100,18 +99,18 @@ function CreateCustomer() {
                                       className="invalid-feedback d-block error"/>
                     </div>
                     <div>
-                        <label>Gender:</label>
+                        <label>Giới tính:</label>
                         <Field as="select" name="gender" className="form-select">
-                            <option value="">Gender</option>
-                            <option value="male">Male</option>
-                            <option value="female">Female</option>
+                            <option value="">Giới tính</option>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
                         </Field>
                         <ErrorMessage name="gender" component="div" className="error"/>
                     </div>
                     <div>
-                        <label>Customer Type:</label>
+                        <label>Loại khách hàng:</label>
                         <Field as="select" name="customerType" className="form-select">
-                            <option value="">Customer Type</option>
+                            <option value="">Loại khách hàng</option>
                             <option value="Diamond">Diamond</option>
                             <option value="Platinium">Platinium</option>
                             <option value="Gold">Gold</option>
@@ -122,12 +121,12 @@ function CreateCustomer() {
                     </div>
 
                     <div>
-                        <label>Address:</label>
+                        <label>Địa chỉ:</label>
                         <Field type="text" name="address" className="form-control"/>
                         <ErrorMessage name="address" component="div" className="error"/>
                     </div>
-                    <button className="btn btn-outline-primary" style={{marginTop: "10px"}} variant="primary" type="submit">
-                        Save
+                    <button className="btn btn-outline-primary" style={{ marginTop: "10px" }} variant="primary" type="submit">
+                        Lưu
                     </button>
                 </Form>
             </Formik>

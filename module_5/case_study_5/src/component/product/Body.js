@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import * as ProductService from "../Service/ProductService";
 import {Link} from "react-router-dom";
-import DeleteProduct from "./DeleteProduct";
+import Swal from "sweetalert2";
+import {useNavigate} from "react-router-dom";
 
 const Body = () => {
+    const navigate = useNavigate();
     const [currentPage, setCurrentPage] = useState(1);
-    const [pageSize, setPageSize] = useState(10);
+    const [pageSize, setPageSize] = useState(9);
 
     const customStyle = {
         width: '70%',
@@ -28,6 +30,23 @@ const Body = () => {
     const getProduct = async () => {
         setCards(await ProductService.getAll(currentPage, pageSize))
     }
+    const Facility = async (value) => {
+        switch (value) {
+            case "villa":
+                Swal.fire(`You selected: ${value}`);
+                navigate("/create/villa")
+                break;
+            case "house":
+                Swal.fire(`You selected: ${value}`);
+                navigate("/create/house")
+                break;
+            case "Room":
+                Swal.fire(`You selected: ${value}`);
+                navigate("/create/Room")
+                break;
+        }
+
+    };
 
     useEffect(() => {
         getProduct();
@@ -69,11 +88,12 @@ const Body = () => {
                     Trang Tiếp Theo
                 </button>
             </div>
-            <Link to="/createProduct">
-                <button style={buttonStyle} type="button" className="btn btn-outline-info float-end">
-                    +
-                </button>
-            </Link>
+            {/*<Link to="/createProduct">*/}
+            <button onClick={() => Facility()} style={buttonStyle} type="button"
+                    className="btn btn-outline-info float-end">
+                +
+            </button>
+            {/*</Link>*/}
             {/*<DeleteProduct isDelete={isDelete} />*/}
         </>
     );
