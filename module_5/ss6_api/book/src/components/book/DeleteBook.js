@@ -22,7 +22,7 @@ function DeleteBook() {
                 console.error('Lỗi xoá cuốn sách:', error);
                 Swal.fire(
                     'Error!',
-                    'An error occurred while deleting the book.',
+                    'An error occurred while deleting the rauCu.',
                     'error'
                 );
             }

@@ -1,0 +1,172 @@
+{
+  "rauCu": [
+    {
+      "id": 3,
+      "tenHangHoa": "Cà chua",
+      "donViTinh": "kg",
+      "gia": 1000,
+      "ngayThuHoach": "19-02-2020",
+      "loaiHangHoa": {
+        "id": 1,
+        "name": "rau "
+      }
+    },
+    {
+      "id": 4,
+      "tenHangHoa": "Cà chua",
+      "donViTinh": "kg",
+      "gia": 1000,
+      "ngayThuHoach": "19-02-2020",
+      "loaiHangHoa": {
+        "id": 1,
+        "name": "rau "
+      }
+    },
+    {
+      "id": 5,
+      "tenHangHoa": "Cà chua",
+      "donViTinh": "kg",
+      "gia": 1000,
+      "ngayThuHoach": "19-02-2020",
+      "loaiHangHoa": {
+        "id": 1,
+        "name": "rau "
+      }
+    },
+    {
+      "id": 6,
+      "tenHangHoa": "Cà chua",
+      "donViTinh": "kg",
+      "gia": 1000,
+      "ngayThuHoach": "19-02-2020",
+      "loaiHangHoa": {
+        "id": 1,
+        "name": "rau "
+      }
+    },
+    {
+      "tenHangHoa": "ádasdas",
+      "donViTinh": "Túi",
+      "gia": 12312,
+      "ngayThuHoach": "2023-10-01",
+      "loaiHangHoa": {
+        "id": 1,
+        "name": "rau"
+      },
+      "id": 8
+    },
+    {
+      "tenHangHoa": "áda",
+      "donViTinh": "Túi",
+      "gia": 12312,
+      "ngayThuHoach": "2023-10-11",
+      "loaiHangHoa": {
+        "id": 2,
+        "name": "củ"
+      },
+      "id": 9
+    },
+    {
+      "maHangHoa": "111111",
+      "tenHangHoa": "ádasdăd",
+      "donViTinh": "Bó",
+      "gia": 1000,
+      "ngayThuHoach": "2023-10-05",
+      "loaiHangHoa": {
+        "id": 2,
+        "name": "củ"
+      },
+      "id": 10
+    },
+    {
+      "maHangHoa": "111111",
+      "tenHangHoa": "ádasdas",
+      "donViTinh": "kg",
+      "gia": 1000,
+      "ngayThuHoach": "2023-10-05",
+      "loaiHangHoa": {
+        "id": 3,
+        "name": "quả"
+      },
+      "id": 11
+    },
+    {
+      "maHangHoa": "ádasd",
+      "tenHangHoa": "adawd",
+      "donViTinh": "Túi",
+      "gia": 1000,
+      "ngayThuHoach": "2023-10-18",
+      "loaiHangHoa": {
+        "id": 1,
+        "name": "rau"
+      },
+      "id": 12
+    },
+    {
+      "maHangHoa": "12431213",
+      "tenHangHoa": "123",
+      "donViTinh": "Túi",
+      "gia": 1000,
+      "ngayThuHoach": "2023-10-11",
+      "loaiHangHoa": {
+        "id": 1,
+        "name": "rau"
+      },
+      "id": 13
+    },
+    {
+      "maHangHoa": "1111",
+      "tenHangHoa": "ádasdas",
+      "donViTinh": "kg",
+      "gia": 1000,
+      "ngayThuHoach": "2023-10-11",
+      "loaiHangHoa": {
+        "id": 1,
+        "name": "rau"
+      },
+      "id": 14
+    },
+    {
+      "maHangHoa": "",
+      "tenHangHoa": "",
+      "donViTinh": "kg",
+      "gia": 1000,
+      "ngayThuHoach": "2023-10-01T15:49:38.159Z",
+      "loaiHangHoa": {
+        "id": 1,
+        "name": "rau"
+      },
+      "id": 15
+    },
+    {
+      "maHangHoa": "111111",
+      "tenHangHoa": "ádasdas",
+      "donViTinh": "kg",
+      "gia": 1000,
+      "ngayThuHoach": "2023-10-11",
+      "loaiHangHoa": {
+        "id": 1,
+        "name": "rau"
+      },
+      "id": 16
+    }
+  ],
+  "loaiHangHoa": [
+    {
+      "id": 1,
+      "name": "rau"
+    },
+    {
+      "id": 2,
+      "name": "củ"
+    },
+    {
+      "id": 3,
+      "name": "quả"
+    },
+    {
+      "id": 4,
+      "name": "hoa"
+    }
+  ]
+}

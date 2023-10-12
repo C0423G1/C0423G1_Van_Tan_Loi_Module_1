@@ -25,6 +25,7 @@ import DeleteRoom from "./component/product/demo/room/DeleteRoom";
 import EditHouse from "./component/product/demo/house/EditHouse";
 import EditRoom from "./component/product/demo/room/EditRoom";
 import EditVilla from "./component/product/demo/villa/EditVilla";
+import QRScanner from "./component/customer/ScanQR";
 
 function App() {
     return (
@@ -55,6 +56,7 @@ function App() {
                     <Route path="editHouse/:id" element={<EditHouse/>}/>
                     <Route path="editRoom/:id" element={<EditRoom/>}/>
                     <Route path="editVilla/:id" element={<EditVilla/>}/>
+                    <Route path="qr" element={<QRScanner/>}/>
                 </Route>
             </Routes>
             <Footer/>

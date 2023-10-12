@@ -44,7 +44,7 @@ function CreateCustomer() {
     const createCustomer = async (values) => {
         try {
             const res = await CustomerService.create(values);
-            if (res.status === 200) {
+            if (res.status === 201) {
                 await Swal.fire('Đã tạo!', 'Khách hàng của bạn đã được tạo thành công.', 'success');
                 navigate('/customer');
             } else {

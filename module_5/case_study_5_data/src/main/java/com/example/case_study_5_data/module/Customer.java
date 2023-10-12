@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Getter
@@ -32,4 +31,9 @@ public class Customer {
     private String address;
 
 
+    public String getSomeData() {
+        return "{id : " + id +
+                "fullName : " + fullName +
+                "}";
+    }
 }

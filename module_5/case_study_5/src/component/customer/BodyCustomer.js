@@ -28,6 +28,7 @@ function BodyCustomer() {
     return (
         <>
             <div className="body">
+                <Link to={'/qr'}><button>Scan QR</button></Link>
                 <h2>Danh sách Khách hàng</h2>
                 <div style={styleSearch} className="input-group mb-3">
                     <input

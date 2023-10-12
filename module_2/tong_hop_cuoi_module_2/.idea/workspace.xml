@@ -5,29 +5,71 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be72be2e-3ebd-41e2-928c-025f5f852aa3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/java/com/example/bookingtour/Controller/PaymentServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/java/com/example/bookingtour/Model/PaymentDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/java/com/example/bookingtour/Repository/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/webapp/View/information.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/gson-2.3.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/java/common/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/java/common/vnpayQuery.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/java/common/vnpayRefund.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/webapp/META-INF/context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/webapp/assets/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/webapp/assets/jquery-1.11.3.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/webapp/assets/jumbotron-narrow.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/webapp/vnpay_ipn.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/webapp/vnpay_pay.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/webapp/vnpay_querydr.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/webapp/vnpay_refund.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/webapp/vnpay_return.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/java/com/example/bookingtour/Controller/PayServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/demo/VNPAY/src/main/java/common/ajaxServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/java/com/example/bookingtour/Model/VnpayPayment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/webapp/View/cart.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/webapp/View/cart.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/case_2/bookingTour/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_3/demo/demo2.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/demo/demo2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/.idea/case_study_5.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/src/component/customer/ScanQR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/.idea/your-name.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/public/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/public/logo192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/public/logo512.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/public/manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/App.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/App.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/component/data/RauCu.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/component/rauCu/CreateRauCu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/component/rauCu/DeleteRauCu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/component/rauCu/EditRauCu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/component/rauCu/RauCu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/component/rauCu/RauCuList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/component/rauCu/c.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/component/rauCu/create.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/reportWebVitals.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/service/RauCuService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/your-name/src/setupTests.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_6/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_6/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_6/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_6/.idea/module_6.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_6/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_6/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_6/html_case/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_6/html_case/LoiVT_SalesReport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/case2/Case-study-team2" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/case2/Case-study-team2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_3/case2_demo_demo/test213" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/case2_demo_demo/test213" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_4/demo-case/case_study_module_4" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_4/demo-case/case_study_module_4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_4/ss9_exception_handling/bai_tap/borrowbooks/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_4/ss9_exception_handling/bai_tap/borrowbooks/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5/src/component/customer/BodyCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5/src/component/customer/BodyCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5/src/component/customer/CreateCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5/src/component/customer/CreateCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5_data/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5_data/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5_data/src/main/java/com/example/case_study_5_data/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5_data/src/main/java/com/example/case_study_5_data/controller/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5_data/src/main/java/com/example/case_study_5_data/module/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5_data/src/main/java/com/example/case_study_5_data/module/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/ss6_api/book/src/components/book/DeleteBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/ss6_api/book/src/components/book/DeleteBook.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,19 +84,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/CodeGymC0423G1/codegym/module_1/module_2/tong_hop_cuoi_module_2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../C0423G1_MODULE_6_TEMPLATE" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="be72be2e-3ebd-41e2-928c-025f5f852aa3" name="Changes" comment="" />
@@ -63,10 +109,17 @@
       <option name="presentableId" value="Default" />
       <updated>1690868649732</updated>
       <workItem from="1690868650737" duration="962000" />
+      <workItem from="1697030750231" duration="3099000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1697040033535">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1697040033535" />
   </component>
 </project>
