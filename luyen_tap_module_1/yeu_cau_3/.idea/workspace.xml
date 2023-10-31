@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2ab716b5-1552-4abf-a748-c60b10efb855" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/hotel/ApplicationsHotel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/hotel/ApplicationsHotelDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/hotel/Hotel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/hotel/HotelDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/hotel/ImageAvatar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/hotel/TypeRoomHotel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/order/OrderBill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/user/customer/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/user/customer/EmployeeCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/user/customer/TypeCustomer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/user/employee/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/user/employee/TypeEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/user/role/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../du_an_ca_nhan/BE/Hotel/src/main/java/com/example/hotel/model/user/role/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html_demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/src/component/Service/SalesService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/src/component/salesReport/SalesReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/src/component/salesReport/ScanQR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module_5/case_study_5/src/component/salesReport/ScanResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5/src/component/customer/BodyCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5/src/component/customer/BodyCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5_data/src/main/java/com/example/case_study_5_data/module/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5_data/src/main/java/com/example/case_study_5_data/module/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module_5/case_study_5_data/src/main/java/com/example/case_study_5_data/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_5/case_study_5_data/src/main/java/com/example/case_study_5_data/repository/ICustomerRepository.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2XUPZ1J27DCe6Dn7MpJ78ymjngO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/CODEGYM/C0423G1/module1-module5/C0423G1_Van_Tan_Loi_Module_1/luyen_tap_module_1/yeu_cau_3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2ab716b5-1552-4abf-a748-c60b10efb855" name="Changes" comment="" />
+      <created>1698680736169</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698680736169</updated>
+      <workItem from="1698680737250" duration="862000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

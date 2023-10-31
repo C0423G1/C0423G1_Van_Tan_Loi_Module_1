@@ -26,9 +26,14 @@ import EditHouse from "./component/product/demo/house/EditHouse";
 import EditRoom from "./component/product/demo/room/EditRoom";
 import EditVilla from "./component/product/demo/villa/EditVilla";
 import QRScanner from "./component/customer/ScanQR";
+import SalesReport from "./component/salesReport/SalesReport";
+import {ToastContainer} from "react-toastify";
+import ScanQR from "./component/salesReport/ScanQR";
+import ScanResult from "./component/salesReport/ScanResult";
 
 function App() {
     return (
+        <>
         <Router>
             <Header/>
             <Routes>
@@ -56,11 +61,16 @@ function App() {
                     <Route path="editHouse/:id" element={<EditHouse/>}/>
                     <Route path="editRoom/:id" element={<EditRoom/>}/>
                     <Route path="editVilla/:id" element={<EditVilla/>}/>
-                    <Route path="qr" element={<QRScanner/>}/>
+                    <Route path="qr" element={<ScanQR/>}/>
+                    <Route path="salesreport" element={<SalesReport/>}/>
+                    <Route path="/scan-result" component={ScanResult} />
+
                 </Route>
             </Routes>
             <Footer/>
         </Router>
+        <ToastContainer></ToastContainer>
+        </>
     );
 }
 

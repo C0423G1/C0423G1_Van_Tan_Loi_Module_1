@@ -28,7 +28,9 @@ function BodyCustomer() {
     return (
         <>
             <div className="body">
-                <Link to={'/qr'}><button>Scan QR</button></Link>
+                <Link to={'/qr'}>
+                    <button>Scan QR</button>
+                </Link>
                 <h2>Danh sách Khách hàng</h2>
                 <div style={styleSearch} className="input-group mb-3">
                     <input
@@ -90,18 +92,19 @@ function BodyCustomer() {
                     ))}
                     </tbody>
                 </table>
-                <div className="pagination-buttons">
+                <div className="pagination-buttons"
+                     style={{display: 'flex', justifyContent: 'center', margin: '20px 0'}}>
                     <button
                         onClick={() => setCurrentPage(currentPage - 1)}
                         disabled={currentPage === 1 || customers.length === 0}
-                        className="pagination-button"
+                        className="btn btn-primary mx-2"
                     >
                         Trang Trước
                     </button>
                     <button
                         onClick={() => setCurrentPage(currentPage + 1)}
                         disabled={customers.length < pageSize}
-                        className="pagination-button"
+                        className="btn btn-primary mx-2"
                     >
                         Trang Tiếp Theo
                     </button>

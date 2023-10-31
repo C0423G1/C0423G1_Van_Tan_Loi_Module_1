@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,31 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="19d6f0a1-6541-4a8f-90d5-f5135533ade3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/component/customer/ScanQR.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../your-name/src/component/data/RauCu.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../your-name/src/component/rauCu/CreateRauCu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../your-name/src/component/rauCu/DeleteRauCu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../your-name/src/component/rauCu/EditRauCu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../your-name/src/component/rauCu/RauCu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../your-name/src/component/rauCu/RauCuList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../your-name/src/component/rauCu/c.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../your-name/src/component/rauCu/create.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../your-name/src/service/RauCuService.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module_6/html_case/LoiVT_SalesReport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_2/tong_hop_cuoi_module_2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_2/tong_hop_cuoi_module_2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_3/case2/Case-study-team2" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/case2/Case-study-team2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_3/case2_demo_demo/test213" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_3/case2_demo_demo/test213" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_4/demo-case/case_study_module_4" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_4/demo-case/case_study_module_4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module_4/ss9_exception_handling/bai_tap/borrowbooks/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../module_4/ss9_exception_handling/bai_tap/borrowbooks/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/Service/SalesService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/salesReport/SalesReport.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/salesReport/ScanQR.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/salesReport/ScanResult.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/customer/BodyCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/BodyCustomer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/customer/CreateCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/CreateCustomer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study_5_data/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_5_data/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../case_study_5_data/src/main/java/com/example/case_study_5_data/controller/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_5_data/src/main/java/com/example/case_study_5_data/controller/ApiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../case_study_5_data/src/main/java/com/example/case_study_5_data/module/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_5_data/src/main/java/com/example/case_study_5_data/module/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ss6_api/book/src/components/book/DeleteBook.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ss6_api/book/src/components/book/DeleteBook.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../case_study_5_data/src/main/java/com/example/case_study_5_data/repository/ICustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../case_study_5_data/src/main/java/com/example/case_study_5_data/repository/ICustomerRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,29 +51,35 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2WBgBX9IqtWSYxYlmPcIs9XIYNV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.standard" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.standard" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.standard" value="C:\CodeGymC0423G1\codegym\module_1\module_5\case_study_5\node_modules\standard" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/CODEGYM/C0423G1/module1-module5/C0423G1_Van_Tan_Loi_Module_1/module_5/case_study_5&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2023.2.3\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -99,11 +95,15 @@
       <workItem from="1696299241555" duration="598000" />
       <workItem from="1696577526386" duration="8660000" />
       <workItem from="1697030803683" duration="2110000" />
+      <workItem from="1697513825490" duration="36591000" />
+      <workItem from="1697631162076" duration="7114000" />
+      <workItem from="1697763703171" duration="6601000" />
+      <workItem from="1698311444769" duration="13446000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -115,28 +115,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="638" y="319" key="#ESLint" timestamp="1696237348624">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state x="638" y="319" key="#ESLint/0.0.1536.816@0.0.1536.816" timestamp="1696237348624" />
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom" timestamp="1696580010599">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1696580010599" />
-    <state width="1515" height="208" key="GridCell.Tab.0.center" timestamp="1696580010599">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1696580010599" />
-    <state width="1515" height="208" key="GridCell.Tab.0.left" timestamp="1696580010599">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1696580010599" />
-    <state width="1515" height="208" key="GridCell.Tab.0.right" timestamp="1696580010599">
-      <screen x="0" y="0" width="1536" height="816" />
-    </state>
-    <state width="1515" height="208" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1696580010599" />
   </component>
 </project>

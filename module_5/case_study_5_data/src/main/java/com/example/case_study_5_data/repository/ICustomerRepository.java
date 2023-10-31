@@ -17,7 +17,7 @@ public interface ICustomerRepository extends JpaRepository<Customer, Integer> {
     @Query(value = "DELETE FROM customer WHERE (id = :id )", nativeQuery = true)
     void deleteById(int id);
 
-    @Query(value = "SELECT * FROM customer where id = :id", nativeQuery = true)
+    @Query(value = "SELECT * FROM customer WHERE id = :id ORDER BY id ASC /SELECT * FROM customer WHERE id = :id ORDER BY id DESC;\n", nativeQuery = true)
     Customer ByIdCustomer(int id);
 
     @Query(value = "SELECT * from customer where full_name like :fullName OR customer_type like :customerType ", nativeQuery = true)
