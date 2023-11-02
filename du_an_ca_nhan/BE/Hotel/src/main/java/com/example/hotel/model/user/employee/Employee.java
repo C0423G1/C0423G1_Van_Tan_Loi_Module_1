@@ -32,9 +32,6 @@ public class Employee {
     @Column(name = "gender_employee")
     private String genderEmployee;
 
-    @Column(name = "email_employee")
-    private String emailEmployee;
-
     @Column(name = "wage_employee")
     private double wageEmployee;
 

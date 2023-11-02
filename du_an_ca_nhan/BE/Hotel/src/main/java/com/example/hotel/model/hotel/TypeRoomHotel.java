@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+
 @Setter
 @Getter
 @AllArgsConstructor
@@ -23,7 +24,10 @@ public class TypeRoomHotel {
 
     @Column(name = "price_type_hotel")
     private double priceTypeHotel;
+    private int isDelete;
+    private int quantityBed;
 
+    private int numberGuests;
     @ManyToOne
     @JoinColumn(name = "id_hotel")
     private Hotel hotel;

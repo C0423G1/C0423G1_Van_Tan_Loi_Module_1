@@ -34,8 +34,6 @@ public class Customer {
     @Column(name = "stk_customer")
     private String stkCustomer;
 
-    @Column(name = "email_customer")
-    private String emailCustomer;
 
     @Column(name = "address_customer")
     private String addressCustomer;

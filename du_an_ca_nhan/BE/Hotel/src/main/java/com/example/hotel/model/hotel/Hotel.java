@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+
 @Setter
 @Getter
 @AllArgsConstructor
@@ -33,11 +34,11 @@ public class Hotel {
 
     @Column(name = "applications_hotel")
     private String applicationsHotel;
+    private String urlImage;
 
     @ManyToOne
     @JoinColumn(name = "id_employee_customer")
     private EmployeeCustomer employeeCustomer;
 
-    // Getters and setters
 }
 

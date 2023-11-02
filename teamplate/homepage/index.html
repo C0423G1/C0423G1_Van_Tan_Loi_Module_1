@@ -5,12 +5,13 @@
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
     <script src="http://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
 </head>
 <body>
 <div class="header">
     <nav>
         <img src="../images/logo.png" class="logo">
-        <a href="#" class="register-btn">Register Now</a>
+        <i class="fas fa-user register-btn"></i>
     </nav>
     <div class="container">
         <h1>Find Your Next Stay</h1>
@@ -32,89 +33,88 @@
                     <label>Guest</label>
                     <input type="number" placeholder="Add Guest">
                 </div>
-                <a href="../listcard/listing.html"><button><img src="../images/search.png"></button></a>
+                <a href="../listcard/listing.html">
+                    <button><img src="../images/search.png"></button>
+                </a>
             </form>
         </div>
     </div>
 </div>
-<!--<div class="container">-->
-<!--    <h2 class="sub-title">Exclusives</h2>-->
-<!--    <div class="exclusives">-->
-<!--        <div>-->
-<!--            <img src="images/image-1.png">-->
-<!--            <span>-->
-<!--                <h3>London</h3>-->
-<!--                <p>Start @ $250</p>-->
-<!--            </span>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <img src="images/image-2.png">-->
-<!--            <span>-->
-<!--                <h3>London</h3>-->
-<!--                <p>Start @ $250</p>-->
-<!--            </span>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <img src="images/image-3.png">-->
-<!--            <span>-->
-<!--                <h3>London</h3>-->
-<!--                <p>Start @ $250</p>-->
-<!--            </span>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <img src="images/image-4.png">-->
-<!--            <span>-->
-<!--                <h3>London</h3>-->
-<!--                <p>Start @ $250</p>-->
-<!--            </span>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <img src="images/image-5.png">-->
-<!--            <span>-->
-<!--                <h3>London</h3>-->
-<!--                <p>Start @ $250</p>-->
-<!--            </span>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <h2 class="sub-title">Trending places</h2>-->
-<!--    <div class="trending">-->
-<!--        <div>-->
-<!--            <img src="images/dubai.png">-->
-<!--            <h3>Dubai</h3>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <img src="images/new-york.png">-->
-<!--            <h3>New York</h3>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <img src="images/paris.png">-->
-<!--            <h3>Paris</h3>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <img src="images/new-delhi.png">-->
-<!--            <h3>New Delhi</h3>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--    <div class="cta">-->
-<!--        <h3>Sharing <br> Is Earning Now</h3>-->
-<!--        <p>Great opportunity <br>to make money</p>-->
-<!--        <a href="#" class="cta-btn">Know More</a>-->
-<!--    </div>-->
-<!--    <h2 class="sub-title">Travellers Strories</h2>-->
-<!--    <div class="stories">-->
-<!--        <div>-->
-<!--            <img src="images/story-1.png">-->
-<!--            <p>Popular European countries with a budget of just $10,000</p>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <img src="images/story-2.png">-->
-<!--            <p>Popular European countries with a budget of just $10,000</p>-->
-<!--        </div>-->
-<!--        <div>-->
-<!--            <img src="images/story-3.png">-->
-<!--            <p>Popular European countries with a budget of just $10,000</p>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <!-- Nút đóng modal -->
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="tabs">
+            <button class="tablinks" onclick="openTab(event, 'Login')">Login</button>
+            <button class="tablinks" onclick="openTab(event, 'Register')">Register</button>
+        </div>
+
+        <!-- Phần đăng nhập -->
+        <div id="Login" class="tabcontent">
+            <form>
+                <div class="input-container">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username">
+                </div>
+                <div class="input-container">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+
+        <!-- Phần đăng ký -->
+        <div id="Register" class="tabcontent">
+            <form>
+                <div class="input-container">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Choose a username">
+                </div>
+                <div class="input-container">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="input-container">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Choose a password">
+                </div>
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    var accountIcon = document.querySelector(".register-btn");
+    var modal = document.getElementById("myModal");
+
+    accountIcon.addEventListener("click", function () {
+        modal.style.display = "block";
+    });
+</script>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    function closeModal() {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+</script>
+
 </body>
 </html>

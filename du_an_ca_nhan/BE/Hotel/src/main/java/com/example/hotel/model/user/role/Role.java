@@ -19,6 +19,7 @@ public class Role {
     private int idRole;
 
     @Column(name = "name_role")
-    private String nameRole;
+    @Enumerated
+    private ERole nameRole;
 
 }

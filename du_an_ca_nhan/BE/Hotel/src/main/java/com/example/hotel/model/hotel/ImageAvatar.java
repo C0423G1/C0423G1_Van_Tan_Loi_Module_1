@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+
 @Setter
 @Getter
 @AllArgsConstructor
@@ -20,7 +21,8 @@ public class ImageAvatar {
 
     @Column(name = "url_image_avatar")
     private String urlImageAvatar;
-
-    // Getters and setters
+    @ManyToOne
+    @JoinColumn(name = "id_type_hotel")
+    private TypeRoomHotel typeRoomHotel;
 }
 

@@ -1,7 +1,7 @@
 package com.example.hotel.model.order;
 
+import com.example.hotel.model.hotel.TypeRoomHotel;
 import com.example.hotel.model.user.customer.Customer;
-import com.example.hotel.model.hotel.HotelDetail;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -43,12 +43,11 @@ public class OrderBill {
     private String phoneCustomer;
 
     @ManyToOne
-    @JoinColumn(name = "id_hotel_detail")
-    private HotelDetail hotelDetail;
+    @JoinColumn(name = "id_type_hotel")
+    private TypeRoomHotel typeRoomHotel;
 
     @Column(name = "status_order")
     private String statusOrder;
 
-    // Getters and setters
 }
 

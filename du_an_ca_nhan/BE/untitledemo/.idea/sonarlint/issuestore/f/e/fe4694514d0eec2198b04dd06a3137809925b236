@@ -1,0 +1,7 @@
+
+7
+java:S1220""Move this file to a named package.8ï¨∂∆∏1
+m	java:S116"QRename this field "Salary" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è£ë®8û¨∂∆∏1
+G	java:S106"+Replace this use of System.out by a logger.(Êõ¶é8¶¨∂∆∏1
+G
+java:S1068"*Remove this unused "Salary" private field.(è£ë®8©¨∂∆∏1
