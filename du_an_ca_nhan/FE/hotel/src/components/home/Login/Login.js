@@ -4,7 +4,7 @@ import * as UserService from "../../../service/APICity/UserService";
 import * as userService from "../../../service/APICity/UserService";
 import Swal from "sweetalert2";
 import {useNavigate} from "react-router-dom";
-
+import { jwtDecode } from "jwt-decode";
 function Login() {
     const navigate = useNavigate()
     const [formData, setFormData] = useState({
@@ -21,6 +21,9 @@ function Login() {
             console.log("Đăng nhập thành công với các giá trị sau:");
             console.log("Tên người dùng:", userName);
             console.log("Mật khẩu:", pass);
+            console.log(localStorage.getItem("JWT"))
+            console.log("---------------------------------")
+            console.log(jwtDecode(localStorage.getItem("JWT")))
             setFormData({
                 userName: "",
                 pass: "",
@@ -38,7 +41,7 @@ function Login() {
                 title: 'Đăng nhập thất bại',
                 text: 'Vui lòng kiểm tra lại tên người dùng và mật khẩu.',
             });
-            navigate("/")
+            navigate("/login")
         }
     };
 

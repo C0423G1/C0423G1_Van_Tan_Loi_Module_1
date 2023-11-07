@@ -3,6 +3,9 @@ import "../../App.css";
 import {Link, useNavigate} from "react-router-dom";
 import {DateRangePicker} from "react-dates";
 import * as City from "../../service/APICity/City";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faSignInAlt} from "@fortawesome/free-solid-svg-icons";
+import {jwtDecode} from "jwt-decode";
 
 const Header = () => {
     const navigate = useNavigate()
@@ -13,6 +16,8 @@ const Header = () => {
     const [endDate, setEndDate] = useState(null);
     const [focusedInput, setFocusedInput] = useState(null);
     const [numberOfGuests, setNumberOfGuests] = useState(1);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [username, setUsername] = useState("");
     const getCity = async () => {
         setCity(await City.getCity());
     };
@@ -36,7 +41,21 @@ const Header = () => {
         const checkOut = new Date(today);
         checkOut.setDate(checkOut.getDate() + 2);
         getCity();
+        if (localStorage.getItem("JWT")) {
+            setIsLoggedIn(true);
+            setUsername(jwtDecode(localStorage.getItem("JWT")).sub);
+        }
     }, []);
+    const handleRegister = () => {
+        navigate("/login");
+    };
+
+    const handleLogout = () => {
+        setIsLoggedIn(false);
+        localStorage.removeItem("JWT");
+        setUsername("");
+    };
+
     return (
         <nav id="navBar" className="nav-white-listing">
             <Link to={"/"}><img src={"/images/logo-red.png"} className="logo"/></Link>
@@ -91,9 +110,19 @@ const Header = () => {
                     </form>
                 </div>
             </div>
-            <a href="#" className="register-btn">
-                Register Now
-            </a>
+            {isLoggedIn ? (
+                <div className="user-info">
+                    <span>Xin chào, {username}</span>
+                    <a href="#" className="logout-btn" onClick={handleLogout}>
+                        <FontAwesomeIcon icon={faSignInAlt} /> Đăng xuất
+                    </a>
+                </div>
+            ) : (
+                <a href="#" className="register-btn" onClick={handleRegister}>
+                    <FontAwesomeIcon icon={faSignInAlt} /> Đăng nhập / Đăng Kí
+                </a>
+            )}
+
         </nav>
     );
 };

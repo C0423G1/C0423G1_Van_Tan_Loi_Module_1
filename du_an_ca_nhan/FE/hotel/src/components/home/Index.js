@@ -2,13 +2,14 @@ import React, {useEffect, useState} from "react";
 import "../../App.css";
 import {Link, useNavigate} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faUser} from "@fortawesome/free-solid-svg-icons";
+import {faSignInAlt} from "@fortawesome/free-solid-svg-icons";
 import ModalLogin from "./Login/ModalLogin";
 import * as City from "../../service/APICity/City";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-dates/initialize"
 import "react-dates/lib/css/_datepicker.css";
 import {DateRangePicker} from "react-dates";
+import {jwtDecode} from "jwt-decode";
 
 function Index() {
     const navigate = useNavigate()
@@ -20,6 +21,8 @@ function Index() {
     const [endDate, setEndDate] = useState(null);
     const [focusedInput, setFocusedInput] = useState(null);
     const [numberOfGuests, setNumberOfGuests] = useState(1);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [username, setUsername] = useState("");
 
     const getCity = async () => {
         setCity(await City.getCity());
@@ -31,6 +34,15 @@ function Index() {
 
     const openModal = () => {
         setModalOpen(true);
+    };
+    const handleRegister = () => {
+        navigate("/login");
+    };
+
+    const handleLogout = () => {
+        setIsLoggedIn(false);
+        localStorage.removeItem("JWT");
+        setUsername("");
     };
 
     const handleSearch = () => {
@@ -52,6 +64,10 @@ function Index() {
         const checkOut = new Date(today);
         checkOut.setDate(checkOut.getDate() + 2);
         getCity();
+        if (localStorage.getItem("JWT")) {
+            setIsLoggedIn(true);
+            setUsername(jwtDecode(localStorage.getItem("JWT")).sub);
+        }
     }, []);
 
     return (
@@ -61,11 +77,18 @@ function Index() {
                     <Link to={"/"}>
                         <img src={"/images/logo.png"} className="logo" alt="Logo"/>
                     </Link>
-                    <Link to={"/login"}>
-                        <button className="register-btn" onClick={openModal}>
-                            <FontAwesomeIcon icon={faUser}/>
-                        </button>
-                    </Link>
+                    {isLoggedIn ? (
+                        <div className="user-info">
+                            <span>Xin chào, {username}</span>
+                            <a href="#" className="logout-btn" onClick={handleLogout}>
+                                <FontAwesomeIcon icon={faSignInAlt}/> Đăng xuất
+                            </a>
+                        </div>
+                    ) : (
+                        <a href="#" className="register-btn" onClick={handleRegister}>
+                            <FontAwesomeIcon icon={faSignInAlt}/> Đăng nhập / Đăng Kí
+                        </a>
+                    )}
                 </nav>
                 <div className="container">
                     <h1>Find Your Next Stay</h1>

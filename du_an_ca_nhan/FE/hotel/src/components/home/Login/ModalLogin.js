@@ -17,13 +17,13 @@ function LoginModal() {
                             className={`tablinks ${activeTab === "Login" ? "active" : ""}`}
                             onClick={() => setActiveTab("Login")}
                         >
-                            Login
+                            Đăng Nhập
                         </button>
                         <button
                             className={`tablinks ${activeTab === "Register" ? "active" : ""}`}
                             onClick={() => setActiveTab("Register")}
                         >
-                            Register
+                            Đăng kí
                         </button>
                     </div>
                     {activeTab === "Login" ? <Login/> : <Register/>}

@@ -646,4 +646,19 @@ video{
     /*object-fit: cover;*/
 
 }
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.user-info span {
+    margin-right: 10px;
+}
+
+.logout-btn {
+    text-decoration: none;
+    color: red;
+}
+
 

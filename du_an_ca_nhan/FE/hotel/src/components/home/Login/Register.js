@@ -40,13 +40,14 @@ function Register() {
                 showConfirmButton: false,
                 timer: 1500
             });
-            navigate("/list")
+            navigate("/login")
         } catch (error) {
             Swal.fire({
                 icon: 'error',
                 title: 'Đăng ký thất bại',
                 text: 'Có lỗi xảy ra khi đăng ký. Vui lòng thử lại sau.',
             });
+            navigate("/login")
         }
     };
 
