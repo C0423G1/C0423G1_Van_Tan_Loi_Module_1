@@ -1,11 +1,10 @@
-package com.example.ad_racing_be.user.controller;
+package com.example.hotel.controller;
 
-import com.example.ad_racing_be.user.common.ValidateAppUser;
-import com.example.ad_racing_be.user.config.JwtTokenUtil;
-import com.example.ad_racing_be.user.dto.AppUserDto;
-import com.example.ad_racing_be.user.model.AppUser;
-import com.example.ad_racing_be.user.model.JwtResponse;
-import com.example.ad_racing_be.user.service.IAppUserService;
+import com.example.hotel.config.JwtTokenUtil;
+import com.example.hotel.dto.AppUserDto;
+import com.example.hotel.model.user.role.AppUser;
+import com.example.hotel.model.user.role.JwtResponse;
+import com.example.hotel.service.role.IAppUserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -79,11 +78,7 @@ public class AppUserController {
     public ResponseEntity<Object> registerByCustomer(@Valid @RequestBody AppUserDto appUserDto,
                                                      BindingResult bindingResult) {
         new AppUserDto().validate(appUserDto, bindingResult);
-        ValidateAppUser.checkValidateConfirmAppUserPassword(appUserDto.getConfirmPassword(), bindingResult);
         Map<String, String> errorsMap = new HashMap<>();
-        if (!ValidateAppUser.checkVerificationPassword(appUserDto.getPass(), appUserDto.getConfirmPassword())) {
-            bindingResult.rejectValue("confirmPassword", "", "Mật khẩu không khớp");
-        }
         if (bindingResult.hasErrors()) {
             for (FieldError fieldError : bindingResult.getFieldErrors()) {
                 errorsMap.put(fieldError.getField(), fieldError.getDefaultMessage());
@@ -104,7 +99,7 @@ public class AppUserController {
         appUser.setPass(passwordEncoder.encode(appUser.getPass()));
         Boolean checkAddNewAppUser = appUserService.createNewAppUser(appUser, "ROLE_CUSTOMER");
         if (Boolean.FALSE.equals(checkAddNewAppUser)) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Đăng ký thất bại, vui lòng chờ trong giây lất");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Đăng ký thất bại, vui lòng chờ trong giây lát");
         }
         return ResponseEntity.ok("Đăng ký thành công, vui lòng bấm nút đăng nhập");
     }

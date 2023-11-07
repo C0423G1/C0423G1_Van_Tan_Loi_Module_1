@@ -26,7 +26,7 @@ public class TypeRoomHotel {
     private double priceTypeHotel;
     private int isDelete;
     private int quantityBed;
-
+    private int quantityRoom;
     private int numberGuests;
     @ManyToOne
     @JoinColumn(name = "id_hotel")

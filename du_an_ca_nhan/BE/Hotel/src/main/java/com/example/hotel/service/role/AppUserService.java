@@ -1,9 +1,9 @@
-package com.example.ad_racing_be.user.service;
+package com.example.hotel.service.role;
 
-import com.example.ad_racing_be.user.dto.JwtResponseUserDetail;
-import com.example.ad_racing_be.user.model.AppUser;
-import com.example.ad_racing_be.user.model.UserRole;
-import com.example.ad_racing_be.user.repository.IAppUserRepository;
+import com.example.hotel.dto.JwtResponseUserDetail;
+import com.example.hotel.model.user.role.AppUser;
+import com.example.hotel.model.user.role.UserRole;
+import com.example.hotel.repository.user.role.IAppUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -48,9 +48,8 @@ public class AppUserService implements IAppUserService {
     @Override
     public Boolean createNewAppUser(AppUser appUser, String role) {
         Integer amountAppUserCreated = appUserRepository.createNewAppUser(appUser);
-//        Long roleId = appUserRepository.findAppRoleIdByName(role);
-//        AppUser currentAppUser = appUserRepository.findAppUserByName(appUser.getUserName());
-//        appUserRepository.insertRoleForCustomer(roleId, currentAppUser.getId());
+        AppUser currentAppUser = appUserRepository.findAppUserByName(appUser.getUserName());
+        appUserRepository.insertRoleForCustomer(2L, currentAppUser.getId());
         return amountAppUserCreated > 0;
     }
 

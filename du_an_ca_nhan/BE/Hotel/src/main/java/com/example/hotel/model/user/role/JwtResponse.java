@@ -1,4 +1,4 @@
-package com.example.ad_racing_be.user.model;
+package com.example.hotel.model.user.role;
 
 import org.springframework.security.core.GrantedAuthority;
 

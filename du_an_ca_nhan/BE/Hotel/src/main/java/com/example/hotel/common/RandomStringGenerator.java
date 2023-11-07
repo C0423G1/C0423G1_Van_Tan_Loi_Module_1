@@ -1,4 +1,4 @@
-package com.example.ad_racing_be.user.common;
+package com.example.hotel.common;
 
 import org.springframework.stereotype.Component;
 

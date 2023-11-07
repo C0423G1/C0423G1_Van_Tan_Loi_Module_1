@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import "../../App.css";
 import {Link, useNavigate} from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import ModalLogin from "./ModalLogin";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faUser} from "@fortawesome/free-solid-svg-icons";
+import ModalLogin from "./Login/ModalLogin";
 import * as City from "../../service/APICity/City";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-dates/initialize"
 import "react-dates/lib/css/_datepicker.css";
-import { DateRangePicker } from "react-dates";
+import {DateRangePicker} from "react-dates";
 
 function Index() {
     const navigate = useNavigate()
@@ -59,11 +59,13 @@ function Index() {
             <div className="header">
                 <nav>
                     <Link to={"/"}>
-                        <img src={"/images/logo.png"} className="logo" alt="Logo" />
+                        <img src={"/images/logo.png"} className="logo" alt="Logo"/>
                     </Link>
-                    <button className="register-btn" onClick={openModal}>
-                        <FontAwesomeIcon icon={faUser} />
-                    </button>
+                    <Link to={"/login"}>
+                        <button className="register-btn" onClick={openModal}>
+                            <FontAwesomeIcon icon={faUser}/>
+                        </button>
+                    </Link>
                 </nav>
                 <div className="container">
                     <h1>Find Your Next Stay</h1>
@@ -80,18 +82,20 @@ function Index() {
                                 />
                                 <datalist id="search-options">
                                     {city.map((city) => (
-                                        <option key={city.id} value={city.name} />
+                                        <option key={city.id} value={city.name}/>
                                     ))}
                                 </datalist>
                             </div>
                             <div className="location-input">
-                                <label>Check in &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check out</label>
+                                <label>Check
+                                    in &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check
+                                    out</label>
                                 <DateRangePicker
                                     startDate={startDate}
                                     startDateId="your_unique_start_date_id"
                                     endDate={endDate}
                                     endDateId="your_unique_end_date_id"
-                                    onDatesChange={({ startDate, endDate }) => {
+                                    onDatesChange={({startDate, endDate}) => {
                                         setStartDate(startDate);
                                         setEndDate(endDate);
                                     }}
@@ -110,13 +114,13 @@ function Index() {
                                 />
                             </div>
                             {startDate && endDate && numberOfGuests && <button type="button" onClick={handleSearch}>
-                                <img src="/images/search.png" alt="Search" />
+                                <img src="/images/search.png" alt="Search"/>
                             </button>}
                         </form>
                     </div>
                 </div>
             </div>
-            {isModalOpen && <ModalLogin closeModal={closeModal} />}
+            {isModalOpen && <ModalLogin closeModal={closeModal}/>}
         </div>
     );
 }

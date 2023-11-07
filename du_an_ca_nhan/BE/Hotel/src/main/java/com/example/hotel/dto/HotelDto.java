@@ -11,4 +11,6 @@ public interface HotelDto {
 
     String urlImage();
 
+    double priceHotel();
+
 }

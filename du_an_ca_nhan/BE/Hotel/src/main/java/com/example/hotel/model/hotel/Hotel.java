@@ -32,8 +32,6 @@ public class Hotel {
     @Column(name = "description_hotel")
     private String descriptionHotel;
 
-    @Column(name = "applications_hotel")
-    private String applicationsHotel;
     private String urlImage;
 
     @ManyToOne

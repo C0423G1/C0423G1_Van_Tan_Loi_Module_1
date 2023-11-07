@@ -1,4 +1,4 @@
-package com.example.ad_racing_be.user.config;
+package com.example.hotel.config;
 
 
 import io.jsonwebtoken.Claims;

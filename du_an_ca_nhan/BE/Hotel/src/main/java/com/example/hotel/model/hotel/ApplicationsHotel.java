@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+
 @Setter
 @Getter
 @AllArgsConstructor
@@ -17,10 +18,9 @@ public class ApplicationsHotel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_applications_hotel")
     private int idApplicationsHotel;
-
+    private String card;
     @Column(name = "name_applications_hotel")
     private String nameApplicationsHotel;
 
-    // Getters and setters
 }
 

@@ -1,6 +1,6 @@
 package com.example.hotel.model.user.employee;
 
-import com.example.hotel.model.user.role.Account;
+import com.example.hotel.model.user.role.AppUser;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -44,7 +44,7 @@ public class Employee {
 
     @OneToOne
     @JoinColumn(name = "id_account")
-    private Account account;
+    private AppUser user;
 
 }
 

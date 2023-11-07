@@ -1,4 +1,4 @@
-package com.example.ad_racing_be.user.config;
+package com.example.hotel.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -48,8 +48,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable().cors().and()
                 .authorizeRequests()
                 .antMatchers(
-                        //All role
-                        "/api/user/login-by-username/**",
+                        "/api/user/login-by-username",
                         "/api/user/logout/{userName}/**",
                         "/api/home/**",
                         "/api/home/search/**",

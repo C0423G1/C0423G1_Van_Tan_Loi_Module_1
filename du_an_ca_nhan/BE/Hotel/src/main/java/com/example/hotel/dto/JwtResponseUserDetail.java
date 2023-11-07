@@ -1,4 +1,4 @@
-package com.example.ad_racing_be.user.dto;
+package com.example.hotel.dto;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

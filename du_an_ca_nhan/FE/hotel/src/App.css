@@ -615,10 +615,35 @@ a {
 .DateRangePickerInput__withBorder {
     border: none !important;
 }
-.location-input-listing{
+
+.location-input-listing {
     flex: 1;
 }
-.pagination button{
+
+.pagination button {
     background: none;
+}
+
+#abc {
+  position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid red;
+    background-color:white ;
+    width: 450px;
+}
+.back-round {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: url("https://cdn.pixabay.com/vimeo/395456435/hai-cang-33014.mp4?width=1280&hash=982d60acea0e6b865f22632276e0f67aca34c861") no-repeat center center fixed;
+    background-size: cover;
+}
+video{
+    width: 100vw;
+    /*object-fit: cover;*/
+
 }
 

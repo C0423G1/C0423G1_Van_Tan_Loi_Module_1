@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+
 @Setter
 @Getter
 @AllArgsConstructor
@@ -48,6 +49,8 @@ public class OrderBill {
 
     @Column(name = "status_order")
     private String statusOrder;
+    private int quantity;
+
 
 }
 

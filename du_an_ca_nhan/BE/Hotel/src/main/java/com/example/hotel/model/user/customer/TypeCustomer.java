@@ -21,9 +21,6 @@ public class TypeCustomer {
     @Column(name = "name_type_customer")
     private String nameTypeCustomer;
 
-    @Column(name = "level_type_customer")
-    private int levelTypeCustomer;
-
     @Column(name = "discount_type_customer")
     private double discountTypeCustomer;
 

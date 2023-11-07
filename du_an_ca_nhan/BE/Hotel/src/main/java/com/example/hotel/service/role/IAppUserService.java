@@ -1,6 +1,6 @@
-package com.example.ad_racing_be.user.service;
+package com.example.hotel.service.role;
 
-import com.example.ad_racing_be.user.model.AppUser;
+import com.example.hotel.model.user.role.AppUser;
 import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface IAppUserService extends UserDetailsService {
