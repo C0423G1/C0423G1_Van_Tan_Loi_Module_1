@@ -6,6 +6,7 @@ import * as City from "../../service/APICity/City";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSignInAlt} from "@fortawesome/free-solid-svg-icons";
 import {jwtDecode} from "jwt-decode";
+import moment from "moment";
 
 const Header = () => {
     const navigate = useNavigate()
@@ -21,15 +22,36 @@ const Header = () => {
     const getCity = async () => {
         setCity(await City.getCity());
     };
+    const getAllStart = async () => {
+        const storedHotel = JSON.parse(localStorage.getItem("HOTEL"));
+        setNumberOfGuests(storedHotel.numberOfGuests)
+        setSelectedLocation(storedHotel.selectedLocation)
+        setStartDate(moment(storedHotel.startDate));
+        setEndDate(moment(storedHotel.endDate));
+    };
+    const getAll = async () => {
+        localStorage.removeItem("HOTEL")
+        const hotel = {
+            numberOfGuests: numberOfGuests,
+            startDate: startDate,
+            endDate: endDate,
+            selectedLocation: selectedLocation
+        }
+        City.addSreach(hotel)
+        getAllStart()
+        navigate("/list")
+    };
 
-    const handleSearch = () => {
+
+    const handleSearch = async () => {
+        localStorage.removeItem("HOTEL")
         console.log("Search Term:", searchTerm);
         console.log("Selected Location:", selectedLocation);
         if (startDate && endDate && numberOfGuests >= 0) {
             console.log("Check-In Date:", startDate);
             console.log("Check-Out Date:", endDate);
             console.log("Number of Guests:", numberOfGuests);
-            navigate("/list")
+            await getAll()
         } else {
             alert("Vui lòng kiểm tra ngày và số lượng khách.");
         }
@@ -41,6 +63,7 @@ const Header = () => {
         const checkOut = new Date(today);
         checkOut.setDate(checkOut.getDate() + 2);
         getCity();
+        getAllStart()
         if (localStorage.getItem("JWT")) {
             setIsLoggedIn(true);
             setUsername(jwtDecode(localStorage.getItem("JWT")).sub);
@@ -53,6 +76,7 @@ const Header = () => {
     const handleLogout = () => {
         setIsLoggedIn(false);
         localStorage.removeItem("JWT");
+        localStorage.removeItem("HOTEL")
         setUsername("");
     };
 
@@ -114,15 +138,14 @@ const Header = () => {
                 <div className="user-info">
                     <span>Xin chào, {username}</span>
                     <a href="#" className="logout-btn" onClick={handleLogout}>
-                        <FontAwesomeIcon icon={faSignInAlt} /> Đăng xuất
+                        <FontAwesomeIcon icon={faSignInAlt}/> Đăng xuất
                     </a>
                 </div>
             ) : (
                 <a href="#" className="register-btn" onClick={handleRegister}>
-                    <FontAwesomeIcon icon={faSignInAlt} /> Đăng nhập / Đăng Kí
+                    <FontAwesomeIcon icon={faSignInAlt}/> Đăng nhập / Đăng Kí
                 </a>
             )}
-
         </nav>
     );
 };

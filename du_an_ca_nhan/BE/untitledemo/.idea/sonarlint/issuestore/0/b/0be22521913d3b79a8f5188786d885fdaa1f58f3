@@ -4,3 +4,8 @@ java:S1220""Move this file to a named package.8Èý­Ç¸1
 ]	java:S125"<This block of commented-out lines of code should be removed.(ƒ©Í”ûÿÿÿÿ8Î¯·Ç¸1
 W
 java:S1161":Add the "@Override" annotation above this method signature(Š“†ì8Ðý­Ç¸1
+S
+java:S1854"6Remove this useless assignment to local variable "s4".(Íï’¼8¿‚þ»1
+D
+java:S1481"'Remove this unused "s4" local variable.(Íï’¼8Á‚þ»1
+G	java:S106"+Replace this use of System.out by a logger.(ëë¢Ø8Íµü»1

@@ -3,14 +3,16 @@ package com.example.hotel.dto;
 public interface HotelDto {
     int getIdHotel();
 
-    String getNameHotel();
-
     String getAddressHotel();
 
-    String getPhoneHotel();
+    String getDescriptionHotel();
 
-    String urlImage();
+    String getNameHotel();
 
-    double priceHotel();
+    String getUrlImage();
+
+    double getMinPriceTypeHotel();
+
+    int getAvailableRooms();
 
 }

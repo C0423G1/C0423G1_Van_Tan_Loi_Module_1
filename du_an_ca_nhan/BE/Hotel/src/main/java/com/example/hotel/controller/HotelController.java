@@ -1,35 +1,54 @@
 package com.example.hotel.controller;
 
 import com.example.hotel.dto.HotelDto;
-import com.example.hotel.model.hotel.Hotel;
+import com.example.hotel.dto.HotelDtoList;
+import com.example.hotel.model.hotel.ImageAvatar;
+import com.example.hotel.model.hotel.TypeRoomHotel;
 import com.example.hotel.service.hotel.IHotelService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/api/list")
+@RequestMapping("/api")
 public class HotelController {
     @Autowired
     private IHotelService service;
-    @GetMapping("")
-    public ResponseEntity<Page<HotelDto>> showCustomerList(
-            @RequestParam("pageSize") int pageSize,
-            @RequestParam("currentPage") int currentPage,
-            @RequestParam("numberOfGuests") int numberOfGuests,
-            @RequestParam("endDate") String endDate,
-            @RequestParam("startDate") String startDate,
-            @RequestParam("selectedLocation") String selectedLocation) {
-        Pageable pageable = PageRequest.of(currentPage - 1, pageSize);
-        Page<HotelDto> hotel = service.findAll(pageable, numberOfGuests, endDate, startDate, selectedLocation);
-        if (hotel.isEmpty()) {
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+
+    @PostMapping("/list")
+    public ResponseEntity<ArrayList<HotelDto>> getList(@RequestBody HotelDtoList request) {
+        ArrayList<HotelDto> hotelDto = service.findSreach(request);
+        return ResponseEntity.ok(hotelDto);
+    }
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<HotelDto> getTypeHotelById(@PathVariable Long id) {
+        HotelDto hotel = service.findById(id);
+        if (hotel != null) {
+            return new ResponseEntity<>(hotel, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
-        return new ResponseEntity<>(hotel, HttpStatus.OK);
+    }
+    @GetMapping("/imageHotel/{id}")
+    public ResponseEntity<ArrayList<ImageAvatar>> getIamgeHotelById(@PathVariable Long id) {
+        ArrayList<ImageAvatar> imageHotel = service.findByIdIamge(id);
+        if (imageHotel != null) {
+            return new ResponseEntity<>(imageHotel, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+    @GetMapping("/typeHotel/{id}")
+    public ResponseEntity<ArrayList<TypeRoomHotel>> getHotelById(@PathVariable Long id) {
+        ArrayList<TypeRoomHotel> typeRoom = service.findByIdTypeRoom(id);
+        if (typeRoom != null) {
+            return new ResponseEntity<>(typeRoom, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 }

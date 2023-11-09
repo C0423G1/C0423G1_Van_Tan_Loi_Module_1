@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "../../App.css";
-import {Link, useNavigate} from "react-router-dom";
+import {Link, useNavigate, useParams} from "react-router-dom";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSignInAlt} from "@fortawesome/free-solid-svg-icons";
 import ModalLogin from "./Login/ModalLogin";
@@ -44,15 +44,28 @@ function Index() {
         localStorage.removeItem("JWT");
         setUsername("");
     };
+    const addSreach = () => {
+        console.log("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm")
+        console.log(startDate)
+        const hotel = {
+            numberOfGuests: numberOfGuests,
+            startDate: startDate._d,
+            endDate: endDate,
+            selectedLocation: selectedLocation
+        }
+        City.addSreach(hotel);
+    }
 
     const handleSearch = () => {
+        localStorage.removeItem("HOTEL")
         console.log("Search Term:", searchTerm);
         console.log("Selected Location:", selectedLocation);
         if (startDate && endDate && numberOfGuests >= 0) {
             console.log("Check-In Date:", startDate);
             console.log("Check-Out Date:", endDate);
             console.log("Number of Guests:", numberOfGuests);
-            navigate(`/list?searchTerm=${searchTerm}&selectedLocation=${selectedLocation}&startDate=${startDate}&endDate=${endDate}&numberOfGuests=${numberOfGuests}`);
+            addSreach()
+            navigate(`/list`);
         } else {
             alert("Vui lòng kiểm tra ngày và số lượng khách.");
         }
@@ -133,7 +146,7 @@ function Index() {
                                 <input
                                     type="number"
                                     value={numberOfGuests}
-                                    onChange={(e) => setNumberOfGuests(Math.max(0, parseInt(e.target.value, 10)))} // Giới hạn số lượng khách tối thiểu là 0
+                                    onChange={(e) => setNumberOfGuests(Math.max(0, parseInt(e.target.value, 10)))}
                                 />
                             </div>
                             {startDate && endDate && numberOfGuests && <button type="button" onClick={handleSearch}>

@@ -1,151 +1,99 @@
-import React, {useEffect, useState} from 'react';
-import Header from "./Header";
-import {Link} from "react-router-dom";
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faStar, faStarHalfAlt} from '@fortawesome/free-solid-svg-icons';
-import * as City from "../../service/APICity/City";
+import React, { useEffect, useState } from 'react';
+import Header from './Header';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import * as City from '../../service/APICity/City';
+import ReactPaginate from 'react-paginate';
+import '../../App.css';
 
 const List = () => {
-    const [city, setCity] = useState([])
-    const [selectedLocation, setSelectedLocation] = useState("Thành Phố Đà Nẵng");
-    const [startDate, setStartDate] = useState("2023/11/11");
-    const [endDate, setEndDate] = useState("2023/11/15");
-    const [numberOfGuests, setNumberOfGuests] = useState(5);
-    const [currentPage, setCurrentPage] = useState(1);
-    const [pageSize, setPageSize] = useState(5);
-    const getAll = async () => {
-        setCity(await City.getList(pageSize, currentPage, numberOfGuests, endDate, startDate, selectedLocation));
+    const [city, setCity] = useState([]);
+    const [currentPage, setCurrentPage] = useState(0);
+    const itemsPerPage = 10;
+
+    const handlePageClick = (data) => {
+        setCurrentPage(data.selected);
     };
+
+    const displayedCity = city.slice(
+        currentPage * itemsPerPage,
+        (currentPage + 1) * itemsPerPage
+    );
+
     useEffect(() => {
-        getAll();
-    }, []);
+        const fetchData = async () => {
+            await City.getList(JSON.parse(localStorage.getItem('HOTEL')));
+            setCity(JSON.parse(localStorage.getItem('LIST')));
+        };
+        fetchData();
+    }, [city]);
 
     return (
         <>
-            <Header/>
+            <Header />
             <div className="container">
                 <div className="list-container">
                     <div className="left-col">
-                        <p>200+ Options</p>
-                        <h1>Recommended Places In San Francisco</h1>
-                        <Link to={"/detail"}>
-                            <div className="house">
-                                <div className="house-img">
-                                    <img src="/images/image-s1.png" alt="House Image"/>
-                                </div>
-                                <div className="house-info">
-                                    <p>Private Villa in San Francisco</p>
-                                    <h3>Deluxe Queen Room With Street View</h3>
-                                    <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStarHalfAlt}/>
-                                    <div className="house-price">
-                                        <p>2 Guest</p>
-                                        <h4>$100 <span>/ day</span></h4>
+                        <h1>Thành phố bạn lưu trú  : {JSON.parse(localStorage.getItem('HOTEL')).selectedLocation}</h1>
+                        {displayedCity.map((hotel) => (
+                            <Link to={`/detail/${hotel.idHotel}`} key={hotel.idHotel}>
+                                <div className="house">
+                                    <div className="house-img">
+                                        <img src={hotel.urlImage} alt="House Image" />
+                                    </div>
+                                    <div className="house-info">
+                                        <p>
+                                            <FontAwesomeIcon icon={faMapMarkerAlt} /> {hotel.addressHotel}
+                                        </p>
+                                        <h3>{hotel.nameHotel}</h3>
+                                        <p>{hotel.descriptionHotel}</p>
+                                        <div className="house-price">
+                                            <h4>${hotel.minPriceTypeHotel} <span>/ day</span></h4>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </Link>
-                        <Link to={"/detail"}>
-                            <div className="house">
-                                <div className="house-img">
-                                    <img src="/images/image-s1.png" alt="House Image"/>
-                                </div>
-                                <div className="house-info">
-                                    <p>Private Villa in San Francisco</p>
-                                    <h3>Deluxe Queen Room With Street View</h3>
-                                    <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStarHalfAlt}/>
-                                    <div className="house-price">
-                                        <p>2 Guest</p>
-                                        <h4>$100 <span>/ day</span></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to={"/detail"}>
-                            <div className="house">
-                                <div className="house-img">
-                                    <img src="/images/image-s1.png" alt="House Image"/>
-                                </div>
-                                <div className="house-info">
-                                    <p>Private Villa in San Francisco</p>
-                                    <h3>Deluxe Queen Room With Street View</h3>
-                                    <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStarHalfAlt}/>
-                                    <div className="house-price">
-                                        <p>2 Guest</p>
-                                        <h4>$100 <span>/ day</span></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to={"/detail"}>
-                            <div className="house">
-                                <div className="house-img">
-                                    <img src="/images/image-s1.png" alt="House Image"/>
-                                </div>
-                                <div className="house-info">
-                                    <p>Private Villa in San Francisco</p>
-                                    <h3>Deluxe Queen Room With Street View</h3>
-                                    <p>1 Bedroom / 1 Bathroom / Wifi / Kitchen</p>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStar}/>
-                                    <FontAwesomeIcon icon={faStarHalfAlt}/>
-                                    <div className="house-price">
-                                        <p>2 Guest</p>
-                                        <h4>$100 <span>/ day</span></h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+                            </Link>
+                        ))}
                     </div>
                     <div className="right-col">
                         <div className="sidebar">
                             <h2>Select filters</h2>
                             <h3>Property Type</h3>
                             <div className="filter">
-                                <input type="checkbox"/>
+                                <input type="checkbox" />
                                 <p>House</p> <span>(0)</span>
                             </div>
                             <div className="filter">
-                                <input type="checkbox"/>
+                                <input type="checkbox" />
                                 <p>Villa</p> <span>(0)</span>
                             </div>
                             <div className="filter">
-                                <input type="checkbox"/>
+                                <input type="checkbox" />
                                 <p>Room</p> <span>(0)</span>
                             </div>
                             <div className="filter">
-                                <input type="checkbox"/>
+                                <input type="checkbox" />
                                 <p>Hostel</p> <span>(0)</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="pagination">
-                    <img src="/images/arrow.png" alt="Left Arrow"/>
-                    <span className="current">1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <span>4</span>
-                    <span>5</span>
-                    <span>&middot;&middot;&middot;&middot;</span>
-                    <span>20</span>
-                    <img src="/images/arrow.png" alt="Right Arrow" className="right-arrow"/>
+                    <ReactPaginate
+                        previousLabel={<img src="/images/arrow.png" alt="Left Arrow"/>}
+                        nextLabel={<img src="/images/arrow.png" alt="Right Arrow" className="right-arrow"/>}
+                        breakLabel={'...'}
+                        breakClassName={'break-me'}
+                        pageCount={Math.ceil(city.length / itemsPerPage)}
+                        marginPagesDisplayed={2}
+                        pageRangeDisplayed={5}
+                        onPageChange={handlePageClick}
+                        containerClassName={'pagination'}
+                        subContainerClassName={'pages pagination'}
+                        activeClassName={'current'}
+                        forcePage={currentPage}
+                    />
                 </div>
             </div>
         </>
