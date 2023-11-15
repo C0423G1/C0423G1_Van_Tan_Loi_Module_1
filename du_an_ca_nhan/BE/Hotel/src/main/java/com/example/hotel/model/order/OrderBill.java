@@ -51,6 +51,5 @@ public class OrderBill {
     private String statusOrder;
     private int quantity;
 
-
 }
 

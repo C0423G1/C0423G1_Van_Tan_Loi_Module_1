@@ -1,0 +1,25 @@
+.body-cart {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cart-hotel {
+    flex-basis: 70%;
+}
+.container {
+    padding: 0 7%;
+}
+.pay-hotel {
+    flex-basis: 25%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #f7f9fa;
+}

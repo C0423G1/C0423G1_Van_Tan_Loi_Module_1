@@ -1,8 +1,6 @@
 package com.example.hotel.service.hotel;
 
-import com.example.hotel.dto.HotelDto;
-import com.example.hotel.dto.HotelDtoList;
-import com.example.hotel.model.hotel.Hotel;
+import com.example.hotel.dto.*;
 import com.example.hotel.model.hotel.ImageAvatar;
 import com.example.hotel.model.hotel.TypeRoomHotel;
 import org.springframework.data.domain.Page;
@@ -17,7 +15,22 @@ public interface IHotelService {
 
     HotelDto findById(Long id);
 
-    ArrayList<TypeRoomHotel> findByIdTypeRoom(Long id);
 
     ArrayList<ImageAvatar> findByIdIamge(Long id);
+
+    ArrayList<ApplicationsDto> findByIdApplications(Long id);
+
+    int findByIdName(String nameUser);
+
+    void checkAddRoom(int checkIdUser, int idTypeHotel, String startDate, String endDate);
+
+    ArrayList<OrderBillDto> checkPay(int checkIdUser, int id,String startDate, String endDate);
+
+    ArrayList<TypeRoomDto> findByIdTypeRoom(int id, String endDate, String startDate);
+
+    ArrayList<PayRoomDto> checkPayRoom(int checkIdUser, int id, String startDate, String endDate);
+
+    void pay(int checkIdUser, int idTypeHotel, String startDate, String endDate, String fullName, String phoneNumber);
+
+    Integer checkRoom(int typeHotel, int id ,String startDate, String endDate);
 }

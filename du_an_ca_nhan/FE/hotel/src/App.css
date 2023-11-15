@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    background-color: #f7f9fa;
+}
 
 .header {
     min-height: 100vh;
@@ -22,7 +25,7 @@ nav {
 
 .logo {
     margin-left: 5%;
-    width: 140px;
+    width: 100px;
     cursor: pointer;
 }
 
@@ -262,16 +265,46 @@ nav {
     flex-wrap: wrap;
     padding: 30px 0;
     border-top: 1px solid #ccc;
+    background-color: white;
 }
+.house:hover {
+    border: 2px solid #ff5361;
+    border-radius: 50px;
+    box-shadow: 0 0 5px 2px rgba(255, 83, 97, 100);}
 
 .house-img {
     width: 40%;
     height: 324px;
+    margin-left:2%
 }
 
 .house-info {
-    width: 58%;
+    width: 53%;
     color: #555;
+    margin-right: 2%;
+}
+.house-infoo .svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    font-size: 20px;
+    color: #808281;
+    margin-right: 10px;
+}
+.small-details button {
+    background-color: #ff5361;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    width: 17%;
+    margin-left: 84%;
+}
+.house-infoo {
+    width: 53%;
+    color: #555;
+    margin-right: 2%;
 }
 
 .house-img img {
@@ -286,6 +319,12 @@ nav {
     font-size: 22px;
     margin: 4px 0;
 }
+.house-infoo h3 {
+    font-weight: 600;
+    color: #333;
+    font-size: 22px;
+    margin: 4px 0;
+}
 
 .house-price {
     margin-top: 16%;
@@ -293,11 +332,21 @@ nav {
 }
 
 .house-price h4 {
-    font-size: 20px;
+    font-size: 30px;
+    color : #ff5361;
+}
+.house-price button{
+    background-color: #ff5361;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px;
+    width: 30%;
+
 }
 
-.house-price h4 span {
-    font-size: 16px;
+.house-price h6 {
+    text-decoration: line-through;
 }
 
 .house-info i {
@@ -305,6 +354,16 @@ nav {
     font-size: 18px;
     margin: 10px;
 }
+.house-infoo i {
+    color: #ff5361;
+    font-size: 18px;
+    margin: 10px;
+}
+.house-infoo .house-price {
+    margin-top: 0%;
+    text-align: right;
+}
+
 
 .sidebar {
     border: 1px solid #999;
@@ -425,7 +484,11 @@ nav {
 
 .small-details h4 {
     text-align: right;
-    font-size: 22px;
+    font-size: 30px;
+    color: #ff5361;
+}
+.small-details p {
+    text-align: right;
 }
 
 .line {
@@ -504,7 +567,7 @@ nav {
 }
 
 .home-desc {
-    max-width: 700px;
+    /*max-width: 700px;*/
     margin-bottom: 50px;
 }
 
@@ -659,18 +722,206 @@ video{
 .user-info span {
     margin-right: 10px;
 }
-
+.icon-font{
+    font-size: 30px;
+}
 .logout-btn {
     text-decoration: none;
     color: #5a3ee9d6;
 }
+
 /*.background{*/
 /*    background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full%20page/img(20).webp") no-repeat;*/
 /*    background-position: center;*/
 /*    background-size:cover ;*/
 /*    height: 100vh;*/
 /*    width: 100%;*/
-/*    filter: blur(10px);*/
-/*}*/
 
+.svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    font-size: 25px;
+    color: #ff5361;
+    margin-right: 10px;
+}
+.sidebarr {
+    border: 1px solid #999;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+.hotel-cart {
+    border: 1px solid #999;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+}
+
+.sidebarr h2 {
+    font-weight: 500;
+    text-align: center;
+}
+
+.sidebarr h3 {
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+
+
+
+.sidebarr hr {
+    width: 350px;
+}
+
+.cart-hotel p, .cart-hotel h4 {
+    display: inline;
+}
+
+.cart-hotel {
+    margin: 7% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebarr button {
+    background-color: #ff5361;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 94%;
+    font-size: 20px;
+    margin-top: 3%;
+    margin-left: 4%;
+}
+
+.sidebarr button:hover {
+    background-color: #e1616c;
+}
+
+.date-hotel {
+    margin: 7% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-hotel h5 {
+    width: 100px;
+}
+
+.hotel-cart hr {
+    margin: 5% 0;
+    color: #eff0f2;
+}
+
+.image-hotel-cart img {
+    width: 100px;
+    height: 135px;
+}
+.image-hotel {
+    display: flex;
+}
+
+.image-hotel-cart,
+.image-hotel-cart {
+    flex: 0 0 30%;
+}
+
+.hotel-info {
+    flex: 0 0 70%;
+}
+
+.hotel-info .image-hotel-cart {
+    display: inline;
+}
+.form-user input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 1% 2%;
+    width: 90%;
+}
+.form-user {
+    border: 1px solid gray;
+    border-radius: 11px;
+}
+.form-user-user {
+    padding: 1%;
+}
+.list-container .left-col {
+    flex-basis: 65%;
+}
+
+.list-container .right-col {
+    flex-basis: 33%;
+}
+.check-in, .check-out {
+    display: inline-block;
+    margin: 3% 12%;
+    text-align: center;
+}
+.list-container .house {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    border-top: 1px solid #ccc;
+    background-color: white;
+}
+.list-container .house:hover {
+  }
+
+.list-container .house-img {
+    width: 40%;
+    height: 324px;
+    margin-left:2%
+}
+
+.list-container .house-info {
+    width: 53%;
+    color: #555;
+    margin-right: 1%;
+}
+.list-container .house-infoo .svg-inline--fa {
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    font-size: 20px;
+    color: #808281;
+    margin-right: 10px;
+}
+.room {
+    color: red;
+}
+.pay-icon {
+    color: black;
+    font-size: 17px;
+}
+button.button-pay {
+    margin-bottom: 25px;
+    justify-content: left;
+    margin-left: 77%;
+}
+.form-user-user label {
+    margin-left: 2%;
+}
+.error {
+    color: red;
+    margin-left: 4%;
+}
+.kep-login-facebook{
+    padding: 10px!important;
+}
+.fb-gg-container{
+    display: flex;
+   justify-content: space-between;
+}
+.google{
+    padding-left:15px!important;
+    padding-right:15px!important;
+}
 

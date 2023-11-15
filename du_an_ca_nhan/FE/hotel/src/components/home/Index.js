@@ -81,6 +81,7 @@ function Index() {
             setIsLoggedIn(true);
             setUsername(jwtDecode(localStorage.getItem("JWT")).sub);
         }
+        document.title = 'Catland Booking - Trang Chủ';
     }, []);
 
     return (
@@ -88,7 +89,7 @@ function Index() {
             <div className="header">
                 <nav>
                     <Link to={"/"}>
-                        <img src={"/images/logo.png"} className="logo" alt="Logo"/>
+                        <img src={"/images/snapedit_1699853351032.png"} className="logo" alt="Logo"/>
                     </Link>
                     {isLoggedIn ? (
                         <div className="user-info">
@@ -104,14 +105,14 @@ function Index() {
                     )}
                 </nav>
                 <div className="container">
-                    <h1>Find Your Next Stay</h1>
+                    <h1>Tìm kỳ nghỉ của bạn</h1>
                     <div className="search-bar">
                         <form>
                             <div className="location-input">
-                                <label>Location</label>
+                                <label>Thành phố</label>
                                 <input
                                     type="text"
-                                    placeholder="Where are you going"
+                                    placeholder="Bạn muốn đến ?"
                                     value={selectedLocation}
                                     onChange={(e) => setSelectedLocation(e.target.value)}
                                     list="search-options"
@@ -123,9 +124,9 @@ function Index() {
                                 </datalist>
                             </div>
                             <div className="location-input">
-                                <label>Check
-                                    in &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check
-                                    out</label>
+                                <label>Nhận
+                                    phòng &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trả
+                                    phòng</label>
                                 <DateRangePicker
                                     startDate={startDate}
                                     startDateId="your_unique_start_date_id"
@@ -142,7 +143,7 @@ function Index() {
                                 />
                             </div>
                             <div>
-                                <label>Guest</label>
+                                <label>Khách</label>
                                 <input
                                     type="number"
                                     value={numberOfGuests}

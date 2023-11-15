@@ -18,10 +18,9 @@ function Login() {
             <div className="background"></div>
             <div className="container">
                 <div className="item">
-                    <h2 className="logo"><FontAwesomeIcon icon={faXing} />Hash Techie</h2>
+                    <h2 className="logo"><img src={"/images/snapedit_1699853351032.png"} className="logo"/>Catland Booking</h2>
                     <div className="text-item">
-                        <h2>Welcome! <br/><span>To Our Channel</span></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, repellendus?</p>
+                        <h2>Xin chào! <br/><span>Chào mừng bạn đến với Catland Booking</span></h2>
                         <div className="social-icon">
                             <a href="#"><FontAwesomeIcon icon={faFacebook} /></a>
                             <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>

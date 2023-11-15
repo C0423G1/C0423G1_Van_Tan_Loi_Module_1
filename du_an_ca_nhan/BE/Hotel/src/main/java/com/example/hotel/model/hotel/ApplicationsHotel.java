@@ -21,6 +21,5 @@ public class ApplicationsHotel {
     private String card;
     @Column(name = "name_applications_hotel")
     private String nameApplicationsHotel;
-
 }
 

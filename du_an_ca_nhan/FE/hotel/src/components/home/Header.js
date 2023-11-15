@@ -78,19 +78,20 @@ const Header = () => {
         localStorage.removeItem("JWT");
         localStorage.removeItem("HOTEL")
         setUsername("");
+        navigate("/")
     };
 
     return (
         <nav id="navBar" className="nav-white-listing">
-            <Link to={"/"}><img src={"/images/logo-red.png"} className="logo"/></Link>
+            <Link to={"/"}><img src={"/images/snapedit_1699853351032.png"} className="logo"/></Link>
             <div className="container">
                 <div className="search-bar-listing">
                     <form>
                         <div className="location-input-listing">
-                            <label>Location</label>
+                            <label>Thành phố</label>
                             <input
                                 type="text"
-                                placeholder="Where are you going"
+                                placeholder="Bạn muốn đến ?"
                                 value={selectedLocation}
                                 onChange={(e) => setSelectedLocation(e.target.value)}
                                 list="search-options"
@@ -102,9 +103,7 @@ const Header = () => {
                             </datalist>
                         </div>
                         <div className="location-input-listing">
-                            <label>Check
-                                in &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Check
-                                out</label>
+                            <label>Nhận phòng &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trả phòng</label>
                             <DateRangePicker
                                 startDate={startDate}
                                 startDateId="your_unique_start_date_id"
@@ -121,7 +120,7 @@ const Header = () => {
                             />
                         </div>
                         <div>
-                            <label>Guest</label>
+                            <label>Khách</label>
                             <input
                                 type="number"
                                 value={numberOfGuests}

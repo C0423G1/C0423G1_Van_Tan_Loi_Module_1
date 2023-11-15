@@ -276,3 +276,7 @@ body{
 .create-account p a:hover{
     text-decoration: underline;
 }
+/*--------------------------------------------------------------*/
+.check-out {
+    width: 50%;
+}

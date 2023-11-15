@@ -5,13 +5,16 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Setter
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class HotelDtoList {
-    int numberOfGuests;
-    String endDate;
+
+public class Pay {
+    String fullName;
+    String phoneNumber;
+    int idTypeHotel;
     String startDate;
-    String selectedLocation;
+    String endDate;
+    String userName;
 }

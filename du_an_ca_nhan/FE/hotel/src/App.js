@@ -5,7 +5,10 @@ import List from "./components/home/List";
 import HouseDetails from "./components/home/HouseDetail";
 import Login from "./components/home/Header/Login";
 import A from "./components/home/demo";
-
+import BookingPage from "./components/home/BookingPage";
+import {ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import VNPayPayment from "./components/home/VNPayPayment";
 function App() {
     return (
         <>
@@ -17,8 +20,11 @@ function App() {
                         <Route path="/detail/:id" element={<HouseDetails/>}/>
                         <Route path="/login" element={<Login/>}/>
                         <Route path="/check" element={<A/>}/>
+                        <Route path="/pay/:id" element={<BookingPage/>}/>
+                        <Route path="/booking" element={<VNPayPayment/>}/>
                     </Routes>
                 </Router>
+                <ToastContainer />
             </>
         </>
     );

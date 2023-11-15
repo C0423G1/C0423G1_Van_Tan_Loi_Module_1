@@ -9,9 +9,9 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class HotelDtoList {
-    int numberOfGuests;
-    String endDate;
+public class TypeRoomCheckDto {
+    int idTypeHotel;
+    String nameUser;
     String startDate;
-    String selectedLocation;
+    String endDate;
 }

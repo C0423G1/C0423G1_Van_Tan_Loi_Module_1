@@ -94,85 +94,101 @@ nav {
     width: 15px;
     margin-top: 7px;
 }
-.location-input{
+
+.location-input {
     flex: 0.5;
 }
-.search-bar form label{
+
+.search-bar form label {
     font-weight: 600;
 }
+
 /*-----------------exclusives------------*/
-.sub-title{
+.sub-title {
     margin: 50px 0 20px;
     font-size: 2.2vw;
     font-weight: 500;
     color: #333;
 }
-.exclusives{
+
+.exclusives {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 30px;
 }
-.exclusives div img{
+
+.exclusives div img {
     width: 100%;
     border-radius: 10px;
 }
-.exclusives div{
+
+.exclusives div {
     position: relative;
 }
-.exclusives div span{
+
+.exclusives div span {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
     color: #fff;
 }
+
 /*------------------------ Trending ----------------*/
-.trending{
+.trending {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 30px;
     margin-bottom: 30px;
 }
-.trending div img{
+
+.trending div img {
     width: 100%;
-    border-radius:10px ;
+    border-radius: 10px;
 }
+
 /*-------------- Call to action ----------*/
-.cta{
+.cta {
     margin: 80px 0;
-    background-image :linear-gradient(to right,#3f2321,transparent),url(../images/banner-2.png) ;
+    background-image: linear-gradient(to right, #3f2321, transparent), url(../images/banner-2.png);
     background-size: cover;
     background-position: center;
     border-radius: 10px;
     padding: 5%;
     color: #fff;
 }
-.cta h3{
+
+.cta h3 {
     font-size: 4vw;
     line-height: 5.3vw;
     font-weight: 500;
 }
-.cta p{
+
+.cta p {
     font-size: 18px;
     margin: 10px 0;
 }
+
 /*---------------------Travellers Strories--------------------*/
-.stories{
+.stories {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 30px;
     margin-bottom: 30px;
 }
-.stories div img{
+
+.stories div img {
     width: 100%;
-    border-radius:10px ;
+    border-radius: 10px;
 }
+
 /*---------------  Listing Page ------------------*/
-.nav-white-listing{
+.nav-white-listing {
     background: #fff;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
 }
+
 .search-bar-listing {
     background: #fff;
     width: 100%;
@@ -210,107 +226,131 @@ nav {
     width: 15px;
     margin-top: 7px;
 }
+
 /*.location-input{*/
 /*    flex: 0.5;*/
 /*}*/
-.search-bar-listing form label{
+.search-bar-listing form label {
     font-weight: 600;
 }
-.list-container{
+
+.list-container {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.left-col{
+
+.left-col {
     flex-basis: 70%;
 }
-.right-col{
+
+.right-col {
     flex-basis: 25%;
 }
-.left-col h1{
+
+.left-col h1 {
     color: #333;
     font-weight: 600;
     margin-bottom: 30px;
 }
-.house{
+
+.house {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 30px 0;
     border-top: 1px solid #ccc;
 }
-.house-img{
+
+.house-img {
     flex-basis: 40%;
 }
-.house-info{
+
+.house-info {
     flex-basis: 58%;
     color: #555;
 }
-.house-img img{
+
+.house-img img {
     width: 100%;
     border-radius: 12px;
 }
-.house-info h3{
+
+.house-info h3 {
     font-weight: 600;
     color: #333;
     font-size: 22px;
     margin: 4px 0;
 }
-.house-price{
+
+.house-price {
     margin-top: 20%;
     text-align: right;
 }
-.house-price h4{
+
+.house-price h4 {
     font-size: 20px;
 }
-.house-price h4 span{
+
+.house-price h4 span {
     font-size: 16px;
 }
-.house-info i{
+
+.house-info i {
     color: #ff5361;
     font-size: 18px;
-    margin: 10px ;
+    margin: 10px;
 }
-.sidebar{
+
+.sidebar {
     border: 1px solid #999;
     padding: 20px 30px;
     margin-top: 30px;
 }
-.sidebar h2{
+
+.sidebar h2 {
     font-weight: 500;
 }
-.sidebar h3{
+
+.sidebar h3 {
     font-weight: 500;
     margin: 20px 0 10px;
 }
-.filter{
+
+.filter {
     display: flex;
     align-items: center;
     color: #555;
     margin-bottom: 10px;
 }
-.filter p{
+
+.filter p {
     flex: 1;
 }
-.filter input{
+
+.filter input {
     margin-right: 15px;
     cursor: pointer;
 }
-.pagination{
+
+.pagination {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 40px 0;
 }
-.pagination img{
+
+.pagination img {
     width: 15px;
     margin: 10px 20px;
 }
-.right-arrow{
+
+.right-arrow {
     transform: rotate(180deg);
 }
-.pagination span{
+
+.pagination span {
     margin: 10px 8px;
     width: 40px;
     height: 40px;
@@ -319,54 +359,67 @@ nav {
     border-radius: 50%;
     cursor: pointer;
 }
-.pagination .current{
+
+.pagination .current {
     background: #333;
     color: #fff;
 }
+
 /*-----------------------------Details ---------------*/
-.house-details{
+.house-details {
     padding: 0 12%;
 }
-.house-title{
+
+.house-title {
     margin-top: 50px;
 }
-.house-title h1{
+
+.house-title h1 {
     font-weight: 600;
 }
-.house-title .row{
+
+.house-title .row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin: 10px 0;
 }
-.house-title span{
+
+.house-title span {
     margin: 0 20px;
 }
-.house-title i{
+
+.house-title i {
     color: #ff5361;
 }
-.gallery{
+
+.gallery {
     display: grid;
     grid-gap: 10px;
     grid-template-areas: 'first first . .' 'first first . .';
     margin: 20px 0;
 }
-.gallery div img{
+
+.gallery div img {
     width: 100%;
     display: block;
     border-radius: 10px;
 }
-.gallery-img-1{
+
+.gallery-img-1 {
     grid-area: first;
 }
-.small-details h2{
+
+.small-details h2 {
     font-weight: 500;
 }
-.small-details h4{
+
+.small-details h4 {
     text-align: right;
     font-size: 22px;
 }
-.line{
+
+.line {
     border: 0;
     height: 1px;
     background: #ccc;
@@ -374,28 +427,33 @@ nav {
     max-width: 900px;
     margin: 20px 0 50px;
 }
-.check-from{
+
+.check-from {
     margin: 30px 0;
     background: #fff;
-    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 10px 50px;
 }
-.check-from label{
+
+.check-from label {
     display: block;
 }
-.check-from div{
+
+.check-from div {
     padding: 20px;
 }
-.check-from input{
-    background:  transparent;
+
+.check-from input {
+    background: transparent;
     border: 0;
     outline: none;
 }
-.check-from button{
+
+.check-from button {
     background: #ff5361;
     border: 0;
     outline: none;
@@ -405,14 +463,17 @@ nav {
     border-radius: 8px;
     font-size: 16px;
 }
-.guest-field{
+
+.guest-field {
     flex: 0.5;
 }
-.details-list{
+
+.details-list {
     list-style: none;
     margin: 50px 0;
 }
-.details-list li{
+
+.details-list li {
     margin-left: 50px;
     font-size: 20px;
     font-weight: 500;
@@ -420,20 +481,24 @@ nav {
     color: #555;
     position: relative;
 }
-.details-list li span{
+
+.details-list li span {
     display: block;
     font-weight: 400;
     font-size: 16px;
 }
-.details-list li i{
+
+.details-list li i {
     position: absolute;
-    top : 5px;
+    top: 5px;
     left: -40px;
 }
-.home-desc{
+
+.home-desc {
     max-width: 700px;
     margin-bottom: 50px;
 }
+
 /*------------------Modal------------------*/
 .tablinks {
     background-color: #ff5361;
@@ -454,7 +519,9 @@ nav {
     margin-top: 2%;
 }
 
-#Login {display: block;}
+#Login {
+    display: block;
+}
 
 .modal {
     display: none;
@@ -472,7 +539,7 @@ nav {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff ;
+    background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -518,6 +585,7 @@ button {
 button:hover {
     background-color: #e1616c;
 }
+
 .forgot-password {
     font-size: 14px;
     color: #007bff;
@@ -530,4 +598,113 @@ button:hover {
     text-decoration: underline;
 }
 
+/*-----------------------------------------------------------------*/
+.sidebarr {
+    border: 1px solid #999;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
 
+.hotel-cart {
+    border: 1px solid #999;
+    padding: 20px 30px;
+    margin-top: 30px;
+}
+
+.sidebarr h2 {
+    font-weight: 500;
+    text-align: center;
+}
+
+.sidebarr h3 {
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+
+.check-in, .check-out {
+    display: inline-block;
+    margin: 3% 14%;
+    text-align: center;
+}
+
+.sidebarr hr {
+    width: 350px;
+}
+
+.cart-hotel p, .cart-hotel h4 {
+    display: inline;
+}
+
+.cart-hotel {
+    margin: 7% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebarr button {
+    background-color: #ff5361;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 94%;
+    font-size: 20px;
+    margin-top: 3%;
+    margin-left: 4%;
+}
+
+.sidebarr button:hover {
+    background-color: #e1616c;
+}
+
+.date-hotel {
+    margin: 7% 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-hotel h5 {
+    max-width: 100px;
+}
+
+.hotel-cart hr {
+    margin: 5% 0;
+    color: #eff0f2;
+}
+
+.image-hotel-cart img {
+    width: 100px;
+    height: 135px;
+}
+.image-hotel {
+    display: flex;
+}
+
+.image-hotel-cart,
+.image-hotel-cart {
+    flex: 0 0 30%;
+}
+
+.hotel-info {
+    flex: 0 0 70%;
+}
+
+.hotel-info .image-hotel-cart {
+    display: inline;
+}
+.form-user input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 1% 2%;
+    width: 90%;
+}
+.form-user {
+    border: 1px solid gray;
+    border-radius: 11px;
+}
+.form-user-user {
+    padding: 1%;
+}
