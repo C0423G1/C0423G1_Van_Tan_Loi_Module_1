@@ -103,6 +103,6 @@ public interface ITypeRoomRepository extends JpaRepository<TypeRoomHotel, Intege
             ") " +
             "WHERE trh.id_type_hotel = :typeHotel AND toa.id_customer = :id " +
             "GROUP BY trh.id_type_hotel, trh.name_type_hotel, trh.quantity_room", nativeQuery = true)
-    Integer checkRoomUnpaid(@Param("typeHotel") int typeHotel, int id,@Param("startDate") String startDate, @Param("endDate") String endDate);
+    Integer checkRoomUnpaid(@Param("typeHotel") int typeHotel, @Param("id") int id, @Param("startDate") String startDate, @Param("endDate") String endDate);
 
 }

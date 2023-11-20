@@ -19,6 +19,7 @@ const Header = () => {
     const [numberOfGuests, setNumberOfGuests] = useState(1);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState("");
+    const [customer, setCustomer] = useState(null);
     const getCity = async () => {
         setCity(await City.getCity());
     };
@@ -68,6 +69,16 @@ const Header = () => {
             setIsLoggedIn(true);
             setUsername(jwtDecode(localStorage.getItem("JWT")).sub);
         }
+        const fetchData = async () => {
+            try {
+                const user = await City.getUser(jwtDecode(localStorage.getItem('JWT')).sub);
+                setCustomer(user);
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        };
+
+        fetchData();
     }, []);
     const handleRegister = () => {
         navigate("/login");
@@ -103,7 +114,9 @@ const Header = () => {
                             </datalist>
                         </div>
                         <div className="location-input-listing">
-                            <label>Nhận phòng &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trả phòng</label>
+                            <label>Nhận
+                                phòng &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Trả
+                                phòng</label>
                             <DateRangePicker
                                 startDate={startDate}
                                 startDateId="your_unique_start_date_id"
@@ -133,18 +146,29 @@ const Header = () => {
                     </form>
                 </div>
             </div>
-            {isLoggedIn ? (
-                <div className="user-info">
-                    <span>Xin chào, {username}</span>
-                    <a href="#" className="logout-btn" onClick={handleLogout}>
-                        <FontAwesomeIcon icon={faSignInAlt}/> Đăng xuất
-                    </a>
+            <div className="dropdown">
+                 <span className="dropdown-btn">
+                  {isLoggedIn ? `Xin chào, ${username} ` : 'Đăng nhập '}
+                  </span>
+
+                <div className="dropdown-content">
+                    {isLoggedIn ? (
+                        <React.Fragment>
+                            <Link to="/userform">
+                                <div>Thông tin cá nhân</div>
+                            </Link>
+                            <Link to="/ordersuccess">
+                                <div>Đơn đặt chỗ</div>
+                            </Link>
+                            <div onClick={handleLogout}>Đăng xuất</div>
+                        </React.Fragment>
+                    ) : (
+                        <div onClick={handleRegister}>
+                            Đăng nhập
+                        </div>
+                    )}
                 </div>
-            ) : (
-                <a href="#" className="register-btn" onClick={handleRegister}>
-                    <FontAwesomeIcon icon={faSignInAlt}/> Đăng nhập / Đăng Kí
-                </a>
-            )}
+            </div>
         </nav>
     );
 };

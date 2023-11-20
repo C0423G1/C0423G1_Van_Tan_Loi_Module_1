@@ -9,6 +9,8 @@ import BookingPage from "./components/home/BookingPage";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import VNPayPayment from "./components/home/VNPayPayment";
+import CustomerForm from "./components/CustomerForm";
+import OrderSuccess from "./components/home/OrderSuccess";
 function App() {
     return (
         <>
@@ -22,6 +24,8 @@ function App() {
                         <Route path="/check" element={<A/>}/>
                         <Route path="/pay/:id" element={<BookingPage/>}/>
                         <Route path="/booking" element={<VNPayPayment/>}/>
+                        <Route path="/userform" element={<CustomerForm/>}/>
+                        <Route path="/ordersuccess" element={<OrderSuccess/>}/>
                     </Routes>
                 </Router>
                 <ToastContainer />

@@ -5,6 +5,8 @@ import com.example.hotel.model.hotel.ApplicationsHotel;
 import com.example.hotel.model.hotel.ImageAvatar;
 import com.example.hotel.model.hotel.TypeRoomHotel;
 import com.example.hotel.model.order.OrderBill;
+import com.example.hotel.model.user.customer.Customer;
+import com.example.hotel.repository.hotel.ICustomerRepository;
 import com.example.hotel.repository.hotel.IHotelRepository;
 import com.example.hotel.repository.hotel.IImageRepository;
 import com.example.hotel.repository.hotel.ITypeRoomRepository;
@@ -14,6 +16,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class HotelService implements IHotelService {
@@ -23,6 +26,8 @@ public class HotelService implements IHotelService {
     private IImageRepository imageRepository;
     @Autowired
     private ITypeRoomRepository typeRoomRepository;
+    @Autowired
+    private ICustomerRepository customerRepository;
 
     @Override
     public Page<HotelDto> findAll(Pageable pageable, int numberOfGuests, String endDate, String startDate, String selectedLocation) {
@@ -57,10 +62,28 @@ public class HotelService implements IHotelService {
     }
 
     @Override
-    public Integer checkRoom(int typeHotel, int id,String startDate, String endDate) {
+    public Integer checkRoom(int typeHotel, int id, String startDate, String endDate) {
         Integer paid = typeRoomRepository.checkRoom(typeHotel, startDate, endDate);
-        Integer unpaid = typeRoomRepository.checkRoomUnpaid(typeHotel, id,startDate, endDate);
+        Integer unpaid = typeRoomRepository.checkRoomUnpaid(typeHotel, id, startDate, endDate);
+        if (unpaid == null) {
+            unpaid = 0;
+        }
         return paid - unpaid;
+    }
+
+    @Override
+    public int FindByUserName(int checkIdUser) {
+        return imageRepository.findByNameUser(checkIdUser);
+    }
+
+    @Override
+    public Customer checkCustomer(int checkIdCustomer) {
+        return customerRepository.findById(checkIdCustomer).orElse(null);
+    }
+
+    @Override
+    public ArrayList<OrderSuccessfulDto> orderSuccess(int checkIdUser) {
+        return repository.checkOrderSuccess(checkIdUser);
     }
 
     @Override

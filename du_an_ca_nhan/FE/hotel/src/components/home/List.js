@@ -6,6 +6,7 @@ import {faMapMarkerAlt} from '@fortawesome/free-solid-svg-icons';
 import * as City from '../../service/APICity/City';
 import ReactPaginate from 'react-paginate';
 import '../../App.css';
+import Footer from "./Footer";
 
 function truncateString(str) {
     return str.length > 25 ? str.slice(0, 25) + '...' : str;
@@ -40,50 +41,54 @@ const List = () => {
                 <div className="list-container">
                     <div className="left-col">
                         <h1>Thành phố bạn lưu trú : {JSON.parse(localStorage.getItem('HOTEL')).selectedLocation}</h1>
-                        {displayedCity.map((hotel) => (
-                            <Link to={`/detail/${hotel.idHotel}`} key={hotel.idHotel}>
-                                <div className="house">
-                                    <div className="house-img">
-                                        <img src={hotel.urlImage} alt="House Image"/>
-                                    </div>
-                                    <div className="house-info">
-                                        <p>
-                                            <FontAwesomeIcon icon={faMapMarkerAlt}/> {hotel.addressHotel}
-                                        </p>
-                                        <h3>{truncateString(hotel.nameHotel)}</h3>
-                                        <p>{hotel.descriptionHotel}</p>
-                                        <div className="house-price">
-                                            <h6>{(hotel.minPriceTypeHotel * 5.82573).toLocaleString('vi-VN')} VND</h6>
-                                            <h4>{hotel.minPriceTypeHotel.toLocaleString('vi-VN')} VND<span></span></h4>
-                                            <button>Xem ngay</button>
+                        {displayedCity && displayedCity.length > 0 ? (
+                            displayedCity.map((hotel) => (
+                                <Link to={`/detail/${hotel.idHotel}`} key={hotel.idHotel}>
+                                    <div className="house">
+                                        <div className="house-img">
+                                            <img src={hotel.urlImage} alt="House Image"/>
+                                        </div>
+                                        <div className="house-info">
+                                            <p>
+                                                <FontAwesomeIcon icon={faMapMarkerAlt}/> {hotel.addressHotel}
+                                            </p>
+                                            <h3>{hotel.nameHotel}</h3>
+                                            <p>{hotel.descriptionHotel}</p>
+                                            <div className="house-price">
+                                                <h6>{(hotel.minPriceTypeHotel * 5.82573).toLocaleString('vi-VN')} VND</h6>
+                                                <h4>{hotel.minPriceTypeHotel.toLocaleString('vi-VN')} VND<span></span></h4>
+                                                <button>Xem ngay</button>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </Link>
-                        ))}
+                                </Link>
+                            ))
+                        ) : (
+                            <h4>Không tìm thấy kết quả </h4>
+                        )}
                     </div>
-                    <div className="right-col">
-                        <div className="sidebar">
-                            <h2>Select filters</h2>
-                            <h3>Property Type</h3>
-                            <div className="filter">
-                                <input type="checkbox"/>
-                                <p>House</p> <span>(0)</span>
-                            </div>
-                            <div className="filter">
-                                <input type="checkbox"/>
-                                <p>Villa</p> <span>(0)</span>
-                            </div>
-                            <div className="filter">
-                                <input type="checkbox"/>
-                                <p>Room</p> <span>(0)</span>
-                            </div>
-                            <div className="filter">
-                                <input type="checkbox"/>
-                                <p>Hostel</p> <span>(0)</span>
-                            </div>
-                        </div>
-                    </div>
+                    {/*<div className="right-col">*/}
+                    {/*    <div className="sidebar">*/}
+                    {/*        <h2>Select filters</h2>*/}
+                    {/*        <h3>Property Type</h3>*/}
+                    {/*        <div className="filter">*/}
+                    {/*            <input type="checkbox"/>*/}
+                    {/*            <p>House</p> <span>(0)</span>*/}
+                    {/*        </div>*/}
+                    {/*        <div className="filter">*/}
+                    {/*            <input type="checkbox"/>*/}
+                    {/*            <p>Villa</p> <span>(0)</span>*/}
+                    {/*        </div>*/}
+                    {/*        <div className="filter">*/}
+                    {/*            <input type="checkbox"/>*/}
+                    {/*            <p>Room</p> <span>(0)</span>*/}
+                    {/*        </div>*/}
+                    {/*        <div className="filter">*/}
+                    {/*            <input type="checkbox"/>*/}
+                    {/*            <p>Hostel</p> <span>(0)</span>*/}
+                    {/*        </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                 </div>
                 <div className="pagination">
                     <ReactPaginate
@@ -102,6 +107,7 @@ const List = () => {
                     />
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };

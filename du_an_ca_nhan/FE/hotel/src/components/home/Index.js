@@ -91,18 +91,21 @@ function Index() {
                     <Link to={"/"}>
                         <img src={"/images/snapedit_1699853351032.png"} className="logo" alt="Logo"/>
                     </Link>
-                    {isLoggedIn ? (
-                        <div className="user-info">
-                            <span>Xin chào, {username}</span>
-                            <a href="#" className="logout-btn" onClick={handleLogout}>
-                                <FontAwesomeIcon icon={faSignInAlt}/> Đăng xuất
-                            </a>
+                    <div className="dropdown">
+                        <span className="dropdown-btn">{isLoggedIn ? `Xin chào, ${username}` : 'Đăng nhập '}</span>
+                        <div className="dropdown-content">
+                            {isLoggedIn ? (
+                                <React.Fragment>
+                                    <Link to="/userform"><div>Thông tin cá nhân</div></Link>
+                                    <div onClick={handleLogout}>Đăng xuất</div>
+                                </React.Fragment>
+                            ) : (
+                                <div onClick={handleRegister}>
+                                     Đăng nhập
+                                </div>
+                            )}
                         </div>
-                    ) : (
-                        <a href="#" className="register-btn" onClick={handleRegister}>
-                            <FontAwesomeIcon icon={faSignInAlt}/> Đăng nhập / Đăng Kí
-                        </a>
-                    )}
+                    </div>
                 </nav>
                 <div className="container">
                     <h1>Tìm kỳ nghỉ của bạn</h1>

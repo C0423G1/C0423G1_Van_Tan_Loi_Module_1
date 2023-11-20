@@ -3,6 +3,7 @@ package com.example.hotel.service.hotel;
 import com.example.hotel.dto.*;
 import com.example.hotel.model.hotel.ImageAvatar;
 import com.example.hotel.model.hotel.TypeRoomHotel;
+import com.example.hotel.model.user.customer.Customer;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -33,4 +34,11 @@ public interface IHotelService {
     void pay(int checkIdUser, int idTypeHotel, String startDate, String endDate, String fullName, String phoneNumber);
 
     Integer checkRoom(int typeHotel, int id ,String startDate, String endDate);
+
+    int FindByUserName(int checkIdUser);
+
+    Customer checkCustomer(int checkIdCustomer);
+
+    ArrayList<OrderSuccessfulDto> orderSuccess(int checkIdUser);
+
 }

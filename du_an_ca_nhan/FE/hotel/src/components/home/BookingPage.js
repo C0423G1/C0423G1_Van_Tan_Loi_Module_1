@@ -12,6 +12,7 @@ import {differenceInDays, format, parseISO} from 'date-fns';
 import {ErrorMessage, Field, Form, Formik} from 'formik';
 import * as Yup from 'yup';
 import Swal from "sweetalert2";
+import Footer from "./Footer";
 
 function formatDate(str) {
     const date = new Date(str);
@@ -27,16 +28,19 @@ function quantityDate(end, start) {
 }
 
 const BookingPage = () => {
+    const [paymentMethod, setPaymentMethod] = useState('');
     const navigate = useNavigate();
     const {id} = useParams();
     const [city, setCity] = useState([]);
+    const [flag, setFlag] = useState(true);
+    const [flagPay, setFlagPay] = useState(false);
     const quantityDatee = quantityDate(
         JSON.parse(localStorage.getItem('HOTEL')).startDate,
         JSON.parse(localStorage.getItem('HOTEL')).endDate
     );
 
     const sum = city.reduce((acc, current) => acc + current.priceTypeHotel * current.quantity * quantityDatee, 0);
-    const sumPay = sum/20000;
+    const sumPay = sum / 20000;
     const sumRoom = city.reduce((acc, current) => acc + current.quantity, 0);
 
     const validationSchema = Yup.object({
@@ -72,8 +76,8 @@ const BookingPage = () => {
             purchase_units: [
                 {
                     amount: {
-                        value:sumPay ,
-                        currency_code: 'USD', // Đặt lại thành 'USD' nếu bạn sử dụng môi trường sandbox
+                        value: sumPay,
+                        currency_code: 'USD',
                     },
                 },
             ],
@@ -99,17 +103,40 @@ const BookingPage = () => {
     }, []);
 
     const handleSubmit = async (values) => {
+        let check = true;
         for (let i = 0; i < city.length; i++) {
-            await City.pay(
-                values.fullName,
-                values.phoneNumber,
-                city[i].idTypeHotel,
-                JSON.parse(localStorage.getItem('HOTEL')).startDate,
-                JSON.parse(localStorage.getItem('HOTEL')).endDate,
-                jwtDecode(localStorage.getItem('JWT')).sub
-            );
+            const a = await City.checkRoom(city[i].idTypeHotel, jwtDecode(localStorage.getItem("JWT")).sub, JSON.parse(localStorage.getItem("HOTEL")).startDate, JSON.parse(localStorage.getItem("HOTEL")).endDate);
+            if (a < 0) {
+                check = false;
+                break;
+            }
         }
+        if (check) {
+            for (let i = 0; i < city.length; i++) {
+                await City.pay(
+                    values.fullName,
+                    values.phoneNumber,
+                    city[i].idTypeHotel,
+                    JSON.parse(localStorage.getItem('HOTEL')).startDate,
+                    JSON.parse(localStorage.getItem('HOTEL')).endDate,
+                    jwtDecode(localStorage.getItem('JWT')).sub
+                );
+            }
+        } else {
+            toast("Chậm mất rồi phòng bạn đã chọn đã hết");
+            navigate("/")
+        }
+        setFlag(false);
+        setFlagPay(true)
     };
+
+    const checkVNPay = async () => {
+        console.log(sum);
+        const link = await City.checkVNPay(sum);
+        console.log(link)
+        window.location.href = link;
+    }
+
 
     return (
         <>
@@ -143,8 +170,8 @@ const BookingPage = () => {
                                 phoneNumber: '',
                                 idCard: '',
                             }}
-                            validationSchema={validationSchema}
                             onSubmit={handleSubmit}
+                            validationSchema={validationSchema}
                         >
                             <Form>
                                 <div className="form-user">
@@ -171,9 +198,9 @@ const BookingPage = () => {
                                             <ErrorMessage name="idCard" component="div" className="error"/>
                                         </div>
                                     </div>
-                                    <button className="button-pay" type="submit">
+                                    {flag && <button className="button-pay" type="submit">
                                         Thanh toán
-                                    </button>
+                                    </button>}
                                 </div>
                             </Form>
                         </Formik>
@@ -236,14 +263,48 @@ const BookingPage = () => {
                                 <p>{sum.toLocaleString('vi-VN')} đ</p>
                             </div>
                             <h6>Giá đã bao gồm : <span>Thuế 8% ,Phí dịch vụ 5 %</span></h6>
-                            <PayPalScriptProvider
-                                options={{"client-id": "ATVLu4Mi0WmojMeUtCh-wTtCBb37GExzwi18B7kLRGSX9bUvnLq92Rnm02UnBCRPu_KGIgnkFOCOP94E"}}>
-                                <PayPalButtons createOrder={createOrder} onApprove={onApprove} onError={onError}/>
-                            </PayPalScriptProvider>
+                            <div class="payment">
+                                {flagPay && (
+                                    <>
+                                        <input
+                                            type="radio"
+                                            id="vnpay"
+                                            name="paymentMethod"
+                                            value="vnpay"
+                                            checked={paymentMethod === 'vnpay'}
+                                            onChange={() => setPaymentMethod('vnpay')}
+                                        />
+                                        Thanh toán VNPay
+                                        <input
+                                            type="radio"
+                                            id="palpay"
+                                            name="paymentMethod"
+                                            value="palpay"
+                                            checked={paymentMethod === 'palpay'}
+                                            onChange={() => setPaymentMethod('palpay')}
+                                        />
+                                        Thanh toán PalPay
+                                        {paymentMethod === 'palpay' && (
+                                            <PayPalScriptProvider
+                                                options={{"client-id": "ATVLu4Mi0WmojMeUtCh-wTtCBb37GExzwi18B7kLRGSX9bUvnLq92Rnm02UnBCRPu_KGIgnkFOCOP94E"}}
+                                            >
+                                                <PayPalButtons createOrder={createOrder} onApprove={onApprove}
+                                                               onError={onError}/>
+                                            </PayPalScriptProvider>
+                                        )}
+
+                                        {paymentMethod === 'vnpay' && (
+                                            <button onClick={checkVNPay}>Ví điện tử &nbsp;&nbsp; <img
+                                                src="/images/images-removebg-preview.png"/></button>
+                                        )}
+                                    </>
+                                )}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };

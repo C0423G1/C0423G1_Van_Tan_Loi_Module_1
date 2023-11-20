@@ -3,6 +3,7 @@ package com.example.hotel.repository.hotel;
 import com.example.hotel.dto.ApplicationsDto;
 import com.example.hotel.dto.HotelDto;
 import com.example.hotel.dto.OrderBillDto;
+import com.example.hotel.dto.OrderSuccessfulDto;
 import com.example.hotel.model.hotel.Hotel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
@@ -126,5 +127,27 @@ public interface IHotelRepository extends JpaRepository<Hotel, Integer> {
             "AND th.id_hotel = :id", nativeQuery = true)
     ArrayList<OrderBillDto> checkPay(int checkIdUser, int id,String startDate, String endDate);
 
-
+    @Query(value = "SELECT " +
+            "table_order_bill.id_order AS IdOrder, " +
+            "table_order_bill.date_start AS DateStart, " +
+            "table_order_bill.date_end AS DateEnd, " +
+            "table_order_bill.quantity AS Quantity, " +
+            "table_order_bill.sum_price AS SumPrice, " +
+            "table_type_room_hotel.name_type_hotel AS NameTypeHotel, " +
+            "table_type_room_hotel.quantity_bed AS QuantityBed, " +
+            "table_type_room_hotel.quantity_room AS QuantityRoom, " +
+            "table_hotel.name_hotel AS NameHotel, " +
+            "table_hotel.url_image AS UrlImage " +
+            "FROM " +
+            "table_order_bill " +
+            "JOIN " +
+            "table_type_room_hotel ON table_order_bill.id_type_hotel = table_type_room_hotel.id_type_hotel " +
+            "JOIN " +
+            "table_hotel ON table_type_room_hotel.id_hotel = table_hotel.id_hotel " +
+            "WHERE " +
+            "table_order_bill.status_order = 'Đã thanh toán' " +
+            "AND table_order_bill.id_customer = :checkIdUser " +
+            "ORDER BY " +
+            "table_order_bill.date_start DESC",nativeQuery = true)
+    ArrayList<OrderSuccessfulDto> checkOrderSuccess(int checkIdUser);
 }

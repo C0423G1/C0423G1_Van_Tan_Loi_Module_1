@@ -27,6 +27,7 @@ import {FreeMode, Navigation, Thumbs} from "swiper/modules";
 import {jwtDecode} from "jwt-decode";
 import {toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from "./Footer";
 
 
 const HouseDetails = () => {
@@ -39,7 +40,7 @@ const HouseDetails = () => {
     const [applications, setApplications] = useState([])
     const handleAddRoomClick = async (idTypeHotel, nameTypeHotel) => {
         try {
-            const a = await City.checkRoom(idTypeHotel, jwtDecode(localStorage.getItem("JWT")).sub,JSON.parse(localStorage.getItem("HOTEL")).startDate, JSON.parse(localStorage.getItem("HOTEL")).endDate);
+            const a = await City.checkRoom(idTypeHotel, jwtDecode(localStorage.getItem("JWT")).sub, JSON.parse(localStorage.getItem("HOTEL")).startDate, JSON.parse(localStorage.getItem("HOTEL")).endDate);
             console.log("kieerm tar : " + a)
             if (a > 0) {
                 await City.checkAddRoom(idTypeHotel, jwtDecode(localStorage.getItem("JWT")).sub, JSON.parse(localStorage.getItem("HOTEL")).startDate, JSON.parse(localStorage.getItem("HOTEL")).endDate)
@@ -176,18 +177,23 @@ const HouseDetails = () => {
                             return null;
                         }
                     })}
-
                 </ul>
                 <p className="home-desc">
-                    Add peace of mind with Hilton CleanStay when you book your stay here.
-                    Centrally located in New York (NY)'s Financial District, this property
-                    places you close to exciting attractions and dining options. Don't leave
-                    before visiting famous Central Park. Rated 4 stars, this high-quality
-                    property offers access to an on-site restaurant and gym.
+                    Thêm sự an tâm với Hilton CleanStay khi bạn đặt phòng nghỉ tại đây.
+                    Nằm ở trung tâm Khu tài chính của New York (NY), khách sạn này
+                    nơi bạn ở gần các điểm tham quan thú vị và các lựa chọn ăn uống. Đừng rời đi
+                    trước khi đến thăm Công viên Trung tâm nổi tiếng. Được đánh giá 4 sao, chất lượng cao
+                    nơi nghỉ cung cấp quyền sử dụng nhà hàng và phòng tập thể dục ngay trong khuôn viên.
                 </p>
                 <hr className="line"/>
                 {typeHotel.map((typeHotel) => (
-                    <div className="house" key={typeHotel.idTypeHotel}>
+                    <div className="house"
+                         key={typeHotel.idTypeHotel}>
+                        {typeHotel.available === 0 && (
+                            <div className="sold-out-container">
+                                <img className="sold-out-img" src="/images/het_phong.png" alt="Image Alt Text" />
+                            </div>
+                        )}
                         <div className="house-img">
                             <Swiper
                                 style={{
@@ -249,6 +255,7 @@ const HouseDetails = () => {
                     </div>
                 ))}
             </div>
+            <Footer/>
         </>
     );
 };

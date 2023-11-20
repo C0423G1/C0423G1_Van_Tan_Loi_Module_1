@@ -1,8 +1,46 @@
 import axios from "axios";
 
-export const checkRoom = async (idTypeHotel, userName,startDate, endDate)=> {
-    const a ={
-        idTypeHotel, userName,startDate: startDate.substring(0, 10), endDate: endDate.substring(0, 10)
+export const OrderSuccess = async (sub) =>{
+    console.log(sub)
+    try {
+        const response = await axios.get(`http://localhost:8080/api/ordersuccess/${sub}`);
+        console.log("==================", response);
+        return response.data;
+    } catch (error) {
+        console.error("Error in checkVNPay:", error);
+        return [];
+    }
+}
+
+export const getUser = async (id) =>{
+    console.log(id)
+    try {
+        const response = await axios.get(`http://localhost:8080/api/userform/${id}`);
+        console.log("==================", response);
+        console.log(response.data.typeCustomer.nameTypeCustomer)
+        return response.data;
+    } catch (error) {
+        console.error("Error in checkVNPay:", error);
+        return [];
+    }
+}
+
+
+export const checkVNPay = async (sum) => {
+    try {
+        const response = await axios.get(`http://localhost:8080/pay?sum=${sum}`);
+        console.log("==================", response);
+        return response.data;
+    } catch (error) {
+        console.error("Error in checkVNPay:", error);
+        return [];
+    }
+};
+
+
+export const checkRoom = async (idTypeHotel, userName, startDate, endDate) => {
+    const a = {
+        idTypeHotel, userName, startDate: startDate.substring(0, 10), endDate: endDate.substring(0, 10)
     }
     console.log(a)
     try {
@@ -16,8 +54,13 @@ export const checkRoom = async (idTypeHotel, userName,startDate, endDate)=> {
 
 
 export const pay = async (fullName, phoneNumber, idTypeHotel, startDate, endDate, userName) => {
-    const a ={
-        fullName,phoneNumber,idTypeHotel, startDate: startDate.substring(0, 10), endDate: endDate.substring(0, 10),userName
+    const a = {
+        fullName,
+        phoneNumber,
+        idTypeHotel,
+        startDate: startDate.substring(0, 10),
+        endDate: endDate.substring(0, 10),
+        userName
     }
     try {
         const res = await axios.post(`http://localhost:8080/api/pay`, a);
@@ -97,7 +140,7 @@ export const getTypeHotel = async (id, startDate, endDate) => {
     }
     try {
         const res = await axios.post(`http://localhost:8080/api/typeHotel`, a);
-        console.log("--------")
+        console.log("-----check---")
         console.log(res)
         return res.data;
     } catch (e) {

@@ -2,7 +2,7 @@ package com.example.hotel.controller;
 
 import com.example.hotel.dto.*;
 import com.example.hotel.model.hotel.ImageAvatar;
-import com.example.hotel.model.hotel.TypeRoomHotel;
+import com.example.hotel.model.user.customer.Customer;
 import com.example.hotel.service.hotel.IHotelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class HotelController {
     @Autowired
     private IHotelService service;
+
 
     @PostMapping("/list")
     public ResponseEntity<ArrayList<HotelDto>> getList(@RequestBody HotelDtoList request) {
@@ -55,6 +56,12 @@ public class HotelController {
         Integer orderBill = service.checkRoom(request.getIdTypeHotel(),checkIdUser,request.getStartDate(), request.getEndDate());
         return ResponseEntity.ok(orderBill);
     }
+    @GetMapping("/userform/{user}")
+    public ResponseEntity<Customer> getCheckUserAccount(@PathVariable String user) {
+            int checkIdUser = service.findByIdName(user);
+        Customer customer = service.checkCustomer(checkIdUser);
+        return ResponseEntity.ok(customer);
+    }
 
     @GetMapping("/detail/{id}")
     public ResponseEntity<HotelDto> getTypeHotelById(@PathVariable Long id) {
@@ -81,6 +88,16 @@ public class HotelController {
         ArrayList<ApplicationsDto> applications = service.findByIdApplications(id);
         if (applications != null) {
             return new ResponseEntity<>(applications, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+    @GetMapping("/ordersuccess/{name}")
+    public ResponseEntity<ArrayList<OrderSuccessfulDto>> getOrderSuccess(@PathVariable String name) {
+        int checkIdUser = service.findByIdName(name);
+        ArrayList<OrderSuccessfulDto> orderSuccessfulDto = service.orderSuccess(checkIdUser);
+        if (orderSuccessfulDto != null) {
+            return new ResponseEntity<>(orderSuccessfulDto, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }

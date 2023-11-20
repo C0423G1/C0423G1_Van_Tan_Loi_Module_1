@@ -4,7 +4,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-body{
+
+body {
     background-color: #f7f9fa;
 }
 
@@ -20,7 +21,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 7px;
+    padding: 4px 47px 4px 6px;
 }
 
 .logo {
@@ -260,22 +261,47 @@ nav {
 }
 
 .house {
+    transition: all ease 0.2s;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 30px 0;
+    margin: 30px 0;
     border-top: 1px solid #ccc;
     background-color: white;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
 }
+
+.sold-out-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: #e7e6e6b8;
+}
+
+.sold-out-img {
+    user-select: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
 .house:hover {
     border: 2px solid #ff5361;
-    border-radius: 50px;
-    box-shadow: 0 0 5px 2px rgba(255, 83, 97, 100);}
+    border-radius: 20px;
+    box-shadow: 0 0 5px 2px rgba(255, 83, 97, 100);
+    overflow: hidden;
+
+}
 
 .house-img {
     width: 40%;
     height: 324px;
-    margin-left:2%
+    margin-left: 2%
 }
 
 .house-info {
@@ -283,6 +309,7 @@ nav {
     color: #555;
     margin-right: 2%;
 }
+
 .house-infoo .svg-inline--fa {
     display: var(--fa-display, inline-block);
     height: 1em;
@@ -292,6 +319,7 @@ nav {
     color: #808281;
     margin-right: 10px;
 }
+
 .small-details button {
     background-color: #ff5361;
     color: #fff;
@@ -301,6 +329,7 @@ nav {
     width: 17%;
     margin-left: 84%;
 }
+
 .house-infoo {
     width: 53%;
     color: #555;
@@ -318,12 +347,14 @@ nav {
     color: #333;
     font-size: 22px;
     margin: 4px 0;
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.house-infoo h3 {
-    font-weight: 600;
-    color: #333;
-    font-size: 22px;
-    margin: 4px 0;
+
+.house-info h3:hover {
+    overflow: visible;
 }
 
 .house-price {
@@ -333,9 +364,10 @@ nav {
 
 .house-price h4 {
     font-size: 30px;
-    color : #ff5361;
+    color: #ff5361;
 }
-.house-price button{
+
+.house-price button {
     background-color: #ff5361;
     color: #fff;
     padding: 10px 20px;
@@ -354,11 +386,13 @@ nav {
     font-size: 18px;
     margin: 10px;
 }
+
 .house-infoo i {
     color: #ff5361;
     font-size: 18px;
     margin: 10px;
 }
+
 .house-infoo .house-price {
     margin-top: 0%;
     text-align: right;
@@ -487,6 +521,7 @@ nav {
     font-size: 30px;
     color: #ff5361;
 }
+
 .small-details p {
     text-align: right;
 }
@@ -692,14 +727,15 @@ a {
 }
 
 #abc {
-  position: absolute;
-    top:50%;
-    left:50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid red;
-    background-color:white ;
+    background-color: white;
     width: 450px;
 }
+
 .back-round {
     width: 100vw;
     height: 100vh;
@@ -708,11 +744,13 @@ a {
     background: url("https://cdn.pixabay.com/vimeo/395456435/hai-cang-33014.mp4?width=1280&hash=982d60acea0e6b865f22632276e0f67aca34c861") no-repeat center center fixed;
     background-size: cover;
 }
-video{
+
+video {
     width: 100vw;
     /*object-fit: cover;*/
 
 }
+
 .user-info {
     display: flex;
     align-items: center;
@@ -722,9 +760,11 @@ video{
 .user-info span {
     margin-right: 10px;
 }
-.icon-font{
+
+.icon-font {
     font-size: 30px;
 }
+
 .logout-btn {
     text-decoration: none;
     color: #5a3ee9d6;
@@ -746,6 +786,7 @@ video{
     color: #ff5361;
     margin-right: 10px;
 }
+
 .sidebarr {
     border: 1px solid #999;
     padding: 20px 30px;
@@ -767,7 +808,6 @@ video{
     font-weight: 500;
     margin: 20px 0 10px;
 }
-
 
 
 .sidebarr hr {
@@ -820,6 +860,7 @@ video{
     width: 100px;
     height: 135px;
 }
+
 .image-hotel {
     display: flex;
 }
@@ -836,6 +877,7 @@ video{
 .hotel-info .image-hotel-cart {
     display: inline;
 }
+
 .form-user input {
     padding: 10px;
     border: 1px solid #ccc;
@@ -844,13 +886,16 @@ video{
     margin: 1% 2%;
     width: 90%;
 }
+
 .form-user {
     border: 1px solid gray;
     border-radius: 11px;
 }
+
 .form-user-user {
     padding: 1%;
 }
+
 .list-container .left-col {
     flex-basis: 65%;
 }
@@ -858,11 +903,13 @@ video{
 .list-container .right-col {
     flex-basis: 33%;
 }
+
 .check-in, .check-out {
     display: inline-block;
     margin: 3% 12%;
     text-align: center;
 }
+
 .list-container .house {
     display: flex;
     justify-content: space-between;
@@ -871,13 +918,14 @@ video{
     border-top: 1px solid #ccc;
     background-color: white;
 }
+
 .list-container .house:hover {
-  }
+}
 
 .list-container .house-img {
     width: 40%;
     height: 324px;
-    margin-left:2%
+    margin-left: 2%
 }
 
 .list-container .house-info {
@@ -885,6 +933,7 @@ video{
     color: #555;
     margin-right: 1%;
 }
+
 .list-container .house-infoo .svg-inline--fa {
     display: var(--fa-display, inline-block);
     height: 1em;
@@ -894,34 +943,156 @@ video{
     color: #808281;
     margin-right: 10px;
 }
+
 .room {
     color: red;
 }
+
 .pay-icon {
     color: black;
     font-size: 17px;
 }
+
 button.button-pay {
     margin-bottom: 25px;
     justify-content: left;
     margin-left: 77%;
 }
+
 .form-user-user label {
     margin-left: 2%;
 }
+
 .error {
     color: red;
     margin-left: 4%;
 }
-.kep-login-facebook{
-    padding: 10px!important;
+
+.kep-login-facebook {
+    padding: 10px !important;
 }
-.fb-gg-container{
+
+.fb-gg-container {
     display: flex;
-   justify-content: space-between;
+    justify-content: space-between;
 }
-.google{
-    padding-left:15px!important;
-    padding-right:15px!important;
+
+.google {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
 }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-btn {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content div {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content div:hover {
+    background-color: #ddd;
+}
+
+/* Style for the FontAwesome icon */
+.dropdown-content svg {
+    margin-right: 5px;
+}
+
+.face-id button {
+    background-color: #f72d7a;
+    border-radius: 6px;
+    width: 100%;
+    margin: 14px 0;
+}
+
+.payment input {
+    width: 20px;
+}
+
+input#palpay {
+    margin-left: 8%;
+}
+
+.payment button {
+    background-color: #f72d7a;
+    margin: 16px;
+    border-radius: 8px;
+    width: 335px;
+}
+
+.payment img {
+    vertical-align: middle;
+    width: 102px;
+}
+
+/*-------------------------------------------------------------------------------*/
+.form-user-account .customer-form {
+    max-width: 66%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-user-account .form-group {
+    margin-bottom: 20px;
+}
+
+.form-user-account label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-user-account div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+.form-user-account .form-group:hover {
+    background-color: #f0f0f0;
+}
+
+.order-success p {
+    white-space: nowrap;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.order-success p:hover {
+    overflow: visible;
+}
+
+
+
 
