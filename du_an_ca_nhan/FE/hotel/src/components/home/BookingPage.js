@@ -100,6 +100,7 @@ const BookingPage = () => {
 
     useEffect(() => {
         getAll();
+        document.title = "Catland Booking - Đặt phòng " ;
     }, []);
 
     const handleSubmit = async (values) => {
@@ -134,6 +135,7 @@ const BookingPage = () => {
         console.log(sum);
         const link = await City.checkVNPay(sum);
         console.log(link)
+        window.close();
         window.location.href = link;
     }
 

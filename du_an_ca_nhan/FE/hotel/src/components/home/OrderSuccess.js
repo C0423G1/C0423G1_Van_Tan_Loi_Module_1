@@ -5,7 +5,7 @@ import ReactPaginate from "react-paginate";
 import React, {useEffect, useState} from "react";
 import * as City from "../../service/APICity/City";
 import {jwtDecode} from "jwt-decode";
-import {format} from "date-fns";
+import {differenceInDays, format, parseISO} from "date-fns";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -14,7 +14,12 @@ function formatDate(str) {
     const formattedDate = format(date, "dd 'tháng' MM yyyy");
     return formattedDate;
 }
-
+function quantityDate(end, start) {
+    const startDateObject = parseISO(start);
+    const endDateObject = parseISO(end);
+    const daysDifference = differenceInDays(startDateObject, endDateObject);
+    return daysDifference;
+}
 const OrderSuccess = () => {
     const [city, setCity] = useState([]);
     const [currentPage, setCurrentPage] = useState(0);
@@ -33,6 +38,7 @@ const OrderSuccess = () => {
             }
         };
         fetchData();
+        document.title = "Catland Booking - Chuyến đi của bạn ";
     }, []);
     const handlePageClick = (data) => {
         setCurrentPage(data.selected);
@@ -60,7 +66,7 @@ const OrderSuccess = () => {
                                                 {formatDate(hotel.dateStart)} - {formatDate(hotel.dateEnd)}
                                             </p>
                                             <div className="house-price">
-                                                <h4>{(hotel.sumPrice * hotel.quantity).toLocaleString('vi-VN')} VND<span></span>
+                                                <h4>{(hotel.sumPrice * hotel.quantity * (quantityDate(hotel.dateStart,hotel.dateEnd))).toLocaleString('vi-VN')} VND<span></span>
                                                 </h4>
                                             </div>
                                         </div>

@@ -279,6 +279,7 @@ function LoginForm({toggleForm}) {
         }
 
         gapi.load('client:auth2', start);
+        document.title = "Catland Booking - Đăng nhập";
     }, [isGoogleSignedIn]);
     return (
         <div className="form-box login">
@@ -327,7 +328,6 @@ function LoginForm({toggleForm}) {
                     <button className="action face-sign-in" onClick={faceSignIn}>Face ID</button>
                 </div>
                 <div className="fb-gg-container">
-
                     <FacebookLogin
                         appId="893376725832823"
                         autoLoad={false}

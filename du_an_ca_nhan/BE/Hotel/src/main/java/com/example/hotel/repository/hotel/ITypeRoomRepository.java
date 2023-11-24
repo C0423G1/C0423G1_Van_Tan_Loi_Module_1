@@ -1,7 +1,4 @@
 package com.example.hotel.repository.hotel;
-
-
-import com.example.hotel.dto.OrderBillDto;
 import com.example.hotel.dto.PayRoomDto;
 import com.example.hotel.dto.TypeRoomDto;
 import com.example.hotel.model.hotel.TypeRoomHotel;
@@ -104,5 +101,4 @@ public interface ITypeRoomRepository extends JpaRepository<TypeRoomHotel, Intege
             "WHERE trh.id_type_hotel = :typeHotel AND toa.id_customer = :id " +
             "GROUP BY trh.id_type_hotel, trh.name_type_hotel, trh.quantity_room", nativeQuery = true)
     Integer checkRoomUnpaid(@Param("typeHotel") int typeHotel, @Param("id") int id, @Param("startDate") String startDate, @Param("endDate") String endDate);
-
 }

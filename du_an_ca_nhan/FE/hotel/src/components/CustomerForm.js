@@ -16,7 +16,7 @@ const CustomerForm = () => {
                 console.error('Error fetching user data:', error);
             }
         };
-
+        document.title = "Catland Booking - Thông tin cá nhân ";
         fetchData();
     }, []);
 
