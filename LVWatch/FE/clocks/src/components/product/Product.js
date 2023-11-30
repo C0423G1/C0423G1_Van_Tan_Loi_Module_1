@@ -111,7 +111,7 @@ export default function Product() {
         }
     }
     useEffect(() => {
-        search(searchTerm, min, max, page, selectedBrands, selectedColor, selectedCategories);
+        // search(searchTerm, min, max, page, selectedBrands, selectedColor, selectedCategories);
     }, [searchTerm, min, max, page, selectedBrands,selectedColor, selectedCategories])
     // useEffect(() => {
     //     search(searchTerm,min,max,selectedBrands);

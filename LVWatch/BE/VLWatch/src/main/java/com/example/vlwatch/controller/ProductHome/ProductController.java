@@ -1,6 +1,7 @@
 package com.example.vlwatch.controller.ProductHome;
 
 import com.example.vlwatch.dto.product_home.IWatchHome;
+import com.example.vlwatch.dto.product_home.UserInfo;
 import com.example.vlwatch.service.product.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -23,6 +24,12 @@ public class ProductController {
     public ResponseEntity<ArrayList<IWatchHome>> getListFemale() {
         ArrayList<IWatchHome> hotelDto = productService.watchFemale();
         return ResponseEntity.ok(hotelDto);
+    }
+    @GetMapping("/user")
+    public ResponseEntity<UserInfo> getUserById(@RequestParam String userName) {
+        UserInfo userInfo = productService.userInfo(userName);
+        System.out.println(userInfo);
+        return ResponseEntity.ok(userInfo);
     }
 
 
