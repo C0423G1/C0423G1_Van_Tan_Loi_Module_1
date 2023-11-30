@@ -18,7 +18,6 @@ public class TableWatch {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idWatch;
     private String nameWatch;
-    private String phoneWatch;
     private String urlImage;
     private double priceWatch;
     private int quantityWatch;

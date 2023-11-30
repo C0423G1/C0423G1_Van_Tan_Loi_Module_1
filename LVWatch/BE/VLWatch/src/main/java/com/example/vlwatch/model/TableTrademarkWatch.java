@@ -15,6 +15,7 @@ import javax.persistence.Id;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+//Thuong hieu
 public class TableTrademarkWatch {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

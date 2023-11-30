@@ -1,0 +1,13 @@
+.image-home {
+    /*display: block;*/
+    border-radius: 10px;
+    /*width: 300px;*/
+    /*height: 200px;*/
+    /*border: 1px solid #f8f9fa;*/
+    transition: transform 0.3s;
+}
+
+.image-home:hover {
+    transform: scale(1.03);
+}
+

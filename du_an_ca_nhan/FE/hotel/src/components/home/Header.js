@@ -49,9 +49,6 @@ const Header = () => {
         console.log("Search Term:", searchTerm);
         console.log("Selected Location:", selectedLocation);
         if (startDate && endDate && numberOfGuests >= 0) {
-            console.log("Check-In Date:", startDate);
-            console.log("Check-Out Date:", endDate);
-            console.log("Number of Guests:", numberOfGuests);
             await getAll()
         } else {
             alert("Vui lòng kiểm tra ngày và số lượng khách.");

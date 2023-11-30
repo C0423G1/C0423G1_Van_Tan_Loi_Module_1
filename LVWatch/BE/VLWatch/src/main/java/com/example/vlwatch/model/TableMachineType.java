@@ -15,9 +15,11 @@ import javax.persistence.Id;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+//ten loai may
 public class TableMachineType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idMachineType;
     private String nameMachineType;
+
 }
