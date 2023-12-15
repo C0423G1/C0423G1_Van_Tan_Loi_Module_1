@@ -11,7 +11,7 @@ import Swal from "sweetalert2";
 import jwt_decode from "jwt-decode";
 import {AiOutlineDoubleLeft, AiOutlineDoubleRight} from "react-icons/ai";
 
-export default function Product() {
+export default function ProductList() {
     const [totalPage, setTotalPage] = useState(0);
     const [page, setPage] = useState(0);
     const navigate = useNavigate();

@@ -1,4 +1,13 @@
 import axios from "axios";
+export const getCart = async (sub) => {
+    try {
+        const res = await axios.get(`http://localhost:8080/api/cart`);
+        return res;
+    } catch (e) {
+        return [];
+    }
+};
+
 export const getMaleWatch = async () => {
     try {
         const res = await axios.get(`http://localhost:8080/api/male`);
@@ -15,3 +24,9 @@ export const getFemaleWatch = async () => {
         return [];
     }
 };
+export const ProductDetail = async (idProduct) => {
+    console.log(idProduct)
+    const result = await axios.get(`http://localhost:8080/api/product/${idProduct}`)
+    console.log(result)
+    return result;
+}

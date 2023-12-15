@@ -1,9 +1,7 @@
 import axios from "axios";
 
 export const loginUser = async (appUser) => {
-    console.log(appUser)
     const result = await axios.post(`http://localhost:8080/api/user/login-by-username`, appUser)
-    console.log(result)
     return result;
 }
 

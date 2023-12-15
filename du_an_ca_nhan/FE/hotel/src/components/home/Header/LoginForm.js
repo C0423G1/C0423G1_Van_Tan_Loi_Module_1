@@ -170,27 +170,21 @@ function LoginForm({toggleForm}) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const result = await UserService.loginUser(formData);
-            UserService.addJwtTokenToLocalStorage(result.data.jwtToken);
-            const {userName, pass} = formData;
-            console.log('Đăng nhập thành công với các giá trị sau:');
-            console.log('Email:', userName);
-            console.log('Mật khẩu:', pass);
-            console.log(localStorage.getItem('JWT'));
-            console.log('---------------------------------');
-            console.log(jwtDecode(localStorage.getItem('JWT')));
-            setFormData({
-                userName: '',
-                pass: '',
-            });
-
-            Swal.fire({
-                icon: 'success',
-                title: 'Đăng nhập thành công!',
-                showConfirmButton: false,
-                timer: 1500,
-            });
-            navigate('/');
+            // const result = await UserService.loginUser(formData);
+            // UserService.addJwtTokenToLocalStorage(result.data.jwtToken);
+            // const {userName, pass} = formData;
+            // setFormData({
+            //     userName: '',
+            //     pass: '',
+            // });
+            //
+            // Swal.fire({
+            //     icon: 'success',
+            //     title: 'Đăng nhập thành công!',
+            //     showConfirmButton: false,
+            //     timer: 1500,
+            // });
+            // navigate('/');
         } catch (error) {
             console.log('-------------');
             Swal.fire({

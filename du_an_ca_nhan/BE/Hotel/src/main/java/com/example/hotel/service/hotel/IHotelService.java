@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import java.util.ArrayList;
 
 public interface IHotelService {
+
     Page<HotelDto> findAll(Pageable pageable, int numberOfGuests, String endDate, String startDate, String selectedLocation);
 
     ArrayList<HotelDto> findSreach(HotelDtoList request);

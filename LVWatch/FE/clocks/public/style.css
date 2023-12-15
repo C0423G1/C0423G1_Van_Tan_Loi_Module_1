@@ -410,7 +410,7 @@ a {
   background-color: var(--bs-primary);
 }
 
-/* - Featured Product
+/* - Featured ProductList
 ------------------------------------------------------------- */ 
 .product-card .cart-button {
   top: 0;
@@ -456,7 +456,7 @@ a {
   color: var(--bs-dark);
 }
 
-/* - Single Product
+/* - Single ProductList
 ------------------------------------------------------------- */
 .product-info .color-product-options .color-item {
   display: inline-block;

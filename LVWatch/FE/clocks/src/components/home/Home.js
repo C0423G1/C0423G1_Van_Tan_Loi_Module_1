@@ -161,16 +161,6 @@ export default function Home() {
                                             <h6 style={{color:"red"}}>
                                                 {formatPrice(product?.price)} đ
                                             </h6>
-                                            {/*<input type="radio" name="rating" id="star5" value="5"/>*/}
-                                            {/*<label htmlFor="star5"></label>*/}
-                                            {/*/!*<input type="radio" name="rating" id="star4" value="4"/>*!/*/}
-                                            {/*<label htmlFor="star4"></label>*/}
-                                            {/*/!*<input type="radio" name="rating" id="star3" value="3"/>*!/*/}
-                                            {/*<label htmlFor="star3"></label>*/}
-                                            {/*/!*<input type="radio" name="rating" id="star2" value="2"/>*!/*/}
-                                            {/*<label htmlFor="star2"></label>*/}
-                                            {/*/!*<input type="radio" name="rating" id="star1" value="1"/>*!/*/}
-                                            {/*<label htmlFor="star1"></label>*/}
                                             <button onClick={() => addToCart(product.watchId)} className="text-uppercase primary-btn" style={{textDecoration: "none"}}>
                                                 Thêm vào giỏ hàng
                                             </button>

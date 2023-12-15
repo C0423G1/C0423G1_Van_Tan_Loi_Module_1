@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
-import Product from "../product/Product";
+import ProductList from "../product/ProductList";
 import {Link, useNavigate} from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import Swal from "sweetalert2";

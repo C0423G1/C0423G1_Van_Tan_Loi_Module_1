@@ -67,6 +67,7 @@ const BookingPage = () => {
 
     // Hàm callback khi thanh toán thất bại
     const onError = (err) => {
+
         console.error('Payment failed:', err);
         console.log("uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu")
     };

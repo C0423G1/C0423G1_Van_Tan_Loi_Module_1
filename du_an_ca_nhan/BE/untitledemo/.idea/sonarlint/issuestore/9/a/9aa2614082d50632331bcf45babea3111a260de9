@@ -1,12 +1,3 @@
 
-0
-java:S1220""Move this file to a named package.
-E
-java:S1197"*Move the array designators [] to the type.(ÖÖÅ¨úÿÿÿÿ
-@	java:S106"+Replace this use of System.out by a logger.(‚¨Ö§
-F
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ
-F
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
-J
-java:S1128"4Remove this unused import 'java.util.stream.Stream'.(ó÷”
+7
+java:S1220""Move this file to a named package.8‹ÔÍ“Æ1

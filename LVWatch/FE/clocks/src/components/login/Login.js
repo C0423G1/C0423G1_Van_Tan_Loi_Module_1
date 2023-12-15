@@ -24,7 +24,7 @@ export default function Login() {
                             src={a?.products?.imageUrl}
                             className="img-fluid rounded-3"
                             style={{width: "100px", height: "100px"}}
-                            alt="Product Image"
+                            alt="ProductList Image"
                         />
                     </div>
                     <div className="col-6 " style={{textAlign: "center"}}>

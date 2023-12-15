@@ -2,6 +2,7 @@ package com.example.vlwatch.service.product;
 
 import com.example.vlwatch.dto.product_home.IWatchHome;
 import com.example.vlwatch.dto.product_home.UserInfo;
+import com.example.vlwatch.model.TableWatch;
 import com.example.vlwatch.repository.product.IProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,5 +27,10 @@ public class ProductService implements IProductService {
    @Override
    public UserInfo userInfo(String userName) {
       return productRepository.userInfo(userName);
+   }
+
+   @Override
+   public TableWatch IdProduct(int idProduct) {
+      return productRepository.findById(idProduct).orElse(null);
    }
 }
