@@ -9,6 +9,7 @@ import { getVoucherByCode } from "../api/VoucherApi";
 import Spinner from "./spinner/Spinner";
 import { Button } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
+import {PayPalButtons, PayPalScriptProvider} from "@paypal/react-paypal-js";
 
 const Checkout = (props) => {
   const [amount, setAmount] = useState();
@@ -26,6 +27,7 @@ const Checkout = (props) => {
 
   const handleCloseFirst = () => {
     setShowFirst(false);
+    console.log("-------")
   };
   const handleShowFirst = (data) => {
     setObj(data);
@@ -477,18 +479,12 @@ const Checkout = (props) => {
                 Chuyển khoản qua ngân hàng <br />
               </label>
               {text === "Chuyển khoản qua ngân hàng" && (
-                <div className="alert alert-dark">
-                  <p>
-                    Vui lòng ghi lại MÃ ĐƠN HÀNG và SỐ ĐIỆN THOẠI của bạn vào
-                    mục Nội dung thanh toán. Đơn hàng sẽ đươc giao sau khi tiền
-                    đã được chuyển.
-                  </p>
-                  <p>Ví dụ: 01234 - 0987654321</p>
-                  <p>Thông tin tài khoản:</p>
-                  <p>
-                    Trần Thị Thủy - stk: 04136519801 - TPbank chi nhánh Hà Nội
-                  </p>
-                </div>
+                  <PayPalScriptProvider
+                      options={{"client-id": "ATVLu4Mi0WmojMeUtCh-wTtCBb37GExzwi18B7kLRGSX9bUvnLq92Rnm02UnBCRPu_KGIgnkFOCOP94E"}}
+                  >
+                    <PayPalButtons createOrder={createOrder} onApprove={onApprove}
+                                   onError={onError}/>
+                  </PayPalScriptProvider>
               )}
             </div>
             <button
